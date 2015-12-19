@@ -56,5 +56,4 @@ sprite $SecurityIdentity_IdentityAccessManagement_DataEncryptionKey [42x54/16] {
 022222222222222222222222222222222222222220
 }
 
-
 @enduml

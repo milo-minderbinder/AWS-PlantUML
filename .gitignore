@@ -3,3 +3,5 @@
 *.ai
 *.py
 *.png
+.idea/
+*.sw[po]
