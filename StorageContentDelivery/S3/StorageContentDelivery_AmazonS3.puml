@@ -74,4 +74,7 @@ BBBBB98888888888000BBBBBBBBBBB988888888888000BBBBBBBBBB988888
 0000000000000000000000000000BB9880000000000000000000000000000
 }
 
+skinparam storageBackgroundColor<<S3>> White
+
+!define AWS_S3(name) storage "<color:red><$StorageContentDelivery_AmazonS3></color>" as name<<S3>>
 @enduml

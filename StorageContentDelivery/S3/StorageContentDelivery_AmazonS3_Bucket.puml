@@ -60,4 +60,8 @@ B988888800000BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB000008888889B
 0000000000000000000000BBBBBBBBBBBB0000000000000000000000
 }
 
+skinparam folderBackgroundColor<<S3 Bucket>> White
+
+!define S3_BUCKET(name) folder "<color:red><$StorageContentDelivery_AmazonS3_Bucket></color>\r name" <<S3 Bucket>>
+
 @enduml
