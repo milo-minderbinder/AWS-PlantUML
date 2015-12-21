@@ -74,4 +74,11 @@ sprite $Compute_Lambda [60x72/16] {
 000000000000000000000000000099660000000000000000000000000000
 }
 
+skinparam component<<Lambda>> {
+    BackgroundColor White
+    BorderColor Black
+}
+
+!define LAMBDA_FUNCTION(name) component "<color:orange><$Compute_Lambda></color>\r name" as name<<Lambda>>
+
 @enduml

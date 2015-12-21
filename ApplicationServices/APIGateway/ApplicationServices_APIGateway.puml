@@ -74,4 +74,7 @@ sprite $ApplicationServices_APIGateway [60x72/16] {
 000000000000000000000000000099550000000000000000000000000000
 }
 
+skinparam nodeBackgroundColor<<API Gateway>> White
+
+!define API_GATEWAY(name) node "<color:orange><$ApplicationServices_APIGateway></color>" as name<<API Gateway>>
 @enduml
