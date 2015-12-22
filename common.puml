@@ -5,7 +5,7 @@
 '   e_color:    the color for the sprite
 '   e_sprite:   the sprite for the AWS Icon representing the entity
 '   e_stereo:   the stereotype, which can define additional styling
-!define AWS_ENTITY(e_type,e_color,e_sprite,e_title,e_stereo) e_type "<color:e_color><$e_sprite></color>" <<e_stereo>>
+!define AWS_ENTITY(e_type,e_color,e_sprite,e_stereo) e_type "<color:e_color><$e_sprite></color>" <<e_stereo>>
 
 ' Creates a entity with a colorized sprite, title, and stereotype
 ' Params:
