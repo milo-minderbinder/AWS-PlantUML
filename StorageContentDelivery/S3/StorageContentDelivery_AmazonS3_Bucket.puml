@@ -60,5 +60,10 @@ B988888800000BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB000008888889B
 0000000000000000000000BBBBBBBBBBBB0000000000000000000000
 }
 
+skinparam folderBackgroundColor<<S3 Bucket>> White
+
+!define S3_BUCKET(alias) AWS_ENTITY(folder,red,StorageContentDelivery_AmazonS3_Bucket,alias,S3 Bucket)
+
+!define S3_BUCKET(alias,label) AWS_ENTITY(folder,red,StorageContentDelivery_AmazonS3_Bucket,label,alias,S3 Bucket)
 
 @enduml

@@ -74,5 +74,13 @@ sprite $Compute_Lambda [60x72/16] {
 000000000000000000000000000099660000000000000000000000000000
 }
 
+skinparam component<<Lambda>> {
+    BackgroundColor White
+    BorderColor Black
+}
+
+!define LAMBDA_FUNCTION(alias) AWS_ENTITY(component,orange,Compute_Lambda,alias,Lambda)
+
+!define LAMBDA_FUNCTION(alias,label) AWS_ENTITY(component,orange,Compute_Lambda,label,alias,Lambda)
 
 @enduml

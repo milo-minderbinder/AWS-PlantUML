@@ -46,5 +46,4 @@ sprite $ApplicationServices_AmazonSQS_Message [38x44/16] {
 99999999999009999999999900099999999999
 }
 
-
 @enduml

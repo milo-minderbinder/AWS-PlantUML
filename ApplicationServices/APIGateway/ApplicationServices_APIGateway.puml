@@ -74,5 +74,8 @@ sprite $ApplicationServices_APIGateway [60x72/16] {
 000000000000000000000000000099550000000000000000000000000000
 }
 
+skinparam nodeBackgroundColor<<API Gateway>> White
+
+!define API_GATEWAY(alias) AWS_ENTITY(node,orange,ApplicationServices_APIGateway,alias,API Gateway)
 
 @enduml

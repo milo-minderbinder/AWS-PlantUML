@@ -60,5 +60,4 @@ sprite $SecurityIdentity_IdentityAccessManagement_Permissions [42x58/16] {
 000088888888888888888888888888888888880000
 }
 
-
 @enduml

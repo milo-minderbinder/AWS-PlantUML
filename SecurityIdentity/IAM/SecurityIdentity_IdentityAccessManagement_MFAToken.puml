@@ -58,5 +58,4 @@ sprite $SecurityIdentity_IdentityAccessManagement_MFAToken [56x56/16] {
 00000000000000000000000888888888800000000000000000000000
 }
 
-
 @enduml

@@ -75,5 +75,10 @@ CCCCCCCCBAAAAAABBBCCCCCCCCCCCCCCCCCCCCCCCCCCCCCA98777777799999999
 000000000000000000000AA999999999999999999997700000000000000000000
 }
 
+skinparam databaseBackgroundColor<<DynamoDB>> White
+
+!define DYNAMODB(alias) AWS_ENTITY(database,blue,Database_DynamoDB,alias,DynamoDB)
+
+!define DYNAMODB(alias,label) AWS_ENTITY(database,blue,Database_DynamoDB,label,alias,DynamoDB)
 
 @enduml

@@ -1,0 +1,11 @@
+@startuml
+!define AWS_PLANTUML https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/master
+
+!includeurl AWS_PLANTUML/common.puml
+!includeurl AWS_PLANTUML/StorageContentDelivery/S3/StorageContentDelivery_AmazonS3.puml
+!includeurl AWS_PLANTUML/StorageContentDelivery/S3/StorageContentDelivery_AmazonS3_Bucket.puml
+
+AWS_S3(s3_internal)
+AWS_S3(s3_partner,Vendor's S3)
+s3_internal <-- s3_partner
+@enduml

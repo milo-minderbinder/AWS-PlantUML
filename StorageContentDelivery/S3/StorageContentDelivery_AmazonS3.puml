@@ -74,5 +74,10 @@ BBBBB98888888888000BBBBBBBBBBB988888888888000BBBBBBBBBB988888
 0000000000000000000000000000BB9880000000000000000000000000000
 }
 
+skinparam storageBackgroundColor<<S3>> White
+
+!define AWS_S3(alias) AWS_ENTITY(storage,red,StorageContentDelivery_AmazonS3,alias,S3)
+
+!define AWS_S3(alias,label) AWS_ENTITY(storage,red,StorageContentDelivery_AmazonS3,label,alias,S3)
 
 @enduml
