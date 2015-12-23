@@ -85,7 +85,9 @@ Before you know it, you'll be creating nice, clean diagrams for your AWS applica
     lambda --> comments :**5**
 
     comments --> browser :**6**
-
     @enduml
 
-![basic example](examples/comments-exmample.png)
+
+![full example](examples/comments-example.png)
+
+Enjoy!
