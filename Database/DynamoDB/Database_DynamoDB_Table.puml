@@ -63,4 +63,6 @@ skinparam artifactBackgroundColor<<DynamoDB Table>> #CCFFFF
 
 !define DYNAMODB_TABLE(alias) AWS_ENTITY(artifact,blue,Database_DynamoDB_Table,alias,DynamoDB Table)
 
+!define DYNAMODB_TABLE(alias,label) AWS_ENTITY(artifact,blue,Database_DynamoDB_Table,label,alias,DynamoDB Table)
+
 @enduml

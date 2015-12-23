@@ -3,5 +3,6 @@
 *.ai
 *.py
 *.png
+!/examples/*.png
 .idea/
 *.sw[po]

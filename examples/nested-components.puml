@@ -1,0 +1,11 @@
+@startuml
+!includeurl http://localhost:8000/common.puml
+!includeurl http://localhost:8000/StorageContentDelivery/S3/StorageContentDelivery_AmazonS3.puml
+!includeurl http://localhost:8000/StorageContentDelivery/S3/StorageContentDelivery_AmazonS3_Bucket.puml
+
+AWS_S3(s3) {
+    S3_BUCKET(site,www.insecurity.co)
+    S3_BUCKET(logs,logs.insecurity.co)
+}
+site .r.> logs : events
+@enduml
