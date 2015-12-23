@@ -59,6 +59,10 @@ CCCCCCCCCC00CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCC00CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 }
 
-!define DYNAMODB_TABLE(name) artifact "<color:blue><$Database_DynamoDB_Table></color>\r name" as name #CCFFFF
+skinparam artifactBackgroundColor<<DynamoDB Table>> #CCFFFF
+
+!define DYNAMODB_TABLE(alias) AWS_ENTITY(artifact,blue,Database_DynamoDB_Table,alias,DynamoDB Table)
+
+!define DYNAMODB_TABLE(alias,label) AWS_ENTITY(artifact,blue,Database_DynamoDB_Table,label,alias,DynamoDB Table)
 
 @enduml

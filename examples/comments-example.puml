@@ -1,0 +1,44 @@
+@startuml
+!define AWS_PLANTUML https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/master
+
+!includeurl AWS_PLANTUML/common.puml
+!includeurl AWS_PLANTUML/StorageContentDelivery/S3/StorageContentDelivery_AmazonS3_Bucket.puml
+!includeurl AWS_PLANTUML/StorageContentDelivery/S3/StorageContentDelivery_AmazonS3.puml
+!includeurl AWS_PLANTUML/Compute/Lambda/Compute_Lambda.puml
+!includeurl AWS_PLANTUML/Database/DynamoDB/Database_DynamoDB.puml
+!includeurl AWS_PLANTUML/Database/DynamoDB/Database_DynamoDB_Table.puml
+!includeurl AWS_PLANTUML/ApplicationServices/APIGateway/ApplicationServices_APIGateway.puml
+
+
+skinparam componentArrowColor Black
+
+agent browser
+
+AWS_S3(s3) {
+    S3_BUCKET(site,www.insecurity.co)
+    S3_BUCKET(logs,logs.insecurity.co)
+}
+
+API_GATEWAY(api)
+
+LAMBDA_FUNCTION(lambda,addComment)
+
+DYNAMODB(dynamo) {
+    DYNAMODB_TABLE(comments,Comments)
+}
+
+browser --> site :**1a**
+site ~~> logs :1a
+site --> browser :**1b**
+browser ..> comments :**2a**
+comments ..> browser :**2b**
+
+browser .r.> api :**3**
+
+api -r-> lambda :**4**
+
+lambda --> comments :**5**
+
+comments --> browser :**6**
+
+@enduml

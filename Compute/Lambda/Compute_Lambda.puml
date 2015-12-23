@@ -79,6 +79,8 @@ skinparam component<<Lambda>> {
     BorderColor Black
 }
 
-!define LAMBDA_FUNCTION(name) component "<color:orange><$Compute_Lambda></color>\r name" as name<<Lambda>>
+!define LAMBDA_FUNCTION(alias) AWS_ENTITY(component,orange,Compute_Lambda,alias,Lambda)
+
+!define LAMBDA_FUNCTION(alias,label) AWS_ENTITY(component,orange,Compute_Lambda,label,alias,Lambda)
 
 @enduml
