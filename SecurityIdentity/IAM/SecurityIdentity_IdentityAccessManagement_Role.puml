@@ -74,4 +74,13 @@ AAAAAAA97777777777777777777777777788899998877777777777778AAAAAA00000000000000000
 0000000000000000000000000000AAAAAA00000000000000000000000000000000000000000000000000
 }
 
+skinparam agent<<IAM Role>> {
+    BackgroundColor White
+    BorderColor Green
+}
+
+!define IAM_ROLE(alias) AWS_ENTITY(agent,green,SecurityIdentity_IdentityAccessManagement_Role,alias,IAM Role)
+
+!define IAM_ROLE(alias,label) AWS_ENTITY(agent,green,SecurityIdentity_IdentityAccessManagement_Role,label,alias,IAM Role)
+
 @enduml
