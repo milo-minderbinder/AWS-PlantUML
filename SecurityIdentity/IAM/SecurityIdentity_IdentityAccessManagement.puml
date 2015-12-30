@@ -102,4 +102,10 @@ sprite $SecurityIdentity_IdentityAccessManagement [100x100/16] {
 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 }
 
+skinparam frameBackgroundColor<<IAM>> PaleGreen
+
+!define IAM(alias) AWS_ENTITY(frame,green,SecurityIdentity_IdentityAccessManagement,alias,IAM)
+
+!define IAM(alias,label) AWS_ENTITY(frame,green,SecurityIdentity_IdentityAccessManagement,label,alias,IAM)
+
 @enduml

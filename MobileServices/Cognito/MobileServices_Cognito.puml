@@ -86,4 +86,10 @@ BBBBBB9666666600BBBBBBBBBBBBBBBBA8655666666666666666666666666666666666
 0000000000000000000000000000000000B60000000000000000000000000000000000
 }
 
+skinparam nodeBackgroundColor<<Cognito>> #ddaaff
+
+!define COGNITO(alias) AWS_ENTITY(node,purple,MobileServices_Cognito,alias,Cognito)
+
+!define COGNITO(alias,label) AWS_ENTITY(node,purple,MobileServices_Cognito,label,alias,Cognito)
+
 @enduml
