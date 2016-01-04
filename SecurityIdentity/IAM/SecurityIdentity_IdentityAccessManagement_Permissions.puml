@@ -60,4 +60,10 @@ sprite $SecurityIdentity_IdentityAccessManagement_Permissions [42x58/16] {
 000088888888888888888888888888888888880000
 }
 
+skinparam artifactBackgroundColor<<IAM Policy>> White
+
+!define IAM_POLICY(alias) AWS_ENTITY(artifact,green,SecurityIdentity_IdentityAccessManagement_Permissions,alias,IAM Policy)
+
+!define IAM_POLICY(alias,label) AWS_ENTITY(artifact,green,SecurityIdentity_IdentityAccessManagement_Permissions,label,alias,IAM Policy)
+
 @enduml
