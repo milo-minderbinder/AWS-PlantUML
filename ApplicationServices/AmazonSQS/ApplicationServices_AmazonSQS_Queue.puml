@@ -46,4 +46,10 @@ sprite $ApplicationServices_AmazonSQS_Queue [66x44/16] {
 999999999999999999999999999999999999999999999999999999999999999999
 }
 
+skinparam artifactBackgroundColor<<SQS Queue>> #ffffcc
+
+!define SQS_QUEUE(alias) AWS_ENTITY(artifact,darkgoldenrod,ApplicationServices_AmazonSQS_Queue,alias,SQS Queue)
+
+!define SQS_QUEUE(alias,label) AWS_ENTITY(artifact,darkgoldenrod,ApplicationServices_AmazonSQS_Queue,label,alias,SQS Queue)
+
 @enduml
