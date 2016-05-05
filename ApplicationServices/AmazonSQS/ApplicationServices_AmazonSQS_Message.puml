@@ -46,4 +46,6 @@ sprite $ApplicationServices_AmazonSQS_Message [38x44/16] {
 99999999999009999999999900099999999999
 }
 
+!define SQS_MESSAGE_SPRITE AWS_SPRITE(darkgoldenrod,ApplicationServices_AmazonSQS_Message)
+
 @enduml
