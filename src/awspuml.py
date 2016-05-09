@@ -4,6 +4,7 @@ import shutil
 import argparse
 import subprocess
 from itertools import groupby
+import re
 
 
 SRC_DIR = os.path.realpath(os.path.dirname(__file__))
@@ -41,21 +42,18 @@ def create_puml(icon_path):
 
 
 def create_structured_path(orig_path, dest, sep='_'):
-    icon_name = os.path.basename(orig_path)
-    return os.path.join(dest, *(icon_name.split(sep=sep)))
+    icon_path = os.path.join(dest,
+                             *(os.path.basename(orig_path).split(sep=sep)))
+    icon_name = os.path.basename(icon_path).replace('-', '_')
+    return os.path.join(os.path.dirname(icon_path), icon_name)
 
 
-def basename_sort(icon_path):
-    return os.path.basename(icon_path[1])
+def rename_duplicates(icon_paths):
 
+    def basename_sort(icon_path):
+        return os.path.basename(icon_path[1])
 
-def create_pumls(src, dest, ext='.png', sep='_'):
-    src = os.path.realpath(src)
-    dest = os.path.realpath(dest)
-    icon_paths = [(op, create_structured_path(op, dest, sep)) for op in
-                  find_icon_images(src, ext)]
     icon_paths = sorted(icon_paths, key=basename_sort)
-    deduped_paths = []
     for k, g in groupby(icon_paths, basename_sort):
         new_paths = list(g)
         if len(new_paths) > 1:
@@ -64,11 +62,18 @@ def create_pumls(src, dest, ext='.png', sep='_'):
                 dir_name = os.path.dirname(np[1])
                 deduped_name = '%s_%s' % (os.path.basename(dir_name),
                                           os.path.basename(np[1]))
-                deduped_paths.append((np[0],
-                                      os.path.join(dir_name, deduped_name)))
+                yield (np[0], os.path.join(dir_name, deduped_name))
         else:
-            deduped_paths.append(new_paths[0])
-    for icon_src, icon_dest in deduped_paths:
+            yield new_paths[0]
+
+
+def create_pumls(src, dest, ext='.png', sep='_'):
+    src = os.path.realpath(src)
+    dest = os.path.realpath(dest)
+    icon_paths = [(op, create_structured_path(op, dest, sep)) for op in
+                  find_icon_images(src, ext)]
+    icon_paths = list(rename_duplicates(icon_paths))
+    for icon_src, icon_dest in icon_paths:
         dest_dir = os.path.dirname(icon_dest)
         if not os.path.isdir(dest_dir):
             print('Creating directory: %s' % dest_dir)
