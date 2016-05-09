@@ -1,8 +1,9 @@
 *.svg
 *.eps
 *.ai
-*.py
+*.py[co]
 *.png
-!/examples/*.png
+!/old-src/examples/*.png
 .idea/
+**/output/
 *.sw[po]
