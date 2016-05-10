@@ -1,15 +1,27 @@
 import os
 import os.path
 import shutil
-import configparser
 import argparse
 import subprocess
+import configparser
+from configparser import _UNSET, NoOptionError, NoSectionError
 from itertools import groupby
 
 
 SRC_DIR = os.path.realpath(os.path.dirname(__file__))
 CONFIG_FILE = os.path.join(SRC_DIR, 'awspuml.conf')
 PUML_JAR = os.path.join(SRC_DIR, 'plantuml.jar')
+
+
+class InheritingConfigParser(configparser.ConfigParser):
+    def get(self, section, option, *, raw=False, vars=None, fallback=_UNSET):
+        try:
+            return super().get(section, option, raw=raw, vars=vars, fallback=fallback)
+        except (NoOptionError, NoSectionError) as e:
+            parent_section = section.rpartition('.')[0]
+            if parent_section:
+                return self.get(parent_section, option, raw=raw, vars=vars, fallback=fallback)
+            raise e
 
 
 def find_icon_images(path, ext='.png'):
@@ -25,10 +37,8 @@ def make_sprite(path, size='16'):
     return subprocess.check_output(cmd, universal_newlines=True)
 
 
-def create_puml(icon_path, options=None):
-    if not options:
-        options = {}
-    icon_name = os.path.splitext(os.path.basename(icon_path))[0]
+def create_puml(icon_path, icon_name, conf):
+    file_name = os.path.splitext(os.path.basename(icon_path))[0]
     output = []
     sprite = make_sprite(icon_path)
     lines = sprite.split('\n')
@@ -37,16 +47,16 @@ def create_puml(icon_path, options=None):
         output.append(line.replace('F', '0'))
     output.extend(lines[-3:])
 
-    macro_name = icon_name.upper()
-    entity_type = options.get('entity_type', 'component')
-    color = options.get('color', 'black')
-    stereotype = icon_name.replace('_', ' ').title()
+    macro_name = file_name.upper()
+    entity_type = conf.get(icon_name, 'entity_type')
+    color = conf.get(icon_name, 'color')
+    stereotype = file_name.replace('_', ' ').title()
 
     output.append('!define %s(alias) AWS_ENTITY(%s,%s,%s,alias,%s)\n' % (
         macro_name,
         entity_type,
         color,
-        icon_name,
+        file_name,
         stereotype
     ))
     output.append(
@@ -54,7 +64,7 @@ def create_puml(icon_path, options=None):
             macro_name,
             entity_type,
             color,
-            icon_name,
+            file_name,
             stereotype
         ))
 
@@ -105,6 +115,31 @@ def get_parent_dir(path, rel_path=None):
         return get_parent_dir(dirname)
 
 
+def separate_path(path):
+    parts = []
+    dirname, basename = os.path.split(path)
+    while dirname and basename:
+        parts.insert(0, basename)
+        dirname, basename = os.path.split(dirname)
+    if basename:
+        parts.insert(0, basename)
+    elif dirname:
+        parts.insert(0, dirname)
+    return parts
+
+
+def get_icon_name(path, rel_path=None):
+    if rel_path:
+        path = os.path.relpath(path, rel_path)
+    path = os.path.splitext(path)[0]
+    # Handle files renamed with rename_duplicates()
+    dirname, basename = os.path.split(path)
+    prefix, sep, suffix = basename.partition('_')
+    if suffix and prefix == os.path.basename(dirname):
+        path = os.path.join(dirname, suffix)
+    return '.'.join(separate_path(path))
+
+
 def create_pumls(src, dest, conf, ext='.png', sep='_'):
     src = os.path.realpath(src)
     dest = os.path.realpath(dest)
@@ -118,9 +153,8 @@ def create_pumls(src, dest, conf, ext='.png', sep='_'):
             os.makedirs(dest_dir)
         print('Copying icon to: %s' % icon_dest)
         shutil.copy2(icon_src, icon_dest)
-        category = get_parent_dir(icon_dest, rel_path=dest)
-        options = conf[category]
-        create_puml(icon_dest, options)
+        icon_name = get_icon_name(icon_dest, rel_path=dest)
+        create_puml(icon_dest, icon_name, conf)
     shutil.copy2(os.path.join(SRC_DIR, 'common.puml'), dest)
 
 
@@ -139,7 +173,7 @@ if __name__ == '__main__':
     if not os.path.isdir(icons_path):
         raise Exception('Invalid path: %s' % icons_path)
 
-    config = configparser.ConfigParser()
+    config = InheritingConfigParser()
     config.read(args.config)
 
     output_path = os.path.join(SRC_DIR, 'output', 'AWS_Simple_Icons')
