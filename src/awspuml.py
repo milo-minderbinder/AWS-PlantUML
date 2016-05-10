@@ -16,12 +16,12 @@ PUML_JAR = os.path.join(SRC_DIR, 'plantuml.jar')
 class InheritingConfigParser(configparser.ConfigParser):
     def get(self, section, option, *, raw=False, vars=None, fallback=_UNSET):
         try:
-            return super().get(section, option, raw=raw, vars=vars, fallback=fallback)
+            return super().get(section, option, raw=raw, vars=vars, fallback=_UNSET)
         except (NoOptionError, NoSectionError) as e:
             parent_section = section.rpartition('.')[0]
             if parent_section:
                 return self.get(parent_section, option, raw=raw, vars=vars, fallback=fallback)
-            raise e
+            return super().get(section, option, raw=raw, vars=vars, fallback=fallback)
 
 
 def find_icon_images(path, ext='.png'):
@@ -38,7 +38,7 @@ def make_sprite(path, size='16'):
 
 
 def create_puml(icon_path, icon_name, conf):
-    file_name = os.path.splitext(os.path.basename(icon_path))[0]
+    file_name = str(os.path.splitext(os.path.basename(icon_path))[0])
     output = []
     sprite = make_sprite(icon_path)
     lines = sprite.split('\n')
@@ -48,9 +48,17 @@ def create_puml(icon_path, icon_name, conf):
     output.extend(lines[-3:])
 
     macro_name = file_name.upper()
-    entity_type = conf.get(icon_name, 'entity_type')
-    color = conf.get(icon_name, 'color')
-    stereotype = file_name.replace('_', ' ').title()
+    entity_type = conf.get(icon_name, 'entity_type', fallback='component')
+    color = conf.get(icon_name, 'color', fallback='black')
+    # Title-case lower-case words that are not proper nouns (e.g. AWSIoT)
+    stereotype = ' '.join([(w.title() if w.islower() else w)
+                           for w in file_name.split('_')])
+
+    skinparam = conf.get(icon_name, 'skinparam', fallback=None)
+    if skinparam:
+        output.append('skinparam %s<<%s>> {' % (entity_type, stereotype))
+        output.extend(['\t%s' % s for s in skinparam.splitlines()])
+        output.append('}\n')
 
     output.append('!define %s(alias) AWS_ENTITY(%s,%s,%s,alias,%s)\n' % (
         macro_name,
@@ -151,8 +159,8 @@ def create_pumls(src, dest, conf, ext='.png', sep='_'):
         if not os.path.isdir(dest_dir):
             print('Creating directory: %s' % dest_dir)
             os.makedirs(dest_dir)
-        print('Copying icon to: %s' % icon_dest)
-        shutil.copy2(icon_src, icon_dest)
+        # print('Copying icon to: %s' % icon_dest)
+        # shutil.copy2(icon_src, icon_dest)
         icon_name = get_icon_name(icon_dest, rel_path=dest)
         create_puml(icon_dest, icon_name, conf)
     shutil.copy2(os.path.join(SRC_DIR, 'common.puml'), dest)
