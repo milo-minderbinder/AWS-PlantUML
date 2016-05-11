@@ -20,8 +20,14 @@ class InheritingConfigParser(configparser.ConfigParser):
         except (NoOptionError, NoSectionError) as e:
             parent_section = section.rpartition('.')[0]
             if parent_section:
-                return self.get(parent_section, option, raw=raw, vars=vars, fallback=fallback)
-            return super().get(section, option, raw=raw, vars=vars, fallback=fallback)
+                try:
+                    wildcard_section = '%s.' % parent_section
+                    return super().get(wildcard_section, option, raw=raw, vars=vars, fallback=_UNSET)
+                except (NoOptionError, NoSectionError) as e2:
+                    return self.get(parent_section, option, raw=raw, vars=vars, fallback=fallback)
+            if fallback is not _UNSET:
+                return fallback
+            raise e
 
 
 def find_icon_images(path, ext='.png'):
