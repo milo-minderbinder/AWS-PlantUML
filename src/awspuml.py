@@ -9,7 +9,7 @@ from itertools import groupby
 
 
 SRC_DIR = os.path.realpath(os.path.dirname(__file__))
-CONFIG_FILE = os.path.join(SRC_DIR, 'awspuml.conf')
+CONFIG_FILE = os.path.join(SRC_DIR, 'awspuml.ini')
 PUML_JAR = os.path.join(SRC_DIR, 'plantuml.jar')
 
 
@@ -159,8 +159,8 @@ def create_pumls(src, dest, conf, ext='.png', sep='_'):
         if not os.path.isdir(dest_dir):
             print('Creating directory: %s' % dest_dir)
             os.makedirs(dest_dir)
-        # print('Copying icon to: %s' % icon_dest)
-        # shutil.copy2(icon_src, icon_dest)
+        print('Copying icon to: %s' % icon_dest)
+        shutil.copy(icon_src, icon_dest)
         icon_name = get_icon_name(icon_dest, rel_path=dest)
         create_puml(icon_dest, icon_name, conf)
     shutil.copy2(os.path.join(SRC_DIR, 'common.puml'), dest)
@@ -171,7 +171,7 @@ if __name__ == '__main__':
         description='Generate PlantUML Sprites from AWS Simple Icons',
         formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument('-c', '--config',
-                        default=os.path.join(SRC_DIR, 'awspuml.conf'),
+                        default=CONFIG_FILE,
                         help='Config file for puml generation')
     parser.add_argument('icons_path',
                         help='Path to AWS Simple Icons directory')
