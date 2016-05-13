@@ -25,8 +25,10 @@ Params:
 !define AWS_ENTITY(e_type,e_color,e_sprite,e_label,e_alias,e_stereo) e_type "<color:e_color><$e_sprite></color>\r e_label" as e_alias <<e_stereo>>
 
 skinparam nodeBackgroundColor White
+skinparam artifactBackgroundColor White
+skinparam componentBackgroundColor White
+skinparam cloudBackgroundColor White
 
-skinparam cloudBackgroundColor<<AWS>> White
 skinparam cloudBorderColor<<AWS>> #F58536
 
 @enduml

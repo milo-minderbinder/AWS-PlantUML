@@ -43,15 +43,33 @@ def make_sprite(path, size='16'):
     return subprocess.check_output(cmd, universal_newlines=True)
 
 
+def make_transparent(sprite, shift=None, ignore='0'):
+    result = []
+    lines = sprite.split('\n')
+    darkest = '0'
+    # get 'darkest' pixel, but ignore 'F' since it will be flipped
+    for line in lines[1:-3]:
+        darkest = max(darkest,
+                      max(line.upper(), key=lambda v: v if v != 'F' else '0'))
+    if shift is None:
+        shift = 15 - int(darkest, base=16)
+    result.append(lines[0])
+    for line in lines[1:-3]:
+        new_line = ''
+        for c in line.upper().replace('F', '0'):
+            if c not in ignore:
+                # shift up to 15/F, convert to hex and strip leading '0x'
+                c = hex(min(15, shift + int(c, base=16))).upper()[-1]
+            new_line += c
+        result.append(new_line)
+    result.extend(lines[-3:])
+    return result
+
+
 def create_puml(icon_path, icon_name, conf):
     file_name = str(os.path.splitext(os.path.basename(icon_path))[0])
-    output = []
     sprite = make_sprite(icon_path)
-    lines = sprite.split('\n')
-    output.extend(lines[:1])
-    for line in lines[1:-3]:
-        output.append(line.replace('F', '0'))
-    output.extend(lines[-3:])
+    output = make_transparent(sprite)
 
     macro_name = file_name.upper()
     entity_type = conf.get(icon_name, 'entity_type', fallback='component')
@@ -154,6 +172,24 @@ def get_icon_name(path, rel_path=None):
     return '.'.join(separate_path(path))
 
 
+def create_test_puml(dest, icon_paths, host='localhost', port='8000'):
+    icon_paths = sorted([os.path.splitext(os.path.relpath(d, dest))[0]
+                         for s, d in icon_paths])
+    test_puml = os.path.join(dest, 'test.puml')
+    print('Writing test puml: %s' % test_puml)
+    with open(test_puml, 'w') as f:
+        f.write('@startuml\n')
+        f.write('!define AWSPUML http://%s:%s\n' % (host, port))
+        f.write('!includeurl AWSPUML/common.puml\n\n')
+        for icon_path in icon_paths:
+            parts = separate_path(icon_path)
+            name = parts[-1]
+            puml_path = '%s.puml' % '/'.join(parts)
+            f.write('\'!includeurl AWSPUML/%s\n' % puml_path)
+            f.write('\'%s(%s,%s)\n\n' % (name.upper(), name, name))
+        f.write('@enduml\n')
+
+
 def create_pumls(src, dest, conf, ext='.png', sep='_'):
     src = os.path.realpath(src)
     dest = os.path.realpath(dest)
@@ -169,7 +205,9 @@ def create_pumls(src, dest, conf, ext='.png', sep='_'):
         shutil.copy(icon_src, icon_dest)
         icon_name = get_icon_name(icon_dest, rel_path=dest)
         create_puml(icon_dest, icon_name, conf)
-    shutil.copy2(os.path.join(SRC_DIR, 'common.puml'), dest)
+    shutil.copy(os.path.join(SRC_DIR, 'common.puml'), dest)
+    if conf.getboolean('AWSPUML', 'debug'):
+        create_test_puml(dest, icon_paths)
 
 
 if __name__ == '__main__':
