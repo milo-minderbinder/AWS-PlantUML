@@ -24,9 +24,11 @@ Params:
     e_stereo:   the stereotype, which can define additional styling '/
 !define AWS_ENTITY(e_type,e_color,e_sprite,e_label,e_alias,e_stereo) e_type "<color:e_color><$e_sprite></color>\r e_label" as e_alias <<e_stereo>>
 
-skinparam nodeBackgroundColor White
 skinparam artifactBackgroundColor White
 skinparam componentBackgroundColor White
+skinparam nodeBackgroundColor White
+skinparam databaseBackgroundColor White
+skinparam storageBackgroundColor White
 skinparam cloudBackgroundColor White
 
 skinparam cloudBorderColor<<AWS>> #F58536

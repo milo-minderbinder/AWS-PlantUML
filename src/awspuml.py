@@ -225,7 +225,8 @@ if __name__ == '__main__':
     if not os.path.isdir(icons_path):
         raise Exception('Invalid path: %s' % icons_path)
 
-    config = InheritingConfigParser()
+    config = InheritingConfigParser(
+        interpolation=configparser.ExtendedInterpolation())
     config.read(args.config)
 
     output_path = os.path.join(SRC_DIR, 'output', 'AWS_Simple_Icons')
