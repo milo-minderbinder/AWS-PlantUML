@@ -10,6 +10,7 @@ from itertools import groupby
 
 SRC_DIR = os.path.realpath(os.path.dirname(__file__))
 CONFIG_FILE = os.path.join(SRC_DIR, 'awspuml.ini')
+OUTPUT_DIR = os.path.join(SRC_DIR, '..', 'AWS-PlantUML')
 PUML_JAR = os.path.join(SRC_DIR, 'plantuml.jar')
 
 
@@ -217,6 +218,9 @@ if __name__ == '__main__':
     parser.add_argument('-c', '--config',
                         default=CONFIG_FILE,
                         help='Config file for puml generation')
+    parser.add_argument('-o', '--output',
+                        default=OUTPUT_DIR,
+                        help='Config file for puml generation')
     parser.add_argument('icons_path',
                         help='Path to AWS Simple Icons directory')
     args = parser.parse_args()
@@ -229,6 +233,6 @@ if __name__ == '__main__':
         interpolation=configparser.ExtendedInterpolation())
     config.read(args.config)
 
-    output_path = os.path.join(SRC_DIR, 'output', 'AWS_Simple_Icons')
+    output_path = os.path.realpath(args.output)
     print('Writing output to: %s' % output_path)
     create_pumls(icons_path, output_path, config)

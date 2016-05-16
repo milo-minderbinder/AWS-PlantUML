@@ -1,10 +1,6 @@
-*.svg
-*.eps
-*.ai
 *.py[co]
-*.png
-!/old-src/examples/*.png
-.idea/
-**/output/*
+**/__pycache__/
 resources/*
+AWS-PlantUML/**/*.png
+.idea/
 *.sw[po]
