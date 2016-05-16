@@ -59,8 +59,8 @@ sprite $client [56x56/16] {
 }
 
 
-!define CLIENT(alias) AWS_ENTITY(agent,#D6D6D6,client,alias,Client)
+!define CLIENT(alias) AWS_ENTITY(agent,#7E7D7D,client,alias,Client)
 
-!define CLIENT(alias,label) AWS_ENTITY(agent,#D6D6D6,client,label,alias,Client)
+!define CLIENT(alias,label) AWS_ENTITY(agent,#7E7D7D,client,label,alias,Client)
 
 @enduml

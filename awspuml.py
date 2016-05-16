@@ -10,7 +10,7 @@ from itertools import groupby
 
 SRC_DIR = os.path.realpath(os.path.dirname(__file__))
 CONFIG_FILE = os.path.join(SRC_DIR, 'awspuml.ini')
-OUTPUT_DIR = os.path.join(SRC_DIR, '..', 'AWS-PlantUML')
+OUTPUT_DIR = os.path.join(SRC_DIR, 'dist')
 PUML_JAR = os.path.join(SRC_DIR, 'plantuml.jar')
 
 

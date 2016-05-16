@@ -1,0 +1,17 @@
+@startuml
+
+!define AWSPUML http://localhost:8000
+
+!includeurl AWSPUML/common.puml
+!includeurl AWSPUML/Storage-Content-Delivery/AmazonS3.puml
+!includeurl AWSPUML/Storage-Content-Delivery/AmazonS3/bucket.puml
+
+
+AMAZONS3(s3) {
+    BUCKET(site,www.insecurity.co)
+    BUCKET(logs,logs.insecurity.co)
+}
+
+site .r.> logs : events
+
+@enduml

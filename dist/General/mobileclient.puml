@@ -61,8 +61,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 }
 
 
-!define MOBILECLIENT(alias) AWS_ENTITY(agent,#D6D6D6,mobileclient,alias,Mobileclient)
+!define MOBILECLIENT(alias) AWS_ENTITY(agent,#7E7D7D,mobileclient,alias,Mobileclient)
 
-!define MOBILECLIENT(alias,label) AWS_ENTITY(agent,#D6D6D6,mobileclient,label,alias,Mobileclient)
+!define MOBILECLIENT(alias,label) AWS_ENTITY(agent,#7E7D7D,mobileclient,label,alias,Mobileclient)
 
 @enduml
