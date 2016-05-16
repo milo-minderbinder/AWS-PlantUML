@@ -1,0 +1,59 @@
+@startuml
+
+!define AWSPUML http://localhost:8000
+
+!includeurl AWSPUML/common.puml
+!includeurl AWSPUML/Application-Services/AmazonAPIGateway.puml
+!includeurl AWSPUML/Compute/AWSLambda.puml
+!includeurl AWSPUML/Database/AmazonDynamoDB.puml
+!includeurl AWSPUML/Database/AmazonDynamoDB/table.puml
+!includeurl AWSPUML/General/AWScloud.puml
+!includeurl AWSPUML/General/client.puml
+!includeurl AWSPUML/General/user.puml
+!includeurl AWSPUML/Storage-Content-Delivery/AmazonS3.puml
+!includeurl AWSPUML/Storage-Content-Delivery/AmazonS3/bucket.puml
+
+
+skinparam componentArrowColor Black
+skinparam nodeBackgroundColor White
+skinparam agentBackgroundColor White
+skinparam artifactBackgroundColor White
+
+
+USER(user)
+CLIENT(browser)
+
+AWSCLOUD(aws) {
+
+    AMAZONS3(s3) {
+        BUCKET(site,www.insecurity.co)
+        BUCKET(logs,logs.insecurity.co)
+    }
+
+    AMAZONAPIGATEWAY(api)
+
+    AWSLAMBDA(lambda,addComment)
+
+    AMAZONDYNAMODB(dynamo) {
+        TABLE(comments,Comments)
+    }
+}
+
+user - browser
+
+browser -d-> site :**1a**
+site ~> logs :1a
+site -u-> browser :**1b**
+browser ..> comments :**2a**
+comments ..> browser :**2b**
+
+browser .r.> api :**3**
+
+api -d-> lambda :**4**
+
+lambda -> comments :**5**
+
+comments --> browser :**6**
+
+
+@enduml
