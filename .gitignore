@@ -4,5 +4,6 @@
 *.py
 *.png
 !/examples/*.png
+dist/
 .idea/
 *.sw[po]
