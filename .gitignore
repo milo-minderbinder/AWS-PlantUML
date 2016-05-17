@@ -1,8 +1,7 @@
-*.svg
-*.eps
-*.ai
-*.py
-*.png
-!/examples/*.png
+*.py[co]
+**/__pycache__/
+resources/*
+dist/**/*.png
+dist/test.puml
 .idea/
 *.sw[po]
