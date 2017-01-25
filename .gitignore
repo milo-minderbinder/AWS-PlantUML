@@ -1,4 +1,4 @@
-*.py[co]
+*.py[cod]
 **/__pycache__/
 resources/*
 dist/**/*.png
