@@ -17,13 +17,13 @@ PUML_JAR = os.path.join(SRC_DIR, 'plantuml.jar')
 class InheritingConfigParser(configparser.ConfigParser):
     def get(self, section, option, *, raw=False, vars=None, fallback=_UNSET):
         try:
-            return super(InheritingConfigParser).get(section, option, raw=raw, vars=vars, fallback=_UNSET)
+            return super().get(section, option, raw=raw, vars=vars, fallback=_UNSET)
         except (NoOptionError, NoSectionError) as e:
             parent_section = section.rpartition('.')[0]
             if parent_section:
                 try:
                     wildcard_section = '%s.' % parent_section
-                    return super(InheritingConfigParser).get(wildcard_section, option, raw=raw, vars=vars, fallback=_UNSET)
+                    return super().get(wildcard_section, option, raw=raw, vars=vars, fallback=_UNSET)
                 except (NoOptionError, NoSectionError) as e2:
                     return self.get(parent_section, option, raw=raw, vars=vars, fallback=fallback)
             if fallback is not _UNSET:
@@ -34,14 +34,13 @@ class InheritingConfigParser(configparser.ConfigParser):
 TEMPLATE = '''
 @startuml
 {sprite}
-
-skinparam {entity_type}<<{stereotype}>> {
+skinparam {entity_type}<<{stereotype}>> {{
     {skinparam}
-}
+}}
 
-skinparam {entity_type}<<{stereotype_long}>> {
+skinparam {entity_type}<<{stereotype_long}>> {{
     {skinparam}
-}
+}}
 
 !define {macro}(alias) AWS_ENTITY({entity_type},{color},{nickname},alias,{stereotype})
 
@@ -128,9 +127,9 @@ class PUML:
 
     @property
     def sprite(self):
-        size = self.conf.getint('AWSPUML', 'sprite_size', fallback=16)
+        size = self.conf.get('AWSPUML', 'sprite_size', fallback='16')
         shift = self.conf.getint('AWSPUML', 'sprite_shift', fallback=None)
-        ignore = self.conf.getint('AWSPUML', 'sprite_shift_ignore', fallback=None)
+        ignore = self.conf.get('AWSPUML', 'sprite_shift_ignore', fallback='0')
         cmd = ['java', '-jar', PUML_JAR, '-encodesprite',
                size,
                self.image_path]
@@ -216,7 +215,6 @@ def filter_duplicate_images(pumls):
 
 
 def create_test_puml(output_path, puml_files, host='localhost', port='8000'):
-    puml_files = sorted([os.path.relpath(p, output_path) for p in puml_files])
     test_puml = os.path.join(output_path, 'test.puml')
     print('Writing test puml: {}'.format(test_puml))
     with open(test_puml, 'w') as f:
@@ -224,7 +222,7 @@ def create_test_puml(output_path, puml_files, host='localhost', port='8000'):
         f.write('!define AWSPUML http://%s:%s\n' % (host, port))
         f.write('!includeurl AWSPUML/common.puml\n\n')
         for puml, puml_file in puml_files:
-            f.write('\'!includeurl AWSPUML/%s\n' % puml_file)
+            f.write('\'!includeurl AWSPUML/%s\n' % os.path.relpath(puml_file, output_path))
             f.write('\'{macro}({macro},{macro})\n\n'.format(
                 macro=puml.nickname.upper()))
         f.write('@enduml\n')
