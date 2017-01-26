@@ -201,10 +201,8 @@ def set_unique_names(pumls, expand=0):
         g = list(g)
         if len(g) == 1:
             g[0].unique_name = k
-            yield g[0]
         else:
-            for p in set_unique_names(g, expand=expand+1):
-                yield p
+            set_unique_names(g, expand=expand+1)
 
 
 def filter_duplicate_images(pumls):
@@ -245,6 +243,8 @@ def create_pumls(conf, icons_path, output_path, icon_ext='.png'):
     icons = find_images(icons_path, icon_ext)
     pumls = [PUML(p, conf) for p in icons]
     set_unique_names(filter_duplicate_images(pumls))
+    # for p in pumls:
+    #     print(p.namespaced_name)
     written_pumls = []
     for puml in pumls:
         written_pumls.append((puml, puml.write_puml(output_path)))
