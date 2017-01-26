@@ -33,22 +33,22 @@ class InheritingConfigParser(configparser.ConfigParser):
 
 TEMPLATE = '''
 @startuml
-{sprite}
-skinparam {entity_type}<<{stereotype}>> {{
-    {skinparam}
+{puml.sprite}
+skinparam {puml.entity_type}<<{puml.stereotype}>> {{
+    {puml.skinparam}
 }}
 
-skinparam {entity_type}<<{stereotype_long}>> {{
-    {skinparam}
+skinparam {puml.entity_type}<<{puml.unique_stereotype}>> {{
+    {puml.skinparam}
 }}
 
-!define {macro}(alias) AWS_ENTITY({entity_type},{color},{nickname},alias,{stereotype})
+!define {puml.macro}(alias) AWS_ENTITY({puml.entity_type},{puml.color},{puml.unique_name},alias,{puml.stereotype})
 
-!define {macro}(alias,label) AWS_ENTITY({entity_type},{color},{nickname},label,alias,{stereotype})
+!define {puml.macro}(alias,label) AWS_ENTITY({puml.entity_type},{puml.color},{puml.unique_name},label,alias,{puml.stereotype})
 
-!define {macro_long}(alias) AWS_ENTITY({entity_type},{color},{nickname},alias,{stereotype_long})
+!define {puml.unique_macro}(alias) AWS_ENTITY({puml.entity_type},{puml.color},{puml.unique_name},alias,{puml.unique_stereotype})
 
-!define {macro_long}(alias,label) AWS_ENTITY({entity_type},{color},{nickname},label,alias,{stereotype_long})
+!define {puml.unique_macro}(alias,label) AWS_ENTITY({puml.entity_type},{puml.color},{puml.unique_name},label,alias,{puml.unique_stereotype})
 @enduml
 '''
 
@@ -88,18 +88,30 @@ class PUML:
         return '{}.{}'.format('.'.join(self.categories), self.name)
 
     @property
-    def nickname(self):
+    def unique_name(self):
         if self._nickname is None:
             self._nickname = self.name
         return self._nickname
 
-    @nickname.setter
-    def nickname(self, value):
+    @unique_name.setter
+    def unique_name(self, value):
         self._nickname = value
 
-    def expand_name(self, levels=0):
-        levels = max(0, len(self.categories) - levels - 1)
-        return '_'.join(self.categories[levels:-1] + [self.name])
+    @property
+    def macro(self):
+        return self.name.upper()
+
+    @property
+    def unique_macro(self):
+        return self.unique_name.upper()
+
+    @property
+    def stereotype(self):
+        return self.name.replace('_', ' ')
+
+    @property
+    def unique_stereotype(self):
+        return self.unique_name.replace('_', ' ')
 
     @property
     def entity_type(self):
@@ -120,9 +132,9 @@ class PUML:
     @property
     def skinparam(self):
         if self._skinparam is None:
-            self._skinparam = '\n\t'.join(self.conf.get(self.namespaced_name,
-                                                        'skinparam',
-                                                        fallback='').splitlines())
+            self._skinparam = '\n\t'.join(
+                self.conf.get(self.namespaced_name, 'skinparam', fallback='')
+                    .splitlines())
         return self._skinparam
 
     @property
@@ -144,7 +156,7 @@ class PUML:
         if not shift:
             shift = 15 - int(darkest, base=16)
         lines[0] = re.sub(r'^(\s*sprite\s+\$)\w+(\s+\[\d+x\d+/\d+\]\s*\{\s*)$',
-                          r'\1{}\2'.format(self.nickname),
+                          r'\1{}\2'.format(self.unique_name),
                           lines[0],
                           re.I)
         result.append(lines[0])
@@ -159,21 +171,16 @@ class PUML:
         result.extend(lines[-3:])
         return '\n'.join(result)
 
+    def expand_name(self, levels=0):
+        levels = max(0, len(self.categories) - levels - 1)
+        return '_'.join(self.categories[levels:-1] + [self.name])
+
     def write_puml(self, dest_dir):
         dest_dir = os.path.join(os.path.abspath(dest_dir), *self.categories)
         if not os.path.isdir(dest_dir):
             os.makedirs(dest_dir)
         dest_file = os.path.join(dest_dir, '{}.puml'.format(self.name))
-        content = TEMPLATE.format(
-            sprite=self.sprite,
-            entity_type=self.entity_type,
-            stereotype=self.name.replace('_', ' '),
-            stereotype_long=self.nickname.replace('_', ' '),
-            skinparam=self.skinparam,
-            macro=self.name.upper(),
-            macro_long=self.nickname.upper(),
-            color=self.color,
-            nickname=self.nickname)
+        content = TEMPLATE.format(puml=self)
         print('Writing PUML file to: {}'.format(dest_file))
         with open(dest_file, 'w') as f:
             f.write(content)
@@ -188,15 +195,15 @@ def find_images(path, ext='.png'):
                 yield os.path.join(root, fname)
 
 
-def create_unique_nicknames(pumls, expand=0):
+def set_unique_names(pumls, expand=0):
     pumls = sorted(pumls, key=lambda p: p.expand_name(expand))
     for k, g in groupby(pumls, key=lambda p: p.expand_name(expand)):
         g = list(g)
         if len(g) == 1:
-            g[0].nickname = k
+            g[0].unique_name = k
             yield g[0]
         else:
-            for p in create_unique_nicknames(g, expand=expand+1):
+            for p in set_unique_names(g, expand=expand+1):
                 yield p
 
 
@@ -214,7 +221,7 @@ def filter_duplicate_images(pumls):
             yield g[0]
 
 
-def create_test_puml(output_path, puml_files, host='localhost', port='8000'):
+def create_test_puml(output_path, puml_files, host='localhost', port='8080'):
     test_puml = os.path.join(output_path, 'test.puml')
     print('Writing test puml: {}'.format(test_puml))
     with open(test_puml, 'w') as f:
@@ -222,9 +229,10 @@ def create_test_puml(output_path, puml_files, host='localhost', port='8000'):
         f.write('!define AWSPUML http://%s:%s\n' % (host, port))
         f.write('!includeurl AWSPUML/common.puml\n\n')
         for puml, puml_file in puml_files:
-            f.write('\'!includeurl AWSPUML/%s\n' % os.path.relpath(puml_file, output_path))
+            f.write('\'!includeurl AWSPUML/{}\n'.format(
+                os.path.relpath(puml_file, output_path)))
             f.write('\'{macro}({macro},{macro})\n\n'.format(
-                macro=puml.nickname.upper()))
+                macro=puml.unique_name.upper()))
         f.write('@enduml\n')
 
 
@@ -236,7 +244,7 @@ def create_pumls(conf, icons_path, output_path, icon_ext='.png'):
 
     icons = find_images(icons_path, icon_ext)
     pumls = [PUML(p, conf) for p in icons]
-    create_unique_nicknames(filter_duplicate_images(pumls))
+    set_unique_names(filter_duplicate_images(pumls))
     written_pumls = []
     for puml in pumls:
         written_pumls.append((puml, puml.write_puml(output_path)))
