@@ -1,6 +1,7 @@
 *.py[cod]
 **/__pycache__/
 resources/*
+test/*
 dist/**/*.png
 dist/test.puml
 .idea/
