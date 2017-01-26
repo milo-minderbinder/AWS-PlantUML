@@ -31,34 +31,36 @@ class InheritingConfigParser(configparser.ConfigParser):
             raise e
 
 
-TEMPLATE = '''
+PUML_TEMPLATE = '''
 @startuml
-{puml.sprite}
-skinparam {puml.entity_type}<<{puml.stereotype}>> {{
-    {puml.skinparam}
+{sprite}
+{stereotype_skinparam}
+{macros}
+@enduml'''.strip()
+
+STEREOTYPE_SKINPARAM_TEMPLATE = '''
+skinparam {entity_type}<<{stereotype}>> {{
+    {skinparam}
 }}
+'''.strip()
 
-skinparam {puml.entity_type}<<{puml.unique_stereotype}>> {{
-    {puml.skinparam}
-}}
+MACROS_TEMPLATE = '''
+!define {macro}(alias) AWS_ENTITY({entity_type},{color},{unique_name},alias,{stereotype})
 
-!define {puml.macro}(alias) AWS_ENTITY({puml.entity_type},{puml.color},{puml.unique_name},alias,{puml.stereotype})
-
-!define {puml.macro}(alias,label) AWS_ENTITY({puml.entity_type},{puml.color},{puml.unique_name},label,alias,{puml.stereotype})
-
-!define {puml.unique_macro}(alias) AWS_ENTITY({puml.entity_type},{puml.color},{puml.unique_name},alias,{puml.unique_stereotype})
-
-!define {puml.unique_macro}(alias,label) AWS_ENTITY({puml.entity_type},{puml.color},{puml.unique_name},label,alias,{puml.unique_stereotype})
-@enduml
+!define {macro}(alias,label) AWS_ENTITY({entity_type},{color},{unique_name},label,alias,{stereotype})
 '''
 
 
 class PUML:
-    def __init__(self, image_path, conf):
+    def __init__(self, image_path, output_root_dir, conf):
         self.conf = conf
         self.image_path = os.path.abspath(image_path)
+        self.output_root_dir = os.path.abspath(output_root_dir)
+        self._output_dir = None
         self._categorized_name = None
-        self._nickname = None
+        self._unique_name = None
+        self._macros = None
+        self._stereotype_skinparam = None
         self._sprite = None
         self._entity_type = None
         self._color = None
@@ -89,29 +91,63 @@ class PUML:
 
     @property
     def unique_name(self):
-        if self._nickname is None:
-            self._nickname = self.name
-        return self._nickname
+        if self._unique_name is None:
+            self._unique_name = self.name
+        return self._unique_name
 
     @unique_name.setter
     def unique_name(self, value):
-        self._nickname = value
+        self._unique_name = value
+
+    def _macro(self, unique=True):
+        name = self.name
+        if not unique:
+            name = self.unique_name
+        return name.upper()
+
+    def _stereotype(self, unique=True):
+        name = self.name
+        if not unique:
+            name = self.unique_name
+        if name.endswith('_LARGE'):
+            name = '*{}*'.format(name[:-6])
+        return name.replace('_', ' ')
 
     @property
-    def macro(self):
-        return self.name.upper()
+    def macros(self):
+        if self._macros is None:
+            self._macros = MACROS_TEMPLATE.format(
+                macro=self._macro(),
+                entity_type=self.entity_type,
+                color=self.color,
+                unique_name=self.unique_name,
+                stereotype=self._stereotype())
+            if self.name != self.unique_name:
+                self._macros += MACROS_TEMPLATE.format(
+                    macro=self._macro(False),
+                    entity_type=self.entity_type,
+                    color=self.color,
+                    unique_name=self.unique_name,
+                    stereotype=self._stereotype(False))
+        return self._macros
 
     @property
-    def unique_macro(self):
-        return self.unique_name.upper()
-
-    @property
-    def stereotype(self):
-        return self.name.replace('_', ' ')
-
-    @property
-    def unique_stereotype(self):
-        return self.unique_name.replace('_', ' ')
+    def stereotype_skinparam(self):
+        if self._stereotype_skinparam is None:
+            self._stereotype_skinparam = ''
+            if self.skinparam:
+                self._stereotype_skinparam = \
+                    STEREOTYPE_SKINPARAM_TEMPLATE.format(
+                        entity_type=self.entity_type,
+                        stereotype=self._stereotype(),
+                        skinparam=self.skinparam)
+                if self.name != self.unique_name:
+                    self._stereotype_skinparam += \
+                        STEREOTYPE_SKINPARAM_TEMPLATE.format(
+                            entity_type=self.entity_type,
+                            stereotype=self._stereotype(False),
+                            skinparam=self.skinparam)
+        return self._stereotype_skinparam
 
     @property
     def entity_type(self):
@@ -138,15 +174,51 @@ class PUML:
         return self._skinparam
 
     @property
+    def output_dir(self):
+        if self._output_dir is None:
+            self._output_dir = os.path.join(self.output_root_dir,
+                                            *self.categories)
+        return self._output_dir
+
+    @property
+    def sprite_path(self):
+        return os.path.join(self.output_dir, '{}-sprite.puml'.format(self.name))
+
+    @property
+    def puml_path(self):
+        return os.path.join(self.output_dir, '{}.puml'.format(self.name))
+
+    @property
     def sprite(self):
-        size = self.conf.get('AWSPUML', 'sprite_size', fallback='16')
-        shift = self.conf.getint('AWSPUML', 'sprite_shift', fallback=None)
-        ignore = self.conf.get('AWSPUML', 'sprite_shift_ignore', fallback='0')
+        if self._sprite is None:
+            force_regen = self.conf.getboolean('AWSPUML', 'sprite.force_regen',
+                                               fallback=False)
+            if os.path.isfile(self.sprite_path) and not force_regen:
+                print('Reading from existing sprite file: {}'.format(
+                    self.sprite_path))
+                if not os.path.isdir(self.output_dir):
+                    os.makedirs(self.output_dir)
+                with open(self.sprite_path, 'r') as f:
+                    lines = f.readlines()
+                self._sprite = ''.join(lines[1:-3])
+            else:
+                self._sprite = self.generate_sprite()
+                print('Writing sprite file: {}'.format(self.sprite_path))
+                if not os.path.isdir(self.output_dir):
+                    os.makedirs(self.output_dir)
+                with open(self.sprite_path, 'w') as f:
+                    f.write('@startuml\n{}\n@enduml'.format(self._sprite))
+        return self._sprite
+
+    def generate_sprite(self):
+        size = self.conf.get('AWSPUML', 'sprite.size', fallback='16')
+        shift = self.conf.getint('AWSPUML', 'sprite.shift', fallback=0)
+        ignore = self.conf.get('AWSPUML', 'sprite.shift_ignore', fallback='0')
         cmd = ['java', '-jar', PUML_JAR, '-encodesprite',
                size,
                self.image_path]
         output = subprocess.check_output(cmd, universal_newlines=True)
-        result = []
+        transparency = []
         lines = output.split('\n')
         darkest = '0'
         # get 'darkest' pixel, but ignore 'F' since it will be flipped
@@ -156,10 +228,10 @@ class PUML:
         if not shift:
             shift = 15 - int(darkest, base=16)
         lines[0] = re.sub(r'^(\s*sprite\s+\$)\w+(\s+\[\d+x\d+/\d+\]\s*\{\s*)$',
-                          r'\1{}\2'.format(self.unique_name),
+                          r'\1{}\2'.format(self.name),
                           lines[0],
                           re.I)
-        result.append(lines[0])
+        transparency.append(lines[0])
         for line in lines[1:-3]:
             new_line = ''
             for c in line.upper().replace('F', '0'):
@@ -167,28 +239,33 @@ class PUML:
                     # shift up to 15/F, convert to hex and strip leading '0x'
                     c = hex(min(15, shift + int(c, base=16))).upper()[-1]
                 new_line += c
-            result.append(new_line)
-        result.extend(lines[-3:])
-        return '\n'.join(result)
+            transparency.append(new_line)
+        transparency.extend(lines[-3:])
+        sprite = '\n'.join(transparency)
+        if self.name != self.unique_name:
+            transparency[0] = transparency[0].replace(self.name,
+                                                      self.unique_name, 1)
+            sprite += '\n'.join(transparency)
+        return sprite
 
     def expand_name(self, levels=0):
         levels = max(0, len(self.categories) - levels - 1)
         return '_'.join(self.categories[levels:-1] + [self.name])
 
-    def write_puml(self, dest_dir):
-        dest_dir = os.path.join(os.path.abspath(dest_dir), *self.categories)
-        if not os.path.isdir(dest_dir):
-            os.makedirs(dest_dir)
-        dest_file = os.path.join(dest_dir, '{}.puml'.format(self.name))
-        content = TEMPLATE.format(puml=self)
-        print('Writing PUML file to: {}'.format(dest_file))
-        with open(dest_file, 'w') as f:
+    def write_puml(self):
+        content = PUML_TEMPLATE.format(
+            sprite=self.sprite,
+            stereotype_skinparam=self.stereotype_skinparam,
+            macros=self.macros)
+        if not os.path.isdir(self.output_dir):
+            os.makedirs(self.output_dir)
+        print('Writing PUML file to: {}'.format(self.puml_path))
+        with open(self.puml_path, 'w') as f:
             f.write(content)
-        return dest_file
 
 
 def find_images(path, ext='.png'):
-    path = os.path.realpath(path)
+    path = os.path.abspath(path)
     for root, dirs, files in os.walk(path):
         for fname in files:
             if fname.lower().endswith(ext):
@@ -219,18 +296,19 @@ def filter_duplicate_images(pumls):
             yield g[0]
 
 
-def create_test_puml(output_path, puml_files, host='localhost', port='8080'):
+def create_test_puml(output_path, pumls, host='localhost', port='8080'):
     test_puml = os.path.join(output_path, 'test.puml')
     print('Writing test puml: {}'.format(test_puml))
     with open(test_puml, 'w') as f:
         f.write('@startuml\n')
         f.write('!define AWSPUML http://%s:%s\n' % (host, port))
         f.write('!includeurl AWSPUML/common.puml\n\n')
-        for puml, puml_file in puml_files:
+        for puml in pumls:
             f.write('\'!includeurl AWSPUML/{}\n'.format(
-                os.path.relpath(puml_file, output_path)))
-            f.write('\'{macro}({macro},{macro})\n\n'.format(
-                macro=puml.unique_name.upper()))
+                os.path.relpath(puml.puml_path, output_path)))
+            f.write('\'{macro}({name},{name})\n\n'.format(
+                macro=puml.unique_name.upper(),
+                name=puml.name))
         f.write('@enduml\n')
 
 
@@ -241,16 +319,13 @@ def create_pumls(conf, icons_path, output_path, icon_ext='.png'):
     output_path = os.path.abspath(output_path)
 
     icons = find_images(icons_path, icon_ext)
-    pumls = [PUML(p, conf) for p in icons]
+    pumls = [PUML(p, output_path, conf) for p in icons]
     set_unique_names(filter_duplicate_images(pumls))
-    # for p in pumls:
-    #     print(p.namespaced_name)
-    written_pumls = []
     for puml in pumls:
-        written_pumls.append((puml, puml.write_puml(output_path)))
+        puml.write_puml()
     shutil.copy(os.path.join(SRC_DIR, 'common.puml'), output_path)
-    if conf.getboolean('AWSPUML', 'debug'):
-        create_test_puml(output_path, written_pumls)
+    if conf.getboolean('AWSPUML', 'debug', fallback=False):
+        create_test_puml(output_path, pumls)
 
 
 if __name__ == '__main__':
@@ -274,4 +349,3 @@ if __name__ == '__main__':
     create_pumls(config, args.icons_path, args.output)
 
     print('done!')
-
