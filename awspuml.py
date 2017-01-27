@@ -1,12 +1,12 @@
-import os
-import os.path
-import shutil
 import argparse
-import subprocess
 import configparser
+import os.path
+import re
+import shutil
+import subprocess
 from configparser import _UNSET, NoOptionError, NoSectionError
+from hashlib import sha1
 from itertools import groupby
-
 
 SRC_DIR = os.path.realpath(os.path.dirname(__file__))
 CONFIG_FILE = os.path.join(SRC_DIR, 'awspuml.ini')
@@ -31,184 +31,301 @@ class InheritingConfigParser(configparser.ConfigParser):
             raise e
 
 
-def find_icon_images(path, ext='.png'):
-    path = os.path.realpath(path)
+PUML_TEMPLATE = '''
+@startuml
+{sprite}
+{stereotype_skinparam}
+{macros}
+@enduml'''.strip()
+
+STEREOTYPE_SKINPARAM_TEMPLATE = '''
+skinparam {entity_type}<<{stereotype}>> {{
+    {skinparam}
+}}
+'''.strip()
+
+MACROS_TEMPLATE = '''
+!define {macro}(alias) AWS_ENTITY({entity_type},{color},{unique_name},alias,{stereotype})
+
+!define {macro}(alias,label) AWS_ENTITY({entity_type},{color},{unique_name},label,alias,{stereotype})
+'''
+
+
+class PUML:
+    def __init__(self, image_path, output_root_dir, conf):
+        self.conf = conf
+        self.image_path = os.path.abspath(image_path)
+        self.output_root_dir = os.path.abspath(output_root_dir)
+        self._output_dir = None
+        self._categorized_name = None
+        self._unique_name = None
+        self._macros = None
+        self._stereotype_skinparam = None
+        self._sprite = None
+        self._entity_type = None
+        self._color = None
+        self._skinparam = None
+
+    @property
+    def categorized_name(self):
+        if self._categorized_name is None:
+            basename = os.path.splitext(os.path.basename(self.image_path))[0]
+            parts = [re.sub(r'[^\w]', '_', p) for p in basename.split('_')]
+            if parts[-1] == 'LARGE':
+                self._categorized_name = parts[:-1], '_'.join(parts[-2:])
+            else:
+                self._categorized_name = parts, parts[-1]
+        return self._categorized_name
+
+    @property
+    def categories(self):
+        return self.categorized_name[0]
+
+    @property
+    def name(self):
+        return self.categorized_name[1]
+
+    @property
+    def namespaced_name(self):
+        return '{}.{}'.format('.'.join(self.categories), self.name)
+
+    @property
+    def unique_name(self):
+        if self._unique_name is None:
+            self._unique_name = self.name
+        return self._unique_name
+
+    @unique_name.setter
+    def unique_name(self, value):
+        self._unique_name = value
+
+    def _macro(self, unique=True):
+        name = self.name
+        if not unique:
+            name = self.unique_name
+        return name.upper()
+
+    def _stereotype(self, unique=True):
+        name = self.name
+        if not unique:
+            name = self.unique_name
+        if name.endswith('_LARGE'):
+            name = '*{}*'.format(name[:-6])
+        return name.replace('_', ' ')
+
+    @property
+    def macros(self):
+        if self._macros is None:
+            self._macros = MACROS_TEMPLATE.format(
+                macro=self._macro(),
+                entity_type=self.entity_type,
+                color=self.color,
+                unique_name=self.unique_name,
+                stereotype=self._stereotype())
+            if self.name != self.unique_name:
+                self._macros += MACROS_TEMPLATE.format(
+                    macro=self._macro(False),
+                    entity_type=self.entity_type,
+                    color=self.color,
+                    unique_name=self.unique_name,
+                    stereotype=self._stereotype(False))
+        return self._macros
+
+    @property
+    def stereotype_skinparam(self):
+        if self._stereotype_skinparam is None:
+            self._stereotype_skinparam = ''
+            if self.skinparam:
+                self._stereotype_skinparam = \
+                    STEREOTYPE_SKINPARAM_TEMPLATE.format(
+                        entity_type=self.entity_type,
+                        stereotype=self._stereotype(),
+                        skinparam=self.skinparam)
+                if self.name != self.unique_name:
+                    self._stereotype_skinparam += \
+                        STEREOTYPE_SKINPARAM_TEMPLATE.format(
+                            entity_type=self.entity_type,
+                            stereotype=self._stereotype(False),
+                            skinparam=self.skinparam)
+        return self._stereotype_skinparam
+
+    @property
+    def entity_type(self):
+        if self._entity_type is None:
+            self._entity_type = self.conf.get(self.namespaced_name,
+                                              'entity_type',
+                                              fallback='component')
+        return self._entity_type
+
+    @property
+    def color(self):
+        if self._color is None:
+            self._color = self.conf.get(self.namespaced_name,
+                                        'color',
+                                        fallback='black')
+        return self._color
+
+    @property
+    def skinparam(self):
+        if self._skinparam is None:
+            self._skinparam = '\n\t'.join(
+                self.conf.get(self.namespaced_name, 'skinparam', fallback='')
+                    .splitlines())
+        return self._skinparam
+
+    @property
+    def output_dir(self):
+        if self._output_dir is None:
+            self._output_dir = os.path.join(self.output_root_dir,
+                                            *self.categories)
+        return self._output_dir
+
+    @property
+    def sprite_path(self):
+        return os.path.join(self.output_dir, '{}-sprite.puml'.format(self.name))
+
+    @property
+    def puml_path(self):
+        return os.path.join(self.output_dir, '{}.puml'.format(self.name))
+
+    @property
+    def sprite(self):
+        if self._sprite is None:
+            force_regen = self.conf.getboolean('AWSPUML', 'sprite.force_regen',
+                                               fallback=False)
+            if os.path.isfile(self.sprite_path) and not force_regen:
+                print('Reading from existing sprite file: {}'.format(
+                    self.sprite_path))
+                if not os.path.isdir(self.output_dir):
+                    os.makedirs(self.output_dir)
+                with open(self.sprite_path, 'r') as f:
+                    lines = f.readlines()
+                self._sprite = ''.join(lines[1:-3])
+            else:
+                self._sprite = self.generate_sprite()
+                print('Writing sprite file: {}'.format(self.sprite_path))
+                if not os.path.isdir(self.output_dir):
+                    os.makedirs(self.output_dir)
+                with open(self.sprite_path, 'w') as f:
+                    f.write('@startuml\n{}\n@enduml'.format(self._sprite))
+        return self._sprite
+
+    def generate_sprite(self):
+        size = self.conf.get('AWSPUML', 'sprite.size', fallback='16')
+        shift = self.conf.getint('AWSPUML', 'sprite.shift', fallback=0)
+        ignore = self.conf.get('AWSPUML', 'sprite.shift_ignore', fallback='0')
+        cmd = ['java', '-jar', PUML_JAR, '-encodesprite',
+               size,
+               self.image_path]
+        output = subprocess.check_output(cmd, universal_newlines=True)
+        transparency = []
+        lines = output.split('\n')
+        darkest = '0'
+        # get 'darkest' pixel, but ignore 'F' since it will be flipped
+        for line in lines[1:-3]:
+            darkest = max(darkest, max(line.upper(),
+                                       key=lambda v: v if v != 'F' else '0'))
+        if not shift:
+            shift = 15 - int(darkest, base=16)
+        lines[0] = re.sub(r'^(\s*sprite\s+\$)\w+(\s+\[\d+x\d+/\d+\]\s*\{\s*)$',
+                          r'\1{}\2'.format(self.name),
+                          lines[0],
+                          re.I)
+        transparency.append(lines[0])
+        for line in lines[1:-3]:
+            new_line = ''
+            for c in line.upper().replace('F', '0'):
+                if c not in ignore:
+                    # shift up to 15/F, convert to hex and strip leading '0x'
+                    c = hex(min(15, shift + int(c, base=16))).upper()[-1]
+                new_line += c
+            transparency.append(new_line)
+        transparency.extend(lines[-3:])
+        sprite = '\n'.join(transparency)
+        if self.name != self.unique_name:
+            transparency[0] = transparency[0].replace(self.name,
+                                                      self.unique_name, 1)
+            sprite += '\n'.join(transparency)
+        return sprite
+
+    def expand_name(self, levels=0):
+        levels = max(0, len(self.categories) - levels - 1)
+        return '_'.join(self.categories[levels:-1] + [self.name])
+
+    def write_puml(self):
+        content = PUML_TEMPLATE.format(
+            sprite=self.sprite,
+            stereotype_skinparam=self.stereotype_skinparam,
+            macros=self.macros)
+        if not os.path.isdir(self.output_dir):
+            os.makedirs(self.output_dir)
+        print('Writing PUML file to: {}'.format(self.puml_path))
+        with open(self.puml_path, 'w') as f:
+            f.write(content)
+
+
+def find_images(path, ext='.png'):
+    path = os.path.abspath(path)
     for root, dirs, files in os.walk(path):
         for fname in files:
-            if os.path.splitext(fname.lower())[1] == ext:
+            if fname.lower().endswith(ext):
                 yield os.path.join(root, fname)
 
 
-def make_sprite(path, size='16'):
-    cmd = ['java', '-jar', PUML_JAR, '-encodesprite', size, path]
-    return subprocess.check_output(cmd, universal_newlines=True)
-
-
-def make_transparent(sprite, shift=None, ignore='0'):
-    result = []
-    lines = sprite.split('\n')
-    darkest = '0'
-    # get 'darkest' pixel, but ignore 'F' since it will be flipped
-    for line in lines[1:-3]:
-        darkest = max(darkest,
-                      max(line.upper(), key=lambda v: v if v != 'F' else '0'))
-    if shift is None:
-        shift = 15 - int(darkest, base=16)
-    result.append(lines[0])
-    for line in lines[1:-3]:
-        new_line = ''
-        for c in line.upper().replace('F', '0'):
-            if c not in ignore:
-                # shift up to 15/F, convert to hex and strip leading '0x'
-                c = hex(min(15, shift + int(c, base=16))).upper()[-1]
-            new_line += c
-        result.append(new_line)
-    result.extend(lines[-3:])
-    return result
-
-
-def create_puml(icon_path, icon_name, conf):
-    file_name = str(os.path.splitext(os.path.basename(icon_path))[0])
-    sprite = make_sprite(icon_path)
-    output = make_transparent(sprite)
-
-    macro_name = file_name.upper()
-    entity_type = conf.get(icon_name, 'entity_type', fallback='component')
-    color = conf.get(icon_name, 'color', fallback='black')
-    # Title-case lower-case words that are not proper nouns (e.g. AWSIoT)
-    stereotype = ' '.join([(w.title() if w.islower() else w)
-                           for w in file_name.split('_')])
-
-    skinparam = conf.get(icon_name, 'skinparam', fallback=None)
-    if skinparam:
-        output.append('skinparam %s<<%s>> {' % (entity_type, stereotype))
-        output.extend(['\t%s' % s for s in skinparam.splitlines()])
-        output.append('}\n')
-
-    output.append('!define %s(alias) AWS_ENTITY(%s,%s,%s,alias,%s)\n' % (
-        macro_name,
-        entity_type,
-        color,
-        file_name,
-        stereotype
-    ))
-    output.append(
-        '!define %s(alias,label) AWS_ENTITY(%s,%s,%s,label,alias,%s)\n' % (
-            macro_name,
-            entity_type,
-            color,
-            file_name,
-            stereotype
-        ))
-
-    puml_file = '%s.puml' % os.path.splitext(icon_path)[0]
-    print('Writing %s' % puml_file)
-    with open(puml_file, 'w') as f:
-        f.write('@startuml\n')
-        for line in output:
-            f.write('%s\n' % line)
-        f.write('@enduml\n')
-
-
-def create_structured_path(orig_path, dest, sep='_'):
-    icon_path = os.path.join(dest,
-                             *(os.path.basename(orig_path).split(sep=sep)))
-    icon_name = os.path.basename(icon_path).replace('-', '_')
-    return os.path.join(os.path.dirname(icon_path), icon_name)
-
-
-def rename_duplicates(icon_paths):
-
-    def basename_sort(icon_path):
-        return os.path.basename(icon_path[1])
-
-    icon_paths = sorted(icon_paths, key=basename_sort)
-    for k, g in groupby(icon_paths, basename_sort):
-        new_paths = list(g)
-        if len(new_paths) > 1:
-            print('Renaming duplicated names: %s' % k)
-            for np in new_paths:
-                dir_name = os.path.dirname(np[1])
-                deduped_name = '%s_%s' % (os.path.basename(dir_name),
-                                          os.path.basename(np[1]))
-                yield (np[0], os.path.join(dir_name, deduped_name))
+def set_unique_names(pumls, expand=0):
+    pumls = sorted(pumls, key=lambda p: p.expand_name(expand))
+    for k, g in groupby(pumls, key=lambda p: p.expand_name(expand)):
+        g = list(g)
+        if len(g) == 1:
+            g[0].unique_name = k
         else:
-            yield new_paths[0]
+            set_unique_names(g, expand=expand+1)
 
 
-def get_parent_dir(path, rel_path=None):
-    if rel_path:
-        path = os.path.relpath(path, rel_path)
-    dirname, basename = os.path.split(path)
-    if not basename:
-        return path
-    elif not dirname:
-        return basename
-    else:
-        return get_parent_dir(dirname)
+def filter_duplicate_images(pumls):
+    def shasum(puml):
+        h = sha1()
+        with open(puml.image_path, 'rb') as f:
+            h.update(f.read())
+        return h.hexdigest()
+
+    pumls = sorted(pumls, key=shasum)
+    for k, g in groupby(pumls, key=shasum):
+        g = list(g)
+        if len(g) == 1:
+            yield g[0]
 
 
-def separate_path(path):
-    parts = []
-    dirname, basename = os.path.split(path)
-    while dirname and basename:
-        parts.insert(0, basename)
-        dirname, basename = os.path.split(dirname)
-    if basename:
-        parts.insert(0, basename)
-    elif dirname:
-        parts.insert(0, dirname)
-    return parts
-
-
-def get_icon_name(path, rel_path=None):
-    if rel_path:
-        path = os.path.relpath(path, rel_path)
-    path = os.path.splitext(path)[0]
-    # Handle files renamed with rename_duplicates()
-    dirname, basename = os.path.split(path)
-    prefix, sep, suffix = basename.partition('_')
-    if suffix and prefix == os.path.basename(dirname):
-        path = os.path.join(dirname, suffix)
-    return '.'.join(separate_path(path))
-
-
-def create_test_puml(dest, icon_paths, host='localhost', port='8000'):
-    icon_paths = sorted([os.path.splitext(os.path.relpath(d, dest))[0]
-                         for s, d in icon_paths])
-    test_puml = os.path.join(dest, 'test.puml')
-    print('Writing test puml: %s' % test_puml)
+def create_test_puml(output_path, pumls, host='localhost', port='8080'):
+    test_puml = os.path.join(output_path, 'test.puml')
+    print('Writing test puml: {}'.format(test_puml))
     with open(test_puml, 'w') as f:
         f.write('@startuml\n')
         f.write('!define AWSPUML http://%s:%s\n' % (host, port))
         f.write('!includeurl AWSPUML/common.puml\n\n')
-        for icon_path in icon_paths:
-            parts = separate_path(icon_path)
-            name = parts[-1]
-            puml_path = '%s.puml' % '/'.join(parts)
-            f.write('\'!includeurl AWSPUML/%s\n' % puml_path)
-            f.write('\'%s(%s,%s)\n\n' % (name.upper(), name, name))
+        for puml in pumls:
+            f.write('\'!includeurl AWSPUML/{}\n'.format(
+                os.path.relpath(puml.puml_path, output_path)))
+            f.write('\'{macro}({name},{name})\n\n'.format(
+                macro=puml.unique_name.upper(),
+                name=puml.name))
         f.write('@enduml\n')
 
 
-def create_pumls(src, dest, conf, ext='.png', sep='_'):
-    src = os.path.realpath(src)
-    dest = os.path.realpath(dest)
-    icon_paths = [(op, create_structured_path(op, dest, sep)) for op in
-                  find_icon_images(src, ext)]
-    icon_paths = list(rename_duplicates(icon_paths))
-    for icon_src, icon_dest in icon_paths:
-        dest_dir = os.path.dirname(icon_dest)
-        if not os.path.isdir(dest_dir):
-            print('Creating directory: %s' % dest_dir)
-            os.makedirs(dest_dir)
-        print('Copying icon to: %s' % icon_dest)
-        shutil.copy(icon_src, icon_dest)
-        icon_name = get_icon_name(icon_dest, rel_path=dest)
-        create_puml(icon_dest, icon_name, conf)
-    shutil.copy(os.path.join(SRC_DIR, 'common.puml'), dest)
-    if conf.getboolean('AWSPUML', 'debug'):
-        create_test_puml(dest, icon_paths)
+def create_pumls(conf, icons_path, output_path, icon_ext='.png'):
+    icons_path = os.path.abspath(icons_path)
+    if not os.path.isdir(icons_path):
+        raise Exception('Invalid AWS Icons path: %s' % icons_path)
+    output_path = os.path.abspath(output_path)
+
+    icons = find_images(icons_path, icon_ext)
+    pumls = [PUML(p, output_path, conf) for p in icons]
+    set_unique_names(filter_duplicate_images(pumls))
+    for puml in pumls:
+        puml.write_puml()
+    shutil.copy(os.path.join(SRC_DIR, 'common.puml'), output_path)
+    if conf.getboolean('AWSPUML', 'debug', fallback=False):
+        create_test_puml(output_path, pumls)
 
 
 if __name__ == '__main__':
@@ -225,14 +342,10 @@ if __name__ == '__main__':
                         help='Path to AWS Simple Icons directory')
     args = parser.parse_args()
 
-    icons_path = os.path.realpath(args.icons_path)
-    if not os.path.isdir(icons_path):
-        raise Exception('Invalid path: %s' % icons_path)
-
     config = InheritingConfigParser(
         interpolation=configparser.ExtendedInterpolation())
     config.read(args.config)
 
-    output_path = os.path.realpath(args.output)
-    print('Writing output to: %s' % output_path)
-    create_pumls(icons_path, output_path, config)
+    create_pumls(config, args.icons_path, args.output)
+
+    print('done!')
