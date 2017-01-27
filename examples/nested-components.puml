@@ -1,10 +1,10 @@
 @startuml
 
-!define AWSPUML http://localhost:8000
+!define AWSPUML https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/17-1-6/dist
 
 !includeurl AWSPUML/common.puml
-!includeurl AWSPUML/Storage-Content-Delivery/AmazonS3.puml
-!includeurl AWSPUML/Storage-Content-Delivery/AmazonS3/bucket.puml
+!includeurl AWSPUML/Storage/AmazonS3/AmazonS3.puml
+!includeurl AWSPUML/Storage/AmazonS3/bucket/bucket.puml
 
 
 AMAZONS3(s3) {
