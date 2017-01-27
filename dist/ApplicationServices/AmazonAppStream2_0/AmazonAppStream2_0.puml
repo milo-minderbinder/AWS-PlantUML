@@ -175,12 +175,12 @@ sprite $ApplicationServices_AmazonAppStream2_0 [70x84/16] {
 
 
 
-!define AMAZONAPPSTREAM2_0(alias) AWS_ENTITY(component,black,ApplicationServices_AmazonAppStream2_0,alias,AmazonAppStream2 0)
+!define AMAZONAPPSTREAM2_0(alias) AWS_ENTITY(component,#D9A842,ApplicationServices_AmazonAppStream2_0,alias,AmazonAppStream2 0)
 
-!define AMAZONAPPSTREAM2_0(alias,label) AWS_ENTITY(component,black,ApplicationServices_AmazonAppStream2_0,label,alias,AmazonAppStream2 0)
+!define AMAZONAPPSTREAM2_0(alias,label) AWS_ENTITY(component,#D9A842,ApplicationServices_AmazonAppStream2_0,label,alias,AmazonAppStream2 0)
 
-!define APPLICATIONSERVICES_AMAZONAPPSTREAM2_0(alias) AWS_ENTITY(component,black,ApplicationServices_AmazonAppStream2_0,alias,ApplicationServices AmazonAppStream2 0)
+!define APPLICATIONSERVICES_AMAZONAPPSTREAM2_0(alias) AWS_ENTITY(component,#D9A842,ApplicationServices_AmazonAppStream2_0,alias,ApplicationServices AmazonAppStream2 0)
 
-!define APPLICATIONSERVICES_AMAZONAPPSTREAM2_0(alias,label) AWS_ENTITY(component,black,ApplicationServices_AmazonAppStream2_0,label,alias,ApplicationServices AmazonAppStream2 0)
+!define APPLICATIONSERVICES_AMAZONAPPSTREAM2_0(alias,label) AWS_ENTITY(component,#D9A842,ApplicationServices_AmazonAppStream2_0,label,alias,ApplicationServices AmazonAppStream2 0)
 
 @enduml

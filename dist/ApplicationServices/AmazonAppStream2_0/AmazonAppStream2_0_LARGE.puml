@@ -831,12 +831,12 @@ sprite $ApplicationServices_AmazonAppStream2_0_LARGE [342x412/16] {
 
 
 
-!define AMAZONAPPSTREAM2_0_LARGE(alias) AWS_ENTITY(component,black,ApplicationServices_AmazonAppStream2_0_LARGE,alias,*AmazonAppStream2 0*)
+!define AMAZONAPPSTREAM2_0_LARGE(alias) AWS_ENTITY(component,#D9A842,ApplicationServices_AmazonAppStream2_0_LARGE,alias,*AmazonAppStream2 0*)
 
-!define AMAZONAPPSTREAM2_0_LARGE(alias,label) AWS_ENTITY(component,black,ApplicationServices_AmazonAppStream2_0_LARGE,label,alias,*AmazonAppStream2 0*)
+!define AMAZONAPPSTREAM2_0_LARGE(alias,label) AWS_ENTITY(component,#D9A842,ApplicationServices_AmazonAppStream2_0_LARGE,label,alias,*AmazonAppStream2 0*)
 
-!define APPLICATIONSERVICES_AMAZONAPPSTREAM2_0_LARGE(alias) AWS_ENTITY(component,black,ApplicationServices_AmazonAppStream2_0_LARGE,alias,*ApplicationServices AmazonAppStream2 0*)
+!define APPLICATIONSERVICES_AMAZONAPPSTREAM2_0_LARGE(alias) AWS_ENTITY(component,#D9A842,ApplicationServices_AmazonAppStream2_0_LARGE,alias,*ApplicationServices AmazonAppStream2 0*)
 
-!define APPLICATIONSERVICES_AMAZONAPPSTREAM2_0_LARGE(alias,label) AWS_ENTITY(component,black,ApplicationServices_AmazonAppStream2_0_LARGE,label,alias,*ApplicationServices AmazonAppStream2 0*)
+!define APPLICATIONSERVICES_AMAZONAPPSTREAM2_0_LARGE(alias,label) AWS_ENTITY(component,#D9A842,ApplicationServices_AmazonAppStream2_0_LARGE,label,alias,*ApplicationServices AmazonAppStream2 0*)
 
 @enduml

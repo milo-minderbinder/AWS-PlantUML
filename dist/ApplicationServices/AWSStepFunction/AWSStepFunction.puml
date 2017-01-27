@@ -87,8 +87,8 @@ DDDDA9999BDDDDDC9999999ADDDDDDDDDC9999999999999999999999999999999999
 
 
 
-!define AWSSTEPFUNCTION(alias) AWS_ENTITY(component,black,AWSStepFunction,alias,AWSStepFunction)
+!define AWSSTEPFUNCTION(alias) AWS_ENTITY(component,#D9A842,AWSStepFunction,alias,AWSStepFunction)
 
-!define AWSSTEPFUNCTION(alias,label) AWS_ENTITY(component,black,AWSStepFunction,label,alias,AWSStepFunction)
+!define AWSSTEPFUNCTION(alias,label) AWS_ENTITY(component,#D9A842,AWSStepFunction,label,alias,AWSStepFunction)
 
 @enduml

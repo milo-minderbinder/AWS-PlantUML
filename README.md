@@ -12,19 +12,19 @@ If you want to tweak the basic representation of AWS-PlantUML entities, or you d
 
 Otherwise, you can link directly to the file in this repo with:
 
-    !includeurl https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/16-2-22/dist/common.puml
+    !includeurl https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/17-1-6/dist/common.puml
 
 After the `common.puml` is added, you can then add any additional `.puml` files from AWS-PlantUML to import the specific sprites, macros, and other definitions you need. Sometimes it's helpful to define a constant pointing to the `dist` folder of the AWS PlantUML version you're using, to make switching versions and hosts easier.
 
-    !define AWSPUML https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/16-2-22/dist
+    !define AWSPUML https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/17-1-6/dist
     !includeurl AWSPUML/common.puml
-    !includeurl AWSPUML/Storage-Content-Delivery/AmazonS3.puml
-    !includeurl AWSPUML/Storage-Content-Delivery/AmazonS3/bucket.puml
+    !includeurl AWSPUML/Storage/AmazonS3/AmazonS3.puml
+    !includeurl AWSPUML/Storage-Content-Delivery/AmazonS3/bucket/bucket.puml
 
 Macro definitions for components, like S3 and S3 Buckets, will take an alias as the first parameter, and a label as an optional second parameter:
 
     AMAZONS3(s3_internal)
-    AMAZONS3(s3_partner,Vendor's S3)
+    AMAZONS3(s3_partner,"Vendor's S3")
     s3_internal <-- s3_partner
 
 ![simple example](examples/simple-s3.png)
@@ -42,21 +42,22 @@ You can also nest components inside others using enclosures:
 Before you know it, you'll be creating nice, clean diagrams for your AWS applications:
 
     @startuml
-    !define AWSPUML https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/16-2-22/dist
+    !define AWSPUML https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/17-1-6/dist
 
     !includeurl AWSPUML/common.puml
-    !includeurl AWSPUML/Application-Services/AmazonAPIGateway.puml
-    !includeurl AWSPUML/Compute/AWSLambda.puml
-    !includeurl AWSPUML/Database/AmazonDynamoDB.puml
-    !includeurl AWSPUML/Database/AmazonDynamoDB/table.puml
-    !includeurl AWSPUML/General/AWScloud.puml
-    !includeurl AWSPUML/General/client.puml
-    !includeurl AWSPUML/General/user.puml
-    !includeurl AWSPUML/Storage-Content-Delivery/AmazonS3.puml
-    !includeurl AWSPUML/Storage-Content-Delivery/AmazonS3/bucket.puml
+    !includeurl AWSPUML/ApplicationServices/AmazonAPIGateway/AmazonAPIGateway.puml
+    !includeurl AWSPUML/Compute/AWSLambda/AWSLambda.puml
+    !includeurl AWSPUML/Database/AmazonDynamoDB/AmazonDynamoDB.puml
+    !includeurl AWSPUML/Database/AmazonDynamoDB/table/table.puml
+    !includeurl AWSPUML/General/AWScloud/AWScloud.puml
+    !includeurl AWSPUML/General/client/client.puml
+    !includeurl AWSPUML/General/user/user.puml
+    !includeurl AWSPUML/Storage/AmazonS3/AmazonS3.puml
+    !includeurl AWSPUML/Storage/AmazonS3/bucket/bucket.puml
 
 
     skinparam componentArrowColor Black
+    skinparam componentBackgroundColor White
     skinparam nodeBackgroundColor White
     skinparam agentBackgroundColor White
     skinparam artifactBackgroundColor White
@@ -111,30 +112,30 @@ For those so inclined, it is also simple to generate customized `.puml` files fo
     3. Run the `awspuml.py` script against your downloaded `<ICONS_DIR>` using your custom config
 
 #### 1. Download
-If you haven't installed it already, you'll need Python 3 to run the `awspuml.py` module used to generate the AWS-PlantUML `.puml` files. You can get installation instructions and binaries for Python 3.4, which was used to generate the release version of AWS-PlantUML, on [Python.org](https://www.python.org/downloads/release/python-344/).
+If you haven't installed it already, you'll need Python 3 to run the `awspuml.py` module used to generate the AWS-PlantUML `.puml` files. You can get installation instructions and binaries for Python 3.6, which was used to generate the release version of AWS-PlantUML, on [Python.org](https://www.python.org/downloads/release/python-360/).
 
-Download the AWS Simple Icon set [here](https://aws.amazon.com/architecture/icons/) and extract the contents to a directory we'll refer to as `<ICONS_DIR>`. This release was generated from version 16.2.22 of the AWS Simple Icons set release by Amazon.
+Download the AWS Simple Icon set [here](https://aws.amazon.com/architecture/icons/) and extract the contents to a directory we'll refer to as `<ICONS_DIR>`. This release was generated from version 17.1.6 of the AWS Simple Icons set release by Amazon.
 
 #### 2. Configure
 Using the release version of the `awspuml.ini` configuration file as a reference, you can specify custom styles for your own AWS-PlantUML build. The `[AWSPUML.colors]` section maps color names to simple HTML color names (e.g. Red) or custom hex values (e.g. #AAFFCC). These custom color names can then be referenced elsewhere in the configuration by including `${AWSPUML.colors:<COLOR_NAME>` in a configuration option value, where "`<COLOR_NAME>`" would be replaced by the desired option in the `[AWSPUML.colors]` section.
 
 The remaining sections designate generation options for the folders created from the icons in `<ICONS_DIR>`. To make the generated folder structure of AWS-PlantUML URL-safe, the `awspuml.py` script relies on Amazon's file naming convention for the AWS Simple Icon set, which names files according to the pattern:
 
-    <CATEGORY>_<SERVICE_NAME>[_<SERVICE_COMPONENT>].<FILE_EXTENSION>
+    <CATEGORY>_<SERVICE_NAME>[_<SERVICE_COMPONENT>][_LARGE].<FILE_EXTENSION>
 
 Options in the `awspuml.ini` can be set for an entire category
 
-    [Internet-Of-Things]
+    [InternetOfThings]
     entity_type: artifact
 
 or for all subsections of a category
 
-    [Internet-Of-Things.AWSIoT.]
+    [InternetOfThings.AWSIoT.]
     entity_type: component
 
 or just for a specific item in a category
 
-    [Internet-Of-Things.AWSIoT.action]
+    [InternetOfThings.AWSIoT.action]
     entity_type: usecase
 
 Valid options are:
@@ -144,7 +145,7 @@ Valid options are:
     * `skinparam` - sets custom skinparam options for the stereotype generated for corresponding entities. An example value for this option would be `BackgroundColor Red`.
 
 #### 3. Run
-After configuring, simply run the `awspuml.py` module from the command line, using Python 3, passing the configuration file and the `<ICONS_DIR>` as command line options. If you need help, just call the script with the `-h` flag to print usage help to stdout:
+After configuring, simply run the `awspuml.py` module from the command line using Python 3, passing the configuration file and the `<ICONS_DIR>` as command line options. If you need help, just call the script with the `-h` flag to print usage help to stdout:
 
     > python3 awspuml.py -h
     usage: awspuml.py [-h] [-c CONFIG] [-o OUTPUT] icons_path

@@ -88,8 +88,8 @@ DDDDDDDDDDA9999999999999ADDDDDDDDDD9999999999CDDDDDDDDDDDDDC9999999999
 
 
 
-!define AMAZONAPIGATEWAY(alias) AWS_ENTITY(component,black,AmazonAPIGateway,alias,AmazonAPIGateway)
+!define AMAZONAPIGATEWAY(alias) AWS_ENTITY(component,#D9A842,AmazonAPIGateway,alias,AmazonAPIGateway)
 
-!define AMAZONAPIGATEWAY(alias,label) AWS_ENTITY(component,black,AmazonAPIGateway,label,alias,AmazonAPIGateway)
+!define AMAZONAPIGATEWAY(alias,label) AWS_ENTITY(component,#D9A842,AmazonAPIGateway,label,alias,AmazonAPIGateway)
 
 @enduml

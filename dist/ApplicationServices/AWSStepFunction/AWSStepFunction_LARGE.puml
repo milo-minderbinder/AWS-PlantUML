@@ -415,8 +415,8 @@ DDDDDDDDDDDDDDDDDDDDDC9999999999999999999999999ADDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDA
 
 
 
-!define AWSSTEPFUNCTION_LARGE(alias) AWS_ENTITY(component,black,AWSStepFunction_LARGE,alias,*AWSStepFunction*)
+!define AWSSTEPFUNCTION_LARGE(alias) AWS_ENTITY(component,#D9A842,AWSStepFunction_LARGE,alias,*AWSStepFunction*)
 
-!define AWSSTEPFUNCTION_LARGE(alias,label) AWS_ENTITY(component,black,AWSStepFunction_LARGE,label,alias,*AWSStepFunction*)
+!define AWSSTEPFUNCTION_LARGE(alias,label) AWS_ENTITY(component,#D9A842,AWSStepFunction_LARGE,label,alias,*AWSStepFunction*)
 
 @enduml

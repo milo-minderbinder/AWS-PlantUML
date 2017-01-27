@@ -88,8 +88,8 @@ DDDDDDC99ADDDDDDDDA999BDDDDDDDDDDDD999999999999BDDDD99999999CDDA999999
 
 
 
-!define AMAZONELASTICTRANSCODER(alias) AWS_ENTITY(component,black,AmazonElasticTranscoder,alias,AmazonElasticTranscoder)
+!define AMAZONELASTICTRANSCODER(alias) AWS_ENTITY(component,#D9A842,AmazonElasticTranscoder,alias,AmazonElasticTranscoder)
 
-!define AMAZONELASTICTRANSCODER(alias,label) AWS_ENTITY(component,black,AmazonElasticTranscoder,label,alias,AmazonElasticTranscoder)
+!define AMAZONELASTICTRANSCODER(alias,label) AWS_ENTITY(component,#D9A842,AmazonElasticTranscoder,label,alias,AmazonElasticTranscoder)
 
 @enduml
