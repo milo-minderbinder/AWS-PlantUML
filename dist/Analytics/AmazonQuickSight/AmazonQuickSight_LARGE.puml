@@ -270,8 +270,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 
 
 
-!define AMAZONQUICKSIGHT_LARGE(alias) AWS_ENTITY(node,#F58536,AmazonQuickSight_LARGE,alias,*AmazonQuickSight*)
+!define AMAZONQUICKSIGHT_LARGE(alias) AWS_ENTITY(node,#F58536,AmazonQuickSight_LARGE,alias,**AmazonQuickSight**)
 
-!define AMAZONQUICKSIGHT_LARGE(alias,label) AWS_ENTITY(node,#F58536,AmazonQuickSight_LARGE,label,alias,*AmazonQuickSight*)
+!define AMAZONQUICKSIGHT_LARGE(alias,label) AWS_ENTITY(node,#F58536,AmazonQuickSight_LARGE,label,alias,**AmazonQuickSight**)
 
 @enduml

@@ -77,8 +77,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA0000
 
 
 
-!define EVENTEVENTBASED(alias) AWS_ENTITY(node,#769D3F,eventeventbased,alias,eventeventbased)
+!define EVENTEVENTBASED(alias) AWS_ENTITY(artifact,#769D3F,eventeventbased,alias,eventeventbased)
 
-!define EVENTEVENTBASED(alias,label) AWS_ENTITY(node,#769D3F,eventeventbased,label,alias,eventeventbased)
+!define EVENTEVENTBASED(alias,label) AWS_ENTITY(artifact,#769D3F,eventeventbased,label,alias,eventeventbased)
 
 @enduml

@@ -414,8 +414,8 @@ DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
 
 
 
-!define AMAZONREKOGNITION_LARGE(alias) AWS_ENTITY(component,#2F74B8,AmazonRekognition_LARGE,alias,*AmazonRekognition*)
+!define AMAZONREKOGNITION_LARGE(alias) AWS_ENTITY(component,#2F74B8,AmazonRekognition_LARGE,alias,**AmazonRekognition**)
 
-!define AMAZONREKOGNITION_LARGE(alias,label) AWS_ENTITY(component,#2F74B8,AmazonRekognition_LARGE,label,alias,*AmazonRekognition*)
+!define AMAZONREKOGNITION_LARGE(alias,label) AWS_ENTITY(component,#2F74B8,AmazonRekognition_LARGE,label,alias,**AmazonRekognition**)
 
 @enduml

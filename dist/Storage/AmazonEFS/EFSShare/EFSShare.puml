@@ -60,8 +60,8 @@ BBA88888888888888888888888888888888888886000018200753688000000
 
 
 
-!define EFSSHARE(alias) AWS_ENTITY(storage,#E05344,EFSShare,alias,EFSShare)
+!define EFSSHARE(alias) AWS_ENTITY(folder,#E05344,EFSShare,alias,EFSShare)
 
-!define EFSSHARE(alias,label) AWS_ENTITY(storage,#E05344,EFSShare,label,alias,EFSShare)
+!define EFSSHARE(alias,label) AWS_ENTITY(folder,#E05344,EFSShare,label,alias,EFSShare)
 
 @enduml

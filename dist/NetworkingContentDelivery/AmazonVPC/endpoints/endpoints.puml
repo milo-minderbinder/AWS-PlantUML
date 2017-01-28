@@ -138,17 +138,19 @@ FDCCCCCCCCCCCCCC7000CCCCCCCCCCCCCCCCCCCCCC0007CCCCCCCCCCCCCCDF
 skinparam interface<<endpoints>> {
     BackgroundColor #FEEDE2
 	BorderColor #F58536
-}skinparam interface<<NetworkingContentDelivery AmazonVPC endpoints>> {
+}
+skinparam interface<<NetworkingContentDelivery\nAmazonVPC\nendpoints>> {
     BackgroundColor #FEEDE2
 	BorderColor #F58536
 }
+
 
 !define ENDPOINTS(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_endpoints,alias,endpoints)
 
 !define ENDPOINTS(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_endpoints,label,alias,endpoints)
 
-!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_ENDPOINTS(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_endpoints,alias,NetworkingContentDelivery AmazonVPC endpoints)
+!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_ENDPOINTS(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_endpoints,alias,NetworkingContentDelivery\nAmazonVPC\nendpoints)
 
-!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_ENDPOINTS(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_endpoints,label,alias,NetworkingContentDelivery AmazonVPC endpoints)
+!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_ENDPOINTS(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_endpoints,label,alias,NetworkingContentDelivery\nAmazonVPC\nendpoints)
 
 @enduml

@@ -64,6 +64,7 @@ skinparam artifact<<HTTPnotification>> {
     BackgroundColor #EDDEE6
 }
 
+
 !define HTTPNOTIFICATION(alias) AWS_ENTITY(artifact,#D9A842,HTTPnotification,alias,HTTPnotification)
 
 !define HTTPNOTIFICATION(alias,label) AWS_ENTITY(artifact,#D9A842,HTTPnotification,label,alias,HTTPnotification)

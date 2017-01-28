@@ -803,20 +803,22 @@ FFFFDCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000F000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 }
 
-skinparam interface<<*elasticnetworkadapter*>> {
+skinparam interface<<**elasticnetworkadapter**>> {
     BackgroundColor #FEEDE2
 	BorderColor #F58536
-}skinparam interface<<*NetworkingContentDelivery AmazonVPC elasticnetworkadapter*>> {
+}
+skinparam interface<<**NetworkingContentDelivery\nAmazonVPC\nelasticnetworkadapter**>> {
     BackgroundColor #FEEDE2
 	BorderColor #F58536
 }
 
-!define ELASTICNETWORKADAPTER_LARGE(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_elasticnetworkadapter_LARGE,alias,*elasticnetworkadapter*)
 
-!define ELASTICNETWORKADAPTER_LARGE(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_elasticnetworkadapter_LARGE,label,alias,*elasticnetworkadapter*)
+!define ELASTICNETWORKADAPTER_LARGE(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_elasticnetworkadapter_LARGE,alias,**elasticnetworkadapter**)
 
-!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_ELASTICNETWORKADAPTER_LARGE(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_elasticnetworkadapter_LARGE,alias,*NetworkingContentDelivery AmazonVPC elasticnetworkadapter*)
+!define ELASTICNETWORKADAPTER_LARGE(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_elasticnetworkadapter_LARGE,label,alias,**elasticnetworkadapter**)
 
-!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_ELASTICNETWORKADAPTER_LARGE(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_elasticnetworkadapter_LARGE,label,alias,*NetworkingContentDelivery AmazonVPC elasticnetworkadapter*)
+!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_ELASTICNETWORKADAPTER_LARGE(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_elasticnetworkadapter_LARGE,alias,**NetworkingContentDelivery\nAmazonVPC\nelasticnetworkadapter**)
+
+!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_ELASTICNETWORKADAPTER_LARGE(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_elasticnetworkadapter_LARGE,label,alias,**NetworkingContentDelivery\nAmazonVPC\nelasticnetworkadapter**)
 
 @enduml

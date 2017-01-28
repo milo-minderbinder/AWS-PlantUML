@@ -286,8 +286,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 
 
 
-!define ASSIGNMENTTASK_LARGE(alias) AWS_ENTITY(artifact,#D6D6D6,assignmenttask_LARGE,alias,*assignmenttask*)
+!define ASSIGNMENTTASK_LARGE(alias) AWS_ENTITY(artifact,#D6D6D6,assignmenttask_LARGE,alias,**assignmenttask**)
 
-!define ASSIGNMENTTASK_LARGE(alias,label) AWS_ENTITY(artifact,#D6D6D6,assignmenttask_LARGE,label,alias,*assignmenttask*)
+!define ASSIGNMENTTASK_LARGE(alias,label) AWS_ENTITY(artifact,#D6D6D6,assignmenttask_LARGE,label,alias,**assignmenttask**)
 
 @enduml

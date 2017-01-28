@@ -376,8 +376,8 @@ FFFFFFFFFFFFFFFFFFFFB50000000000000000000000000000000000000000000000000000000000
 
 
 
-!define PYTHON_LARGE(alias) AWS_ENTITY(agent,black,Python_LARGE,alias,*Python*)
+!define PYTHON_LARGE(alias) AWS_ENTITY(agent,black,Python_LARGE,alias,**Python**)
 
-!define PYTHON_LARGE(alias,label) AWS_ENTITY(agent,black,Python_LARGE,label,alias,*Python*)
+!define PYTHON_LARGE(alias,label) AWS_ENTITY(agent,black,Python_LARGE,label,alias,**Python**)
 
 @enduml

@@ -639,20 +639,22 @@ FFCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCB7000000000000000000000CCCCCCCCC
 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 }
 
-skinparam interface<<*customergateway*>> {
+skinparam interface<<**customergateway**>> {
     BackgroundColor #FEEDE2
 	BorderColor #F58536
-}skinparam interface<<*NetworkingContentDelivery AmazonVPC customergateway*>> {
+}
+skinparam interface<<**NetworkingContentDelivery\nAmazonVPC\ncustomergateway**>> {
     BackgroundColor #FEEDE2
 	BorderColor #F58536
 }
 
-!define CUSTOMERGATEWAY_LARGE(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_customergateway_LARGE,alias,*customergateway*)
 
-!define CUSTOMERGATEWAY_LARGE(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_customergateway_LARGE,label,alias,*customergateway*)
+!define CUSTOMERGATEWAY_LARGE(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_customergateway_LARGE,alias,**customergateway**)
 
-!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_CUSTOMERGATEWAY_LARGE(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_customergateway_LARGE,alias,*NetworkingContentDelivery AmazonVPC customergateway*)
+!define CUSTOMERGATEWAY_LARGE(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_customergateway_LARGE,label,alias,**customergateway**)
 
-!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_CUSTOMERGATEWAY_LARGE(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_customergateway_LARGE,label,alias,*NetworkingContentDelivery AmazonVPC customergateway*)
+!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_CUSTOMERGATEWAY_LARGE(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_customergateway_LARGE,alias,**NetworkingContentDelivery\nAmazonVPC\ncustomergateway**)
+
+!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_CUSTOMERGATEWAY_LARGE(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_customergateway_LARGE,label,alias,**NetworkingContentDelivery\nAmazonVPC\ncustomergateway**)
 
 @enduml

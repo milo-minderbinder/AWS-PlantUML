@@ -72,6 +72,7 @@ skinparam interface<<internetgateway>> {
 	BorderColor #F58536
 }
 
+
 !define INTERNETGATEWAY(alias) AWS_ENTITY(interface,#F58536,internetgateway,alias,internetgateway)
 
 !define INTERNETGATEWAY(alias,label) AWS_ENTITY(interface,#F58536,internetgateway,label,alias,internetgateway)

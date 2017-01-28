@@ -452,8 +452,8 @@ CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 
 
-!define HARDWAREBOARD_LARGE(alias) AWS_ENTITY(node,#2F74B8,hardwareboard_LARGE,alias,*hardwareboard*)
+!define HARDWAREBOARD_LARGE(alias) AWS_ENTITY(node,#2F74B8,hardwareboard_LARGE,alias,**hardwareboard**)
 
-!define HARDWAREBOARD_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,hardwareboard_LARGE,label,alias,*hardwareboard*)
+!define HARDWAREBOARD_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,hardwareboard_LARGE,label,alias,**hardwareboard**)
 
 @enduml

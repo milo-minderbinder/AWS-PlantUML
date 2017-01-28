@@ -641,20 +641,22 @@ FFCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC0000000000000ACCC
 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000FFFFFFFFFF0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 }
 
-skinparam interface<<*elasticnetworkinterface*>> {
+skinparam interface<<**elasticnetworkinterface**>> {
     BackgroundColor #FEEDE2
 	BorderColor #F58536
-}skinparam interface<<*NetworkingContentDelivery AmazonVPC elasticnetworkinterface*>> {
+}
+skinparam interface<<**NetworkingContentDelivery\nAmazonVPC\nelasticnetworkinterface**>> {
     BackgroundColor #FEEDE2
 	BorderColor #F58536
 }
 
-!define ELASTICNETWORKINTERFACE_LARGE(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_elasticnetworkinterface_LARGE,alias,*elasticnetworkinterface*)
 
-!define ELASTICNETWORKINTERFACE_LARGE(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_elasticnetworkinterface_LARGE,label,alias,*elasticnetworkinterface*)
+!define ELASTICNETWORKINTERFACE_LARGE(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_elasticnetworkinterface_LARGE,alias,**elasticnetworkinterface**)
 
-!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_ELASTICNETWORKINTERFACE_LARGE(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_elasticnetworkinterface_LARGE,alias,*NetworkingContentDelivery AmazonVPC elasticnetworkinterface*)
+!define ELASTICNETWORKINTERFACE_LARGE(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_elasticnetworkinterface_LARGE,label,alias,**elasticnetworkinterface**)
 
-!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_ELASTICNETWORKINTERFACE_LARGE(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_elasticnetworkinterface_LARGE,label,alias,*NetworkingContentDelivery AmazonVPC elasticnetworkinterface*)
+!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_ELASTICNETWORKINTERFACE_LARGE(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_elasticnetworkinterface_LARGE,alias,**NetworkingContentDelivery\nAmazonVPC\nelasticnetworkinterface**)
+
+!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_ELASTICNETWORKINTERFACE_LARGE(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_elasticnetworkinterface_LARGE,label,alias,**NetworkingContentDelivery\nAmazonVPC\nelasticnetworkinterface**)
 
 @enduml

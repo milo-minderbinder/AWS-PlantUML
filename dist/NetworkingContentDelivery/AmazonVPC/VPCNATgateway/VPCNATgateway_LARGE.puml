@@ -641,20 +641,22 @@ FFCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC70000000009CCCCCCCCCCCCC
 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFF000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 }
 
-skinparam interface<<*VPCNATgateway*>> {
+skinparam interface<<**VPCNATgateway**>> {
     BackgroundColor #FEEDE2
 	BorderColor #F58536
-}skinparam interface<<*NetworkingContentDelivery AmazonVPC VPCNATgateway*>> {
+}
+skinparam interface<<**NetworkingContentDelivery\nAmazonVPC\nVPCNATgateway**>> {
     BackgroundColor #FEEDE2
 	BorderColor #F58536
 }
 
-!define VPCNATGATEWAY_LARGE(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_VPCNATgateway_LARGE,alias,*VPCNATgateway*)
 
-!define VPCNATGATEWAY_LARGE(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_VPCNATgateway_LARGE,label,alias,*VPCNATgateway*)
+!define VPCNATGATEWAY_LARGE(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_VPCNATgateway_LARGE,alias,**VPCNATgateway**)
 
-!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_VPCNATGATEWAY_LARGE(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_VPCNATgateway_LARGE,alias,*NetworkingContentDelivery AmazonVPC VPCNATgateway*)
+!define VPCNATGATEWAY_LARGE(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_VPCNATgateway_LARGE,label,alias,**VPCNATgateway**)
 
-!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_VPCNATGATEWAY_LARGE(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_VPCNATgateway_LARGE,label,alias,*NetworkingContentDelivery AmazonVPC VPCNATgateway*)
+!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_VPCNATGATEWAY_LARGE(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_VPCNATgateway_LARGE,alias,**NetworkingContentDelivery\nAmazonVPC\nVPCNATgateway**)
+
+!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_VPCNATGATEWAY_LARGE(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_VPCNATgateway_LARGE,label,alias,**NetworkingContentDelivery\nAmazonVPC\nVPCNATgateway**)
 
 @enduml

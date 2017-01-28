@@ -66,6 +66,7 @@ skinparam interface<<HTTP2protocol>> {
 	BorderColor #2F74B8
 }
 
+
 !define HTTP2PROTOCOL(alias) AWS_ENTITY(interface,#2F74B8,HTTP2protocol,alias,HTTP2protocol)
 
 !define HTTP2PROTOCOL(alias,label) AWS_ENTITY(interface,#2F74B8,HTTP2protocol,label,alias,HTTP2protocol)

@@ -641,12 +641,12 @@ FFCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC900000007CCCCCCCCCCCCCCC
 
 
 
-!define APPLICATIONLOADBALANCING_LARGE(alias) AWS_ENTITY(node,#F58536,Compute_ElasticLoadBalancing_ApplicationLoadBalancing_LARGE,alias,*ApplicationLoadBalancing*)
+!define APPLICATIONLOADBALANCING_LARGE(alias) AWS_ENTITY(node,#F58536,Compute_ElasticLoadBalancing_ApplicationLoadBalancing_LARGE,alias,**ApplicationLoadBalancing**)
 
-!define APPLICATIONLOADBALANCING_LARGE(alias,label) AWS_ENTITY(node,#F58536,Compute_ElasticLoadBalancing_ApplicationLoadBalancing_LARGE,label,alias,*ApplicationLoadBalancing*)
+!define APPLICATIONLOADBALANCING_LARGE(alias,label) AWS_ENTITY(node,#F58536,Compute_ElasticLoadBalancing_ApplicationLoadBalancing_LARGE,label,alias,**ApplicationLoadBalancing**)
 
-!define COMPUTE_ELASTICLOADBALANCING_APPLICATIONLOADBALANCING_LARGE(alias) AWS_ENTITY(node,#F58536,Compute_ElasticLoadBalancing_ApplicationLoadBalancing_LARGE,alias,*Compute ElasticLoadBalancing ApplicationLoadBalancing*)
+!define COMPUTE_ELASTICLOADBALANCING_APPLICATIONLOADBALANCING_LARGE(alias) AWS_ENTITY(node,#F58536,Compute_ElasticLoadBalancing_ApplicationLoadBalancing_LARGE,alias,**Compute\nElasticLoadBalancing\nApplicationLoadBalancing**)
 
-!define COMPUTE_ELASTICLOADBALANCING_APPLICATIONLOADBALANCING_LARGE(alias,label) AWS_ENTITY(node,#F58536,Compute_ElasticLoadBalancing_ApplicationLoadBalancing_LARGE,label,alias,*Compute ElasticLoadBalancing ApplicationLoadBalancing*)
+!define COMPUTE_ELASTICLOADBALANCING_APPLICATIONLOADBALANCING_LARGE(alias,label) AWS_ENTITY(node,#F58536,Compute_ElasticLoadBalancing_ApplicationLoadBalancing_LARGE,label,alias,**Compute\nElasticLoadBalancing\nApplicationLoadBalancing**)
 
 @enduml

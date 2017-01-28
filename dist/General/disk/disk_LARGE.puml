@@ -290,8 +290,8 @@ FFDCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 
 
-!define DISK_LARGE(alias) AWS_ENTITY(artifact,#7E7D7D,disk_LARGE,alias,*disk*)
+!define DISK_LARGE(alias) AWS_ENTITY(artifact,#7E7D7D,disk_LARGE,alias,**disk**)
 
-!define DISK_LARGE(alias,label) AWS_ENTITY(artifact,#7E7D7D,disk_LARGE,label,alias,*disk*)
+!define DISK_LARGE(alias,label) AWS_ENTITY(artifact,#7E7D7D,disk_LARGE,label,alias,**disk**)
 
 @enduml

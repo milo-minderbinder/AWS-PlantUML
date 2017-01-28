@@ -131,8 +131,8 @@ FFFFEDDCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCDEFFF
 
 !define TOPIC(alias,label) AWS_ENTITY(artifact,#2F74B8,AWSIoT_topic,label,alias,topic)
 
-!define AWSIOT_TOPIC(alias) AWS_ENTITY(artifact,#2F74B8,AWSIoT_topic,alias,AWSIoT topic)
+!define AWSIOT_TOPIC(alias) AWS_ENTITY(artifact,#2F74B8,AWSIoT_topic,alias,AWSIoT\ntopic)
 
-!define AWSIOT_TOPIC(alias,label) AWS_ENTITY(artifact,#2F74B8,AWSIoT_topic,label,alias,AWSIoT topic)
+!define AWSIOT_TOPIC(alias,label) AWS_ENTITY(artifact,#2F74B8,AWSIoT_topic,label,alias,AWSIoT\ntopic)
 
 @enduml

@@ -404,8 +404,8 @@ FFFFFFFDCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 
 
-!define ACTUATOR_LARGE(alias) AWS_ENTITY(node,#2F74B8,actuator_LARGE,alias,*actuator*)
+!define ACTUATOR_LARGE(alias) AWS_ENTITY(node,#2F74B8,actuator_LARGE,alias,**actuator**)
 
-!define ACTUATOR_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,actuator_LARGE,label,alias,*actuator*)
+!define ACTUATOR_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,actuator_LARGE,label,alias,**actuator**)
 
 @enduml

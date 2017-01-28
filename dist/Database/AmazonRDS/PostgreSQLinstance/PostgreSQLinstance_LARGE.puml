@@ -282,8 +282,8 @@ FFFFDCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 
 
-!define POSTGRESQLINSTANCE_LARGE(alias) AWS_ENTITY(component,#2F74B8,PostgreSQLinstance_LARGE,alias,*PostgreSQLinstance*)
+!define POSTGRESQLINSTANCE_LARGE(alias) AWS_ENTITY(component,#2F74B8,PostgreSQLinstance_LARGE,alias,**PostgreSQLinstance**)
 
-!define POSTGRESQLINSTANCE_LARGE(alias,label) AWS_ENTITY(component,#2F74B8,PostgreSQLinstance_LARGE,label,alias,*PostgreSQLinstance*)
+!define POSTGRESQLINSTANCE_LARGE(alias,label) AWS_ENTITY(component,#2F74B8,PostgreSQLinstance_LARGE,label,alias,**PostgreSQLinstance**)
 
 @enduml

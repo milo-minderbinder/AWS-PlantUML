@@ -525,18 +525,20 @@ sprite $AmazonSNS_topic_LARGE [410x260/16] {
 99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
 }
 
-skinparam artifact<<*topic*>> {
+skinparam artifact<<**topic**>> {
     BackgroundColor #EDDEE6
-}skinparam artifact<<*AmazonSNS topic*>> {
+}
+skinparam artifact<<**AmazonSNS\ntopic**>> {
     BackgroundColor #EDDEE6
 }
 
-!define TOPIC_LARGE(alias) AWS_ENTITY(artifact,#D9A842,AmazonSNS_topic_LARGE,alias,*topic*)
 
-!define TOPIC_LARGE(alias,label) AWS_ENTITY(artifact,#D9A842,AmazonSNS_topic_LARGE,label,alias,*topic*)
+!define TOPIC_LARGE(alias) AWS_ENTITY(artifact,#D9A842,AmazonSNS_topic_LARGE,alias,**topic**)
 
-!define AMAZONSNS_TOPIC_LARGE(alias) AWS_ENTITY(artifact,#D9A842,AmazonSNS_topic_LARGE,alias,*AmazonSNS topic*)
+!define TOPIC_LARGE(alias,label) AWS_ENTITY(artifact,#D9A842,AmazonSNS_topic_LARGE,label,alias,**topic**)
 
-!define AMAZONSNS_TOPIC_LARGE(alias,label) AWS_ENTITY(artifact,#D9A842,AmazonSNS_topic_LARGE,label,alias,*AmazonSNS topic*)
+!define AMAZONSNS_TOPIC_LARGE(alias) AWS_ENTITY(artifact,#D9A842,AmazonSNS_topic_LARGE,alias,**AmazonSNS\ntopic**)
+
+!define AMAZONSNS_TOPIC_LARGE(alias,label) AWS_ENTITY(artifact,#D9A842,AmazonSNS_topic_LARGE,label,alias,**AmazonSNS\ntopic**)
 
 @enduml

@@ -66,8 +66,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFCCCCCCCCCCCCCCCCCCFF0
 
 
 
-!define AMAZONKINESIS_ENABLEDAPP(alias) AWS_ENTITY(component,#F58536,AmazonKinesis_enabledapp,alias,AmazonKinesis enabledapp)
+!define AMAZONKINESIS_ENABLEDAPP(alias) AWS_ENTITY(component,#F58536,AmazonKinesis_enabledapp,alias,AmazonKinesis\nenabledapp)
 
-!define AMAZONKINESIS_ENABLEDAPP(alias,label) AWS_ENTITY(component,#F58536,AmazonKinesis_enabledapp,label,alias,AmazonKinesis enabledapp)
+!define AMAZONKINESIS_ENABLEDAPP(alias,label) AWS_ENTITY(component,#F58536,AmazonKinesis_enabledapp,label,alias,AmazonKinesis\nenabledapp)
 
 @enduml

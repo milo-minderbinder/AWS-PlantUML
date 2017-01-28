@@ -71,6 +71,7 @@ skinparam node<<LambdaFunction>> {
 	BorderColor Black
 }
 
+
 !define LAMBDAFUNCTION(alias) AWS_ENTITY(node,#F58536,LambdaFunction,alias,LambdaFunction)
 
 !define LAMBDAFUNCTION(alias,label) AWS_ENTITY(node,#F58536,LambdaFunction,label,alias,LambdaFunction)

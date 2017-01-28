@@ -376,8 +376,8 @@ FFFFFFFFFFFFFFFFFFFFB50000000000000000000000000000000000000000000000000000000000
 
 
 
-!define XAMARIN_LARGE(alias) AWS_ENTITY(agent,black,Xamarin_LARGE,alias,*Xamarin*)
+!define XAMARIN_LARGE(alias) AWS_ENTITY(agent,black,Xamarin_LARGE,alias,**Xamarin**)
 
-!define XAMARIN_LARGE(alias,label) AWS_ENTITY(agent,black,Xamarin_LARGE,label,alias,*Xamarin*)
+!define XAMARIN_LARGE(alias,label) AWS_ENTITY(agent,black,Xamarin_LARGE,label,alias,**Xamarin**)
 
 @enduml

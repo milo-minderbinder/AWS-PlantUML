@@ -721,12 +721,12 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 
 
 
-!define PERMISSIONS_LARGE(alias) AWS_ENTITY(artifact,#769D3F,AWSOpsWorks_permissions_LARGE,alias,*permissions*)
+!define PERMISSIONS_LARGE(alias) AWS_ENTITY(artifact,#769D3F,AWSOpsWorks_permissions_LARGE,alias,**permissions**)
 
-!define PERMISSIONS_LARGE(alias,label) AWS_ENTITY(artifact,#769D3F,AWSOpsWorks_permissions_LARGE,label,alias,*permissions*)
+!define PERMISSIONS_LARGE(alias,label) AWS_ENTITY(artifact,#769D3F,AWSOpsWorks_permissions_LARGE,label,alias,**permissions**)
 
-!define AWSOPSWORKS_PERMISSIONS_LARGE(alias) AWS_ENTITY(artifact,#769D3F,AWSOpsWorks_permissions_LARGE,alias,*AWSOpsWorks permissions*)
+!define AWSOPSWORKS_PERMISSIONS_LARGE(alias) AWS_ENTITY(artifact,#769D3F,AWSOpsWorks_permissions_LARGE,alias,**AWSOpsWorks\npermissions**)
 
-!define AWSOPSWORKS_PERMISSIONS_LARGE(alias,label) AWS_ENTITY(artifact,#769D3F,AWSOpsWorks_permissions_LARGE,label,alias,*AWSOpsWorks permissions*)
+!define AWSOPSWORKS_PERMISSIONS_LARGE(alias,label) AWS_ENTITY(artifact,#769D3F,AWSOpsWorks_permissions_LARGE,label,alias,**AWSOpsWorks\npermissions**)
 
 @enduml

@@ -68,8 +68,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 
 
 
-!define CONFIGRULE(alias) AWS_ENTITY(node,#769D3F,configrule,alias,configrule)
+!define CONFIGRULE(alias) AWS_ENTITY(artifact,#769D3F,configrule,alias,configrule)
 
-!define CONFIGRULE(alias,label) AWS_ENTITY(node,#769D3F,configrule,label,alias,configrule)
+!define CONFIGRULE(alias,label) AWS_ENTITY(artifact,#769D3F,configrule,label,alias,configrule)
 
 @enduml

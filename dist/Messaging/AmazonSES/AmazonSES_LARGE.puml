@@ -416,8 +416,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 
 
 
-!define AMAZONSES_LARGE(alias) AWS_ENTITY(artifact,#D9A842,AmazonSES_LARGE,alias,*AmazonSES*)
+!define AMAZONSES_LARGE(alias) AWS_ENTITY(node,#D9A842,AmazonSES_LARGE,alias,**AmazonSES**)
 
-!define AMAZONSES_LARGE(alias,label) AWS_ENTITY(artifact,#D9A842,AmazonSES_LARGE,label,alias,*AmazonSES*)
+!define AMAZONSES_LARGE(alias,label) AWS_ENTITY(node,#D9A842,AmazonSES_LARGE,label,alias,**AmazonSES**)
 
 @enduml

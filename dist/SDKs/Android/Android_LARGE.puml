@@ -376,8 +376,8 @@ FFFFFFFFFFFFFFFFFFFFB50000000000000000000000000000000000000000000000000000000000
 
 
 
-!define ANDROID_LARGE(alias) AWS_ENTITY(agent,black,Android_LARGE,alias,*Android*)
+!define ANDROID_LARGE(alias) AWS_ENTITY(agent,black,Android_LARGE,alias,**Android**)
 
-!define ANDROID_LARGE(alias,label) AWS_ENTITY(agent,black,Android_LARGE,label,alias,*Android*)
+!define ANDROID_LARGE(alias,label) AWS_ENTITY(agent,black,Android_LARGE,label,alias,**Android**)
 
 @enduml

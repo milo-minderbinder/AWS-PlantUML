@@ -225,8 +225,8 @@ sprite $message_LARGE [190x221/16] {
 
 
 
-!define MESSAGE_LARGE(alias) AWS_ENTITY(artifact,#D9A842,message_LARGE,alias,*message*)
+!define MESSAGE_LARGE(alias) AWS_ENTITY(artifact,#D9A842,message_LARGE,alias,**message**)
 
-!define MESSAGE_LARGE(alias,label) AWS_ENTITY(artifact,#D9A842,message_LARGE,label,alias,*message*)
+!define MESSAGE_LARGE(alias,label) AWS_ENTITY(artifact,#D9A842,message_LARGE,label,alias,**message**)
 
 @enduml

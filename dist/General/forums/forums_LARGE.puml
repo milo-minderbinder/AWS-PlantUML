@@ -372,8 +372,8 @@ sprite $forums_LARGE [384x368/16] {
 
 
 
-!define FORUMS_LARGE(alias) AWS_ENTITY(artifact,#F58536,forums_LARGE,alias,*forums*)
+!define FORUMS_LARGE(alias) AWS_ENTITY(artifact,#F58536,forums_LARGE,alias,**forums**)
 
-!define FORUMS_LARGE(alias,label) AWS_ENTITY(artifact,#F58536,forums_LARGE,label,alias,*forums*)
+!define FORUMS_LARGE(alias,label) AWS_ENTITY(artifact,#F58536,forums_LARGE,label,alias,**forums**)
 
 @enduml

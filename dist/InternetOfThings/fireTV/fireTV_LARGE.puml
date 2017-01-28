@@ -247,8 +247,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 
 
 
-!define FIRETV_LARGE(alias) AWS_ENTITY(node,#2F74B8,fireTV_LARGE,alias,*fireTV*)
+!define FIRETV_LARGE(alias) AWS_ENTITY(node,#2F74B8,fireTV_LARGE,alias,**fireTV**)
 
-!define FIRETV_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,fireTV_LARGE,label,alias,*fireTV*)
+!define FIRETV_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,fireTV_LARGE,label,alias,**fireTV**)
 
 @enduml

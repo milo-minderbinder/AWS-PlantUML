@@ -125,8 +125,8 @@ FFFFFFFFF00CCCCCCCCCC00CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 !define INSTANCES(alias,label) AWS_ENTITY(frame,#F58536,AmazonEC2_instances,label,alias,instances)
 
-!define AMAZONEC2_INSTANCES(alias) AWS_ENTITY(frame,#F58536,AmazonEC2_instances,alias,AmazonEC2 instances)
+!define AMAZONEC2_INSTANCES(alias) AWS_ENTITY(frame,#F58536,AmazonEC2_instances,alias,AmazonEC2\ninstances)
 
-!define AMAZONEC2_INSTANCES(alias,label) AWS_ENTITY(frame,#F58536,AmazonEC2_instances,label,alias,AmazonEC2 instances)
+!define AMAZONEC2_INSTANCES(alias,label) AWS_ENTITY(frame,#F58536,AmazonEC2_instances,label,alias,AmazonEC2\ninstances)
 
 @enduml

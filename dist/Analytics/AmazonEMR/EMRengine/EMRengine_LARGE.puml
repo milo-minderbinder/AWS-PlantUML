@@ -272,8 +272,8 @@ sprite $EMRengine_LARGE [372x268/16] {
 
 
 
-!define EMRENGINE_LARGE(alias) AWS_ENTITY(component,#F58536,EMRengine_LARGE,alias,*EMRengine*)
+!define EMRENGINE_LARGE(alias) AWS_ENTITY(component,#F58536,EMRengine_LARGE,alias,**EMRengine**)
 
-!define EMRENGINE_LARGE(alias,label) AWS_ENTITY(component,#F58536,EMRengine_LARGE,label,alias,*EMRengine*)
+!define EMRENGINE_LARGE(alias,label) AWS_ENTITY(component,#F58536,EMRengine_LARGE,label,alias,**EMRengine**)
 
 @enduml

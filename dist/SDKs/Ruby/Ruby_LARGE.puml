@@ -376,8 +376,8 @@ FFFFFFFFFFFFFFFFFFFFB50000000000000000000000000000000000000000000000000000000000
 
 
 
-!define RUBY_LARGE(alias) AWS_ENTITY(agent,black,Ruby_LARGE,alias,*Ruby*)
+!define RUBY_LARGE(alias) AWS_ENTITY(agent,black,Ruby_LARGE,alias,**Ruby**)
 
-!define RUBY_LARGE(alias,label) AWS_ENTITY(agent,black,Ruby_LARGE,label,alias,*Ruby*)
+!define RUBY_LARGE(alias,label) AWS_ENTITY(agent,black,Ruby_LARGE,label,alias,**Ruby**)
 
 @enduml

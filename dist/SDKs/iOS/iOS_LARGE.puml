@@ -376,8 +376,8 @@ FFFFFFFFFFFFFFFFFFFFB50000000000000000000000000000000000000000000000000000000000
 
 
 
-!define IOS_LARGE(alias) AWS_ENTITY(agent,black,iOS_LARGE,alias,*iOS*)
+!define IOS_LARGE(alias) AWS_ENTITY(agent,black,iOS_LARGE,alias,**iOS**)
 
-!define IOS_LARGE(alias,label) AWS_ENTITY(agent,black,iOS_LARGE,label,alias,*iOS*)
+!define IOS_LARGE(alias,label) AWS_ENTITY(agent,black,iOS_LARGE,label,alias,**iOS**)
 
 @enduml

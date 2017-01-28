@@ -416,8 +416,8 @@ DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
 
 
 
-!define AMAZONSQS_LARGE(alias) AWS_ENTITY(artifact,#D9A842,AmazonSQS_LARGE,alias,*AmazonSQS*)
+!define AMAZONSQS_LARGE(alias) AWS_ENTITY(node,#D9A842,AmazonSQS_LARGE,alias,**AmazonSQS**)
 
-!define AMAZONSQS_LARGE(alias,label) AWS_ENTITY(artifact,#D9A842,AmazonSQS_LARGE,label,alias,*AmazonSQS*)
+!define AMAZONSQS_LARGE(alias,label) AWS_ENTITY(node,#D9A842,AmazonSQS_LARGE,label,alias,**AmazonSQS**)
 
 @enduml

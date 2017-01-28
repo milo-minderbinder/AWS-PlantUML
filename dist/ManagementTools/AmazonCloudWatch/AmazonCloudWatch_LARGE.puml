@@ -415,8 +415,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 
 
 
-!define AMAZONCLOUDWATCH_LARGE(alias) AWS_ENTITY(node,#769D3F,AmazonCloudWatch_LARGE,alias,*AmazonCloudWatch*)
+!define AMAZONCLOUDWATCH_LARGE(alias) AWS_ENTITY(node,#769D3F,AmazonCloudWatch_LARGE,alias,**AmazonCloudWatch**)
 
-!define AMAZONCLOUDWATCH_LARGE(alias,label) AWS_ENTITY(node,#769D3F,AmazonCloudWatch_LARGE,label,alias,*AmazonCloudWatch*)
+!define AMAZONCLOUDWATCH_LARGE(alias,label) AWS_ENTITY(node,#769D3F,AmazonCloudWatch_LARGE,label,alias,**AmazonCloudWatch**)
 
 @enduml

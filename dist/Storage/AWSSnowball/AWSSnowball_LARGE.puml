@@ -827,12 +827,12 @@ EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
 
 
 
-!define AWSSNOWBALL_LARGE(alias) AWS_ENTITY(storage,#E05344,Storage_AWSSnowball_LARGE,alias,*AWSSnowball*)
+!define AWSSNOWBALL_LARGE(alias) AWS_ENTITY(storage,#E05344,Storage_AWSSnowball_LARGE,alias,**AWSSnowball**)
 
-!define AWSSNOWBALL_LARGE(alias,label) AWS_ENTITY(storage,#E05344,Storage_AWSSnowball_LARGE,label,alias,*AWSSnowball*)
+!define AWSSNOWBALL_LARGE(alias,label) AWS_ENTITY(storage,#E05344,Storage_AWSSnowball_LARGE,label,alias,**AWSSnowball**)
 
-!define STORAGE_AWSSNOWBALL_LARGE(alias) AWS_ENTITY(storage,#E05344,Storage_AWSSnowball_LARGE,alias,*Storage AWSSnowball*)
+!define STORAGE_AWSSNOWBALL_LARGE(alias) AWS_ENTITY(storage,#E05344,Storage_AWSSnowball_LARGE,alias,**Storage\nAWSSnowball**)
 
-!define STORAGE_AWSSNOWBALL_LARGE(alias,label) AWS_ENTITY(storage,#E05344,Storage_AWSSnowball_LARGE,label,alias,*Storage AWSSnowball*)
+!define STORAGE_AWSSNOWBALL_LARGE(alias,label) AWS_ENTITY(storage,#E05344,Storage_AWSSnowball_LARGE,label,alias,**Storage\nAWSSnowball**)
 
 @enduml

@@ -350,8 +350,8 @@ FD999999999999999999999990000000000000000000089999999999999999999999999999999999
 
 
 
-!define SSLPADLOCK_LARGE(alias) AWS_ENTITY(frame,#7E7D7D,SSLpadlock_LARGE,alias,*SSLpadlock*)
+!define SSLPADLOCK_LARGE(alias) AWS_ENTITY(frame,#7E7D7D,SSLpadlock_LARGE,alias,**SSLpadlock**)
 
-!define SSLPADLOCK_LARGE(alias,label) AWS_ENTITY(frame,#7E7D7D,SSLpadlock_LARGE,label,alias,*SSLpadlock*)
+!define SSLPADLOCK_LARGE(alias,label) AWS_ENTITY(frame,#7E7D7D,SSLpadlock_LARGE,label,alias,**SSLpadlock**)
 
 @enduml

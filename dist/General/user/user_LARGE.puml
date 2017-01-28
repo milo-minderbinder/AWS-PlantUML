@@ -282,12 +282,13 @@ sprite $user_LARGE [202x280/16] {
 8888888888888888888888888888888888888888800000888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888000000888888888888888888888888888888888888888
 }
 
-skinparam agent<<*user*>> {
+skinparam agent<<**user**>> {
     BorderColor transparent
 }
 
-!define USER_LARGE(alias) AWS_ENTITY(agent,#D6D6D6,user_LARGE,alias,*user*)
 
-!define USER_LARGE(alias,label) AWS_ENTITY(agent,#D6D6D6,user_LARGE,label,alias,*user*)
+!define USER_LARGE(alias) AWS_ENTITY(agent,#D6D6D6,user_LARGE,alias,**user**)
+
+!define USER_LARGE(alias,label) AWS_ENTITY(agent,#D6D6D6,user_LARGE,label,alias,**user**)
 
 @enduml

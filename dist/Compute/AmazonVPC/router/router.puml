@@ -133,14 +133,22 @@ FDCCCCCCCCCCCCCCCCCCCCCCCCCC900009CCCCCCCCCCCCCCCCCCCCCCCCCCDF
 000000000000000000000000FFFFFFFFFFFFFF000000000000000000000000
 }
 
+skinparam interface<<router>> {
+    BackgroundColor #FEEDE2
+	BorderColor #F58536
+}
+skinparam interface<<Compute\nAmazonVPC\nrouter>> {
+    BackgroundColor #FEEDE2
+	BorderColor #F58536
+}
 
 
-!define ROUTER(alias) AWS_ENTITY(node,#F58536,Compute_AmazonVPC_router,alias,router)
+!define ROUTER(alias) AWS_ENTITY(interface,#F58536,Compute_AmazonVPC_router,alias,router)
 
-!define ROUTER(alias,label) AWS_ENTITY(node,#F58536,Compute_AmazonVPC_router,label,alias,router)
+!define ROUTER(alias,label) AWS_ENTITY(interface,#F58536,Compute_AmazonVPC_router,label,alias,router)
 
-!define COMPUTE_AMAZONVPC_ROUTER(alias) AWS_ENTITY(node,#F58536,Compute_AmazonVPC_router,alias,Compute AmazonVPC router)
+!define COMPUTE_AMAZONVPC_ROUTER(alias) AWS_ENTITY(interface,#F58536,Compute_AmazonVPC_router,alias,Compute\nAmazonVPC\nrouter)
 
-!define COMPUTE_AMAZONVPC_ROUTER(alias,label) AWS_ENTITY(node,#F58536,Compute_AmazonVPC_router,label,alias,Compute AmazonVPC router)
+!define COMPUTE_AMAZONVPC_ROUTER(alias,label) AWS_ENTITY(interface,#F58536,Compute_AmazonVPC_router,label,alias,Compute\nAmazonVPC\nrouter)
 
 @enduml

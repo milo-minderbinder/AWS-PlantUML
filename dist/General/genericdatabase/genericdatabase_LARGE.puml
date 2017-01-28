@@ -289,8 +289,8 @@ FFFFFFFFFFFFFFFFFFFFEDCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 
 
-!define GENERICDATABASE_LARGE(alias) AWS_ENTITY(database,#7E7D7D,genericdatabase_LARGE,alias,*genericdatabase*)
+!define GENERICDATABASE_LARGE(alias) AWS_ENTITY(database,#7E7D7D,genericdatabase_LARGE,alias,**genericdatabase**)
 
-!define GENERICDATABASE_LARGE(alias,label) AWS_ENTITY(database,#7E7D7D,genericdatabase_LARGE,label,alias,*genericdatabase*)
+!define GENERICDATABASE_LARGE(alias,label) AWS_ENTITY(database,#7E7D7D,genericdatabase_LARGE,label,alias,**genericdatabase**)
 
 @enduml

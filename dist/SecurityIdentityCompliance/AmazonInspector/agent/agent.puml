@@ -69,8 +69,8 @@ FECCCCC900009CCCCCCCCCCCC007AACCCCCCCCCC70000ACCCCCF0000000000
 
 
 
-!define AGENT(alias) AWS_ENTITY(node,#769D3F,agent,alias,agent)
+!define AGENT(alias) AWS_ENTITY(agent,#769D3F,agent,alias,agent)
 
-!define AGENT(alias,label) AWS_ENTITY(node,#769D3F,agent,label,alias,agent)
+!define AGENT(alias,label) AWS_ENTITY(agent,#769D3F,agent,label,alias,agent)
 
 @enduml

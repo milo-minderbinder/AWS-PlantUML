@@ -362,8 +362,8 @@ CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 
 
-!define AVSENABLEDDEVICE_LARGE(alias) AWS_ENTITY(component,#2F74B8,AVSenableddevice_LARGE,alias,*AVSenableddevice*)
+!define AVSENABLEDDEVICE_LARGE(alias) AWS_ENTITY(component,#2F74B8,AVSenableddevice_LARGE,alias,**AVSenableddevice**)
 
-!define AVSENABLEDDEVICE_LARGE(alias,label) AWS_ENTITY(component,#2F74B8,AVSenableddevice_LARGE,label,alias,*AVSenableddevice*)
+!define AVSENABLEDDEVICE_LARGE(alias,label) AWS_ENTITY(component,#2F74B8,AVSenableddevice_LARGE,label,alias,**AVSenableddevice**)
 
 @enduml

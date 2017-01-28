@@ -123,12 +123,12 @@ FDCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCF00
 
 
 
-!define IMPORTEXPORT(alias) AWS_ENTITY(component,black,Migration_AWSSnowball_importexport,alias,importexport)
+!define IMPORTEXPORT(alias) AWS_ENTITY(agent,#E05344,Migration_AWSSnowball_importexport,alias,importexport)
 
-!define IMPORTEXPORT(alias,label) AWS_ENTITY(component,black,Migration_AWSSnowball_importexport,label,alias,importexport)
+!define IMPORTEXPORT(alias,label) AWS_ENTITY(agent,#E05344,Migration_AWSSnowball_importexport,label,alias,importexport)
 
-!define MIGRATION_AWSSNOWBALL_IMPORTEXPORT(alias) AWS_ENTITY(component,black,Migration_AWSSnowball_importexport,alias,Migration AWSSnowball importexport)
+!define MIGRATION_AWSSNOWBALL_IMPORTEXPORT(alias) AWS_ENTITY(agent,#E05344,Migration_AWSSnowball_importexport,alias,Migration\nAWSSnowball\nimportexport)
 
-!define MIGRATION_AWSSNOWBALL_IMPORTEXPORT(alias,label) AWS_ENTITY(component,black,Migration_AWSSnowball_importexport,label,alias,Migration AWSSnowball importexport)
+!define MIGRATION_AWSSNOWBALL_IMPORTEXPORT(alias,label) AWS_ENTITY(agent,#E05344,Migration_AWSSnowball_importexport,label,alias,Migration\nAWSSnowball\nimportexport)
 
 @enduml

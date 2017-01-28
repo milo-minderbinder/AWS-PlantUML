@@ -414,8 +414,8 @@ DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
 
 
 
-!define AWSDIRECTCONNECT_LARGE(alias) AWS_ENTITY(node,#F58536,AWSDirectConnect_LARGE,alias,*AWSDirectConnect*)
+!define AWSDIRECTCONNECT_LARGE(alias) AWS_ENTITY(node,#F58536,AWSDirectConnect_LARGE,alias,**AWSDirectConnect**)
 
-!define AWSDIRECTCONNECT_LARGE(alias,label) AWS_ENTITY(node,#F58536,AWSDirectConnect_LARGE,label,alias,*AWSDirectConnect*)
+!define AWSDIRECTCONNECT_LARGE(alias,label) AWS_ENTITY(node,#F58536,AWSDirectConnect_LARGE,label,alias,**AWSDirectConnect**)
 
 @enduml

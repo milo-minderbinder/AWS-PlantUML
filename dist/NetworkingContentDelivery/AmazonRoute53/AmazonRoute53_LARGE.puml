@@ -414,8 +414,8 @@ EFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEDCCBAAAAAAAAAA
 
 
 
-!define AMAZONROUTE53_LARGE(alias) AWS_ENTITY(node,#F58536,AmazonRoute53_LARGE,alias,*AmazonRoute53*)
+!define AMAZONROUTE53_LARGE(alias) AWS_ENTITY(node,#F58536,AmazonRoute53_LARGE,alias,**AmazonRoute53**)
 
-!define AMAZONROUTE53_LARGE(alias,label) AWS_ENTITY(node,#F58536,AmazonRoute53_LARGE,label,alias,*AmazonRoute53*)
+!define AMAZONROUTE53_LARGE(alias,label) AWS_ENTITY(node,#F58536,AmazonRoute53_LARGE,label,alias,**AmazonRoute53**)
 
 @enduml

@@ -66,6 +66,7 @@ skinparam interface<<MQTTprotocol>> {
 	BorderColor #2F74B8
 }
 
+
 !define MQTTPROTOCOL(alias) AWS_ENTITY(interface,#2F74B8,MQTTprotocol,alias,MQTTprotocol)
 
 !define MQTTPROTOCOL(alias,label) AWS_ENTITY(interface,#2F74B8,MQTTprotocol,label,alias,MQTTprotocol)

@@ -289,8 +289,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 
 
 
-!define CHECKLIST_LARGE(alias) AWS_ENTITY(artifact,#769D3F,checklist_LARGE,alias,*checklist*)
+!define CHECKLIST_LARGE(alias) AWS_ENTITY(artifact,#769D3F,checklist_LARGE,alias,**checklist**)
 
-!define CHECKLIST_LARGE(alias,label) AWS_ENTITY(artifact,#769D3F,checklist_LARGE,label,alias,*checklist*)
+!define CHECKLIST_LARGE(alias,label) AWS_ENTITY(artifact,#769D3F,checklist_LARGE,label,alias,**checklist**)
 
 @enduml

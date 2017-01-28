@@ -94,17 +94,19 @@ FFFFDCCCCCDDDDDCCCCCCDDDDDDDDDDDCCCCCCCDDDDDCCCCCDFFFF
 skinparam interface<<VPNconnection>> {
     BackgroundColor #FEEDE2
 	BorderColor #F58536
-}skinparam interface<<NetworkingContentDelivery AmazonVPC VPNconnection>> {
+}
+skinparam interface<<NetworkingContentDelivery\nAmazonVPC\nVPNconnection>> {
     BackgroundColor #FEEDE2
 	BorderColor #F58536
 }
+
 
 !define VPNCONNECTION(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_VPNconnection,alias,VPNconnection)
 
 !define VPNCONNECTION(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_VPNconnection,label,alias,VPNconnection)
 
-!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_VPNCONNECTION(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_VPNconnection,alias,NetworkingContentDelivery AmazonVPC VPNconnection)
+!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_VPNCONNECTION(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_VPNconnection,alias,NetworkingContentDelivery\nAmazonVPC\nVPNconnection)
 
-!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_VPNCONNECTION(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_VPNconnection,label,alias,NetworkingContentDelivery AmazonVPC VPNconnection)
+!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_VPNCONNECTION(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_VPNconnection,label,alias,NetworkingContentDelivery\nAmazonVPC\nVPNconnection)
 
 @enduml

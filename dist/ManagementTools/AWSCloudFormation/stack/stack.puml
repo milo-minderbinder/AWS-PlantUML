@@ -119,8 +119,8 @@ FFFFFFFFFFFFFFFFFFFF000FFFFFFFFFFFFFFFFFFFF000FFFFFFFFFFFFFFFFFFFF
 
 !define STACK(alias,label) AWS_ENTITY(artifact,#769D3F,AWSCloudFormation_stack,label,alias,stack)
 
-!define AWSCLOUDFORMATION_STACK(alias) AWS_ENTITY(artifact,#769D3F,AWSCloudFormation_stack,alias,AWSCloudFormation stack)
+!define AWSCLOUDFORMATION_STACK(alias) AWS_ENTITY(artifact,#769D3F,AWSCloudFormation_stack,alias,AWSCloudFormation\nstack)
 
-!define AWSCLOUDFORMATION_STACK(alias,label) AWS_ENTITY(artifact,#769D3F,AWSCloudFormation_stack,label,alias,AWSCloudFormation stack)
+!define AWSCLOUDFORMATION_STACK(alias,label) AWS_ENTITY(artifact,#769D3F,AWSCloudFormation_stack,label,alias,AWSCloudFormation\nstack)
 
 @enduml

@@ -414,8 +414,8 @@ BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
 
 
 
-!define AMAZONGAMELIFT_LARGE(alias) AWS_ENTITY(node,#AD698C,AmazonGameLift_LARGE,alias,*AmazonGameLift*)
+!define AMAZONGAMELIFT_LARGE(alias) AWS_ENTITY(node,#AD698C,AmazonGameLift_LARGE,alias,**AmazonGameLift**)
 
-!define AMAZONGAMELIFT_LARGE(alias,label) AWS_ENTITY(node,#AD698C,AmazonGameLift_LARGE,label,alias,*AmazonGameLift*)
+!define AMAZONGAMELIFT_LARGE(alias,label) AWS_ENTITY(node,#AD698C,AmazonGameLift_LARGE,label,alias,**AmazonGameLift**)
 
 @enduml

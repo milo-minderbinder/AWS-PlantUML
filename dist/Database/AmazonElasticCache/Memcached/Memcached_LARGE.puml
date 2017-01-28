@@ -282,8 +282,8 @@ FFFFDCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 
 
-!define MEMCACHED_LARGE(alias) AWS_ENTITY(storage,#2F74B8,Memcached_LARGE,alias,*Memcached*)
+!define MEMCACHED_LARGE(alias) AWS_ENTITY(storage,#2F74B8,Memcached_LARGE,alias,**Memcached**)
 
-!define MEMCACHED_LARGE(alias,label) AWS_ENTITY(storage,#2F74B8,Memcached_LARGE,label,alias,*Memcached*)
+!define MEMCACHED_LARGE(alias,label) AWS_ENTITY(storage,#2F74B8,Memcached_LARGE,label,alias,**Memcached**)
 
 @enduml

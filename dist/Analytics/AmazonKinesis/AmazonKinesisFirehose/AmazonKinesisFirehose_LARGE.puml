@@ -287,8 +287,8 @@ FFFFCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 
 
-!define AMAZONKINESISFIREHOSE_LARGE(alias) AWS_ENTITY(component,#F58536,AmazonKinesisFirehose_LARGE,alias,*AmazonKinesisFirehose*)
+!define AMAZONKINESISFIREHOSE_LARGE(alias) AWS_ENTITY(component,#F58536,AmazonKinesisFirehose_LARGE,alias,**AmazonKinesisFirehose**)
 
-!define AMAZONKINESISFIREHOSE_LARGE(alias,label) AWS_ENTITY(component,#F58536,AmazonKinesisFirehose_LARGE,label,alias,*AmazonKinesisFirehose*)
+!define AMAZONKINESISFIREHOSE_LARGE(alias,label) AWS_ENTITY(component,#F58536,AmazonKinesisFirehose_LARGE,label,alias,**AmazonKinesisFirehose**)
 
 @enduml

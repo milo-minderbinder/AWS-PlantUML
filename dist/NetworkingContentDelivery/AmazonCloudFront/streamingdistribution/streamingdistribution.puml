@@ -71,6 +71,7 @@ skinparam entity<<streamingdistribution>> {
 	BorderColor #E05344
 }
 
+
 !define STREAMINGDISTRIBUTION(alias) AWS_ENTITY(entity,#F58536,streamingdistribution,alias,streamingdistribution)
 
 !define STREAMINGDISTRIBUTION(alias,label) AWS_ENTITY(entity,#F58536,streamingdistribution,label,alias,streamingdistribution)

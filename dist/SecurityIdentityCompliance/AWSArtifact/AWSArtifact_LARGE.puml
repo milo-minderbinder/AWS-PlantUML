@@ -404,8 +404,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 
 
-!define AWSARTIFACT_LARGE(alias) AWS_ENTITY(node,#769D3F,AWSArtifact_LARGE,alias,*AWSArtifact*)
+!define AWSARTIFACT_LARGE(alias) AWS_ENTITY(node,#769D3F,AWSArtifact_LARGE,alias,**AWSArtifact**)
 
-!define AWSARTIFACT_LARGE(alias,label) AWS_ENTITY(node,#769D3F,AWSArtifact_LARGE,label,alias,*AWSArtifact*)
+!define AWSARTIFACT_LARGE(alias,label) AWS_ENTITY(node,#769D3F,AWSArtifact_LARGE,label,alias,**AWSArtifact**)
 
 @enduml

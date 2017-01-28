@@ -362,8 +362,8 @@ CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 
 
-!define THINGTRAVEL_LARGE(alias) AWS_ENTITY(node,#2F74B8,thingtravel_LARGE,alias,*thingtravel*)
+!define THINGTRAVEL_LARGE(alias) AWS_ENTITY(node,#2F74B8,thingtravel_LARGE,alias,**thingtravel**)
 
-!define THINGTRAVEL_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,thingtravel_LARGE,label,alias,*thingtravel*)
+!define THINGTRAVEL_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,thingtravel_LARGE,label,alias,**thingtravel**)
 
 @enduml

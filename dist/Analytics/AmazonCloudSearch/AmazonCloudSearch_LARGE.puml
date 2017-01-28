@@ -416,8 +416,8 @@ DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
 
 
 
-!define AMAZONCLOUDSEARCH_LARGE(alias) AWS_ENTITY(node,#F58536,AmazonCloudSearch_LARGE,alias,*AmazonCloudSearch*)
+!define AMAZONCLOUDSEARCH_LARGE(alias) AWS_ENTITY(node,#F58536,AmazonCloudSearch_LARGE,alias,**AmazonCloudSearch**)
 
-!define AMAZONCLOUDSEARCH_LARGE(alias,label) AWS_ENTITY(node,#F58536,AmazonCloudSearch_LARGE,label,alias,*AmazonCloudSearch*)
+!define AMAZONCLOUDSEARCH_LARGE(alias,label) AWS_ENTITY(node,#F58536,AmazonCloudSearch_LARGE,label,alias,**AmazonCloudSearch**)
 
 @enduml

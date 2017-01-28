@@ -404,8 +404,8 @@ CCCCCCB9999999999999999999999999999999999999999999999999994000000000000000000000
 
 
 
-!define SHADOW_LARGE(alias) AWS_ENTITY(node,#2F74B8,shadow_LARGE,alias,*shadow*)
+!define SHADOW_LARGE(alias) AWS_ENTITY(node,#2F74B8,shadow_LARGE,alias,**shadow**)
 
-!define SHADOW_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,shadow_LARGE,label,alias,*shadow*)
+!define SHADOW_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,shadow_LARGE,label,alias,**shadow**)
 
 @enduml

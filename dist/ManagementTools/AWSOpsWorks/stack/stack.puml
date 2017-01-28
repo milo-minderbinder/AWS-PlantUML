@@ -153,8 +153,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 
 !define STACK(alias,label) AWS_ENTITY(artifact,#769D3F,AWSOpsWorks_stack,label,alias,stack)
 
-!define AWSOPSWORKS_STACK(alias) AWS_ENTITY(artifact,#769D3F,AWSOpsWorks_stack,alias,AWSOpsWorks stack)
+!define AWSOPSWORKS_STACK(alias) AWS_ENTITY(artifact,#769D3F,AWSOpsWorks_stack,alias,AWSOpsWorks\nstack)
 
-!define AWSOPSWORKS_STACK(alias,label) AWS_ENTITY(artifact,#769D3F,AWSOpsWorks_stack,label,alias,AWSOpsWorks stack)
+!define AWSOPSWORKS_STACK(alias,label) AWS_ENTITY(artifact,#769D3F,AWSOpsWorks_stack,label,alias,AWSOpsWorks\nstack)
 
 @enduml

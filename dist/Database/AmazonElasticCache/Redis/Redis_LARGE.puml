@@ -282,8 +282,8 @@ FFFFDCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 
 
-!define REDIS_LARGE(alias) AWS_ENTITY(storage,#2F74B8,Redis_LARGE,alias,*Redis*)
+!define REDIS_LARGE(alias) AWS_ENTITY(storage,#2F74B8,Redis_LARGE,alias,**Redis**)
 
-!define REDIS_LARGE(alias,label) AWS_ENTITY(storage,#2F74B8,Redis_LARGE,label,alias,*Redis*)
+!define REDIS_LARGE(alias,label) AWS_ENTITY(storage,#2F74B8,Redis_LARGE,label,alias,**Redis**)
 
 @enduml

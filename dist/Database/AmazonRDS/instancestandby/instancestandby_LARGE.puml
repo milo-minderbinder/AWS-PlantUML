@@ -288,8 +288,8 @@ FFFFFFFFFFFFFFEDCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 
 
-!define INSTANCESTANDBY_LARGE(alias) AWS_ENTITY(component,#2F74B8,instancestandby_LARGE,alias,*instancestandby*)
+!define INSTANCESTANDBY_LARGE(alias) AWS_ENTITY(component,#2F74B8,instancestandby_LARGE,alias,**instancestandby**)
 
-!define INSTANCESTANDBY_LARGE(alias,label) AWS_ENTITY(component,#2F74B8,instancestandby_LARGE,label,alias,*instancestandby*)
+!define INSTANCESTANDBY_LARGE(alias,label) AWS_ENTITY(component,#2F74B8,instancestandby_LARGE,label,alias,**instancestandby**)
 
 @enduml

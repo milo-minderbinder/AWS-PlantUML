@@ -414,8 +414,8 @@ DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
 
 
 
-!define AMAZONELASTICCACHE_LARGE(alias) AWS_ENTITY(storage,#2F74B8,AmazonElasticCache_LARGE,alias,*AmazonElasticCache*)
+!define AMAZONELASTICCACHE_LARGE(alias) AWS_ENTITY(storage,#2F74B8,AmazonElasticCache_LARGE,alias,**AmazonElasticCache**)
 
-!define AMAZONELASTICCACHE_LARGE(alias,label) AWS_ENTITY(storage,#2F74B8,AmazonElasticCache_LARGE,label,alias,*AmazonElasticCache*)
+!define AMAZONELASTICCACHE_LARGE(alias,label) AWS_ENTITY(storage,#2F74B8,AmazonElasticCache_LARGE,label,alias,**AmazonElasticCache**)
 
 @enduml

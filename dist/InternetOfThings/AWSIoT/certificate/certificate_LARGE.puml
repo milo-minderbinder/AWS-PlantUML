@@ -392,8 +392,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFCCC60000000000000006CCCCCCCCCCCCCCCCCCCCCCCCCC600000
 
 
 
-!define CERTIFICATE_LARGE(alias) AWS_ENTITY(artifact,#2F74B8,certificate_LARGE,alias,*certificate*)
+!define CERTIFICATE_LARGE(alias) AWS_ENTITY(artifact,#2F74B8,certificate_LARGE,alias,**certificate**)
 
-!define CERTIFICATE_LARGE(alias,label) AWS_ENTITY(artifact,#2F74B8,certificate_LARGE,label,alias,*certificate*)
+!define CERTIFICATE_LARGE(alias,label) AWS_ENTITY(artifact,#2F74B8,certificate_LARGE,label,alias,**certificate**)
 
 @enduml

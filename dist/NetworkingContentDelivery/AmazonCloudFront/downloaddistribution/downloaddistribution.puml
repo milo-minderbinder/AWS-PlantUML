@@ -71,6 +71,7 @@ skinparam entity<<downloaddistribution>> {
 	BorderColor #E05344
 }
 
+
 !define DOWNLOADDISTRIBUTION(alias) AWS_ENTITY(entity,#F58536,downloaddistribution,alias,downloaddistribution)
 
 !define DOWNLOADDISTRIBUTION(alias,label) AWS_ENTITY(entity,#F58536,downloaddistribution,label,alias,downloaddistribution)

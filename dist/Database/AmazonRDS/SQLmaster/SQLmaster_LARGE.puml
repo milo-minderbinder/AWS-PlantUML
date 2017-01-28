@@ -287,8 +287,8 @@ FFFFCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 
 
-!define SQLMASTER_LARGE(alias) AWS_ENTITY(component,#2F74B8,SQLmaster_LARGE,alias,*SQLmaster*)
+!define SQLMASTER_LARGE(alias) AWS_ENTITY(component,#2F74B8,SQLmaster_LARGE,alias,**SQLmaster**)
 
-!define SQLMASTER_LARGE(alias,label) AWS_ENTITY(component,#2F74B8,SQLmaster_LARGE,label,alias,*SQLmaster*)
+!define SQLMASTER_LARGE(alias,label) AWS_ENTITY(component,#2F74B8,SQLmaster_LARGE,label,alias,**SQLmaster**)
 
 @enduml

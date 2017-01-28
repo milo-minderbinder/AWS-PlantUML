@@ -416,8 +416,8 @@ DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDA9999999999999999999999999999999
 
 
 
-!define AMAZONAPIGATEWAY_LARGE(alias) AWS_ENTITY(node,#AD698C,AmazonAPIGateway_LARGE,alias,*AmazonAPIGateway*)
+!define AMAZONAPIGATEWAY_LARGE(alias) AWS_ENTITY(node,#AD698C,AmazonAPIGateway_LARGE,alias,**AmazonAPIGateway**)
 
-!define AMAZONAPIGATEWAY_LARGE(alias,label) AWS_ENTITY(node,#AD698C,AmazonAPIGateway_LARGE,label,alias,*AmazonAPIGateway*)
+!define AMAZONAPIGATEWAY_LARGE(alias,label) AWS_ENTITY(node,#AD698C,AmazonAPIGateway_LARGE,label,alias,**AmazonAPIGateway**)
 
 @enduml

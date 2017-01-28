@@ -355,8 +355,8 @@ CCCCCC99999999999999999999999999999999999999999999999999999999999999999999999999
 
 
 
-!define SIMULATOR_LARGE(alias) AWS_ENTITY(node,#2F74B8,simulator_LARGE,alias,*simulator*)
+!define SIMULATOR_LARGE(alias) AWS_ENTITY(node,#2F74B8,simulator_LARGE,alias,**simulator**)
 
-!define SIMULATOR_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,simulator_LARGE,label,alias,*simulator*)
+!define SIMULATOR_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,simulator_LARGE,label,alias,**simulator**)
 
 @enduml

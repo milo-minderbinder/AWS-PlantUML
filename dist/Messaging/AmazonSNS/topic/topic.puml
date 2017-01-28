@@ -111,16 +111,18 @@ sprite $AmazonSNS_topic [82x52/16] {
 
 skinparam artifact<<topic>> {
     BackgroundColor #EDDEE6
-}skinparam artifact<<AmazonSNS topic>> {
+}
+skinparam artifact<<AmazonSNS\ntopic>> {
     BackgroundColor #EDDEE6
 }
+
 
 !define TOPIC(alias) AWS_ENTITY(artifact,#D9A842,AmazonSNS_topic,alias,topic)
 
 !define TOPIC(alias,label) AWS_ENTITY(artifact,#D9A842,AmazonSNS_topic,label,alias,topic)
 
-!define AMAZONSNS_TOPIC(alias) AWS_ENTITY(artifact,#D9A842,AmazonSNS_topic,alias,AmazonSNS topic)
+!define AMAZONSNS_TOPIC(alias) AWS_ENTITY(artifact,#D9A842,AmazonSNS_topic,alias,AmazonSNS\ntopic)
 
-!define AMAZONSNS_TOPIC(alias,label) AWS_ENTITY(artifact,#D9A842,AmazonSNS_topic,label,alias,AmazonSNS topic)
+!define AMAZONSNS_TOPIC(alias,label) AWS_ENTITY(artifact,#D9A842,AmazonSNS_topic,label,alias,AmazonSNS\ntopic)
 
 @enduml

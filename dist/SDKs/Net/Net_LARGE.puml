@@ -376,8 +376,8 @@ FFFFFFFFFFFFFFFFFFFFB50000000000000000000000000000000000000000000000000000000000
 
 
 
-!define NET_LARGE(alias) AWS_ENTITY(agent,black,Net_LARGE,alias,*Net*)
+!define NET_LARGE(alias) AWS_ENTITY(agent,black,Net_LARGE,alias,**Net**)
 
-!define NET_LARGE(alias,label) AWS_ENTITY(agent,black,Net_LARGE,label,alias,*Net*)
+!define NET_LARGE(alias,label) AWS_ENTITY(agent,black,Net_LARGE,label,alias,**Net**)
 
 @enduml

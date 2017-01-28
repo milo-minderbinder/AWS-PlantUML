@@ -416,8 +416,8 @@ DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDA9999999999999999999999999999999
 
 
 
-!define AMAZONAPIGATEWAY_LARGE(alias) AWS_ENTITY(component,#D9A842,AmazonAPIGateway_LARGE,alias,*AmazonAPIGateway*)
+!define AMAZONAPIGATEWAY_LARGE(alias) AWS_ENTITY(component,#D9A842,AmazonAPIGateway_LARGE,alias,**AmazonAPIGateway**)
 
-!define AMAZONAPIGATEWAY_LARGE(alias,label) AWS_ENTITY(component,#D9A842,AmazonAPIGateway_LARGE,label,alias,*AmazonAPIGateway*)
+!define AMAZONAPIGATEWAY_LARGE(alias,label) AWS_ENTITY(component,#D9A842,AmazonAPIGateway_LARGE,label,alias,**AmazonAPIGateway**)
 
 @enduml

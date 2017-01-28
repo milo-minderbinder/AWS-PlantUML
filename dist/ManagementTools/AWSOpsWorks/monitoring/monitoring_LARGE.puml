@@ -306,8 +306,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 
 
 
-!define MONITORING_LARGE(alias) AWS_ENTITY(artifact,#769D3F,monitoring_LARGE,alias,*monitoring*)
+!define MONITORING_LARGE(alias) AWS_ENTITY(artifact,#769D3F,monitoring_LARGE,alias,**monitoring**)
 
-!define MONITORING_LARGE(alias,label) AWS_ENTITY(artifact,#769D3F,monitoring_LARGE,label,alias,*monitoring*)
+!define MONITORING_LARGE(alias,label) AWS_ENTITY(artifact,#769D3F,monitoring_LARGE,label,alias,**monitoring**)
 
 @enduml

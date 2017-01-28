@@ -270,8 +270,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 
 
 
-!define SERVO_LARGE(alias) AWS_ENTITY(node,#2F74B8,servo_LARGE,alias,*servo*)
+!define SERVO_LARGE(alias) AWS_ENTITY(node,#2F74B8,servo_LARGE,alias,**servo**)
 
-!define SERVO_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,servo_LARGE,label,alias,*servo*)
+!define SERVO_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,servo_LARGE,label,alias,**servo**)
 
 @enduml

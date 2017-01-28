@@ -367,8 +367,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 
 
 
-!define EVENTEVENTBASED_LARGE(alias) AWS_ENTITY(node,#769D3F,eventeventbased_LARGE,alias,*eventeventbased*)
+!define EVENTEVENTBASED_LARGE(alias) AWS_ENTITY(artifact,#769D3F,eventeventbased_LARGE,alias,**eventeventbased**)
 
-!define EVENTEVENTBASED_LARGE(alias,label) AWS_ENTITY(node,#769D3F,eventeventbased_LARGE,label,alias,*eventeventbased*)
+!define EVENTEVENTBASED_LARGE(alias,label) AWS_ENTITY(artifact,#769D3F,eventeventbased_LARGE,label,alias,**eventeventbased**)
 
 @enduml

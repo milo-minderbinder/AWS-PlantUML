@@ -283,8 +283,8 @@ BBBBBBBBBBBBBB988888888888888888888888888888888888888888888888888888888888888888
 
 
 
-!define EFSSHARE_LARGE(alias) AWS_ENTITY(storage,#E05344,EFSShare_LARGE,alias,*EFSShare*)
+!define EFSSHARE_LARGE(alias) AWS_ENTITY(folder,#E05344,EFSShare_LARGE,alias,**EFSShare**)
 
-!define EFSSHARE_LARGE(alias,label) AWS_ENTITY(storage,#E05344,EFSShare_LARGE,label,alias,*EFSShare*)
+!define EFSSHARE_LARGE(alias,label) AWS_ENTITY(folder,#E05344,EFSShare_LARGE,label,alias,**EFSShare**)
 
 @enduml

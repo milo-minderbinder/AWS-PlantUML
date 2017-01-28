@@ -89,14 +89,22 @@ FFFECCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCEFFF
 00000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00000000000
 }
 
+skinparam interface<<VPNconnection>> {
+    BackgroundColor #FEEDE2
+	BorderColor #F58536
+}
+skinparam interface<<Compute\nAmazonVPC\nVPNconnection>> {
+    BackgroundColor #FEEDE2
+	BorderColor #F58536
+}
 
 
-!define VPNCONNECTION(alias) AWS_ENTITY(node,#F58536,Compute_AmazonVPC_VPNconnection,alias,VPNconnection)
+!define VPNCONNECTION(alias) AWS_ENTITY(interface,#F58536,Compute_AmazonVPC_VPNconnection,alias,VPNconnection)
 
-!define VPNCONNECTION(alias,label) AWS_ENTITY(node,#F58536,Compute_AmazonVPC_VPNconnection,label,alias,VPNconnection)
+!define VPNCONNECTION(alias,label) AWS_ENTITY(interface,#F58536,Compute_AmazonVPC_VPNconnection,label,alias,VPNconnection)
 
-!define COMPUTE_AMAZONVPC_VPNCONNECTION(alias) AWS_ENTITY(node,#F58536,Compute_AmazonVPC_VPNconnection,alias,Compute AmazonVPC VPNconnection)
+!define COMPUTE_AMAZONVPC_VPNCONNECTION(alias) AWS_ENTITY(interface,#F58536,Compute_AmazonVPC_VPNconnection,alias,Compute\nAmazonVPC\nVPNconnection)
 
-!define COMPUTE_AMAZONVPC_VPNCONNECTION(alias,label) AWS_ENTITY(node,#F58536,Compute_AmazonVPC_VPNconnection,label,alias,Compute AmazonVPC VPNconnection)
+!define COMPUTE_AMAZONVPC_VPNCONNECTION(alias,label) AWS_ENTITY(interface,#F58536,Compute_AmazonVPC_VPNconnection,label,alias,Compute\nAmazonVPC\nVPNconnection)
 
 @enduml

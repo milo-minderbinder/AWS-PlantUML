@@ -364,8 +364,8 @@ DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
 
 
 
-!define AMAZONLEX_LARGE(alias) AWS_ENTITY(component,#2F74B8,AmazonLex_LARGE,alias,*AmazonLex*)
+!define AMAZONLEX_LARGE(alias) AWS_ENTITY(component,#2F74B8,AmazonLex_LARGE,alias,**AmazonLex**)
 
-!define AMAZONLEX_LARGE(alias,label) AWS_ENTITY(component,#2F74B8,AmazonLex_LARGE,label,alias,*AmazonLex*)
+!define AMAZONLEX_LARGE(alias,label) AWS_ENTITY(component,#2F74B8,AmazonLex_LARGE,label,alias,**AmazonLex**)
 
 @enduml

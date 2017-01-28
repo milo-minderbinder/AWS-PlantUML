@@ -713,12 +713,12 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 
 
 
-!define STACK_LARGE(alias) AWS_ENTITY(artifact,#769D3F,AWSOpsWorks_stack_LARGE,alias,*stack*)
+!define STACK_LARGE(alias) AWS_ENTITY(artifact,#769D3F,AWSOpsWorks_stack_LARGE,alias,**stack**)
 
-!define STACK_LARGE(alias,label) AWS_ENTITY(artifact,#769D3F,AWSOpsWorks_stack_LARGE,label,alias,*stack*)
+!define STACK_LARGE(alias,label) AWS_ENTITY(artifact,#769D3F,AWSOpsWorks_stack_LARGE,label,alias,**stack**)
 
-!define AWSOPSWORKS_STACK_LARGE(alias) AWS_ENTITY(artifact,#769D3F,AWSOpsWorks_stack_LARGE,alias,*AWSOpsWorks stack*)
+!define AWSOPSWORKS_STACK_LARGE(alias) AWS_ENTITY(artifact,#769D3F,AWSOpsWorks_stack_LARGE,alias,**AWSOpsWorks\nstack**)
 
-!define AWSOPSWORKS_STACK_LARGE(alias,label) AWS_ENTITY(artifact,#769D3F,AWSOpsWorks_stack_LARGE,label,alias,*AWSOpsWorks stack*)
+!define AWSOPSWORKS_STACK_LARGE(alias,label) AWS_ENTITY(artifact,#769D3F,AWSOpsWorks_stack_LARGE,label,alias,**AWSOpsWorks\nstack**)
 
 @enduml

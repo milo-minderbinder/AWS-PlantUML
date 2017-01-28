@@ -282,8 +282,8 @@ FFFFDCCCCCCCCCCCCC00000000000000000000000000000000000000000000000000000000000000
 
 
 
-!define DESIREDSTATE_LARGE(alias) AWS_ENTITY(artifact,#2F74B8,desiredstate_LARGE,alias,*desiredstate*)
+!define DESIREDSTATE_LARGE(alias) AWS_ENTITY(artifact,#2F74B8,desiredstate_LARGE,alias,**desiredstate**)
 
-!define DESIREDSTATE_LARGE(alias,label) AWS_ENTITY(artifact,#2F74B8,desiredstate_LARGE,label,alias,*desiredstate*)
+!define DESIREDSTATE_LARGE(alias,label) AWS_ENTITY(artifact,#2F74B8,desiredstate_LARGE,label,alias,**desiredstate**)
 
 @enduml

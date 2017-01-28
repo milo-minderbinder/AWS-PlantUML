@@ -414,8 +414,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFECCCCCCCCCCCCCCCCCCCCCCCCCDFFFFFFFFFFFFF
 
 
 
-!define AWSOPSWORKS_LARGE(alias) AWS_ENTITY(artifact,#769D3F,AWSOpsWorks_LARGE,alias,*AWSOpsWorks*)
+!define AWSOPSWORKS_LARGE(alias) AWS_ENTITY(node,#769D3F,AWSOpsWorks_LARGE,alias,**AWSOpsWorks**)
 
-!define AWSOPSWORKS_LARGE(alias,label) AWS_ENTITY(artifact,#769D3F,AWSOpsWorks_LARGE,label,alias,*AWSOpsWorks*)
+!define AWSOPSWORKS_LARGE(alias,label) AWS_ENTITY(node,#769D3F,AWSOpsWorks_LARGE,label,alias,**AWSOpsWorks**)
 
 @enduml

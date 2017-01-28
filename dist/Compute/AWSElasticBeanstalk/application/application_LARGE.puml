@@ -290,8 +290,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000000000000000000000000000000000000
 
 
 
-!define APPLICATION_LARGE(alias) AWS_ENTITY(component,#F58536,application_LARGE,alias,*application*)
+!define APPLICATION_LARGE(alias) AWS_ENTITY(component,#F58536,application_LARGE,alias,**application**)
 
-!define APPLICATION_LARGE(alias,label) AWS_ENTITY(component,#F58536,application_LARGE,label,alias,*application*)
+!define APPLICATION_LARGE(alias,label) AWS_ENTITY(component,#F58536,application_LARGE,label,alias,**application**)
 
 @enduml

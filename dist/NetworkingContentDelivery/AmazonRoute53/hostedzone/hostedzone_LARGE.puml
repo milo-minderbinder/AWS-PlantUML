@@ -291,8 +291,8 @@ FFFCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 
 
-!define HOSTEDZONE_LARGE(alias) AWS_ENTITY(frame,#F58536,hostedzone_LARGE,alias,*hostedzone*)
+!define HOSTEDZONE_LARGE(alias) AWS_ENTITY(frame,#F58536,hostedzone_LARGE,alias,**hostedzone**)
 
-!define HOSTEDZONE_LARGE(alias,label) AWS_ENTITY(frame,#F58536,hostedzone_LARGE,label,alias,*hostedzone*)
+!define HOSTEDZONE_LARGE(alias,label) AWS_ENTITY(frame,#F58536,hostedzone_LARGE,label,alias,**hostedzone**)
 
 @enduml

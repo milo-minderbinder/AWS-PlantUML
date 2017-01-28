@@ -91,6 +91,7 @@ skinparam node<<AWSLambda>> {
 	BorderColor Black
 }
 
+
 !define AWSLAMBDA(alias) AWS_ENTITY(node,#F58536,AWSLambda,alias,AWSLambda)
 
 !define AWSLAMBDA(alias,label) AWS_ENTITY(node,#F58536,AWSLambda,label,alias,AWSLambda)

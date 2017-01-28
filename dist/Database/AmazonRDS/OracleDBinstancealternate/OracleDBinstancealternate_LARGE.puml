@@ -282,8 +282,8 @@ FFFFDCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 
 
-!define ORACLEDBINSTANCEALTERNATE_LARGE(alias) AWS_ENTITY(component,#2F74B8,OracleDBinstancealternate_LARGE,alias,*OracleDBinstancealternate*)
+!define ORACLEDBINSTANCEALTERNATE_LARGE(alias) AWS_ENTITY(component,#2F74B8,OracleDBinstancealternate_LARGE,alias,**OracleDBinstancealternate**)
 
-!define ORACLEDBINSTANCEALTERNATE_LARGE(alias,label) AWS_ENTITY(component,#2F74B8,OracleDBinstancealternate_LARGE,label,alias,*OracleDBinstancealternate*)
+!define ORACLEDBINSTANCEALTERNATE_LARGE(alias,label) AWS_ENTITY(component,#2F74B8,OracleDBinstancealternate_LARGE,label,alias,**OracleDBinstancealternate**)
 
 @enduml

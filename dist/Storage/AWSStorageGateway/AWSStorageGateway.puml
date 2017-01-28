@@ -86,8 +86,8 @@ EEEEEEEEECBBBBBCEEEEEEEEEEEEEEEEEEBBBBBBBBBBB000000000EEEEEEEEECBBBB
 
 
 
-!define AWSSTORAGEGATEWAY(alias) AWS_ENTITY(artifact,#E05344,AWSStorageGateway,alias,AWSStorageGateway)
+!define AWSSTORAGEGATEWAY(alias) AWS_ENTITY(node,#E05344,AWSStorageGateway,alias,AWSStorageGateway)
 
-!define AWSSTORAGEGATEWAY(alias,label) AWS_ENTITY(artifact,#E05344,AWSStorageGateway,label,alias,AWSStorageGateway)
+!define AWSSTORAGEGATEWAY(alias,label) AWS_ENTITY(node,#E05344,AWSStorageGateway,label,alias,AWSStorageGateway)
 
 @enduml

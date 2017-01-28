@@ -133,14 +133,22 @@ FDCCCCCCCCCCCCCB0008CCCCCCCCCCCCCCCCCCCCCC8000BCCCCCCCCCCCCCDF
 00000000000000000000000FFFFFFFFFFFFFFFF00000000000000000000000
 }
 
+skinparam interface<<endpoints>> {
+    BackgroundColor #FEEDE2
+	BorderColor #F58536
+}
+skinparam interface<<Compute\nAmazonVPC\nendpoints>> {
+    BackgroundColor #FEEDE2
+	BorderColor #F58536
+}
 
 
-!define ENDPOINTS(alias) AWS_ENTITY(node,#F58536,Compute_AmazonVPC_endpoints,alias,endpoints)
+!define ENDPOINTS(alias) AWS_ENTITY(interface,#F58536,Compute_AmazonVPC_endpoints,alias,endpoints)
 
-!define ENDPOINTS(alias,label) AWS_ENTITY(node,#F58536,Compute_AmazonVPC_endpoints,label,alias,endpoints)
+!define ENDPOINTS(alias,label) AWS_ENTITY(interface,#F58536,Compute_AmazonVPC_endpoints,label,alias,endpoints)
 
-!define COMPUTE_AMAZONVPC_ENDPOINTS(alias) AWS_ENTITY(node,#F58536,Compute_AmazonVPC_endpoints,alias,Compute AmazonVPC endpoints)
+!define COMPUTE_AMAZONVPC_ENDPOINTS(alias) AWS_ENTITY(interface,#F58536,Compute_AmazonVPC_endpoints,alias,Compute\nAmazonVPC\nendpoints)
 
-!define COMPUTE_AMAZONVPC_ENDPOINTS(alias,label) AWS_ENTITY(node,#F58536,Compute_AmazonVPC_endpoints,label,alias,Compute AmazonVPC endpoints)
+!define COMPUTE_AMAZONVPC_ENDPOINTS(alias,label) AWS_ENTITY(interface,#F58536,Compute_AmazonVPC_endpoints,label,alias,Compute\nAmazonVPC\nendpoints)
 
 @enduml

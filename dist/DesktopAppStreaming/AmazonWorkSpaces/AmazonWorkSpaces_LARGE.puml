@@ -430,8 +430,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 
 
 
-!define AMAZONWORKSPACES_LARGE(alias) AWS_ENTITY(component,#F58536,AmazonWorkSpaces_LARGE,alias,*AmazonWorkSpaces*)
+!define AMAZONWORKSPACES_LARGE(alias) AWS_ENTITY(component,#F58536,AmazonWorkSpaces_LARGE,alias,**AmazonWorkSpaces**)
 
-!define AMAZONWORKSPACES_LARGE(alias,label) AWS_ENTITY(component,#F58536,AmazonWorkSpaces_LARGE,label,alias,*AmazonWorkSpaces*)
+!define AMAZONWORKSPACES_LARGE(alias,label) AWS_ENTITY(component,#F58536,AmazonWorkSpaces_LARGE,label,alias,**AmazonWorkSpaces**)
 
 @enduml

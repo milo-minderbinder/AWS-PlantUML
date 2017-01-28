@@ -414,8 +414,8 @@ BBBBBBBBBBBBBBBBBBBBBB77777777777777777777777779BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBA7
 
 
 
-!define AWSDEVICEFARM_LARGE(alias) AWS_ENTITY(node,#AD698C,AWSDeviceFarm_LARGE,alias,*AWSDeviceFarm*)
+!define AWSDEVICEFARM_LARGE(alias) AWS_ENTITY(node,#AD698C,AWSDeviceFarm_LARGE,alias,**AWSDeviceFarm**)
 
-!define AWSDEVICEFARM_LARGE(alias,label) AWS_ENTITY(node,#AD698C,AWSDeviceFarm_LARGE,label,alias,*AWSDeviceFarm*)
+!define AWSDEVICEFARM_LARGE(alias,label) AWS_ENTITY(node,#AD698C,AWSDeviceFarm_LARGE,label,alias,**AWSDeviceFarm**)
 
 @enduml

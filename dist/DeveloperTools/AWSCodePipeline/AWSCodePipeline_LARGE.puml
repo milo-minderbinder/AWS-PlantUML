@@ -415,8 +415,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA87777777777777777777777777777778
 
 
 
-!define AWSCODEPIPELINE_LARGE(alias) AWS_ENTITY(component,#769D3F,AWSCodePipeline_LARGE,alias,*AWSCodePipeline*)
+!define AWSCODEPIPELINE_LARGE(alias) AWS_ENTITY(component,#769D3F,AWSCodePipeline_LARGE,alias,**AWSCodePipeline**)
 
-!define AWSCODEPIPELINE_LARGE(alias,label) AWS_ENTITY(component,#769D3F,AWSCodePipeline_LARGE,label,alias,*AWSCodePipeline*)
+!define AWSCODEPIPELINE_LARGE(alias,label) AWS_ENTITY(component,#769D3F,AWSCodePipeline_LARGE,label,alias,**AWSCodePipeline**)
 
 @enduml

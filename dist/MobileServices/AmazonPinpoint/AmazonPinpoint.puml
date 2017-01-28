@@ -167,8 +167,8 @@ EEEEEEEBAAAABEEEEEEEEEECAAAAAA9987899BCCCCCCCAAAAAAAAABCCCCCCAAAAAAA0
 
 !define AMAZONPINPOINT(alias,label) AWS_ENTITY(node,#AD698C,MobileServices_AmazonPinpoint,label,alias,AmazonPinpoint)
 
-!define MOBILESERVICES_AMAZONPINPOINT(alias) AWS_ENTITY(node,#AD698C,MobileServices_AmazonPinpoint,alias,MobileServices AmazonPinpoint)
+!define MOBILESERVICES_AMAZONPINPOINT(alias) AWS_ENTITY(node,#AD698C,MobileServices_AmazonPinpoint,alias,MobileServices\nAmazonPinpoint)
 
-!define MOBILESERVICES_AMAZONPINPOINT(alias,label) AWS_ENTITY(node,#AD698C,MobileServices_AmazonPinpoint,label,alias,MobileServices AmazonPinpoint)
+!define MOBILESERVICES_AMAZONPINPOINT(alias,label) AWS_ENTITY(node,#AD698C,MobileServices_AmazonPinpoint,label,alias,MobileServices\nAmazonPinpoint)
 
 @enduml

@@ -284,8 +284,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 
 
 
-!define DENSESTORAGENODE_LARGE(alias) AWS_ENTITY(node,#2F74B8,densestoragenode_LARGE,alias,*densestoragenode*)
+!define DENSESTORAGENODE_LARGE(alias) AWS_ENTITY(database,#2F74B8,densestoragenode_LARGE,alias,**densestoragenode**)
 
-!define DENSESTORAGENODE_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,densestoragenode_LARGE,label,alias,*densestoragenode*)
+!define DENSESTORAGENODE_LARGE(alias,label) AWS_ENTITY(database,#2F74B8,densestoragenode_LARGE,label,alias,**densestoragenode**)
 
 @enduml

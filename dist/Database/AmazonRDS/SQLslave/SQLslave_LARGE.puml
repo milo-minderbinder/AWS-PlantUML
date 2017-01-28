@@ -287,8 +287,8 @@ FFFFCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 
 
-!define SQLSLAVE_LARGE(alias) AWS_ENTITY(component,#2F74B8,SQLslave_LARGE,alias,*SQLslave*)
+!define SQLSLAVE_LARGE(alias) AWS_ENTITY(component,#2F74B8,SQLslave_LARGE,alias,**SQLslave**)
 
-!define SQLSLAVE_LARGE(alias,label) AWS_ENTITY(component,#2F74B8,SQLslave_LARGE,label,alias,*SQLslave*)
+!define SQLSLAVE_LARGE(alias,label) AWS_ENTITY(component,#2F74B8,SQLslave_LARGE,label,alias,**SQLslave**)
 
 @enduml

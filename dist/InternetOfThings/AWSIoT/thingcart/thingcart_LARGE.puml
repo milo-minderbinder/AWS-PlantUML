@@ -362,8 +362,8 @@ CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 
 
-!define THINGCART_LARGE(alias) AWS_ENTITY(node,#2F74B8,thingcart_LARGE,alias,*thingcart*)
+!define THINGCART_LARGE(alias) AWS_ENTITY(node,#2F74B8,thingcart_LARGE,alias,**thingcart**)
 
-!define THINGCART_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,thingcart_LARGE,label,alias,*thingcart*)
+!define THINGCART_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,thingcart_LARGE,label,alias,**thingcart**)
 
 @enduml

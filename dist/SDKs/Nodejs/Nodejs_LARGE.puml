@@ -376,8 +376,8 @@ FFFFFFFFFFFFFFFFFFFFB50000000000000000000000000000000000000000000000000000000000
 
 
 
-!define NODEJS_LARGE(alias) AWS_ENTITY(agent,black,Nodejs_LARGE,alias,*Nodejs*)
+!define NODEJS_LARGE(alias) AWS_ENTITY(agent,black,Nodejs_LARGE,alias,**Nodejs**)
 
-!define NODEJS_LARGE(alias,label) AWS_ENTITY(agent,black,Nodejs_LARGE,label,alias,*Nodejs*)
+!define NODEJS_LARGE(alias,label) AWS_ENTITY(agent,black,Nodejs_LARGE,label,alias,**Nodejs**)
 
 @enduml

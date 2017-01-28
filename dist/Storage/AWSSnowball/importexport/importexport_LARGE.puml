@@ -577,12 +577,12 @@ FFFFFFFFFFFFFFFFEDCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 
 
-!define IMPORTEXPORT_LARGE(alias) AWS_ENTITY(component,#E05344,Storage_AWSSnowball_importexport_LARGE,alias,*importexport*)
+!define IMPORTEXPORT_LARGE(alias) AWS_ENTITY(component,#E05344,Storage_AWSSnowball_importexport_LARGE,alias,**importexport**)
 
-!define IMPORTEXPORT_LARGE(alias,label) AWS_ENTITY(component,#E05344,Storage_AWSSnowball_importexport_LARGE,label,alias,*importexport*)
+!define IMPORTEXPORT_LARGE(alias,label) AWS_ENTITY(component,#E05344,Storage_AWSSnowball_importexport_LARGE,label,alias,**importexport**)
 
-!define STORAGE_AWSSNOWBALL_IMPORTEXPORT_LARGE(alias) AWS_ENTITY(component,#E05344,Storage_AWSSnowball_importexport_LARGE,alias,*Storage AWSSnowball importexport*)
+!define STORAGE_AWSSNOWBALL_IMPORTEXPORT_LARGE(alias) AWS_ENTITY(component,#E05344,Storage_AWSSnowball_importexport_LARGE,alias,**Storage\nAWSSnowball\nimportexport**)
 
-!define STORAGE_AWSSNOWBALL_IMPORTEXPORT_LARGE(alias,label) AWS_ENTITY(component,#E05344,Storage_AWSSnowball_importexport_LARGE,label,alias,*Storage AWSSnowball importexport*)
+!define STORAGE_AWSSNOWBALL_IMPORTEXPORT_LARGE(alias,label) AWS_ENTITY(component,#E05344,Storage_AWSSnowball_importexport_LARGE,label,alias,**Storage\nAWSSnowball\nimportexport**)
 
 @enduml

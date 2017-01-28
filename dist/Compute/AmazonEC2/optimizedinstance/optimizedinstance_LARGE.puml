@@ -282,8 +282,8 @@ FFFFECCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 
 
-!define OPTIMIZEDINSTANCE_LARGE(alias) AWS_ENTITY(component,#F58536,optimizedinstance_LARGE,alias,*optimizedinstance*)
+!define OPTIMIZEDINSTANCE_LARGE(alias) AWS_ENTITY(component,#F58536,optimizedinstance_LARGE,alias,**optimizedinstance**)
 
-!define OPTIMIZEDINSTANCE_LARGE(alias,label) AWS_ENTITY(component,#F58536,optimizedinstance_LARGE,label,alias,*optimizedinstance*)
+!define OPTIMIZEDINSTANCE_LARGE(alias,label) AWS_ENTITY(component,#F58536,optimizedinstance_LARGE,label,alias,**optimizedinstance**)
 
 @enduml

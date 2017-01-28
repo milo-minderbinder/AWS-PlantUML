@@ -346,8 +346,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFCCCCCCCCCCCCCCC
 
 
 
-!define AUTOSCALING_LARGE(alias) AWS_ENTITY(frame,#F58536,AutoScaling_LARGE,alias,*AutoScaling*)
+!define AUTOSCALING_LARGE(alias) AWS_ENTITY(frame,#F58536,AutoScaling_LARGE,alias,**AutoScaling**)
 
-!define AUTOSCALING_LARGE(alias,label) AWS_ENTITY(frame,#F58536,AutoScaling_LARGE,label,alias,*AutoScaling*)
+!define AUTOSCALING_LARGE(alias,label) AWS_ENTITY(frame,#F58536,AutoScaling_LARGE,label,alias,**AutoScaling**)
 
 @enduml

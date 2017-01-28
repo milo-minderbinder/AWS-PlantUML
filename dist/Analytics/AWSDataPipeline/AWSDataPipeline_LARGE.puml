@@ -414,8 +414,8 @@ ABBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
 
 
 
-!define AWSDATAPIPELINE_LARGE(alias) AWS_ENTITY(node,#F58536,AWSDataPipeline_LARGE,alias,*AWSDataPipeline*)
+!define AWSDATAPIPELINE_LARGE(alias) AWS_ENTITY(node,#F58536,AWSDataPipeline_LARGE,alias,**AWSDataPipeline**)
 
-!define AWSDATAPIPELINE_LARGE(alias,label) AWS_ENTITY(node,#F58536,AWSDataPipeline_LARGE,label,alias,*AWSDataPipeline*)
+!define AWSDATAPIPELINE_LARGE(alias,label) AWS_ENTITY(node,#F58536,AWSDataPipeline_LARGE,label,alias,**AWSDataPipeline**)
 
 @enduml

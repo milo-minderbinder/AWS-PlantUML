@@ -324,8 +324,8 @@ FFCCCCCCCCCCCCCCCCCCCCCCCCCCCC800000000000000000000BCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 
 
-!define AGENT_LARGE(alias) AWS_ENTITY(node,#769D3F,agent_LARGE,alias,*agent*)
+!define AGENT_LARGE(alias) AWS_ENTITY(agent,#769D3F,agent_LARGE,alias,**agent**)
 
-!define AGENT_LARGE(alias,label) AWS_ENTITY(node,#769D3F,agent_LARGE,label,alias,*agent*)
+!define AGENT_LARGE(alias,label) AWS_ENTITY(agent,#769D3F,agent_LARGE,label,alias,**agent**)
 
 @enduml

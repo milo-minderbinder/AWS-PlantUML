@@ -297,8 +297,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 
 
 
-!define ALARM_LARGE(alias) AWS_ENTITY(artifact,#769D3F,alarm_LARGE,alias,*alarm*)
+!define ALARM_LARGE(alias) AWS_ENTITY(artifact,#769D3F,alarm_LARGE,alias,**alarm**)
 
-!define ALARM_LARGE(alias,label) AWS_ENTITY(artifact,#769D3F,alarm_LARGE,label,alias,*alarm*)
+!define ALARM_LARGE(alias,label) AWS_ENTITY(artifact,#769D3F,alarm_LARGE,label,alias,**alarm**)
 
 @enduml

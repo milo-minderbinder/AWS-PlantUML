@@ -69,8 +69,8 @@ FDCCCCCCCCCCCCCCCCCCCCCCCC8000000006CCCCCCCCCCCCCCCCCCCCCCCCCE
 
 
 
-!define FILTERINGRULE(alias) AWS_ENTITY(node,#769D3F,filteringrule,alias,filteringrule)
+!define FILTERINGRULE(alias) AWS_ENTITY(artifact,#769D3F,filteringrule,alias,filteringrule)
 
-!define FILTERINGRULE(alias,label) AWS_ENTITY(node,#769D3F,filteringrule,label,alias,filteringrule)
+!define FILTERINGRULE(alias,label) AWS_ENTITY(artifact,#769D3F,filteringrule,label,alias,filteringrule)
 
 @enduml

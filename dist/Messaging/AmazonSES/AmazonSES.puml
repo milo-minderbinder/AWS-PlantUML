@@ -88,8 +88,8 @@ FFFFFFFFFFFFFFFFFCBBBBBBBEFFFFFFFFFFBBBBBBBBBBBBBBBBBBBDFFFFEBBBBBBBBBBB
 
 
 
-!define AMAZONSES(alias) AWS_ENTITY(artifact,#D9A842,AmazonSES,alias,AmazonSES)
+!define AMAZONSES(alias) AWS_ENTITY(node,#D9A842,AmazonSES,alias,AmazonSES)
 
-!define AMAZONSES(alias,label) AWS_ENTITY(artifact,#D9A842,AmazonSES,label,alias,AmazonSES)
+!define AMAZONSES(alias,label) AWS_ENTITY(node,#D9A842,AmazonSES,label,alias,AmazonSES)
 
 @enduml

@@ -354,8 +354,8 @@ BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
 
 
 
-!define AMAZONMOBILEANALYTICS_LARGE(alias) AWS_ENTITY(node,#AD698C,AmazonMobileAnalytics_LARGE,alias,*AmazonMobileAnalytics*)
+!define AMAZONMOBILEANALYTICS_LARGE(alias) AWS_ENTITY(node,#AD698C,AmazonMobileAnalytics_LARGE,alias,**AmazonMobileAnalytics**)
 
-!define AMAZONMOBILEANALYTICS_LARGE(alias,label) AWS_ENTITY(node,#AD698C,AmazonMobileAnalytics_LARGE,label,alias,*AmazonMobileAnalytics*)
+!define AMAZONMOBILEANALYTICS_LARGE(alias,label) AWS_ENTITY(node,#AD698C,AmazonMobileAnalytics_LARGE,label,alias,**AmazonMobileAnalytics**)
 
 @enduml

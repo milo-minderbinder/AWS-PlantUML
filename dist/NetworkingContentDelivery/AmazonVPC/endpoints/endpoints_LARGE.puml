@@ -641,20 +641,22 @@ FFCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC700000000
 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000FFFFFFFFFF0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 }
 
-skinparam interface<<*endpoints*>> {
+skinparam interface<<**endpoints**>> {
     BackgroundColor #FEEDE2
 	BorderColor #F58536
-}skinparam interface<<*NetworkingContentDelivery AmazonVPC endpoints*>> {
+}
+skinparam interface<<**NetworkingContentDelivery\nAmazonVPC\nendpoints**>> {
     BackgroundColor #FEEDE2
 	BorderColor #F58536
 }
 
-!define ENDPOINTS_LARGE(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_endpoints_LARGE,alias,*endpoints*)
 
-!define ENDPOINTS_LARGE(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_endpoints_LARGE,label,alias,*endpoints*)
+!define ENDPOINTS_LARGE(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_endpoints_LARGE,alias,**endpoints**)
 
-!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_ENDPOINTS_LARGE(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_endpoints_LARGE,alias,*NetworkingContentDelivery AmazonVPC endpoints*)
+!define ENDPOINTS_LARGE(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_endpoints_LARGE,label,alias,**endpoints**)
 
-!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_ENDPOINTS_LARGE(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_endpoints_LARGE,label,alias,*NetworkingContentDelivery AmazonVPC endpoints*)
+!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_ENDPOINTS_LARGE(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_endpoints_LARGE,alias,**NetworkingContentDelivery\nAmazonVPC\nendpoints**)
+
+!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_ENDPOINTS_LARGE(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_endpoints_LARGE,label,alias,**NetworkingContentDelivery\nAmazonVPC\nendpoints**)
 
 @enduml

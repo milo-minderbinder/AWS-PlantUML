@@ -84,13 +84,14 @@ sprite $AmazonCloudFront [70x82/16] {
 0000000000000000000000000000000009966000000000000000000000000000000000
 }
 
-skinparam entity<<AmazonCloudFront>> {
+skinparam node<<AmazonCloudFront>> {
     BackgroundColor transparent
 	BorderColor #E05344
 }
 
-!define AMAZONCLOUDFRONT(alias) AWS_ENTITY(entity,#F58536,AmazonCloudFront,alias,AmazonCloudFront)
 
-!define AMAZONCLOUDFRONT(alias,label) AWS_ENTITY(entity,#F58536,AmazonCloudFront,label,alias,AmazonCloudFront)
+!define AMAZONCLOUDFRONT(alias) AWS_ENTITY(node,#F58536,AmazonCloudFront,alias,AmazonCloudFront)
+
+!define AMAZONCLOUDFRONT(alias,label) AWS_ENTITY(node,#F58536,AmazonCloudFront,label,alias,AmazonCloudFront)
 
 @enduml

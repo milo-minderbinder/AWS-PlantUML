@@ -286,8 +286,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFF000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00000009999
 
 
 
-!define WORKERS_LARGE(alias) AWS_ENTITY(artifact,#D6D6D6,workers_LARGE,alias,*workers*)
+!define WORKERS_LARGE(alias) AWS_ENTITY(artifact,#D6D6D6,workers_LARGE,alias,**workers**)
 
-!define WORKERS_LARGE(alias,label) AWS_ENTITY(artifact,#D6D6D6,workers_LARGE,label,alias,*workers*)
+!define WORKERS_LARGE(alias,label) AWS_ENTITY(artifact,#D6D6D6,workers_LARGE,label,alias,**workers**)
 
 @enduml

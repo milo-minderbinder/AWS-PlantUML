@@ -138,17 +138,19 @@ FDCCCCCCCCCCCCCCCCCCCCCCCCCC700009CCCCCCCCCCCCCCCCCCCCCCCCCCDF
 skinparam interface<<customergateway>> {
     BackgroundColor #FEEDE2
 	BorderColor #F58536
-}skinparam interface<<NetworkingContentDelivery AmazonVPC customergateway>> {
+}
+skinparam interface<<NetworkingContentDelivery\nAmazonVPC\ncustomergateway>> {
     BackgroundColor #FEEDE2
 	BorderColor #F58536
 }
+
 
 !define CUSTOMERGATEWAY(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_customergateway,alias,customergateway)
 
 !define CUSTOMERGATEWAY(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_customergateway,label,alias,customergateway)
 
-!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_CUSTOMERGATEWAY(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_customergateway,alias,NetworkingContentDelivery AmazonVPC customergateway)
+!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_CUSTOMERGATEWAY(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_customergateway,alias,NetworkingContentDelivery\nAmazonVPC\ncustomergateway)
 
-!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_CUSTOMERGATEWAY(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_customergateway,label,alias,NetworkingContentDelivery AmazonVPC customergateway)
+!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_CUSTOMERGATEWAY(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_customergateway,label,alias,NetworkingContentDelivery\nAmazonVPC\ncustomergateway)
 
 @enduml

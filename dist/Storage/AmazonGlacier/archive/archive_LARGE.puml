@@ -335,8 +335,8 @@ BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
 
 
 
-!define ARCHIVE_LARGE(alias) AWS_ENTITY(artifact,#E05344,archive_LARGE,alias,*archive*)
+!define ARCHIVE_LARGE(alias) AWS_ENTITY(artifact,#E05344,archive_LARGE,alias,**archive**)
 
-!define ARCHIVE_LARGE(alias,label) AWS_ENTITY(artifact,#E05344,archive_LARGE,label,alias,*archive*)
+!define ARCHIVE_LARGE(alias,label) AWS_ENTITY(artifact,#E05344,archive_LARGE,label,alias,**archive**)
 
 @enduml

@@ -284,8 +284,8 @@ sprite $AWSManagementConsole_LARGE [278x280/16] {
 
 
 
-!define AWSMANAGEMENTCONSOLE_LARGE(alias) AWS_ENTITY(agent,#F58536,AWSManagementConsole_LARGE,alias,*AWSManagementConsole*)
+!define AWSMANAGEMENTCONSOLE_LARGE(alias) AWS_ENTITY(agent,#F58536,AWSManagementConsole_LARGE,alias,**AWSManagementConsole**)
 
-!define AWSMANAGEMENTCONSOLE_LARGE(alias,label) AWS_ENTITY(agent,#F58536,AWSManagementConsole_LARGE,label,alias,*AWSManagementConsole*)
+!define AWSMANAGEMENTCONSOLE_LARGE(alias,label) AWS_ENTITY(agent,#F58536,AWSManagementConsole_LARGE,label,alias,**AWSManagementConsole**)
 
 @enduml

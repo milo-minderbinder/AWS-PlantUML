@@ -414,8 +414,8 @@ sprite $AmazonKinesis_LARGE [342x410/16] {
 
 
 
-!define AMAZONKINESIS_LARGE(alias) AWS_ENTITY(component,#F58536,AmazonKinesis_LARGE,alias,*AmazonKinesis*)
+!define AMAZONKINESIS_LARGE(alias) AWS_ENTITY(component,#F58536,AmazonKinesis_LARGE,alias,**AmazonKinesis**)
 
-!define AMAZONKINESIS_LARGE(alias,label) AWS_ENTITY(component,#F58536,AmazonKinesis_LARGE,label,alias,*AmazonKinesis*)
+!define AMAZONKINESIS_LARGE(alias,label) AWS_ENTITY(component,#F58536,AmazonKinesis_LARGE,label,alias,**AmazonKinesis**)
 
 @enduml

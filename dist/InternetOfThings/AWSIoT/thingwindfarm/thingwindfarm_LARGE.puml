@@ -362,8 +362,8 @@ CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 
 
-!define THINGWINDFARM_LARGE(alias) AWS_ENTITY(node,#2F74B8,thingwindfarm_LARGE,alias,*thingwindfarm*)
+!define THINGWINDFARM_LARGE(alias) AWS_ENTITY(node,#2F74B8,thingwindfarm_LARGE,alias,**thingwindfarm**)
 
-!define THINGWINDFARM_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,thingwindfarm_LARGE,label,alias,*thingwindfarm*)
+!define THINGWINDFARM_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,thingwindfarm_LARGE,label,alias,**thingwindfarm**)
 
 @enduml

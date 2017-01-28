@@ -72,12 +72,13 @@ FFFFEBBBBCFFFFFFEBBBBBBBDFFFFFFFFFEBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
 000000000000000000000000000000000000000000000000DB00000000000000000000
 }
 
-skinparam artifact<<AmazonSNS>> {
+skinparam node<<AmazonSNS>> {
     BackgroundColor #EDDEE6
 }
 
-!define AMAZONSNS(alias) AWS_ENTITY(artifact,#D9A842,AmazonSNS,alias,AmazonSNS)
 
-!define AMAZONSNS(alias,label) AWS_ENTITY(artifact,#D9A842,AmazonSNS,label,alias,AmazonSNS)
+!define AMAZONSNS(alias) AWS_ENTITY(node,#D9A842,AmazonSNS,alias,AmazonSNS)
+
+!define AMAZONSNS(alias,label) AWS_ENTITY(node,#D9A842,AmazonSNS,label,alias,AmazonSNS)
 
 @enduml

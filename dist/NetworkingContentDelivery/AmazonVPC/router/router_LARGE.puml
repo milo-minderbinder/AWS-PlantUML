@@ -639,20 +639,22 @@ FFCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC7000000
 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 }
 
-skinparam interface<<*router*>> {
+skinparam interface<<**router**>> {
     BackgroundColor #FEEDE2
 	BorderColor #F58536
-}skinparam interface<<*NetworkingContentDelivery AmazonVPC router*>> {
+}
+skinparam interface<<**NetworkingContentDelivery\nAmazonVPC\nrouter**>> {
     BackgroundColor #FEEDE2
 	BorderColor #F58536
 }
 
-!define ROUTER_LARGE(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_router_LARGE,alias,*router*)
 
-!define ROUTER_LARGE(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_router_LARGE,label,alias,*router*)
+!define ROUTER_LARGE(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_router_LARGE,alias,**router**)
 
-!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_ROUTER_LARGE(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_router_LARGE,alias,*NetworkingContentDelivery AmazonVPC router*)
+!define ROUTER_LARGE(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_router_LARGE,label,alias,**router**)
 
-!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_ROUTER_LARGE(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_router_LARGE,label,alias,*NetworkingContentDelivery AmazonVPC router*)
+!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_ROUTER_LARGE(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_router_LARGE,alias,**NetworkingContentDelivery\nAmazonVPC\nrouter**)
+
+!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_ROUTER_LARGE(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_router_LARGE,label,alias,**NetworkingContentDelivery\nAmazonVPC\nrouter**)
 
 @enduml

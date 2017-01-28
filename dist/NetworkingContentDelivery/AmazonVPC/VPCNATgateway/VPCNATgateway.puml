@@ -136,17 +136,19 @@ FDCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC0009CCCCCCCCCCCCCCCCCDF
 skinparam interface<<VPCNATgateway>> {
     BackgroundColor #FEEDE2
 	BorderColor #F58536
-}skinparam interface<<NetworkingContentDelivery AmazonVPC VPCNATgateway>> {
+}
+skinparam interface<<NetworkingContentDelivery\nAmazonVPC\nVPCNATgateway>> {
     BackgroundColor #FEEDE2
 	BorderColor #F58536
 }
+
 
 !define VPCNATGATEWAY(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_VPCNATgateway,alias,VPCNATgateway)
 
 !define VPCNATGATEWAY(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_VPCNATgateway,label,alias,VPCNATgateway)
 
-!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_VPCNATGATEWAY(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_VPCNATgateway,alias,NetworkingContentDelivery AmazonVPC VPCNATgateway)
+!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_VPCNATGATEWAY(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_VPCNATgateway,alias,NetworkingContentDelivery\nAmazonVPC\nVPCNATgateway)
 
-!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_VPCNATGATEWAY(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_VPCNATgateway,label,alias,NetworkingContentDelivery AmazonVPC VPCNATgateway)
+!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_VPCNATGATEWAY(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_VPCNATgateway,label,alias,NetworkingContentDelivery\nAmazonVPC\nVPCNATgateway)
 
 @enduml

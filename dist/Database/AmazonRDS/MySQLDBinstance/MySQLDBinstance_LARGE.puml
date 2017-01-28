@@ -286,8 +286,8 @@ FFFFDCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 
 
-!define MYSQLDBINSTANCE_LARGE(alias) AWS_ENTITY(component,#2F74B8,MySQLDBinstance_LARGE,alias,*MySQLDBinstance*)
+!define MYSQLDBINSTANCE_LARGE(alias) AWS_ENTITY(component,#2F74B8,MySQLDBinstance_LARGE,alias,**MySQLDBinstance**)
 
-!define MYSQLDBINSTANCE_LARGE(alias,label) AWS_ENTITY(component,#2F74B8,MySQLDBinstance_LARGE,label,alias,*MySQLDBinstance*)
+!define MYSQLDBINSTANCE_LARGE(alias,label) AWS_ENTITY(component,#2F74B8,MySQLDBinstance_LARGE,label,alias,**MySQLDBinstance**)
 
 @enduml

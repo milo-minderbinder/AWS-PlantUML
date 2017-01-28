@@ -414,8 +414,8 @@ EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEDBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBC
 
 
 
-!define AWSSTORAGEGATEWAY_LARGE(alias) AWS_ENTITY(artifact,#E05344,AWSStorageGateway_LARGE,alias,*AWSStorageGateway*)
+!define AWSSTORAGEGATEWAY_LARGE(alias) AWS_ENTITY(node,#E05344,AWSStorageGateway_LARGE,alias,**AWSStorageGateway**)
 
-!define AWSSTORAGEGATEWAY_LARGE(alias,label) AWS_ENTITY(artifact,#E05344,AWSStorageGateway_LARGE,label,alias,*AWSStorageGateway*)
+!define AWSSTORAGEGATEWAY_LARGE(alias,label) AWS_ENTITY(node,#E05344,AWSStorageGateway_LARGE,label,alias,**AWSStorageGateway**)
 
 @enduml

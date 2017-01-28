@@ -289,8 +289,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 
 
 
-!define TEMPLATE_LARGE(alias) AWS_ENTITY(artifact,#769D3F,template_LARGE,alias,*template*)
+!define TEMPLATE_LARGE(alias) AWS_ENTITY(artifact,#769D3F,template_LARGE,alias,**template**)
 
-!define TEMPLATE_LARGE(alias,label) AWS_ENTITY(artifact,#769D3F,template_LARGE,label,alias,*template*)
+!define TEMPLATE_LARGE(alias,label) AWS_ENTITY(artifact,#769D3F,template_LARGE,label,alias,**template**)
 
 @enduml

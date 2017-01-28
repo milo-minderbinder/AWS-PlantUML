@@ -89,6 +89,7 @@ skinparam storage<<AmazonS3>> {
     BackgroundColor White
 }
 
+
 !define AMAZONS3(alias) AWS_ENTITY(storage,#E05344,AmazonS3,alias,AmazonS3)
 
 !define AMAZONS3(alias,label) AWS_ENTITY(storage,#E05344,AmazonS3,label,alias,AmazonS3)

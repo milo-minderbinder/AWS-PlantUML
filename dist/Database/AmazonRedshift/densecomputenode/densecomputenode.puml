@@ -61,8 +61,8 @@ FFFFFFFFFFFFFFFFFFECCCCC0000000CCCDF0CCCCCCCCCCCCC
 
 
 
-!define DENSECOMPUTENODE(alias) AWS_ENTITY(node,#2F74B8,densecomputenode,alias,densecomputenode)
+!define DENSECOMPUTENODE(alias) AWS_ENTITY(database,#2F74B8,densecomputenode,alias,densecomputenode)
 
-!define DENSECOMPUTENODE(alias,label) AWS_ENTITY(node,#2F74B8,densecomputenode,label,alias,densecomputenode)
+!define DENSECOMPUTENODE(alias,label) AWS_ENTITY(database,#2F74B8,densecomputenode,label,alias,densecomputenode)
 
 @enduml

@@ -282,8 +282,8 @@ FFFFDCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 
 
-!define ALEXAVOICESERVICE_LARGE(alias) AWS_ENTITY(node,#2F74B8,alexavoiceservice_LARGE,alias,*alexavoiceservice*)
+!define ALEXAVOICESERVICE_LARGE(alias) AWS_ENTITY(node,#2F74B8,alexavoiceservice_LARGE,alias,**alexavoiceservice**)
 
-!define ALEXAVOICESERVICE_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,alexavoiceservice_LARGE,label,alias,*alexavoiceservice*)
+!define ALEXAVOICESERVICE_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,alexavoiceservice_LARGE,label,alias,**alexavoiceservice**)
 
 @enduml

@@ -282,8 +282,8 @@ FFFFDCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 
 
-!define INSTANCEWITHCLOUDWATCH_LARGE(alias) AWS_ENTITY(component,#F58536,instancewithCloudWatch_LARGE,alias,*instancewithCloudWatch*)
+!define INSTANCEWITHCLOUDWATCH_LARGE(alias) AWS_ENTITY(component,#F58536,instancewithCloudWatch_LARGE,alias,**instancewithCloudWatch**)
 
-!define INSTANCEWITHCLOUDWATCH_LARGE(alias,label) AWS_ENTITY(component,#F58536,instancewithCloudWatch_LARGE,label,alias,*instancewithCloudWatch*)
+!define INSTANCEWITHCLOUDWATCH_LARGE(alias,label) AWS_ENTITY(component,#F58536,instancewithCloudWatch_LARGE,label,alias,**instancewithCloudWatch**)
 
 @enduml

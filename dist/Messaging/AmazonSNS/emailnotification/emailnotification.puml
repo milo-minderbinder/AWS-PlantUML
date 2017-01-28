@@ -64,6 +64,7 @@ skinparam artifact<<emailnotification>> {
     BackgroundColor #EDDEE6
 }
 
+
 !define EMAILNOTIFICATION(alias) AWS_ENTITY(artifact,#D9A842,emailnotification,alias,emailnotification)
 
 !define EMAILNOTIFICATION(alias,label) AWS_ENTITY(artifact,#D9A842,emailnotification,label,alias,emailnotification)

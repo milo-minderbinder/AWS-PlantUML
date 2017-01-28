@@ -372,8 +372,8 @@ BBBBBBBBBBBBBBBBA4000000000000000000000000000000000000000000000000000000000008BB
 
 
 
-!define AWSTOOLKITFORVISUALSTUDIO_LARGE(alias) AWS_ENTITY(agent,black,AWSToolkitForVisualStudio_LARGE,alias,*AWSToolkitForVisualStudio*)
+!define AWSTOOLKITFORVISUALSTUDIO_LARGE(alias) AWS_ENTITY(agent,black,AWSToolkitForVisualStudio_LARGE,alias,**AWSToolkitForVisualStudio**)
 
-!define AWSTOOLKITFORVISUALSTUDIO_LARGE(alias,label) AWS_ENTITY(agent,black,AWSToolkitForVisualStudio_LARGE,label,alias,*AWSToolkitForVisualStudio*)
+!define AWSTOOLKITFORVISUALSTUDIO_LARGE(alias,label) AWS_ENTITY(agent,black,AWSToolkitForVisualStudio_LARGE,label,alias,**AWSToolkitForVisualStudio**)
 
 @enduml

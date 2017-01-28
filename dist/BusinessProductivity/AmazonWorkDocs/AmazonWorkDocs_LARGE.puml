@@ -426,8 +426,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 
 
 
-!define AMAZONWORKDOCS_LARGE(alias) AWS_ENTITY(frame,#F58536,AmazonWorkDocs_LARGE,alias,*AmazonWorkDocs*)
+!define AMAZONWORKDOCS_LARGE(alias) AWS_ENTITY(frame,#F58536,AmazonWorkDocs_LARGE,alias,**AmazonWorkDocs**)
 
-!define AMAZONWORKDOCS_LARGE(alias,label) AWS_ENTITY(frame,#F58536,AmazonWorkDocs_LARGE,label,alias,*AmazonWorkDocs*)
+!define AMAZONWORKDOCS_LARGE(alias,label) AWS_ENTITY(frame,#F58536,AmazonWorkDocs_LARGE,label,alias,**AmazonWorkDocs**)
 
 @enduml

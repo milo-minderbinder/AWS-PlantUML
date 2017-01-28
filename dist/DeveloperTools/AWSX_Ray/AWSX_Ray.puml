@@ -82,8 +82,8 @@ EEEEEEEEFFFFFFFFFFFFEEEEEEEEEEEEEDBBBBBBBBBBBBBBEFFFFFFFFFFEBBBBBBBB
 
 
 
-!define AWSX_RAY(alias) AWS_ENTITY(component,#769D3F,AWSX_Ray,alias,AWSX Ray)
+!define AWSX_RAY(alias) AWS_ENTITY(component,#769D3F,AWSX_Ray,alias,AWSX\nRay)
 
-!define AWSX_RAY(alias,label) AWS_ENTITY(component,#769D3F,AWSX_Ray,label,alias,AWSX Ray)
+!define AWSX_RAY(alias,label) AWS_ENTITY(component,#769D3F,AWSX_Ray,label,alias,AWSX\nRay)
 
 @enduml

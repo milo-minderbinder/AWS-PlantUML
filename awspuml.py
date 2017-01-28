@@ -9,9 +9,51 @@ from hashlib import sha1
 from itertools import groupby
 
 SRC_DIR = os.path.realpath(os.path.dirname(__file__))
-CONFIG_FILE = os.path.join(SRC_DIR, 'awspuml.ini')
 OUTPUT_DIR = os.path.join(SRC_DIR, 'dist')
 PUML_JAR = os.path.join(SRC_DIR, 'plantuml.jar')
+CONFIG_FILE = os.path.join(SRC_DIR, 'awspuml.ini')
+CONFIG_DEFAULTS = {
+    'AWSPUML': {
+        'debug': False,
+        'sprite.force_regen': False,
+        'sprite.size': 16,
+        'sprite.shift': 0,
+        'sprite.shift_ignore': 0},
+    'AWSPUML.colors': {
+        'orange': '#F58536',
+        'light-orange': '#FEEDE2',
+        'goldenrod': '#D9A842',
+        'light-goldenrod': '#F7EDD8',
+        'blue': '#2F74B8',
+        'light-blue': '#AECCEA',
+        'green': '#769D3F',
+        'light-green': '#CBDFAF',
+        'purple': '#AD698C',
+        'light-purple': '#EDDEE6',
+        'grey': '#7E7D7D',
+        'light-grey': '#D6D6D6',
+        'red': '#E05344',
+        'light-red': '#F9DFDC'}}
+
+
+PUML_TEMPLATE = '''
+@startuml
+{sprite}
+{stereotype_skinparam}
+{macros}
+@enduml'''.strip()
+
+STEREOTYPE_SKINPARAM_TEMPLATE = '''
+skinparam {entity_type}<<{stereotype}>> {{
+    {skinparam}
+}}
+'''.lstrip()
+
+MACROS_TEMPLATE = '''
+!define {macro}(alias) AWS_ENTITY({entity_type},{color},{unique_name},alias,{stereotype})
+
+!define {macro}(alias,label) AWS_ENTITY({entity_type},{color},{unique_name},label,alias,{stereotype})
+'''
 
 
 class InheritingConfigParser(configparser.ConfigParser):
@@ -29,26 +71,6 @@ class InheritingConfigParser(configparser.ConfigParser):
             if fallback is not _UNSET:
                 return fallback
             raise e
-
-
-PUML_TEMPLATE = '''
-@startuml
-{sprite}
-{stereotype_skinparam}
-{macros}
-@enduml'''.strip()
-
-STEREOTYPE_SKINPARAM_TEMPLATE = '''
-skinparam {entity_type}<<{stereotype}>> {{
-    {skinparam}
-}}
-'''.strip()
-
-MACROS_TEMPLATE = '''
-!define {macro}(alias) AWS_ENTITY({entity_type},{color},{unique_name},alias,{stereotype})
-
-!define {macro}(alias,label) AWS_ENTITY({entity_type},{color},{unique_name},label,alias,{stereotype})
-'''
 
 
 class PUML:
@@ -110,8 +132,8 @@ class PUML:
         if not unique:
             name = self.unique_name
         if name.endswith('_LARGE'):
-            name = '*{}*'.format(name[:-6])
-        return name.replace('_', ' ')
+            name = '**{}**'.format(name[:-6])
+        return re.sub(r'_(?!\d)', r'\\n', name)
 
     @property
     def macros(self):
@@ -214,7 +236,8 @@ class PUML:
         size = self.conf.get('AWSPUML', 'sprite.size', fallback='16')
         shift = self.conf.getint('AWSPUML', 'sprite.shift', fallback=0)
         ignore = self.conf.get('AWSPUML', 'sprite.shift_ignore', fallback='0')
-        cmd = ['java', '-jar', PUML_JAR, '-encodesprite',
+        cmd = ['java', '-Djava.awt.headless=true', '-jar', PUML_JAR,
+               '-encodesprite',
                size,
                self.image_path]
         output = subprocess.check_output(cmd, universal_newlines=True)
@@ -312,7 +335,51 @@ def create_test_puml(output_path, pumls, host='localhost', port='8080'):
         f.write('@enduml\n')
 
 
-def create_pumls(conf, icons_path, output_path, icon_ext='.png'):
+def create_pumls(conf, output_path, pumls):
+    output_path = os.path.abspath(output_path)
+    for puml in pumls:
+        puml.write_puml()
+    shutil.copy(os.path.join(SRC_DIR, 'common.puml'), output_path)
+    if conf.getboolean('AWSPUML', 'debug', fallback=False):
+        create_test_puml(output_path, pumls)
+
+
+def create_ini(conf, path, pumls):
+    path = os.path.abspath(path)
+    valid_sections = set(CONFIG_DEFAULTS.keys())
+    for nsparts in (p.namespaced_name.split('.') for p in pumls):
+        for i in range(len(nsparts)):
+            section = '.'.join(nsparts[:i+1])
+            if not conf.has_section(section):
+                print('Adding section: {}'.format(section))
+                conf.add_section(section)
+            valid_sections.add(section)
+            if i + 1 < len(nsparts):
+                valid_sections.add('{}.'.format(section))
+    for section in set(conf.sections()) - valid_sections:
+        print('Removing invalid section: {}'.format(section))
+        conf.remove_section(section)
+    print('Writing INI file: {}'.format(path))
+    with open(path, 'w') as f:
+        for section in CONFIG_DEFAULTS.keys():
+            f.write('[{}]\n'.format(section))
+            for k, v in conf.items(section, raw=True):
+                # For multiline opts, re-add indent equal with start of opt val
+                v = v.replace('\n', '{:<{ind}}'.format('\n', ind=len(k) + 3))
+                f.write('{}: {}\n'.format(k, v))
+            f.write('\n')
+        for section in sorted(conf.sections()):
+            if section in CONFIG_DEFAULTS:
+                continue
+            f.write('[{}]\n'.format(section))
+            for k, v in conf.items(section, raw=True):
+                # For multiline opts, re-add indent equal with start of opt val
+                v = v.replace('\n', '{:<{ind}}'.format('\n', ind=len(k) + 3))
+                f.write('{}: {}\n'.format(k, v))
+            f.write('\n')
+
+
+def get_pumls(conf, icons_path, output_path, icon_ext='.png'):
     icons_path = os.path.abspath(icons_path)
     if not os.path.isdir(icons_path):
         raise Exception('Invalid AWS Icons path: %s' % icons_path)
@@ -321,11 +388,7 @@ def create_pumls(conf, icons_path, output_path, icon_ext='.png'):
     icons = find_images(icons_path, icon_ext)
     pumls = [PUML(p, output_path, conf) for p in icons]
     set_unique_names(filter_duplicate_images(pumls))
-    for puml in pumls:
-        puml.write_puml()
-    shutil.copy(os.path.join(SRC_DIR, 'common.puml'), output_path)
-    if conf.getboolean('AWSPUML', 'debug', fallback=False):
-        create_test_puml(output_path, pumls)
+    return pumls
 
 
 if __name__ == '__main__':
@@ -335,17 +398,28 @@ if __name__ == '__main__':
     parser.add_argument('-c', '--config',
                         default=CONFIG_FILE,
                         help='Config file for puml generation')
+    parser.add_argument('-g', '--generate_config',
+                        action='store_true',
+                        help='Write all sections to the INI file specified by '
+                             'the -c switch; if an INI file already exists, '
+                             'its sections and options will be preserved, but '
+                             'missing sections will be added and invalid '
+                             'sections will be deleted.')
     parser.add_argument('-o', '--output',
                         default=OUTPUT_DIR,
-                        help='Config file for puml generation')
+                        help='Output path for generated .puml files')
     parser.add_argument('icons_path',
                         help='Path to AWS Simple Icons directory')
     args = parser.parse_args()
 
     config = InheritingConfigParser(
         interpolation=configparser.ExtendedInterpolation())
+    config.read_dict(CONFIG_DEFAULTS)
     config.read(args.config)
 
-    create_pumls(config, args.icons_path, args.output)
+    puml_objs = get_pumls(config, args.icons_path, args.output)
 
+    if args.generate_config:
+        create_ini(config, args.config, puml_objs)
+    create_pumls(config, args.output, puml_objs)
     print('done!')

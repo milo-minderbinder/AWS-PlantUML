@@ -414,8 +414,8 @@ BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB85555555555555555555555555556BBBBBBBBBBBBBBBBB
 
 
 
-!define AMAZONMECHANICALTURK_LARGE(alias) AWS_ENTITY(artifact,#D6D6D6,AmazonMechanicalTurk_LARGE,alias,*AmazonMechanicalTurk*)
+!define AMAZONMECHANICALTURK_LARGE(alias) AWS_ENTITY(node,#7E7D7D,AmazonMechanicalTurk_LARGE,alias,**AmazonMechanicalTurk**)
 
-!define AMAZONMECHANICALTURK_LARGE(alias,label) AWS_ENTITY(artifact,#D6D6D6,AmazonMechanicalTurk_LARGE,label,alias,*AmazonMechanicalTurk*)
+!define AMAZONMECHANICALTURK_LARGE(alias,label) AWS_ENTITY(node,#7E7D7D,AmazonMechanicalTurk_LARGE,label,alias,**AmazonMechanicalTurk**)
 
 @enduml
