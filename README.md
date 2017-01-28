@@ -12,11 +12,11 @@ If you want to tweak the basic representation of AWS-PlantUML entities, or you d
 
 Otherwise, you can link directly to the file in this repo with:
 
-    !includeurl https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/17-1-6/dist/common.puml
+    !includeurl https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/17-1-19/dist/common.puml
 
 After the `common.puml` is added, you can then add any additional `.puml` files from AWS-PlantUML to import the specific sprites, macros, and other definitions you need. Sometimes it's helpful to define a constant pointing to the `dist` folder of the AWS PlantUML version you're using, to make switching versions and hosts easier.
 
-    !define AWSPUML https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/17-1-6/dist
+    !define AWSPUML https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/17-1-19/dist
     !includeurl AWSPUML/common.puml
     !includeurl AWSPUML/Storage/AmazonS3/AmazonS3.puml
     !includeurl AWSPUML/Storage-Content-Delivery/AmazonS3/bucket/bucket.puml
@@ -42,7 +42,7 @@ You can also nest components inside others using enclosures:
 Before you know it, you'll be creating nice, clean diagrams for your AWS applications:
 
     @startuml
-    !define AWSPUML https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/17-1-6/dist
+    !define AWSPUML https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/17-1-19/dist
 
     !includeurl AWSPUML/common.puml
     !includeurl AWSPUML/ApplicationServices/AmazonAPIGateway/AmazonAPIGateway.puml
@@ -114,7 +114,7 @@ For those so inclined, it is also simple to generate customized `.puml` files fo
 #### 1. Download
 If you haven't installed it already, you'll need Python 3 to run the `awspuml.py` module used to generate the AWS-PlantUML `.puml` files. You can get installation instructions and binaries for Python 3.6, which was used to generate the release version of AWS-PlantUML, on [Python.org](https://www.python.org/downloads/release/python-360/).
 
-Download the AWS Simple Icon set [here](https://aws.amazon.com/architecture/icons/) and extract the contents to a directory we'll refer to as `<ICONS_DIR>`. This release was generated from version 17.1.6 of the AWS Simple Icons set release by Amazon.
+Download the AWS Simple Icon set [here](https://aws.amazon.com/architecture/icons/) and extract the contents to a directory we'll refer to as `<ICONS_DIR>`. This release was generated from version 17.1.19 of the AWS Simple Icons set release by Amazon.
 
 #### 2. Configure
 Using the release version of the `awspuml.ini` configuration file as a reference, you can specify custom styles for your own AWS-PlantUML build. The `[AWSPUML.colors]` section maps color names to simple HTML color names (e.g. Red) or custom hex values (e.g. #AAFFCC). These custom color names can then be referenced elsewhere in the configuration by including `${AWSPUML.colors:<COLOR_NAME>` in a configuration option value, where "`<COLOR_NAME>`" would be replaced by the desired option in the `[AWSPUML.colors]` section.
@@ -148,7 +148,7 @@ Valid options are:
 After configuring, simply run the `awspuml.py` module from the command line using Python 3, passing the configuration file and the `<ICONS_DIR>` as command line options. If you need help, just call the script with the `-h` flag to print usage help to stdout:
 
     > python3 awspuml.py -h
-    usage: awspuml.py [-h] [-c CONFIG] [-o OUTPUT] icons_path
+    usage: awspuml.py [-h] [-c CONFIG] [-g] [-o OUTPUT] icons_path
 
     Generate PlantUML Sprites from AWS Simple Icons
 
@@ -160,8 +160,14 @@ After configuring, simply run the `awspuml.py` module from the command line usin
       -c CONFIG, --config CONFIG
                             Config file for puml generation (default:
                             /home/milo/AWS-PlantUML/awspuml.ini)
+      -g, --generate_config
+                            Write all sections to the INI file specified by the -c
+                            switch; if an INI file already exists, its sections
+                            and options will be preserved, but missing sections
+                            will be added and invalid sections will be deleted.
+                            (default: False)
       -o OUTPUT, --output OUTPUT
-                            Config file for puml generation (default:
-                            /home/milo/AWS- PlantUML/dist)
+                            Output path for generated .puml files (default:
+                            /home/milo/AWS-PlantUML/dist)
 
 Enjoy!
