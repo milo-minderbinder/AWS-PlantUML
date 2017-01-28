@@ -335,8 +335,8 @@ BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
 
 
 
-!define VOLUME_LARGE(alias) AWS_ENTITY(artifact,#E05344,volume_LARGE,alias,*volume*)
+!define VOLUME_LARGE(alias) AWS_ENTITY(artifact,#E05344,volume_LARGE,alias,**volume**)
 
-!define VOLUME_LARGE(alias,label) AWS_ENTITY(artifact,#E05344,volume_LARGE,label,alias,*volume*)
+!define VOLUME_LARGE(alias,label) AWS_ENTITY(artifact,#E05344,volume_LARGE,label,alias,**volume**)
 
 @enduml

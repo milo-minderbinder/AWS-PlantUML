@@ -218,8 +218,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 
 
 
-!define QUEUE_LARGE(alias) AWS_ENTITY(artifact,#D9A842,queue_LARGE,alias,*queue*)
+!define QUEUE_LARGE(alias) AWS_ENTITY(artifact,#D9A842,queue_LARGE,alias,**queue**)
 
-!define QUEUE_LARGE(alias,label) AWS_ENTITY(artifact,#D9A842,queue_LARGE,label,alias,*queue*)
+!define QUEUE_LARGE(alias,label) AWS_ENTITY(artifact,#D9A842,queue_LARGE,label,alias,**queue**)
 
 @enduml

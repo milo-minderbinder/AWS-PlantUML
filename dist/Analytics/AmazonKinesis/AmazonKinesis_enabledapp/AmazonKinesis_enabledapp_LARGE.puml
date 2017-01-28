@@ -308,8 +308,8 @@ FFFFFFFFCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 
 
-!define AMAZONKINESIS_ENABLEDAPP_LARGE(alias) AWS_ENTITY(component,#F58536,AmazonKinesis_enabledapp_LARGE,alias,*AmazonKinesis enabledapp*)
+!define AMAZONKINESIS_ENABLEDAPP_LARGE(alias) AWS_ENTITY(component,#F58536,AmazonKinesis_enabledapp_LARGE,alias,**AmazonKinesis\nenabledapp**)
 
-!define AMAZONKINESIS_ENABLEDAPP_LARGE(alias,label) AWS_ENTITY(component,#F58536,AmazonKinesis_enabledapp_LARGE,label,alias,*AmazonKinesis enabledapp*)
+!define AMAZONKINESIS_ENABLEDAPP_LARGE(alias,label) AWS_ENTITY(component,#F58536,AmazonKinesis_enabledapp_LARGE,label,alias,**AmazonKinesis\nenabledapp**)
 
 @enduml

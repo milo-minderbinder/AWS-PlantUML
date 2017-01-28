@@ -288,8 +288,8 @@ FFFFFFFFFFFFFFEDCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 
 
-!define INSTANCEREADREPLICA_LARGE(alias) AWS_ENTITY(component,#2F74B8,instancereadreplica_LARGE,alias,*instancereadreplica*)
+!define INSTANCEREADREPLICA_LARGE(alias) AWS_ENTITY(component,#2F74B8,instancereadreplica_LARGE,alias,**instancereadreplica**)
 
-!define INSTANCEREADREPLICA_LARGE(alias,label) AWS_ENTITY(component,#2F74B8,instancereadreplica_LARGE,label,alias,*instancereadreplica*)
+!define INSTANCEREADREPLICA_LARGE(alias,label) AWS_ENTITY(component,#2F74B8,instancereadreplica_LARGE,label,alias,**instancereadreplica**)
 
 @enduml

@@ -415,8 +415,8 @@ BBBBBBBBBBBBBBBBBBBBBBBBBBB98888888888888888888888888888888888888888888888888888
 
 
 
-!define AMAZONGLACIER_LARGE(alias) AWS_ENTITY(artifact,#E05344,AmazonGlacier_LARGE,alias,*AmazonGlacier*)
+!define AMAZONGLACIER_LARGE(alias) AWS_ENTITY(storage,#E05344,AmazonGlacier_LARGE,alias,**AmazonGlacier**)
 
-!define AMAZONGLACIER_LARGE(alias,label) AWS_ENTITY(artifact,#E05344,AmazonGlacier_LARGE,label,alias,*AmazonGlacier*)
+!define AMAZONGLACIER_LARGE(alias,label) AWS_ENTITY(storage,#E05344,AmazonGlacier_LARGE,label,alias,**AmazonGlacier**)
 
 @enduml

@@ -335,8 +335,8 @@ BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
 
 
 
-!define AMAZONEBS_LARGE(alias) AWS_ENTITY(storage,#E05344,AmazonEBS_LARGE,alias,*AmazonEBS*)
+!define AMAZONEBS_LARGE(alias) AWS_ENTITY(storage,#E05344,AmazonEBS_LARGE,alias,**AmazonEBS**)
 
-!define AMAZONEBS_LARGE(alias,label) AWS_ENTITY(storage,#E05344,AmazonEBS_LARGE,label,alias,*AmazonEBS*)
+!define AMAZONEBS_LARGE(alias,label) AWS_ENTITY(storage,#E05344,AmazonEBS_LARGE,label,alias,**AmazonEBS**)
 
 @enduml

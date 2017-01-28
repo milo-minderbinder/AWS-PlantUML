@@ -66,6 +66,7 @@ skinparam folder<<table>> {
     BackgroundColor #AECCEA
 }
 
+
 !define TABLE(alias) AWS_ENTITY(folder,#2F74B8,table,alias,table)
 
 !define TABLE(alias,label) AWS_ENTITY(folder,#2F74B8,table,label,alias,table)

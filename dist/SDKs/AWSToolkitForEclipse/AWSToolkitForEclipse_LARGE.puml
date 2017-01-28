@@ -372,8 +372,8 @@ BBBBBBBBBBBBBBBBA4000000000000000000000000000000000000000000000000000000000008BB
 
 
 
-!define AWSTOOLKITFORECLIPSE_LARGE(alias) AWS_ENTITY(agent,black,AWSToolkitForEclipse_LARGE,alias,*AWSToolkitForEclipse*)
+!define AWSTOOLKITFORECLIPSE_LARGE(alias) AWS_ENTITY(agent,black,AWSToolkitForEclipse_LARGE,alias,**AWSToolkitForEclipse**)
 
-!define AWSTOOLKITFORECLIPSE_LARGE(alias,label) AWS_ENTITY(agent,black,AWSToolkitForEclipse_LARGE,label,alias,*AWSToolkitForEclipse*)
+!define AWSTOOLKITFORECLIPSE_LARGE(alias,label) AWS_ENTITY(agent,black,AWSToolkitForEclipse_LARGE,label,alias,**AWSToolkitForEclipse**)
 
 @enduml

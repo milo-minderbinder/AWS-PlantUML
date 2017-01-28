@@ -414,8 +414,8 @@ EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
 
 
 
-!define AWSCLOUDFORMATION_LARGE(alias) AWS_ENTITY(artifact,#769D3F,AWSCloudFormation_LARGE,alias,*AWSCloudFormation*)
+!define AWSCLOUDFORMATION_LARGE(alias) AWS_ENTITY(node,#769D3F,AWSCloudFormation_LARGE,alias,**AWSCloudFormation**)
 
-!define AWSCLOUDFORMATION_LARGE(alias,label) AWS_ENTITY(artifact,#769D3F,AWSCloudFormation_LARGE,label,alias,*AWSCloudFormation*)
+!define AWSCLOUDFORMATION_LARGE(alias,label) AWS_ENTITY(node,#769D3F,AWSCloudFormation_LARGE,label,alias,**AWSCloudFormation**)
 
 @enduml

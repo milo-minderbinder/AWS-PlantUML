@@ -376,8 +376,8 @@ FFFFFFFFFFFFFFFFFFFFB50000000000000000000000000000000000000000000000000000000000
 
 
 
-!define PHP_LARGE(alias) AWS_ENTITY(agent,black,PHP_LARGE,alias,*PHP*)
+!define PHP_LARGE(alias) AWS_ENTITY(agent,black,PHP_LARGE,alias,**PHP**)
 
-!define PHP_LARGE(alias,label) AWS_ENTITY(agent,black,PHP_LARGE,label,alias,*PHP*)
+!define PHP_LARGE(alias,label) AWS_ENTITY(agent,black,PHP_LARGE,label,alias,**PHP**)
 
 @enduml

@@ -138,17 +138,19 @@ FDCCCCCCCCCCC007CC0000000000000000000000000000000007CCCCCCCCDF
 skinparam interface<<elasticnetworkinterface>> {
     BackgroundColor #FEEDE2
 	BorderColor #F58536
-}skinparam interface<<NetworkingContentDelivery AmazonVPC elasticnetworkinterface>> {
+}
+skinparam interface<<NetworkingContentDelivery\nAmazonVPC\nelasticnetworkinterface>> {
     BackgroundColor #FEEDE2
 	BorderColor #F58536
 }
+
 
 !define ELASTICNETWORKINTERFACE(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_elasticnetworkinterface,alias,elasticnetworkinterface)
 
 !define ELASTICNETWORKINTERFACE(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_elasticnetworkinterface,label,alias,elasticnetworkinterface)
 
-!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_ELASTICNETWORKINTERFACE(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_elasticnetworkinterface,alias,NetworkingContentDelivery AmazonVPC elasticnetworkinterface)
+!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_ELASTICNETWORKINTERFACE(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_elasticnetworkinterface,alias,NetworkingContentDelivery\nAmazonVPC\nelasticnetworkinterface)
 
-!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_ELASTICNETWORKINTERFACE(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_elasticnetworkinterface,label,alias,NetworkingContentDelivery AmazonVPC elasticnetworkinterface)
+!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_ELASTICNETWORKINTERFACE(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_elasticnetworkinterface,label,alias,NetworkingContentDelivery\nAmazonVPC\nelasticnetworkinterface)
 
 @enduml

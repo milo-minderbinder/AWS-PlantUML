@@ -639,20 +639,22 @@ FFCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCA7000000000000000000000CCCCCCCCCCCCCCCCCA
 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 }
 
-skinparam interface<<*VPCpeering*>> {
+skinparam interface<<**VPCpeering**>> {
     BackgroundColor #FEEDE2
 	BorderColor #F58536
-}skinparam interface<<*NetworkingContentDelivery AmazonVPC VPCpeering*>> {
+}
+skinparam interface<<**NetworkingContentDelivery\nAmazonVPC\nVPCpeering**>> {
     BackgroundColor #FEEDE2
 	BorderColor #F58536
 }
 
-!define VPCPEERING_LARGE(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_VPCpeering_LARGE,alias,*VPCpeering*)
 
-!define VPCPEERING_LARGE(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_VPCpeering_LARGE,label,alias,*VPCpeering*)
+!define VPCPEERING_LARGE(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_VPCpeering_LARGE,alias,**VPCpeering**)
 
-!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_VPCPEERING_LARGE(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_VPCpeering_LARGE,alias,*NetworkingContentDelivery AmazonVPC VPCpeering*)
+!define VPCPEERING_LARGE(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_VPCpeering_LARGE,label,alias,**VPCpeering**)
 
-!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_VPCPEERING_LARGE(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_VPCpeering_LARGE,label,alias,*NetworkingContentDelivery AmazonVPC VPCpeering*)
+!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_VPCPEERING_LARGE(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_VPCpeering_LARGE,alias,**NetworkingContentDelivery\nAmazonVPC\nVPCpeering**)
+
+!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_VPCPEERING_LARGE(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_VPCpeering_LARGE,label,alias,**NetworkingContentDelivery\nAmazonVPC\nVPCpeering**)
 
 @enduml

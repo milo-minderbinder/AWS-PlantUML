@@ -341,8 +341,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 
 
 
-!define AMAZONATHENA_LARGE(alias) AWS_ENTITY(node,#F58536,AmazonAthena_LARGE,alias,*AmazonAthena*)
+!define AMAZONATHENA_LARGE(alias) AWS_ENTITY(node,#F58536,AmazonAthena_LARGE,alias,**AmazonAthena**)
 
-!define AMAZONATHENA_LARGE(alias,label) AWS_ENTITY(node,#F58536,AmazonAthena_LARGE,label,alias,*AmazonAthena*)
+!define AMAZONATHENA_LARGE(alias,label) AWS_ENTITY(node,#F58536,AmazonAthena_LARGE,label,alias,**AmazonAthena**)
 
 @enduml

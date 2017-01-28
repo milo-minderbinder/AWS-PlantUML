@@ -313,8 +313,8 @@ sprite $routetable_LARGE [336x309/16] {
 
 
 
-!define ROUTETABLE_LARGE(alias) AWS_ENTITY(artifact,#F58536,routetable_LARGE,alias,*routetable*)
+!define ROUTETABLE_LARGE(alias) AWS_ENTITY(artifact,#F58536,routetable_LARGE,alias,**routetable**)
 
-!define ROUTETABLE_LARGE(alias,label) AWS_ENTITY(artifact,#F58536,routetable_LARGE,label,alias,*routetable*)
+!define ROUTETABLE_LARGE(alias,label) AWS_ENTITY(artifact,#F58536,routetable_LARGE,label,alias,**routetable**)
 
 @enduml

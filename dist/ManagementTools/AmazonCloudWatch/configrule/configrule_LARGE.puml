@@ -324,8 +324,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 
 
 
-!define CONFIGRULE_LARGE(alias) AWS_ENTITY(node,#769D3F,configrule_LARGE,alias,*configrule*)
+!define CONFIGRULE_LARGE(alias) AWS_ENTITY(artifact,#769D3F,configrule_LARGE,alias,**configrule**)
 
-!define CONFIGRULE_LARGE(alias,label) AWS_ENTITY(node,#769D3F,configrule_LARGE,label,alias,*configrule*)
+!define CONFIGRULE_LARGE(alias,label) AWS_ENTITY(artifact,#769D3F,configrule_LARGE,label,alias,**configrule**)
 
 @enduml

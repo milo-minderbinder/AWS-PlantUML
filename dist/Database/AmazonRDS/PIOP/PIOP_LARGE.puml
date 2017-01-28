@@ -282,8 +282,8 @@ FFFFDCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 
 
-!define PIOP_LARGE(alias) AWS_ENTITY(component,#2F74B8,PIOP_LARGE,alias,*PIOP*)
+!define PIOP_LARGE(alias) AWS_ENTITY(component,#2F74B8,PIOP_LARGE,alias,**PIOP**)
 
-!define PIOP_LARGE(alias,label) AWS_ENTITY(component,#2F74B8,PIOP_LARGE,label,alias,*PIOP*)
+!define PIOP_LARGE(alias,label) AWS_ENTITY(component,#2F74B8,PIOP_LARGE,label,alias,**PIOP**)
 
 @enduml

@@ -372,8 +372,8 @@ FFFFFFFFFFFFFFFFE800000000000000000000000000000000000000000000000000000000000CFF
 
 
 
-!define AWSCLI_LARGE(alias) AWS_ENTITY(agent,black,AWSCLI_LARGE,alias,*AWSCLI*)
+!define AWSCLI_LARGE(alias) AWS_ENTITY(agent,black,AWSCLI_LARGE,alias,**AWSCLI**)
 
-!define AWSCLI_LARGE(alias,label) AWS_ENTITY(agent,black,AWSCLI_LARGE,label,alias,*AWSCLI*)
+!define AWSCLI_LARGE(alias,label) AWS_ENTITY(agent,black,AWSCLI_LARGE,label,alias,**AWSCLI**)
 
 @enduml

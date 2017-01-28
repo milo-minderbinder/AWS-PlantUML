@@ -641,14 +641,22 @@ FFCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC700000000
 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFF0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 }
 
+skinparam artifact<<**flowlogs**>> {
+    BackgroundColor White
+	BorderColor Black
+}
+skinparam artifact<<**Compute\nAmazonVPC\nflowlogs**>> {
+    BackgroundColor White
+	BorderColor Black
+}
 
 
-!define FLOWLOGS_LARGE(alias) AWS_ENTITY(node,#F58536,Compute_AmazonVPC_flowlogs_LARGE,alias,*flowlogs*)
+!define FLOWLOGS_LARGE(alias) AWS_ENTITY(artifact,#F58536,Compute_AmazonVPC_flowlogs_LARGE,alias,**flowlogs**)
 
-!define FLOWLOGS_LARGE(alias,label) AWS_ENTITY(node,#F58536,Compute_AmazonVPC_flowlogs_LARGE,label,alias,*flowlogs*)
+!define FLOWLOGS_LARGE(alias,label) AWS_ENTITY(artifact,#F58536,Compute_AmazonVPC_flowlogs_LARGE,label,alias,**flowlogs**)
 
-!define COMPUTE_AMAZONVPC_FLOWLOGS_LARGE(alias) AWS_ENTITY(node,#F58536,Compute_AmazonVPC_flowlogs_LARGE,alias,*Compute AmazonVPC flowlogs*)
+!define COMPUTE_AMAZONVPC_FLOWLOGS_LARGE(alias) AWS_ENTITY(artifact,#F58536,Compute_AmazonVPC_flowlogs_LARGE,alias,**Compute\nAmazonVPC\nflowlogs**)
 
-!define COMPUTE_AMAZONVPC_FLOWLOGS_LARGE(alias,label) AWS_ENTITY(node,#F58536,Compute_AmazonVPC_flowlogs_LARGE,label,alias,*Compute AmazonVPC flowlogs*)
+!define COMPUTE_AMAZONVPC_FLOWLOGS_LARGE(alias,label) AWS_ENTITY(artifact,#F58536,Compute_AmazonVPC_flowlogs_LARGE,label,alias,**Compute\nAmazonVPC\nflowlogs**)
 
 @enduml

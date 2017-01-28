@@ -84,13 +84,14 @@ sprite $AmazonVPC [68x82/16] {
 00000000000000000000000000000009996600000000000000000000000000000000
 }
 
-skinparam interface<<AmazonVPC>> {
+skinparam cloud<<AmazonVPC>> {
     BackgroundColor #FEEDE2
 	BorderColor #F58536
 }
 
-!define AMAZONVPC(alias) AWS_ENTITY(interface,#F58536,AmazonVPC,alias,AmazonVPC)
 
-!define AMAZONVPC(alias,label) AWS_ENTITY(interface,#F58536,AmazonVPC,label,alias,AmazonVPC)
+!define AMAZONVPC(alias) AWS_ENTITY(cloud,#F58536,AmazonVPC,alias,AmazonVPC)
+
+!define AMAZONVPC(alias,label) AWS_ENTITY(cloud,#F58536,AmazonVPC,label,alias,AmazonVPC)
 
 @enduml

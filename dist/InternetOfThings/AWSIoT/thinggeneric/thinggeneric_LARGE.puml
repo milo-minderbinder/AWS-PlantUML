@@ -361,8 +361,8 @@ CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 
 
-!define THINGGENERIC_LARGE(alias) AWS_ENTITY(node,#2F74B8,thinggeneric_LARGE,alias,*thinggeneric*)
+!define THINGGENERIC_LARGE(alias) AWS_ENTITY(node,#2F74B8,thinggeneric_LARGE,alias,**thinggeneric**)
 
-!define THINGGENERIC_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,thinggeneric_LARGE,label,alias,*thinggeneric*)
+!define THINGGENERIC_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,thinggeneric_LARGE,label,alias,**thinggeneric**)
 
 @enduml

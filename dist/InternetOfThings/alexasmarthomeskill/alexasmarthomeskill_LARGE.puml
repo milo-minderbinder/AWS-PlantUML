@@ -321,8 +321,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 
 
-!define ALEXASMARTHOMESKILL_LARGE(alias) AWS_ENTITY(node,#2F74B8,alexasmarthomeskill_LARGE,alias,*alexasmarthomeskill*)
+!define ALEXASMARTHOMESKILL_LARGE(alias) AWS_ENTITY(node,#2F74B8,alexasmarthomeskill_LARGE,alias,**alexasmarthomeskill**)
 
-!define ALEXASMARTHOMESKILL_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,alexasmarthomeskill_LARGE,label,alias,*alexasmarthomeskill*)
+!define ALEXASMARTHOMESKILL_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,alexasmarthomeskill_LARGE,label,alias,**alexasmarthomeskill**)
 
 @enduml

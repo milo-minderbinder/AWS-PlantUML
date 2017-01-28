@@ -639,20 +639,22 @@ FFCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 }
 
-skinparam interface<<*VPNgateway*>> {
+skinparam interface<<**VPNgateway**>> {
     BackgroundColor #FEEDE2
 	BorderColor #F58536
-}skinparam interface<<*NetworkingContentDelivery AmazonVPC VPNgateway*>> {
+}
+skinparam interface<<**NetworkingContentDelivery\nAmazonVPC\nVPNgateway**>> {
     BackgroundColor #FEEDE2
 	BorderColor #F58536
 }
 
-!define VPNGATEWAY_LARGE(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_VPNgateway_LARGE,alias,*VPNgateway*)
 
-!define VPNGATEWAY_LARGE(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_VPNgateway_LARGE,label,alias,*VPNgateway*)
+!define VPNGATEWAY_LARGE(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_VPNgateway_LARGE,alias,**VPNgateway**)
 
-!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_VPNGATEWAY_LARGE(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_VPNgateway_LARGE,alias,*NetworkingContentDelivery AmazonVPC VPNgateway*)
+!define VPNGATEWAY_LARGE(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_VPNgateway_LARGE,label,alias,**VPNgateway**)
 
-!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_VPNGATEWAY_LARGE(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_VPNgateway_LARGE,label,alias,*NetworkingContentDelivery AmazonVPC VPNgateway*)
+!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_VPNGATEWAY_LARGE(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_VPNgateway_LARGE,alias,**NetworkingContentDelivery\nAmazonVPC\nVPNgateway**)
+
+!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_VPNGATEWAY_LARGE(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_VPNgateway_LARGE,label,alias,**NetworkingContentDelivery\nAmazonVPC\nVPNgateway**)
 
 @enduml

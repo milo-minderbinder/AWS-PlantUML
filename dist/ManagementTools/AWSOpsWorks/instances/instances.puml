@@ -157,8 +157,8 @@ AAAAAAAAAAAAAAAAAA000000000AAAAAAAAAAAAAAAAAA000000000AAAAAAAAAAAAAAAAAA
 
 !define INSTANCES(alias,label) AWS_ENTITY(artifact,#769D3F,AWSOpsWorks_instances,label,alias,instances)
 
-!define AWSOPSWORKS_INSTANCES(alias) AWS_ENTITY(artifact,#769D3F,AWSOpsWorks_instances,alias,AWSOpsWorks instances)
+!define AWSOPSWORKS_INSTANCES(alias) AWS_ENTITY(artifact,#769D3F,AWSOpsWorks_instances,alias,AWSOpsWorks\ninstances)
 
-!define AWSOPSWORKS_INSTANCES(alias,label) AWS_ENTITY(artifact,#769D3F,AWSOpsWorks_instances,label,alias,AWSOpsWorks instances)
+!define AWSOPSWORKS_INSTANCES(alias,label) AWS_ENTITY(artifact,#769D3F,AWSOpsWorks_instances,label,alias,AWSOpsWorks\ninstances)
 
 @enduml

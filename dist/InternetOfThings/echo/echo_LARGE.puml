@@ -414,8 +414,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFEDDCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 
 
-!define ECHO_LARGE(alias) AWS_ENTITY(node,#2F74B8,echo_LARGE,alias,*echo*)
+!define ECHO_LARGE(alias) AWS_ENTITY(node,#2F74B8,echo_LARGE,alias,**echo**)
 
-!define ECHO_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,echo_LARGE,label,alias,*echo*)
+!define ECHO_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,echo_LARGE,label,alias,**echo**)
 
 @enduml

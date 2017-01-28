@@ -414,8 +414,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 
 
 
-!define AWSDIRECTORYSERVICE_LARGE(alias) AWS_ENTITY(node,#769D3F,AWSDirectoryService_LARGE,alias,*AWSDirectoryService*)
+!define AWSDIRECTORYSERVICE_LARGE(alias) AWS_ENTITY(node,#769D3F,AWSDirectoryService_LARGE,alias,**AWSDirectoryService**)
 
-!define AWSDIRECTORYSERVICE_LARGE(alias,label) AWS_ENTITY(node,#769D3F,AWSDirectoryService_LARGE,label,alias,*AWSDirectoryService*)
+!define AWSDIRECTORYSERVICE_LARGE(alias,label) AWS_ENTITY(node,#769D3F,AWSDirectoryService_LARGE,label,alias,**AWSDirectoryService**)
 
 @enduml

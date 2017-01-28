@@ -340,8 +340,8 @@ FFFFFFFFFFCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC0000000000000000000000000007CCC
 
 
 
-!define AMAZONKINESISANALYTICS_LARGE(alias) AWS_ENTITY(component,#F58536,AmazonKinesisAnalytics_LARGE,alias,*AmazonKinesisAnalytics*)
+!define AMAZONKINESISANALYTICS_LARGE(alias) AWS_ENTITY(component,#F58536,AmazonKinesisAnalytics_LARGE,alias,**AmazonKinesisAnalytics**)
 
-!define AMAZONKINESISANALYTICS_LARGE(alias,label) AWS_ENTITY(component,#F58536,AmazonKinesisAnalytics_LARGE,label,alias,*AmazonKinesisAnalytics*)
+!define AMAZONKINESISANALYTICS_LARGE(alias,label) AWS_ENTITY(component,#F58536,AmazonKinesisAnalytics_LARGE,label,alias,**AmazonKinesisAnalytics**)
 
 @enduml

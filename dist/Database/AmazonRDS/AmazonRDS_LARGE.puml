@@ -366,8 +366,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
 
 
 
-!define AMAZONRDS_LARGE(alias) AWS_ENTITY(component,#2F74B8,AmazonRDS_LARGE,alias,*AmazonRDS*)
+!define AMAZONRDS_LARGE(alias) AWS_ENTITY(node,#2F74B8,AmazonRDS_LARGE,alias,**AmazonRDS**)
 
-!define AMAZONRDS_LARGE(alias,label) AWS_ENTITY(component,#2F74B8,AmazonRDS_LARGE,label,alias,*AmazonRDS*)
+!define AMAZONRDS_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,AmazonRDS_LARGE,label,alias,**AmazonRDS**)
 
 @enduml

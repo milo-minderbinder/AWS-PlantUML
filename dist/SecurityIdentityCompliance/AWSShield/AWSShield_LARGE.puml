@@ -320,8 +320,8 @@ EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
 
 
 
-!define AWSSHIELD_LARGE(alias) AWS_ENTITY(node,#769D3F,AWSShield_LARGE,alias,*AWSShield*)
+!define AWSSHIELD_LARGE(alias) AWS_ENTITY(node,#769D3F,AWSShield_LARGE,alias,**AWSShield**)
 
-!define AWSSHIELD_LARGE(alias,label) AWS_ENTITY(node,#769D3F,AWSShield_LARGE,label,alias,*AWSShield*)
+!define AWSSHIELD_LARGE(alias,label) AWS_ENTITY(node,#769D3F,AWSShield_LARGE,label,alias,**AWSShield**)
 
 @enduml

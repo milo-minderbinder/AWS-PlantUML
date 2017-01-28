@@ -414,8 +414,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAA97777777777777777AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 
 
 
-!define AMAZONMACHINELEARNING_LARGE(alias) AWS_ENTITY(component,#2F74B8,AmazonMachineLearning_LARGE,alias,*AmazonMachineLearning*)
+!define AMAZONMACHINELEARNING_LARGE(alias) AWS_ENTITY(component,#2F74B8,AmazonMachineLearning_LARGE,alias,**AmazonMachineLearning**)
 
-!define AMAZONMACHINELEARNING_LARGE(alias,label) AWS_ENTITY(component,#2F74B8,AmazonMachineLearning_LARGE,label,alias,*AmazonMachineLearning*)
+!define AMAZONMACHINELEARNING_LARGE(alias,label) AWS_ENTITY(component,#2F74B8,AmazonMachineLearning_LARGE,label,alias,**AmazonMachineLearning**)
 
 @enduml

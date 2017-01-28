@@ -335,8 +335,8 @@ BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
 
 
 
-!define VAULT_LARGE(alias) AWS_ENTITY(artifact,#E05344,vault_LARGE,alias,*vault*)
+!define VAULT_LARGE(alias) AWS_ENTITY(storage,#E05344,vault_LARGE,alias,**vault**)
 
-!define VAULT_LARGE(alias,label) AWS_ENTITY(artifact,#E05344,vault_LARGE,label,alias,*vault*)
+!define VAULT_LARGE(alias,label) AWS_ENTITY(storage,#E05344,vault_LARGE,label,alias,**vault**)
 
 @enduml

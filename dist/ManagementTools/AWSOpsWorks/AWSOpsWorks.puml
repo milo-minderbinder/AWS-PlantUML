@@ -86,8 +86,8 @@ FFFFFFFFFCCCCCFFFFFFFFFFFFFFFFFFFFFCCCCCCCCCCCCCCCCCCCCCFFFFFCCCCCCCCC
 
 
 
-!define AWSOPSWORKS(alias) AWS_ENTITY(artifact,#769D3F,AWSOpsWorks,alias,AWSOpsWorks)
+!define AWSOPSWORKS(alias) AWS_ENTITY(node,#769D3F,AWSOpsWorks,alias,AWSOpsWorks)
 
-!define AWSOPSWORKS(alias,label) AWS_ENTITY(artifact,#769D3F,AWSOpsWorks,label,alias,AWSOpsWorks)
+!define AWSOPSWORKS(alias,label) AWS_ENTITY(node,#769D3F,AWSOpsWorks,label,alias,AWSOpsWorks)
 
 @enduml

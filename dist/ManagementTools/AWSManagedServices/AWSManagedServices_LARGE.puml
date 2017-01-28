@@ -414,8 +414,8 @@ EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEDBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBD
 
 
 
-!define AWSMANAGEDSERVICES_LARGE(alias) AWS_ENTITY(node,#769D3F,AWSManagedServices_LARGE,alias,*AWSManagedServices*)
+!define AWSMANAGEDSERVICES_LARGE(alias) AWS_ENTITY(node,#769D3F,AWSManagedServices_LARGE,alias,**AWSManagedServices**)
 
-!define AWSMANAGEDSERVICES_LARGE(alias,label) AWS_ENTITY(node,#769D3F,AWSManagedServices_LARGE,label,alias,*AWSManagedServices*)
+!define AWSMANAGEDSERVICES_LARGE(alias,label) AWS_ENTITY(node,#769D3F,AWSManagedServices_LARGE,label,alias,**AWSManagedServices**)
 
 @enduml

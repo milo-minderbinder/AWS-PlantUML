@@ -404,8 +404,8 @@ FFFFFFFDCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 
 
-!define SENSOR_LARGE(alias) AWS_ENTITY(node,#2F74B8,sensor_LARGE,alias,*sensor*)
+!define SENSOR_LARGE(alias) AWS_ENTITY(node,#2F74B8,sensor_LARGE,alias,**sensor**)
 
-!define SENSOR_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,sensor_LARGE,label,alias,*sensor*)
+!define SENSOR_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,sensor_LARGE,label,alias,**sensor**)
 
 @enduml

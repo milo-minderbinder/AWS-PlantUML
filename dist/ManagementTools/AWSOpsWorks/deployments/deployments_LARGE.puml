@@ -345,8 +345,8 @@ FFFFFFFFFFFFFFFFECCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 
 
-!define DEPLOYMENTS_LARGE(alias) AWS_ENTITY(artifact,#769D3F,deployments_LARGE,alias,*deployments*)
+!define DEPLOYMENTS_LARGE(alias) AWS_ENTITY(artifact,#769D3F,deployments_LARGE,alias,**deployments**)
 
-!define DEPLOYMENTS_LARGE(alias,label) AWS_ENTITY(artifact,#769D3F,deployments_LARGE,label,alias,*deployments*)
+!define DEPLOYMENTS_LARGE(alias,label) AWS_ENTITY(artifact,#769D3F,deployments_LARGE,label,alias,**deployments**)
 
 @enduml

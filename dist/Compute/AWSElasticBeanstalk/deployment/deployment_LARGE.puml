@@ -334,8 +334,8 @@ FFDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA800007AAAAAAAAAAAAAAAAAAAAAAA500
 
 
 
-!define DEPLOYMENT_LARGE(alias) AWS_ENTITY(frame,#F58536,deployment_LARGE,alias,*deployment*)
+!define DEPLOYMENT_LARGE(alias) AWS_ENTITY(frame,#F58536,deployment_LARGE,alias,**deployment**)
 
-!define DEPLOYMENT_LARGE(alias,label) AWS_ENTITY(frame,#F58536,deployment_LARGE,label,alias,*deployment*)
+!define DEPLOYMENT_LARGE(alias,label) AWS_ENTITY(frame,#F58536,deployment_LARGE,label,alias,**deployment**)
 
 @enduml

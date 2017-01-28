@@ -62,6 +62,7 @@ skinparam agent<<user>> {
     BorderColor transparent
 }
 
+
 !define USER(alias) AWS_ENTITY(agent,#D6D6D6,user,alias,user)
 
 !define USER(alias,label) AWS_ENTITY(agent,#D6D6D6,user,label,alias,user)

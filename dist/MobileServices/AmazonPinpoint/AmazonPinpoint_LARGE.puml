@@ -779,12 +779,12 @@ sprite $MobileServices_AmazonPinpoint_LARGE [342x386/16] {
 
 
 
-!define AMAZONPINPOINT_LARGE(alias) AWS_ENTITY(node,#AD698C,MobileServices_AmazonPinpoint_LARGE,alias,*AmazonPinpoint*)
+!define AMAZONPINPOINT_LARGE(alias) AWS_ENTITY(node,#AD698C,MobileServices_AmazonPinpoint_LARGE,alias,**AmazonPinpoint**)
 
-!define AMAZONPINPOINT_LARGE(alias,label) AWS_ENTITY(node,#AD698C,MobileServices_AmazonPinpoint_LARGE,label,alias,*AmazonPinpoint*)
+!define AMAZONPINPOINT_LARGE(alias,label) AWS_ENTITY(node,#AD698C,MobileServices_AmazonPinpoint_LARGE,label,alias,**AmazonPinpoint**)
 
-!define MOBILESERVICES_AMAZONPINPOINT_LARGE(alias) AWS_ENTITY(node,#AD698C,MobileServices_AmazonPinpoint_LARGE,alias,*MobileServices AmazonPinpoint*)
+!define MOBILESERVICES_AMAZONPINPOINT_LARGE(alias) AWS_ENTITY(node,#AD698C,MobileServices_AmazonPinpoint_LARGE,alias,**MobileServices\nAmazonPinpoint**)
 
-!define MOBILESERVICES_AMAZONPINPOINT_LARGE(alias,label) AWS_ENTITY(node,#AD698C,MobileServices_AmazonPinpoint_LARGE,label,alias,*MobileServices AmazonPinpoint*)
+!define MOBILESERVICES_AMAZONPINPOINT_LARGE(alias,label) AWS_ENTITY(node,#AD698C,MobileServices_AmazonPinpoint_LARGE,label,alias,**MobileServices\nAmazonPinpoint**)
 
 @enduml

@@ -167,8 +167,8 @@ EEEEEEEBAAAABEEEEEEEEEECAAAAAA9987899BCCCCCCCAAAAAAAAABCCCCCCAAAAAAA0
 
 !define AMAZONPINPOINT(alias,label) AWS_ENTITY(node,#D9A842,Messaging_AmazonPinpoint,label,alias,AmazonPinpoint)
 
-!define MESSAGING_AMAZONPINPOINT(alias) AWS_ENTITY(node,#D9A842,Messaging_AmazonPinpoint,alias,Messaging AmazonPinpoint)
+!define MESSAGING_AMAZONPINPOINT(alias) AWS_ENTITY(node,#D9A842,Messaging_AmazonPinpoint,alias,Messaging\nAmazonPinpoint)
 
-!define MESSAGING_AMAZONPINPOINT(alias,label) AWS_ENTITY(node,#D9A842,Messaging_AmazonPinpoint,label,alias,Messaging AmazonPinpoint)
+!define MESSAGING_AMAZONPINPOINT(alias,label) AWS_ENTITY(node,#D9A842,Messaging_AmazonPinpoint,label,alias,Messaging\nAmazonPinpoint)
 
 @enduml

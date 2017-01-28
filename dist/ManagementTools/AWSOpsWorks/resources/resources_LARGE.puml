@@ -360,8 +360,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 
 
-!define RESOURCES_LARGE(alias) AWS_ENTITY(artifact,#769D3F,resources_LARGE,alias,*resources*)
+!define RESOURCES_LARGE(alias) AWS_ENTITY(artifact,#769D3F,resources_LARGE,alias,**resources**)
 
-!define RESOURCES_LARGE(alias,label) AWS_ENTITY(artifact,#769D3F,resources_LARGE,label,alias,*resources*)
+!define RESOURCES_LARGE(alias,label) AWS_ENTITY(artifact,#769D3F,resources_LARGE,label,alias,**resources**)
 
 @enduml

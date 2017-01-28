@@ -282,8 +282,8 @@ FFFFDCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 
 
-!define ALEXASKILL_LARGE(alias) AWS_ENTITY(component,#2F74B8,alexaskill_LARGE,alias,*alexaskill*)
+!define ALEXASKILL_LARGE(alias) AWS_ENTITY(component,#2F74B8,alexaskill_LARGE,alias,**alexaskill**)
 
-!define ALEXASKILL_LARGE(alias,label) AWS_ENTITY(component,#2F74B8,alexaskill_LARGE,label,alias,*alexaskill*)
+!define ALEXASKILL_LARGE(alias,label) AWS_ENTITY(component,#2F74B8,alexaskill_LARGE,label,alias,**alexaskill**)
 
 @enduml

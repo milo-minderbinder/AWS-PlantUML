@@ -138,17 +138,19 @@ FDCCCCCCCCCCCCCCCC90000000000000000000000009CCCCCCCCCCCCCCCCDF
 skinparam interface<<VPCpeering>> {
     BackgroundColor #FEEDE2
 	BorderColor #F58536
-}skinparam interface<<NetworkingContentDelivery AmazonVPC VPCpeering>> {
+}
+skinparam interface<<NetworkingContentDelivery\nAmazonVPC\nVPCpeering>> {
     BackgroundColor #FEEDE2
 	BorderColor #F58536
 }
+
 
 !define VPCPEERING(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_VPCpeering,alias,VPCpeering)
 
 !define VPCPEERING(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_VPCpeering,label,alias,VPCpeering)
 
-!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_VPCPEERING(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_VPCpeering,alias,NetworkingContentDelivery AmazonVPC VPCpeering)
+!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_VPCPEERING(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_VPCpeering,alias,NetworkingContentDelivery\nAmazonVPC\nVPCpeering)
 
-!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_VPCPEERING(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_VPCpeering,label,alias,NetworkingContentDelivery AmazonVPC VPCpeering)
+!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_VPCPEERING(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_VPCpeering,label,alias,NetworkingContentDelivery\nAmazonVPC\nVPCpeering)
 
 @enduml

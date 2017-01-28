@@ -47,6 +47,7 @@ skinparam artifact<<object>> {
     BackgroundColor White
 }
 
+
 !define OBJECT(alias) AWS_ENTITY(artifact,#E05344,object,alias,object)
 
 !define OBJECT(alias,label) AWS_ENTITY(artifact,#E05344,object,label,alias,object)

@@ -282,8 +282,8 @@ FFFFDCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 
 
-!define CACHENODE_LARGE(alias) AWS_ENTITY(storage,#2F74B8,cachenode_LARGE,alias,*cachenode*)
+!define CACHENODE_LARGE(alias) AWS_ENTITY(storage,#2F74B8,cachenode_LARGE,alias,**cachenode**)
 
-!define CACHENODE_LARGE(alias,label) AWS_ENTITY(storage,#2F74B8,cachenode_LARGE,label,alias,*cachenode*)
+!define CACHENODE_LARGE(alias,label) AWS_ENTITY(storage,#2F74B8,cachenode_LARGE,label,alias,**cachenode**)
 
 @enduml

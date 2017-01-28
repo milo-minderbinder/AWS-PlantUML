@@ -641,14 +641,22 @@ FFCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC800000000
 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFF0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 }
 
+skinparam interface<<**endpoints**>> {
+    BackgroundColor #FEEDE2
+	BorderColor #F58536
+}
+skinparam interface<<**Compute\nAmazonVPC\nendpoints**>> {
+    BackgroundColor #FEEDE2
+	BorderColor #F58536
+}
 
 
-!define ENDPOINTS_LARGE(alias) AWS_ENTITY(node,#F58536,Compute_AmazonVPC_endpoints_LARGE,alias,*endpoints*)
+!define ENDPOINTS_LARGE(alias) AWS_ENTITY(interface,#F58536,Compute_AmazonVPC_endpoints_LARGE,alias,**endpoints**)
 
-!define ENDPOINTS_LARGE(alias,label) AWS_ENTITY(node,#F58536,Compute_AmazonVPC_endpoints_LARGE,label,alias,*endpoints*)
+!define ENDPOINTS_LARGE(alias,label) AWS_ENTITY(interface,#F58536,Compute_AmazonVPC_endpoints_LARGE,label,alias,**endpoints**)
 
-!define COMPUTE_AMAZONVPC_ENDPOINTS_LARGE(alias) AWS_ENTITY(node,#F58536,Compute_AmazonVPC_endpoints_LARGE,alias,*Compute AmazonVPC endpoints*)
+!define COMPUTE_AMAZONVPC_ENDPOINTS_LARGE(alias) AWS_ENTITY(interface,#F58536,Compute_AmazonVPC_endpoints_LARGE,alias,**Compute\nAmazonVPC\nendpoints**)
 
-!define COMPUTE_AMAZONVPC_ENDPOINTS_LARGE(alias,label) AWS_ENTITY(node,#F58536,Compute_AmazonVPC_endpoints_LARGE,label,alias,*Compute AmazonVPC endpoints*)
+!define COMPUTE_AMAZONVPC_ENDPOINTS_LARGE(alias,label) AWS_ENTITY(interface,#F58536,Compute_AmazonVPC_endpoints_LARGE,label,alias,**Compute\nAmazonVPC\nendpoints**)
 
 @enduml

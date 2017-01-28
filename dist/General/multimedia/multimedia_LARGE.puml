@@ -286,8 +286,8 @@ FFFFFFFFFFECA9999999999999999999999999999999999999999999999999999999999999999999
 
 
 
-!define MULTIMEDIA_LARGE(alias) AWS_ENTITY(artifact,#D6D6D6,multimedia_LARGE,alias,*multimedia*)
+!define MULTIMEDIA_LARGE(alias) AWS_ENTITY(artifact,#D6D6D6,multimedia_LARGE,alias,**multimedia**)
 
-!define MULTIMEDIA_LARGE(alias,label) AWS_ENTITY(artifact,#D6D6D6,multimedia_LARGE,label,alias,*multimedia*)
+!define MULTIMEDIA_LARGE(alias,label) AWS_ENTITY(artifact,#D6D6D6,multimedia_LARGE,label,alias,**multimedia**)
 
 @enduml

@@ -414,8 +414,8 @@ sprite $AmazonEMR_LARGE [340x410/16] {
 
 
 
-!define AMAZONEMR_LARGE(alias) AWS_ENTITY(component,#F58536,AmazonEMR_LARGE,alias,*AmazonEMR*)
+!define AMAZONEMR_LARGE(alias) AWS_ENTITY(component,#F58536,AmazonEMR_LARGE,alias,**AmazonEMR**)
 
-!define AMAZONEMR_LARGE(alias,label) AWS_ENTITY(component,#F58536,AmazonEMR_LARGE,label,alias,*AmazonEMR*)
+!define AMAZONEMR_LARGE(alias,label) AWS_ENTITY(component,#F58536,AmazonEMR_LARGE,label,alias,**AmazonEMR**)
 
 @enduml

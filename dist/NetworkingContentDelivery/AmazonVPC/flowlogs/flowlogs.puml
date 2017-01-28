@@ -138,17 +138,19 @@ FDCCCCCCCCCCCC9009C99999999999999999999C000ACCCCACCCCCCCCCCCDF
 skinparam artifact<<flowlogs>> {
     BackgroundColor White
 	BorderColor Black
-}skinparam artifact<<NetworkingContentDelivery AmazonVPC flowlogs>> {
+}
+skinparam artifact<<NetworkingContentDelivery\nAmazonVPC\nflowlogs>> {
     BackgroundColor White
 	BorderColor Black
 }
+
 
 !define FLOWLOGS(alias) AWS_ENTITY(artifact,#F58536,NetworkingContentDelivery_AmazonVPC_flowlogs,alias,flowlogs)
 
 !define FLOWLOGS(alias,label) AWS_ENTITY(artifact,#F58536,NetworkingContentDelivery_AmazonVPC_flowlogs,label,alias,flowlogs)
 
-!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_FLOWLOGS(alias) AWS_ENTITY(artifact,#F58536,NetworkingContentDelivery_AmazonVPC_flowlogs,alias,NetworkingContentDelivery AmazonVPC flowlogs)
+!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_FLOWLOGS(alias) AWS_ENTITY(artifact,#F58536,NetworkingContentDelivery_AmazonVPC_flowlogs,alias,NetworkingContentDelivery\nAmazonVPC\nflowlogs)
 
-!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_FLOWLOGS(alias,label) AWS_ENTITY(artifact,#F58536,NetworkingContentDelivery_AmazonVPC_flowlogs,label,alias,NetworkingContentDelivery AmazonVPC flowlogs)
+!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_FLOWLOGS(alias,label) AWS_ENTITY(artifact,#F58536,NetworkingContentDelivery_AmazonVPC_flowlogs,label,alias,NetworkingContentDelivery\nAmazonVPC\nflowlogs)
 
 @enduml

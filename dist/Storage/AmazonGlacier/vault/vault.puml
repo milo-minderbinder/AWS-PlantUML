@@ -71,8 +71,8 @@ BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
 
 
 
-!define VAULT(alias) AWS_ENTITY(artifact,#E05344,vault,alias,vault)
+!define VAULT(alias) AWS_ENTITY(storage,#E05344,vault,alias,vault)
 
-!define VAULT(alias,label) AWS_ENTITY(artifact,#E05344,vault,label,alias,vault)
+!define VAULT(alias,label) AWS_ENTITY(storage,#E05344,vault,label,alias,vault)
 
 @enduml

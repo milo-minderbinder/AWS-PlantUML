@@ -324,8 +324,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 
 
 
-!define CHECKLISTFAULTTOLERANCE_LARGE(alias) AWS_ENTITY(artifact,#769D3F,checklistfaulttolerance_LARGE,alias,*checklistfaulttolerance*)
+!define CHECKLISTFAULTTOLERANCE_LARGE(alias) AWS_ENTITY(artifact,#769D3F,checklistfaulttolerance_LARGE,alias,**checklistfaulttolerance**)
 
-!define CHECKLISTFAULTTOLERANCE_LARGE(alias,label) AWS_ENTITY(artifact,#769D3F,checklistfaulttolerance_LARGE,label,alias,*checklistfaulttolerance*)
+!define CHECKLISTFAULTTOLERANCE_LARGE(alias,label) AWS_ENTITY(artifact,#769D3F,checklistfaulttolerance_LARGE,label,alias,**checklistfaulttolerance**)
 
 @enduml

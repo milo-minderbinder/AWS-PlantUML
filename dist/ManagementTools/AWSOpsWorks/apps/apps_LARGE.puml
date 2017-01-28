@@ -358,8 +358,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 
 
 
-!define APPS_LARGE(alias) AWS_ENTITY(artifact,#769D3F,apps_LARGE,alias,*apps*)
+!define APPS_LARGE(alias) AWS_ENTITY(artifact,#769D3F,apps_LARGE,alias,**apps**)
 
-!define APPS_LARGE(alias,label) AWS_ENTITY(artifact,#769D3F,apps_LARGE,label,alias,*apps*)
+!define APPS_LARGE(alias,label) AWS_ENTITY(artifact,#769D3F,apps_LARGE,label,alias,**apps**)
 
 @enduml

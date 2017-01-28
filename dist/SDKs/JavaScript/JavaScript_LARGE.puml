@@ -376,8 +376,8 @@ FFFFFFFFFFFFFFFFFFFFB50000000000000000000000000000000000000000000000000000000000
 
 
 
-!define JAVASCRIPT_LARGE(alias) AWS_ENTITY(agent,black,JavaScript_LARGE,alias,*JavaScript*)
+!define JAVASCRIPT_LARGE(alias) AWS_ENTITY(agent,black,JavaScript_LARGE,alias,**JavaScript**)
 
-!define JAVASCRIPT_LARGE(alias,label) AWS_ENTITY(agent,black,JavaScript_LARGE,label,alias,*JavaScript*)
+!define JAVASCRIPT_LARGE(alias,label) AWS_ENTITY(agent,black,JavaScript_LARGE,label,alias,**JavaScript**)
 
 @enduml

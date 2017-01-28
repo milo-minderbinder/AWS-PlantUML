@@ -268,8 +268,8 @@ sprite $ECRRegistry_LARGE [252x264/16] {
 
 
 
-!define ECRREGISTRY_LARGE(alias) AWS_ENTITY(frame,#F58536,ECRRegistry_LARGE,alias,*ECRRegistry*)
+!define ECRREGISTRY_LARGE(alias) AWS_ENTITY(frame,#F58536,ECRRegistry_LARGE,alias,**ECRRegistry**)
 
-!define ECRREGISTRY_LARGE(alias,label) AWS_ENTITY(frame,#F58536,ECRRegistry_LARGE,label,alias,*ECRRegistry*)
+!define ECRREGISTRY_LARGE(alias,label) AWS_ENTITY(frame,#F58536,ECRRegistry_LARGE,label,alias,**ECRRegistry**)
 
 @enduml

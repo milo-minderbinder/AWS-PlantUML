@@ -416,8 +416,8 @@ FFFFFFFFFFFFFFFFFDCCCCCCCCCCCCCCCCCCDFFFFFFFFFFFFFFFFFFFFDCCCCCCCCCCCCCCCCCCCCCC
 
 
 
-!define AMAZONEC2_LARGE(alias) AWS_ENTITY(component,#F58536,AmazonEC2_LARGE,alias,*AmazonEC2*)
+!define AMAZONEC2_LARGE(alias) AWS_ENTITY(component,#F58536,AmazonEC2_LARGE,alias,**AmazonEC2**)
 
-!define AMAZONEC2_LARGE(alias,label) AWS_ENTITY(component,#F58536,AmazonEC2_LARGE,label,alias,*AmazonEC2*)
+!define AMAZONEC2_LARGE(alias,label) AWS_ENTITY(component,#F58536,AmazonEC2_LARGE,label,alias,**AmazonEC2**)
 
 @enduml

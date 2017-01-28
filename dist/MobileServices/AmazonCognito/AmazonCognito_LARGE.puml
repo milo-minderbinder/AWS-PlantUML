@@ -414,8 +414,8 @@ EEEEEEEEEEEEEEEEEEEEEEEEEEEECAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA0000000000000000E
 
 
 
-!define AMAZONCOGNITO_LARGE(alias) AWS_ENTITY(node,#AD698C,AmazonCognito_LARGE,alias,*AmazonCognito*)
+!define AMAZONCOGNITO_LARGE(alias) AWS_ENTITY(node,#AD698C,AmazonCognito_LARGE,alias,**AmazonCognito**)
 
-!define AMAZONCOGNITO_LARGE(alias,label) AWS_ENTITY(node,#AD698C,AmazonCognito_LARGE,label,alias,*AmazonCognito*)
+!define AMAZONCOGNITO_LARGE(alias,label) AWS_ENTITY(node,#AD698C,AmazonCognito_LARGE,label,alias,**AmazonCognito**)
 
 @enduml

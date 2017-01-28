@@ -414,8 +414,8 @@ EEEEEEEEEEDBBBBBBBBBBBBBBBBBBBBBBBEEEEEEEEEEEEEEEEEEEEEEEEEEEEDBBBBBBBBBBBBBBBBB
 
 
 
-!define AWSCLOUDTRAIL_LARGE(alias) AWS_ENTITY(node,#769D3F,AWSCloudTrail_LARGE,alias,*AWSCloudTrail*)
+!define AWSCLOUDTRAIL_LARGE(alias) AWS_ENTITY(node,#769D3F,AWSCloudTrail_LARGE,alias,**AWSCloudTrail**)
 
-!define AWSCLOUDTRAIL_LARGE(alias,label) AWS_ENTITY(node,#769D3F,AWSCloudTrail_LARGE,label,alias,*AWSCloudTrail*)
+!define AWSCLOUDTRAIL_LARGE(alias,label) AWS_ENTITY(node,#769D3F,AWSCloudTrail_LARGE,label,alias,**AWSCloudTrail**)
 
 @enduml

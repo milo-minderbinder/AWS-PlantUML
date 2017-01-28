@@ -414,8 +414,8 @@ EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEECBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBD
 
 
 
-!define AWSCODECOMMIT_LARGE(alias) AWS_ENTITY(component,#769D3F,AWSCodeCommit_LARGE,alias,*AWSCodeCommit*)
+!define AWSCODECOMMIT_LARGE(alias) AWS_ENTITY(component,#769D3F,AWSCodeCommit_LARGE,alias,**AWSCodeCommit**)
 
-!define AWSCODECOMMIT_LARGE(alias,label) AWS_ENTITY(component,#769D3F,AWSCodeCommit_LARGE,label,alias,*AWSCodeCommit*)
+!define AWSCODECOMMIT_LARGE(alias,label) AWS_ENTITY(component,#769D3F,AWSCodeCommit_LARGE,label,alias,**AWSCodeCommit**)
 
 @enduml

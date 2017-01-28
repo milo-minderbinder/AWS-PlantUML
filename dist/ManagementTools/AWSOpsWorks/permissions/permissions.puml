@@ -155,8 +155,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 
 !define PERMISSIONS(alias,label) AWS_ENTITY(artifact,#769D3F,AWSOpsWorks_permissions,label,alias,permissions)
 
-!define AWSOPSWORKS_PERMISSIONS(alias) AWS_ENTITY(artifact,#769D3F,AWSOpsWorks_permissions,alias,AWSOpsWorks permissions)
+!define AWSOPSWORKS_PERMISSIONS(alias) AWS_ENTITY(artifact,#769D3F,AWSOpsWorks_permissions,alias,AWSOpsWorks\npermissions)
 
-!define AWSOPSWORKS_PERMISSIONS(alias,label) AWS_ENTITY(artifact,#769D3F,AWSOpsWorks_permissions,label,alias,AWSOpsWorks permissions)
+!define AWSOPSWORKS_PERMISSIONS(alias,label) AWS_ENTITY(artifact,#769D3F,AWSOpsWorks_permissions,label,alias,AWSOpsWorks\npermissions)
 
 @enduml

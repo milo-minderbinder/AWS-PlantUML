@@ -333,8 +333,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 
 
 
-!define NON_CACHEDVOLUME_LARGE(alias) AWS_ENTITY(artifact,#E05344,non_cachedvolume_LARGE,alias,*non cachedvolume*)
+!define NON_CACHEDVOLUME_LARGE(alias) AWS_ENTITY(artifact,#E05344,non_cachedvolume_LARGE,alias,**non\ncachedvolume**)
 
-!define NON_CACHEDVOLUME_LARGE(alias,label) AWS_ENTITY(artifact,#E05344,non_cachedvolume_LARGE,label,alias,*non cachedvolume*)
+!define NON_CACHEDVOLUME_LARGE(alias,label) AWS_ENTITY(artifact,#E05344,non_cachedvolume_LARGE,label,alias,**non\ncachedvolume**)
 
 @enduml

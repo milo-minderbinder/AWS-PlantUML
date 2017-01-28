@@ -272,8 +272,8 @@ sprite $EMRengineMapRM5_LARGE [372x268/16] {
 
 
 
-!define EMRENGINEMAPRM5_LARGE(alias) AWS_ENTITY(component,#F58536,EMRengineMapRM5_LARGE,alias,*EMRengineMapRM5*)
+!define EMRENGINEMAPRM5_LARGE(alias) AWS_ENTITY(component,#F58536,EMRengineMapRM5_LARGE,alias,**EMRengineMapRM5**)
 
-!define EMRENGINEMAPRM5_LARGE(alias,label) AWS_ENTITY(component,#F58536,EMRengineMapRM5_LARGE,label,alias,*EMRengineMapRM5*)
+!define EMRENGINEMAPRM5_LARGE(alias,label) AWS_ENTITY(component,#F58536,EMRengineMapRM5_LARGE,label,alias,**EMRengineMapRM5**)
 
 @enduml

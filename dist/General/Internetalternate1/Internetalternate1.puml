@@ -53,6 +53,7 @@ skinparam cloud<<Internetalternate1>> {
     BorderColor #7E7D7D
 }
 
+
 !define INTERNETALTERNATE1(alias) AWS_ENTITY(cloud,#D6D6D6,Internetalternate1,alias,Internetalternate1)
 
 !define INTERNETALTERNATE1(alias,label) AWS_ENTITY(cloud,#D6D6D6,Internetalternate1,label,alias,Internetalternate1)

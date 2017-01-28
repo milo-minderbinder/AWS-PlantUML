@@ -332,8 +332,8 @@ BBBBBBBBBBBBBBB98888888888888888888888888888888888888888888888888888888888888888
 
 
 
-!define SNAPSHOT_LARGE(alias) AWS_ENTITY(artifact,#E05344,snapshot_LARGE,alias,*snapshot*)
+!define SNAPSHOT_LARGE(alias) AWS_ENTITY(artifact,#E05344,snapshot_LARGE,alias,**snapshot**)
 
-!define SNAPSHOT_LARGE(alias,label) AWS_ENTITY(artifact,#E05344,snapshot_LARGE,label,alias,*snapshot*)
+!define SNAPSHOT_LARGE(alias,label) AWS_ENTITY(artifact,#E05344,snapshot_LARGE,label,alias,**snapshot**)
 
 @enduml

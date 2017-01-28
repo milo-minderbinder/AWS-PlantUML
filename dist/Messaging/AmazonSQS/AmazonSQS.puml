@@ -88,8 +88,8 @@ DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDCA878899999999999999999999999999999999
 
 
 
-!define AMAZONSQS(alias) AWS_ENTITY(artifact,#D9A842,AmazonSQS,alias,AmazonSQS)
+!define AMAZONSQS(alias) AWS_ENTITY(node,#D9A842,AmazonSQS,alias,AmazonSQS)
 
-!define AMAZONSQS(alias,label) AWS_ENTITY(artifact,#D9A842,AmazonSQS,label,alias,AmazonSQS)
+!define AMAZONSQS(alias,label) AWS_ENTITY(node,#D9A842,AmazonSQS,label,alias,AmazonSQS)
 
 @enduml

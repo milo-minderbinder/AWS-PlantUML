@@ -362,8 +362,8 @@ CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 
 
-!define THINGPOLICEEMERGENCY_LARGE(alias) AWS_ENTITY(node,#2F74B8,thingpoliceemergency_LARGE,alias,*thingpoliceemergency*)
+!define THINGPOLICEEMERGENCY_LARGE(alias) AWS_ENTITY(node,#2F74B8,thingpoliceemergency_LARGE,alias,**thingpoliceemergency**)
 
-!define THINGPOLICEEMERGENCY_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,thingpoliceemergency_LARGE,label,alias,*thingpoliceemergency*)
+!define THINGPOLICEEMERGENCY_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,thingpoliceemergency_LARGE,label,alias,**thingpoliceemergency**)
 
 @enduml

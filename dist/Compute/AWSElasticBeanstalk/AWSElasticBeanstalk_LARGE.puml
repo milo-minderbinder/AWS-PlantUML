@@ -416,8 +416,8 @@ DDDDDDDDDDDDDDDDDDDDDDDDDDBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACDDD
 
 
 
-!define AWSELASTICBEANSTALK_LARGE(alias) AWS_ENTITY(node,#F58536,AWSElasticBeanstalk_LARGE,alias,*AWSElasticBeanstalk*)
+!define AWSELASTICBEANSTALK_LARGE(alias) AWS_ENTITY(node,#F58536,AWSElasticBeanstalk_LARGE,alias,**AWSElasticBeanstalk**)
 
-!define AWSELASTICBEANSTALK_LARGE(alias,label) AWS_ENTITY(node,#F58536,AWSElasticBeanstalk_LARGE,label,alias,*AWSElasticBeanstalk*)
+!define AWSELASTICBEANSTALK_LARGE(alias,label) AWS_ENTITY(node,#F58536,AWSElasticBeanstalk_LARGE,label,alias,**AWSElasticBeanstalk**)
 
 @enduml

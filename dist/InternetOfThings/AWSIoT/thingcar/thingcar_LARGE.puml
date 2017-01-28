@@ -362,8 +362,8 @@ CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 
 
-!define THINGCAR_LARGE(alias) AWS_ENTITY(node,#2F74B8,thingcar_LARGE,alias,*thingcar*)
+!define THINGCAR_LARGE(alias) AWS_ENTITY(node,#2F74B8,thingcar_LARGE,alias,**thingcar**)
 
-!define THINGCAR_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,thingcar_LARGE,label,alias,*thingcar*)
+!define THINGCAR_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,thingcar_LARGE,label,alias,**thingcar**)
 
 @enduml

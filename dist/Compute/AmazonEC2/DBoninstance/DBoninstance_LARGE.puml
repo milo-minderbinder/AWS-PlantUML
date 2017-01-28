@@ -287,8 +287,8 @@ FFFFDCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 
 
-!define DBONINSTANCE_LARGE(alias) AWS_ENTITY(component,#F58536,DBoninstance_LARGE,alias,*DBoninstance*)
+!define DBONINSTANCE_LARGE(alias) AWS_ENTITY(database,#F58536,DBoninstance_LARGE,alias,**DBoninstance**)
 
-!define DBONINSTANCE_LARGE(alias,label) AWS_ENTITY(component,#F58536,DBoninstance_LARGE,label,alias,*DBoninstance*)
+!define DBONINSTANCE_LARGE(alias,label) AWS_ENTITY(database,#F58536,DBoninstance_LARGE,label,alias,**DBoninstance**)
 
 @enduml

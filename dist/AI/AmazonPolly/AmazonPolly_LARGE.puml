@@ -414,8 +414,8 @@ DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDB877777777777
 
 
 
-!define AMAZONPOLLY_LARGE(alias) AWS_ENTITY(component,#2F74B8,AmazonPolly_LARGE,alias,*AmazonPolly*)
+!define AMAZONPOLLY_LARGE(alias) AWS_ENTITY(component,#2F74B8,AmazonPolly_LARGE,alias,**AmazonPolly**)
 
-!define AMAZONPOLLY_LARGE(alias,label) AWS_ENTITY(component,#2F74B8,AmazonPolly_LARGE,label,alias,*AmazonPolly*)
+!define AMAZONPOLLY_LARGE(alias,label) AWS_ENTITY(component,#2F74B8,AmazonPolly_LARGE,label,alias,**AmazonPolly**)
 
 @enduml

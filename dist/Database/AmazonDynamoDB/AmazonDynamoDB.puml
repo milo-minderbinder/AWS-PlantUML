@@ -76,12 +76,13 @@ FFFFFFFEDDDDDDEEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEDCAAAAAABCCCCCCCC
 000000000000000000000DCCCCCCCCCCCCCCCCCCCCB0000000000000000000000
 }
 
-skinparam artifact<<AmazonDynamoDB>> {
+skinparam node<<AmazonDynamoDB>> {
     BackgroundColor White
 }
 
-!define AMAZONDYNAMODB(alias) AWS_ENTITY(artifact,#2F74B8,AmazonDynamoDB,alias,AmazonDynamoDB)
 
-!define AMAZONDYNAMODB(alias,label) AWS_ENTITY(artifact,#2F74B8,AmazonDynamoDB,label,alias,AmazonDynamoDB)
+!define AMAZONDYNAMODB(alias) AWS_ENTITY(node,#2F74B8,AmazonDynamoDB,alias,AmazonDynamoDB)
+
+!define AMAZONDYNAMODB(alias,label) AWS_ENTITY(node,#2F74B8,AmazonDynamoDB,label,alias,AmazonDynamoDB)
 
 @enduml

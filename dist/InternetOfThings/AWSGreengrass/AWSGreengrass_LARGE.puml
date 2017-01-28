@@ -414,8 +414,8 @@ DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
 
 
 
-!define AWSGREENGRASS_LARGE(alias) AWS_ENTITY(node,#2F74B8,AWSGreengrass_LARGE,alias,*AWSGreengrass*)
+!define AWSGREENGRASS_LARGE(alias) AWS_ENTITY(node,#2F74B8,AWSGreengrass_LARGE,alias,**AWSGreengrass**)
 
-!define AWSGREENGRASS_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,AWSGreengrass_LARGE,label,alias,*AWSGreengrass*)
+!define AWSGREENGRASS_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,AWSGreengrass_LARGE,label,alias,**AWSGreengrass**)
 
 @enduml

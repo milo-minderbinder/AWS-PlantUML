@@ -282,8 +282,8 @@ FFFFDCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 
 
-!define REPORTEDSTATE_LARGE(alias) AWS_ENTITY(artifact,#2F74B8,reportedstate_LARGE,alias,*reportedstate*)
+!define REPORTEDSTATE_LARGE(alias) AWS_ENTITY(artifact,#2F74B8,reportedstate_LARGE,alias,**reportedstate**)
 
-!define REPORTEDSTATE_LARGE(alias,label) AWS_ENTITY(artifact,#2F74B8,reportedstate_LARGE,label,alias,*reportedstate*)
+!define REPORTEDSTATE_LARGE(alias,label) AWS_ENTITY(artifact,#2F74B8,reportedstate_LARGE,label,alias,**reportedstate**)
 
 @enduml

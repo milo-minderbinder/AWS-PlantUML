@@ -276,8 +276,8 @@ BBBBBBBBBBBBB00000000000000000000BBBBBBBBBBBBBBBB000000000000000BBBBBBBBBBBBBBBB
 
 
 
-!define EMAIL_LARGE(alias) AWS_ENTITY(artifact,#D9A842,email_LARGE,alias,*email*)
+!define EMAIL_LARGE(alias) AWS_ENTITY(artifact,#D9A842,email_LARGE,alias,**email**)
 
-!define EMAIL_LARGE(alias,label) AWS_ENTITY(artifact,#D9A842,email_LARGE,label,alias,*email*)
+!define EMAIL_LARGE(alias,label) AWS_ENTITY(artifact,#D9A842,email_LARGE,label,alias,**email**)
 
 @enduml

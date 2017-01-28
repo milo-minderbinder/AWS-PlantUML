@@ -133,14 +133,22 @@ FDCCCCCCCCCCCCCCCCC970000000000000000000079CCCCCCCCCCCCCCCCCDF
 0000000000000000000000000FFFFFFFFFFFF0000000000000000000000000
 }
 
+skinparam interface<<VPCpeering>> {
+    BackgroundColor #FEEDE2
+	BorderColor #F58536
+}
+skinparam interface<<Compute\nAmazonVPC\nVPCpeering>> {
+    BackgroundColor #FEEDE2
+	BorderColor #F58536
+}
 
 
-!define VPCPEERING(alias) AWS_ENTITY(node,#F58536,Compute_AmazonVPC_VPCpeering,alias,VPCpeering)
+!define VPCPEERING(alias) AWS_ENTITY(interface,#F58536,Compute_AmazonVPC_VPCpeering,alias,VPCpeering)
 
-!define VPCPEERING(alias,label) AWS_ENTITY(node,#F58536,Compute_AmazonVPC_VPCpeering,label,alias,VPCpeering)
+!define VPCPEERING(alias,label) AWS_ENTITY(interface,#F58536,Compute_AmazonVPC_VPCpeering,label,alias,VPCpeering)
 
-!define COMPUTE_AMAZONVPC_VPCPEERING(alias) AWS_ENTITY(node,#F58536,Compute_AmazonVPC_VPCpeering,alias,Compute AmazonVPC VPCpeering)
+!define COMPUTE_AMAZONVPC_VPCPEERING(alias) AWS_ENTITY(interface,#F58536,Compute_AmazonVPC_VPCpeering,alias,Compute\nAmazonVPC\nVPCpeering)
 
-!define COMPUTE_AMAZONVPC_VPCPEERING(alias,label) AWS_ENTITY(node,#F58536,Compute_AmazonVPC_VPCpeering,label,alias,Compute AmazonVPC VPCpeering)
+!define COMPUTE_AMAZONVPC_VPCPEERING(alias,label) AWS_ENTITY(interface,#F58536,Compute_AmazonVPC_VPCpeering,label,alias,Compute\nAmazonVPC\nVPCpeering)
 
 @enduml

@@ -58,13 +58,14 @@ FFFFFFFFFFFFFFFFFFF00FFECCCC000000000CCCDFFECCCCCCCCCCCC
 00000000000000000000000000000FFFFFFFFFFF0000000000000000
 }
 
-skinparam cloud<<AmazonEMR HDFScluster>> {
+skinparam cloud<<AmazonEMR\nHDFScluster>> {
     BackgroundColor #FEEDE2
 	BorderColor #F58536
 }
 
-!define AMAZONEMR_HDFSCLUSTER(alias) AWS_ENTITY(cloud,#F58536,AmazonEMR_HDFScluster,alias,AmazonEMR HDFScluster)
 
-!define AMAZONEMR_HDFSCLUSTER(alias,label) AWS_ENTITY(cloud,#F58536,AmazonEMR_HDFScluster,label,alias,AmazonEMR HDFScluster)
+!define AMAZONEMR_HDFSCLUSTER(alias) AWS_ENTITY(cloud,#F58536,AmazonEMR_HDFScluster,alias,AmazonEMR\nHDFScluster)
+
+!define AMAZONEMR_HDFSCLUSTER(alias,label) AWS_ENTITY(cloud,#F58536,AmazonEMR_HDFScluster,label,alias,AmazonEMR\nHDFScluster)
 
 @enduml

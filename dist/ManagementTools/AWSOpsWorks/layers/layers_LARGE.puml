@@ -358,8 +358,8 @@ sprite $layers_LARGE [362x354/16] {
 
 
 
-!define LAYERS_LARGE(alias) AWS_ENTITY(artifact,#769D3F,layers_LARGE,alias,*layers*)
+!define LAYERS_LARGE(alias) AWS_ENTITY(artifact,#769D3F,layers_LARGE,alias,**layers**)
 
-!define LAYERS_LARGE(alias,label) AWS_ENTITY(artifact,#769D3F,layers_LARGE,label,alias,*layers*)
+!define LAYERS_LARGE(alias,label) AWS_ENTITY(artifact,#769D3F,layers_LARGE,label,alias,**layers**)
 
 @enduml

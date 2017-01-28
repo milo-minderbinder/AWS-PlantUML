@@ -138,17 +138,19 @@ FDCCCCCCCCCCCCCCCCCCCCCCCCCC700009CCCCCCCCCCCCCCCCCCCCCCCCCCDF
 skinparam interface<<router>> {
     BackgroundColor #FEEDE2
 	BorderColor #F58536
-}skinparam interface<<NetworkingContentDelivery AmazonVPC router>> {
+}
+skinparam interface<<NetworkingContentDelivery\nAmazonVPC\nrouter>> {
     BackgroundColor #FEEDE2
 	BorderColor #F58536
 }
+
 
 !define ROUTER(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_router,alias,router)
 
 !define ROUTER(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_router,label,alias,router)
 
-!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_ROUTER(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_router,alias,NetworkingContentDelivery AmazonVPC router)
+!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_ROUTER(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_router,alias,NetworkingContentDelivery\nAmazonVPC\nrouter)
 
-!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_ROUTER(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_router,label,alias,NetworkingContentDelivery AmazonVPC router)
+!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_ROUTER(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_router,label,alias,NetworkingContentDelivery\nAmazonVPC\nrouter)
 
 @enduml

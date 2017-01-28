@@ -333,8 +333,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 
 
 
-!define VIRTUALTAPELIBRARY_LARGE(alias) AWS_ENTITY(artifact,#E05344,virtualtapelibrary_LARGE,alias,*virtualtapelibrary*)
+!define VIRTUALTAPELIBRARY_LARGE(alias) AWS_ENTITY(artifact,#E05344,virtualtapelibrary_LARGE,alias,**virtualtapelibrary**)
 
-!define VIRTUALTAPELIBRARY_LARGE(alias,label) AWS_ENTITY(artifact,#E05344,virtualtapelibrary_LARGE,label,alias,*virtualtapelibrary*)
+!define VIRTUALTAPELIBRARY_LARGE(alias,label) AWS_ENTITY(artifact,#E05344,virtualtapelibrary_LARGE,label,alias,**virtualtapelibrary**)
 
 @enduml

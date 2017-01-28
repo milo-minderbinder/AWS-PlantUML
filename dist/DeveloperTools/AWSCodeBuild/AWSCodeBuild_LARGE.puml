@@ -414,8 +414,8 @@ EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEDBBBBBBBBBBBBBBBCEEEEEEEE
 
 
 
-!define AWSCODEBUILD_LARGE(alias) AWS_ENTITY(component,#769D3F,AWSCodeBuild_LARGE,alias,*AWSCodeBuild*)
+!define AWSCODEBUILD_LARGE(alias) AWS_ENTITY(component,#769D3F,AWSCodeBuild_LARGE,alias,**AWSCodeBuild**)
 
-!define AWSCODEBUILD_LARGE(alias,label) AWS_ENTITY(component,#769D3F,AWSCodeBuild_LARGE,label,alias,*AWSCodeBuild*)
+!define AWSCODEBUILD_LARGE(alias,label) AWS_ENTITY(component,#769D3F,AWSCodeBuild_LARGE,label,alias,**AWSCodeBuild**)
 
 @enduml

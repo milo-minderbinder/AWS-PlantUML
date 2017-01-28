@@ -133,14 +133,22 @@ FDCCCCCCCCCCCCCCCCCCCCCCCCCC900009CCCCCCCCCCCCCCCCCCCCCCCCCCDF
 000000000000000000000000FFFFFFFFFFFFFF000000000000000000000000
 }
 
+skinparam interface<<customergateway>> {
+    BackgroundColor #FEEDE2
+	BorderColor #F58536
+}
+skinparam interface<<Compute\nAmazonVPC\ncustomergateway>> {
+    BackgroundColor #FEEDE2
+	BorderColor #F58536
+}
 
 
-!define CUSTOMERGATEWAY(alias) AWS_ENTITY(node,#F58536,Compute_AmazonVPC_customergateway,alias,customergateway)
+!define CUSTOMERGATEWAY(alias) AWS_ENTITY(interface,#F58536,Compute_AmazonVPC_customergateway,alias,customergateway)
 
-!define CUSTOMERGATEWAY(alias,label) AWS_ENTITY(node,#F58536,Compute_AmazonVPC_customergateway,label,alias,customergateway)
+!define CUSTOMERGATEWAY(alias,label) AWS_ENTITY(interface,#F58536,Compute_AmazonVPC_customergateway,label,alias,customergateway)
 
-!define COMPUTE_AMAZONVPC_CUSTOMERGATEWAY(alias) AWS_ENTITY(node,#F58536,Compute_AmazonVPC_customergateway,alias,Compute AmazonVPC customergateway)
+!define COMPUTE_AMAZONVPC_CUSTOMERGATEWAY(alias) AWS_ENTITY(interface,#F58536,Compute_AmazonVPC_customergateway,alias,Compute\nAmazonVPC\ncustomergateway)
 
-!define COMPUTE_AMAZONVPC_CUSTOMERGATEWAY(alias,label) AWS_ENTITY(node,#F58536,Compute_AmazonVPC_customergateway,label,alias,Compute AmazonVPC customergateway)
+!define COMPUTE_AMAZONVPC_CUSTOMERGATEWAY(alias,label) AWS_ENTITY(interface,#F58536,Compute_AmazonVPC_customergateway,label,alias,Compute\nAmazonVPC\ncustomergateway)
 
 @enduml

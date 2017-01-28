@@ -535,12 +535,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 
 
 
-!define STACK_LARGE(alias) AWS_ENTITY(artifact,#769D3F,AWSCloudFormation_stack_LARGE,alias,*stack*)
+!define STACK_LARGE(alias) AWS_ENTITY(artifact,#769D3F,AWSCloudFormation_stack_LARGE,alias,**stack**)
 
-!define STACK_LARGE(alias,label) AWS_ENTITY(artifact,#769D3F,AWSCloudFormation_stack_LARGE,label,alias,*stack*)
+!define STACK_LARGE(alias,label) AWS_ENTITY(artifact,#769D3F,AWSCloudFormation_stack_LARGE,label,alias,**stack**)
 
-!define AWSCLOUDFORMATION_STACK_LARGE(alias) AWS_ENTITY(artifact,#769D3F,AWSCloudFormation_stack_LARGE,alias,*AWSCloudFormation stack*)
+!define AWSCLOUDFORMATION_STACK_LARGE(alias) AWS_ENTITY(artifact,#769D3F,AWSCloudFormation_stack_LARGE,alias,**AWSCloudFormation\nstack**)
 
-!define AWSCLOUDFORMATION_STACK_LARGE(alias,label) AWS_ENTITY(artifact,#769D3F,AWSCloudFormation_stack_LARGE,label,alias,*AWSCloudFormation stack*)
+!define AWSCLOUDFORMATION_STACK_LARGE(alias,label) AWS_ENTITY(artifact,#769D3F,AWSCloudFormation_stack_LARGE,label,alias,**AWSCloudFormation\nstack**)
 
 @enduml

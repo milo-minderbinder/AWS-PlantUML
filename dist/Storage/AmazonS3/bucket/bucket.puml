@@ -62,6 +62,7 @@ skinparam folder<<bucket>> {
     BackgroundColor White
 }
 
+
 !define BUCKET(alias) AWS_ENTITY(folder,#E05344,bucket,alias,bucket)
 
 !define BUCKET(alias,label) AWS_ENTITY(folder,#E05344,bucket,label,alias,bucket)

@@ -362,8 +362,8 @@ CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 
 
-!define THINGBANK_LARGE(alias) AWS_ENTITY(node,#2F74B8,thingbank_LARGE,alias,*thingbank*)
+!define THINGBANK_LARGE(alias) AWS_ENTITY(node,#2F74B8,thingbank_LARGE,alias,**thingbank**)
 
-!define THINGBANK_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,thingbank_LARGE,label,alias,*thingbank*)
+!define THINGBANK_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,thingbank_LARGE,label,alias,**thingbank**)
 
 @enduml

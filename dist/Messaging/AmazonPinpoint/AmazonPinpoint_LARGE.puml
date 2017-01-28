@@ -779,12 +779,12 @@ sprite $Messaging_AmazonPinpoint_LARGE [342x386/16] {
 
 
 
-!define AMAZONPINPOINT_LARGE(alias) AWS_ENTITY(node,#D9A842,Messaging_AmazonPinpoint_LARGE,alias,*AmazonPinpoint*)
+!define AMAZONPINPOINT_LARGE(alias) AWS_ENTITY(node,#D9A842,Messaging_AmazonPinpoint_LARGE,alias,**AmazonPinpoint**)
 
-!define AMAZONPINPOINT_LARGE(alias,label) AWS_ENTITY(node,#D9A842,Messaging_AmazonPinpoint_LARGE,label,alias,*AmazonPinpoint*)
+!define AMAZONPINPOINT_LARGE(alias,label) AWS_ENTITY(node,#D9A842,Messaging_AmazonPinpoint_LARGE,label,alias,**AmazonPinpoint**)
 
-!define MESSAGING_AMAZONPINPOINT_LARGE(alias) AWS_ENTITY(node,#D9A842,Messaging_AmazonPinpoint_LARGE,alias,*Messaging AmazonPinpoint*)
+!define MESSAGING_AMAZONPINPOINT_LARGE(alias) AWS_ENTITY(node,#D9A842,Messaging_AmazonPinpoint_LARGE,alias,**Messaging\nAmazonPinpoint**)
 
-!define MESSAGING_AMAZONPINPOINT_LARGE(alias,label) AWS_ENTITY(node,#D9A842,Messaging_AmazonPinpoint_LARGE,label,alias,*Messaging AmazonPinpoint*)
+!define MESSAGING_AMAZONPINPOINT_LARGE(alias,label) AWS_ENTITY(node,#D9A842,Messaging_AmazonPinpoint_LARGE,label,alias,**Messaging\nAmazonPinpoint**)
 
 @enduml

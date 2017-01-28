@@ -376,8 +376,8 @@ FFFFFFFFFFFFFFFFFFFFB50000000000000000000000000000000000000000000000000000000000
 
 
 
-!define JAVA_LARGE(alias) AWS_ENTITY(agent,black,Java_LARGE,alias,*Java*)
+!define JAVA_LARGE(alias) AWS_ENTITY(agent,black,Java_LARGE,alias,**Java**)
 
-!define JAVA_LARGE(alias,label) AWS_ENTITY(agent,black,Java_LARGE,label,alias,*Java*)
+!define JAVA_LARGE(alias,label) AWS_ENTITY(agent,black,Java_LARGE,label,alias,**Java**)
 
 @enduml

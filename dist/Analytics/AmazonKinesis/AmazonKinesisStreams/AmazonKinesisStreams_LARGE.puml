@@ -283,8 +283,8 @@ FFFFECCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 
 
-!define AMAZONKINESISSTREAMS_LARGE(alias) AWS_ENTITY(component,#F58536,AmazonKinesisStreams_LARGE,alias,*AmazonKinesisStreams*)
+!define AMAZONKINESISSTREAMS_LARGE(alias) AWS_ENTITY(component,#F58536,AmazonKinesisStreams_LARGE,alias,**AmazonKinesisStreams**)
 
-!define AMAZONKINESISSTREAMS_LARGE(alias,label) AWS_ENTITY(component,#F58536,AmazonKinesisStreams_LARGE,label,alias,*AmazonKinesisStreams*)
+!define AMAZONKINESISSTREAMS_LARGE(alias,label) AWS_ENTITY(component,#F58536,AmazonKinesisStreams_LARGE,label,alias,**AmazonKinesisStreams**)
 
 @enduml

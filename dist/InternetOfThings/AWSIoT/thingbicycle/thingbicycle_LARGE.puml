@@ -362,8 +362,8 @@ CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCA0
 
 
 
-!define THINGBICYCLE_LARGE(alias) AWS_ENTITY(node,#2F74B8,thingbicycle_LARGE,alias,*thingbicycle*)
+!define THINGBICYCLE_LARGE(alias) AWS_ENTITY(node,#2F74B8,thingbicycle_LARGE,alias,**thingbicycle**)
 
-!define THINGBICYCLE_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,thingbicycle_LARGE,label,alias,*thingbicycle*)
+!define THINGBICYCLE_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,thingbicycle_LARGE,label,alias,**thingbicycle**)
 
 @enduml

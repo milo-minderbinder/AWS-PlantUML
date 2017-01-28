@@ -61,8 +61,8 @@ FFDCCCCCCCCCCCCCCCCCCCCCCCCCCC00CCCCCCCCCCCCCCCCCCCCCC
 
 
 
-!define DBONINSTANCE(alias) AWS_ENTITY(component,#F58536,DBoninstance,alias,DBoninstance)
+!define DBONINSTANCE(alias) AWS_ENTITY(database,#F58536,DBoninstance,alias,DBoninstance)
 
-!define DBONINSTANCE(alias,label) AWS_ENTITY(component,#F58536,DBoninstance,label,alias,DBoninstance)
+!define DBONINSTANCE(alias,label) AWS_ENTITY(database,#F58536,DBoninstance,label,alias,DBoninstance)
 
 @enduml

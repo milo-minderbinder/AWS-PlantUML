@@ -290,8 +290,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 
 
 
-!define REQUESTER_LARGE(alias) AWS_ENTITY(artifact,#D6D6D6,requester_LARGE,alias,*requester*)
+!define REQUESTER_LARGE(alias) AWS_ENTITY(artifact,#D6D6D6,requester_LARGE,alias,**requester**)
 
-!define REQUESTER_LARGE(alias,label) AWS_ENTITY(artifact,#D6D6D6,requester_LARGE,label,alias,*requester*)
+!define REQUESTER_LARGE(alias,label) AWS_ENTITY(artifact,#D6D6D6,requester_LARGE,label,alias,**requester**)
 
 @enduml

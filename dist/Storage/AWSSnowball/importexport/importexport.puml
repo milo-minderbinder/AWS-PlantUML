@@ -127,8 +127,8 @@ FDCCCCCCCCCCCCC00FFFFFFFFFFFFFFFFFFFFFFF00CCCCCCCCCCCCCE000
 
 !define IMPORTEXPORT(alias,label) AWS_ENTITY(component,#E05344,Storage_AWSSnowball_importexport,label,alias,importexport)
 
-!define STORAGE_AWSSNOWBALL_IMPORTEXPORT(alias) AWS_ENTITY(component,#E05344,Storage_AWSSnowball_importexport,alias,Storage AWSSnowball importexport)
+!define STORAGE_AWSSNOWBALL_IMPORTEXPORT(alias) AWS_ENTITY(component,#E05344,Storage_AWSSnowball_importexport,alias,Storage\nAWSSnowball\nimportexport)
 
-!define STORAGE_AWSSNOWBALL_IMPORTEXPORT(alias,label) AWS_ENTITY(component,#E05344,Storage_AWSSnowball_importexport,label,alias,Storage AWSSnowball importexport)
+!define STORAGE_AWSSNOWBALL_IMPORTEXPORT(alias,label) AWS_ENTITY(component,#E05344,Storage_AWSSnowball_importexport,label,alias,Storage\nAWSSnowball\nimportexport)
 
 @enduml

@@ -426,8 +426,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 
 
 
-!define AMAZONWORKMAIL_LARGE(alias) AWS_ENTITY(frame,#F58536,AmazonWorkMail_LARGE,alias,*AmazonWorkMail*)
+!define AMAZONWORKMAIL_LARGE(alias) AWS_ENTITY(frame,#F58536,AmazonWorkMail_LARGE,alias,**AmazonWorkMail**)
 
-!define AMAZONWORKMAIL_LARGE(alias,label) AWS_ENTITY(frame,#F58536,AmazonWorkMail_LARGE,label,alias,*AmazonWorkMail*)
+!define AMAZONWORKMAIL_LARGE(alias,label) AWS_ENTITY(frame,#F58536,AmazonWorkMail_LARGE,label,alias,**AmazonWorkMail**)
 
 @enduml

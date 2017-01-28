@@ -173,8 +173,8 @@ FFFCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCA00000000000000000000000000005CCCCCCCCCCCCCCCCC
 
 
 
-!define TAPESTORAGE_LARGE(alias) AWS_ENTITY(storage,#7E7D7D,tapestorage_LARGE,alias,*tapestorage*)
+!define TAPESTORAGE_LARGE(alias) AWS_ENTITY(storage,#7E7D7D,tapestorage_LARGE,alias,**tapestorage**)
 
-!define TAPESTORAGE_LARGE(alias,label) AWS_ENTITY(storage,#7E7D7D,tapestorage_LARGE,label,alias,*tapestorage*)
+!define TAPESTORAGE_LARGE(alias,label) AWS_ENTITY(storage,#7E7D7D,tapestorage_LARGE,label,alias,**tapestorage**)
 
 @enduml

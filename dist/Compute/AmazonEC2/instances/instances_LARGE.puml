@@ -565,12 +565,12 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00000000000000CCCCCCCCCCCCCCCCCCCCCCC
 
 
 
-!define INSTANCES_LARGE(alias) AWS_ENTITY(frame,#F58536,AmazonEC2_instances_LARGE,alias,*instances*)
+!define INSTANCES_LARGE(alias) AWS_ENTITY(frame,#F58536,AmazonEC2_instances_LARGE,alias,**instances**)
 
-!define INSTANCES_LARGE(alias,label) AWS_ENTITY(frame,#F58536,AmazonEC2_instances_LARGE,label,alias,*instances*)
+!define INSTANCES_LARGE(alias,label) AWS_ENTITY(frame,#F58536,AmazonEC2_instances_LARGE,label,alias,**instances**)
 
-!define AMAZONEC2_INSTANCES_LARGE(alias) AWS_ENTITY(frame,#F58536,AmazonEC2_instances_LARGE,alias,*AmazonEC2 instances*)
+!define AMAZONEC2_INSTANCES_LARGE(alias) AWS_ENTITY(frame,#F58536,AmazonEC2_instances_LARGE,alias,**AmazonEC2\ninstances**)
 
-!define AMAZONEC2_INSTANCES_LARGE(alias,label) AWS_ENTITY(frame,#F58536,AmazonEC2_instances_LARGE,label,alias,*AmazonEC2 instances*)
+!define AMAZONEC2_INSTANCES_LARGE(alias,label) AWS_ENTITY(frame,#F58536,AmazonEC2_instances_LARGE,label,alias,**AmazonEC2\ninstances**)
 
 @enduml

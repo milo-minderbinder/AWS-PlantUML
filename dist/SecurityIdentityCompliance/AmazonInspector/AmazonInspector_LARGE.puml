@@ -414,8 +414,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 
 
 
-!define AMAZONINSPECTOR_LARGE(alias) AWS_ENTITY(node,#769D3F,AmazonInspector_LARGE,alias,*AmazonInspector*)
+!define AMAZONINSPECTOR_LARGE(alias) AWS_ENTITY(node,#769D3F,AmazonInspector_LARGE,alias,**AmazonInspector**)
 
-!define AMAZONINSPECTOR_LARGE(alias,label) AWS_ENTITY(node,#769D3F,AmazonInspector_LARGE,label,alias,*AmazonInspector*)
+!define AMAZONINSPECTOR_LARGE(alias,label) AWS_ENTITY(node,#769D3F,AmazonInspector_LARGE,label,alias,**AmazonInspector**)
 
 @enduml

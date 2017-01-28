@@ -66,6 +66,7 @@ skinparam artifact<<globalsecondaryindex>> {
     BackgroundColor White
 }
 
+
 !define GLOBALSECONDARYINDEX(alias) AWS_ENTITY(artifact,#2F74B8,globalsecondaryindex,alias,globalsecondaryindex)
 
 !define GLOBALSECONDARYINDEX(alias,label) AWS_ENTITY(artifact,#2F74B8,globalsecondaryindex,label,alias,globalsecondaryindex)

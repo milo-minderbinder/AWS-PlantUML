@@ -334,8 +334,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 
 
 
-!define CHECKLISTCOST_LARGE(alias) AWS_ENTITY(artifact,#769D3F,checklistcost_LARGE,alias,*checklistcost*)
+!define CHECKLISTCOST_LARGE(alias) AWS_ENTITY(artifact,#769D3F,checklistcost_LARGE,alias,**checklistcost**)
 
-!define CHECKLISTCOST_LARGE(alias,label) AWS_ENTITY(artifact,#769D3F,checklistcost_LARGE,label,alias,*checklistcost*)
+!define CHECKLISTCOST_LARGE(alias,label) AWS_ENTITY(artifact,#769D3F,checklistcost_LARGE,label,alias,**checklistcost**)
 
 @enduml

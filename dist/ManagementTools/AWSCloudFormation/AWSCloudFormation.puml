@@ -86,8 +86,8 @@ EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEDBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
 
 
 
-!define AWSCLOUDFORMATION(alias) AWS_ENTITY(artifact,#769D3F,AWSCloudFormation,alias,AWSCloudFormation)
+!define AWSCLOUDFORMATION(alias) AWS_ENTITY(node,#769D3F,AWSCloudFormation,alias,AWSCloudFormation)
 
-!define AWSCLOUDFORMATION(alias,label) AWS_ENTITY(artifact,#769D3F,AWSCloudFormation,label,alias,AWSCloudFormation)
+!define AWSCLOUDFORMATION(alias,label) AWS_ENTITY(node,#769D3F,AWSCloudFormation,label,alias,AWSCloudFormation)
 
 @enduml

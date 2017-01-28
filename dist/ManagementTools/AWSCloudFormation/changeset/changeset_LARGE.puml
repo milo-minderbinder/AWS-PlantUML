@@ -289,8 +289,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 
 
 
-!define CHANGESET_LARGE(alias) AWS_ENTITY(artifact,#769D3F,changeset_LARGE,alias,*changeset*)
+!define CHANGESET_LARGE(alias) AWS_ENTITY(artifact,#769D3F,changeset_LARGE,alias,**changeset**)
 
-!define CHANGESET_LARGE(alias,label) AWS_ENTITY(artifact,#769D3F,changeset_LARGE,label,alias,*changeset*)
+!define CHANGESET_LARGE(alias,label) AWS_ENTITY(artifact,#769D3F,changeset_LARGE,label,alias,**changeset**)
 
 @enduml

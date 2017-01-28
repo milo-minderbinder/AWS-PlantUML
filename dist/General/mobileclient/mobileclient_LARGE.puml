@@ -286,8 +286,8 @@ FFFFFFFFFFFFFFDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
 
 
 
-!define MOBILECLIENT_LARGE(alias) AWS_ENTITY(agent,#7E7D7D,mobileclient_LARGE,alias,*mobileclient*)
+!define MOBILECLIENT_LARGE(alias) AWS_ENTITY(agent,#7E7D7D,mobileclient_LARGE,alias,**mobileclient**)
 
-!define MOBILECLIENT_LARGE(alias,label) AWS_ENTITY(agent,#7E7D7D,mobileclient_LARGE,label,alias,*mobileclient*)
+!define MOBILECLIENT_LARGE(alias,label) AWS_ENTITY(agent,#7E7D7D,mobileclient_LARGE,label,alias,**mobileclient**)
 
 @enduml

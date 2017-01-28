@@ -370,8 +370,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCE
 
 
 
-!define AMAZONLIGHTSAIL_LARGE(alias) AWS_ENTITY(node,#F58536,AmazonLightsail_LARGE,alias,*AmazonLightsail*)
+!define AMAZONLIGHTSAIL_LARGE(alias) AWS_ENTITY(node,#F58536,AmazonLightsail_LARGE,alias,**AmazonLightsail**)
 
-!define AMAZONLIGHTSAIL_LARGE(alias,label) AWS_ENTITY(node,#F58536,AmazonLightsail_LARGE,label,alias,*AmazonLightsail*)
+!define AMAZONLIGHTSAIL_LARGE(alias,label) AWS_ENTITY(node,#F58536,AmazonLightsail_LARGE,label,alias,**AmazonLightsail**)
 
 @enduml

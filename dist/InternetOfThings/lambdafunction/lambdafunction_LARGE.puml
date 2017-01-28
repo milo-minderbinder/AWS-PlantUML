@@ -282,8 +282,8 @@ FFFFECCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 
 
-!define LAMBDAFUNCTION_LARGE(alias) AWS_ENTITY(node,#2F74B8,lambdafunction_LARGE,alias,*lambdafunction*)
+!define LAMBDAFUNCTION_LARGE(alias) AWS_ENTITY(node,#2F74B8,lambdafunction_LARGE,alias,**lambdafunction**)
 
-!define LAMBDAFUNCTION_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,lambdafunction_LARGE,label,alias,*lambdafunction*)
+!define LAMBDAFUNCTION_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,lambdafunction_LARGE,label,alias,**lambdafunction**)
 
 @enduml

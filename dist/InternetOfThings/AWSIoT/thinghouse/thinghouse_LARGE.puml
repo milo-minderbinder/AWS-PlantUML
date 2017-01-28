@@ -362,8 +362,8 @@ CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 
 
-!define THINGHOUSE_LARGE(alias) AWS_ENTITY(node,#2F74B8,thinghouse_LARGE,alias,*thinghouse*)
+!define THINGHOUSE_LARGE(alias) AWS_ENTITY(node,#2F74B8,thinghouse_LARGE,alias,**thinghouse**)
 
-!define THINGHOUSE_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,thinghouse_LARGE,label,alias,*thinghouse*)
+!define THINGHOUSE_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,thinghouse_LARGE,label,alias,**thinghouse**)
 
 @enduml

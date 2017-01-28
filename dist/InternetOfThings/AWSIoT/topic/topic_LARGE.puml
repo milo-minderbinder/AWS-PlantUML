@@ -595,12 +595,12 @@ FFFFFFFFFFFFFECCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 
 
-!define TOPIC_LARGE(alias) AWS_ENTITY(artifact,#2F74B8,AWSIoT_topic_LARGE,alias,*topic*)
+!define TOPIC_LARGE(alias) AWS_ENTITY(artifact,#2F74B8,AWSIoT_topic_LARGE,alias,**topic**)
 
-!define TOPIC_LARGE(alias,label) AWS_ENTITY(artifact,#2F74B8,AWSIoT_topic_LARGE,label,alias,*topic*)
+!define TOPIC_LARGE(alias,label) AWS_ENTITY(artifact,#2F74B8,AWSIoT_topic_LARGE,label,alias,**topic**)
 
-!define AWSIOT_TOPIC_LARGE(alias) AWS_ENTITY(artifact,#2F74B8,AWSIoT_topic_LARGE,alias,*AWSIoT topic*)
+!define AWSIOT_TOPIC_LARGE(alias) AWS_ENTITY(artifact,#2F74B8,AWSIoT_topic_LARGE,alias,**AWSIoT\ntopic**)
 
-!define AWSIOT_TOPIC_LARGE(alias,label) AWS_ENTITY(artifact,#2F74B8,AWSIoT_topic_LARGE,label,alias,*AWSIoT topic*)
+!define AWSIOT_TOPIC_LARGE(alias,label) AWS_ENTITY(artifact,#2F74B8,AWSIoT_topic_LARGE,label,alias,**AWSIoT\ntopic**)
 
 @enduml

@@ -248,8 +248,8 @@ FFFFFFFFFFFFFFFFFFFFFE9999999999999999999999999999999999000000000000000000000000
 
 
 
-!define HUMANINTELLIGENCETASKS_LARGE(alias) AWS_ENTITY(artifact,#D6D6D6,humanintelligencetasks_LARGE,alias,*humanintelligencetasks*)
+!define HUMANINTELLIGENCETASKS_LARGE(alias) AWS_ENTITY(artifact,#D6D6D6,humanintelligencetasks_LARGE,alias,**humanintelligencetasks**)
 
-!define HUMANINTELLIGENCETASKS_LARGE(alias,label) AWS_ENTITY(artifact,#D6D6D6,humanintelligencetasks_LARGE,label,alias,*humanintelligencetasks*)
+!define HUMANINTELLIGENCETASKS_LARGE(alias,label) AWS_ENTITY(artifact,#D6D6D6,humanintelligencetasks_LARGE,label,alias,**humanintelligencetasks**)
 
 @enduml

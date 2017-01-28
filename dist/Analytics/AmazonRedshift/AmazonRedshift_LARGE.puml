@@ -380,8 +380,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFECCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 
 
-!define AMAZONREDSHIFT_LARGE(alias) AWS_ENTITY(node,#F58536,AmazonRedshift_LARGE,alias,*AmazonRedshift*)
+!define AMAZONREDSHIFT_LARGE(alias) AWS_ENTITY(node,#F58536,AmazonRedshift_LARGE,alias,**AmazonRedshift**)
 
-!define AMAZONREDSHIFT_LARGE(alias,label) AWS_ENTITY(node,#F58536,AmazonRedshift_LARGE,label,alias,*AmazonRedshift*)
+!define AMAZONREDSHIFT_LARGE(alias,label) AWS_ENTITY(node,#F58536,AmazonRedshift_LARGE,label,alias,**AmazonRedshift**)
 
 @enduml

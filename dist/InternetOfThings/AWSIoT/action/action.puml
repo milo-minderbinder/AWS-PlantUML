@@ -65,6 +65,7 @@ skinparam usecase<<action>> {
 	BorderColor #2F74B8
 }
 
+
 !define ACTION(alias) AWS_ENTITY(usecase,#2F74B8,action,alias,action)
 
 !define ACTION(alias,label) AWS_ENTITY(usecase,#2F74B8,action,label,alias,action)

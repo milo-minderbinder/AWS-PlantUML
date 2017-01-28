@@ -414,8 +414,8 @@ EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
 
 
 
-!define AWSSERVICECATALOG_LARGE(alias) AWS_ENTITY(node,#769D3F,AWSServiceCatalog_LARGE,alias,*AWSServiceCatalog*)
+!define AWSSERVICECATALOG_LARGE(alias) AWS_ENTITY(node,#769D3F,AWSServiceCatalog_LARGE,alias,**AWSServiceCatalog**)
 
-!define AWSSERVICECATALOG_LARGE(alias,label) AWS_ENTITY(node,#769D3F,AWSServiceCatalog_LARGE,label,alias,*AWSServiceCatalog*)
+!define AWSSERVICECATALOG_LARGE(alias,label) AWS_ENTITY(node,#769D3F,AWSServiceCatalog_LARGE,label,alias,**AWSServiceCatalog**)
 
 @enduml

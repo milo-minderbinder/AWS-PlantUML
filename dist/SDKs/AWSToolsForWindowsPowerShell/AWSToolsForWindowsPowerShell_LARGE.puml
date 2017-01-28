@@ -372,8 +372,8 @@ BBBBBBBBBBBBBBBBA4000000000000000000000000000000000000000000000000000000000008BB
 
 
 
-!define AWSTOOLSFORWINDOWSPOWERSHELL_LARGE(alias) AWS_ENTITY(agent,black,AWSToolsForWindowsPowerShell_LARGE,alias,*AWSToolsForWindowsPowerShell*)
+!define AWSTOOLSFORWINDOWSPOWERSHELL_LARGE(alias) AWS_ENTITY(agent,black,AWSToolsForWindowsPowerShell_LARGE,alias,**AWSToolsForWindowsPowerShell**)
 
-!define AWSTOOLSFORWINDOWSPOWERSHELL_LARGE(alias,label) AWS_ENTITY(agent,black,AWSToolsForWindowsPowerShell_LARGE,label,alias,*AWSToolsForWindowsPowerShell*)
+!define AWSTOOLSFORWINDOWSPOWERSHELL_LARGE(alias,label) AWS_ENTITY(agent,black,AWSToolsForWindowsPowerShell_LARGE,label,alias,**AWSToolsForWindowsPowerShell**)
 
 @enduml

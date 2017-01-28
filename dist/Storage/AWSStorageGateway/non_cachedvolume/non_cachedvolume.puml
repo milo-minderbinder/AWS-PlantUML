@@ -70,8 +70,8 @@ FFFFFFFFFFFFFFFFFFFF00000000000000FFFFFFFFFFFFFFFFFFFF
 
 
 
-!define NON_CACHEDVOLUME(alias) AWS_ENTITY(artifact,#E05344,non_cachedvolume,alias,non cachedvolume)
+!define NON_CACHEDVOLUME(alias) AWS_ENTITY(artifact,#E05344,non_cachedvolume,alias,non\ncachedvolume)
 
-!define NON_CACHEDVOLUME(alias,label) AWS_ENTITY(artifact,#E05344,non_cachedvolume,label,alias,non cachedvolume)
+!define NON_CACHEDVOLUME(alias,label) AWS_ENTITY(artifact,#E05344,non_cachedvolume,label,alias,non\ncachedvolume)
 
 @enduml

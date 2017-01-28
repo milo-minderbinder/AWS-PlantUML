@@ -64,6 +64,7 @@ skinparam cloud<<cluster>> {
 	BorderColor #F58536
 }
 
+
 !define CLUSTER(alias) AWS_ENTITY(cloud,#F58536,cluster,alias,cluster)
 
 !define CLUSTER(alias,label) AWS_ENTITY(cloud,#F58536,cluster,label,alias,cluster)

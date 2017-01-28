@@ -61,8 +61,8 @@ FFFFFFFFFFFFFFFFFFEDCCCC0000000CCCDF0CCCCCCCCCCCCC
 
 
 
-!define DENSESTORAGENODE(alias) AWS_ENTITY(node,#2F74B8,densestoragenode,alias,densestoragenode)
+!define DENSESTORAGENODE(alias) AWS_ENTITY(database,#2F74B8,densestoragenode,alias,densestoragenode)
 
-!define DENSESTORAGENODE(alias,label) AWS_ENTITY(node,#2F74B8,densestoragenode,label,alias,densestoragenode)
+!define DENSESTORAGENODE(alias,label) AWS_ENTITY(database,#2F74B8,densestoragenode,label,alias,densestoragenode)
 
 @enduml

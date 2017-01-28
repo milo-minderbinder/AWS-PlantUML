@@ -86,8 +86,8 @@ AAAAAA9777779AAAAAAAAAAAAAAAAAAAAA7777777777777777777778AAAAA7777777
 
 
 
-!define AWSTRUSTEDADVISOR(alias) AWS_ENTITY(artifact,#769D3F,AWSTrustedAdvisor,alias,AWSTrustedAdvisor)
+!define AWSTRUSTEDADVISOR(alias) AWS_ENTITY(node,#769D3F,AWSTrustedAdvisor,alias,AWSTrustedAdvisor)
 
-!define AWSTRUSTEDADVISOR(alias,label) AWS_ENTITY(artifact,#769D3F,AWSTrustedAdvisor,label,alias,AWSTrustedAdvisor)
+!define AWSTRUSTEDADVISOR(alias,label) AWS_ENTITY(node,#769D3F,AWSTrustedAdvisor,label,alias,AWSTrustedAdvisor)
 
 @enduml

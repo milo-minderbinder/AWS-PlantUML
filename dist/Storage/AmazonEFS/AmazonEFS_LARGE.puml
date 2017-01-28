@@ -414,8 +414,8 @@ BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB88888888888888888888888888888888
 
 
 
-!define AMAZONEFS_LARGE(alias) AWS_ENTITY(storage,#E05344,AmazonEFS_LARGE,alias,*AmazonEFS*)
+!define AMAZONEFS_LARGE(alias) AWS_ENTITY(storage,#E05344,AmazonEFS_LARGE,alias,**AmazonEFS**)
 
-!define AMAZONEFS_LARGE(alias,label) AWS_ENTITY(storage,#E05344,AmazonEFS_LARGE,label,alias,*AmazonEFS*)
+!define AMAZONEFS_LARGE(alias,label) AWS_ENTITY(storage,#E05344,AmazonEFS_LARGE,label,alias,**AmazonEFS**)
 
 @enduml

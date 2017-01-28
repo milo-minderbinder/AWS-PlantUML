@@ -362,8 +362,8 @@ CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 
 
-!define THINGTHERMOSTAT_LARGE(alias) AWS_ENTITY(node,#2F74B8,thingthermostat_LARGE,alias,*thingthermostat*)
+!define THINGTHERMOSTAT_LARGE(alias) AWS_ENTITY(node,#2F74B8,thingthermostat_LARGE,alias,**thingthermostat**)
 
-!define THINGTHERMOSTAT_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,thingthermostat_LARGE,label,alias,*thingthermostat*)
+!define THINGTHERMOSTAT_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,thingthermostat_LARGE,label,alias,**thingthermostat**)
 
 @enduml

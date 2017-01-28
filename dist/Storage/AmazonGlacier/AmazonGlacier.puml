@@ -87,8 +87,8 @@ BBBBB9888888888880000BBBBBBBBBBBBB88888888888880000BBBBBBBBBBB988888
 
 
 
-!define AMAZONGLACIER(alias) AWS_ENTITY(artifact,#E05344,AmazonGlacier,alias,AmazonGlacier)
+!define AMAZONGLACIER(alias) AWS_ENTITY(storage,#E05344,AmazonGlacier,alias,AmazonGlacier)
 
-!define AMAZONGLACIER(alias,label) AWS_ENTITY(artifact,#E05344,AmazonGlacier,label,alias,AmazonGlacier)
+!define AMAZONGLACIER(alias,label) AWS_ENTITY(storage,#E05344,AmazonGlacier,label,alias,AmazonGlacier)
 
 @enduml

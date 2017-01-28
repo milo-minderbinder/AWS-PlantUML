@@ -282,8 +282,8 @@ FFFFDCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 
 
-!define INSTANCE_LARGE(alias) AWS_ENTITY(component,#F58536,instance_LARGE,alias,*instance*)
+!define INSTANCE_LARGE(alias) AWS_ENTITY(component,#F58536,instance_LARGE,alias,**instance**)
 
-!define INSTANCE_LARGE(alias,label) AWS_ENTITY(component,#F58536,instance_LARGE,label,alias,*instance*)
+!define INSTANCE_LARGE(alias,label) AWS_ENTITY(component,#F58536,instance_LARGE,label,alias,**instance**)
 
 @enduml

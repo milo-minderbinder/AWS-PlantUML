@@ -78,8 +78,8 @@ FFFFFFFFDDDDDDDDDDDDDDCCCCCCCCCCCCCCCCCCCCAAAAAAAAAAAAAACCCCCCCC
 
 
 
-!define AMAZONRDS(alias) AWS_ENTITY(component,#2F74B8,AmazonRDS,alias,AmazonRDS)
+!define AMAZONRDS(alias) AWS_ENTITY(node,#2F74B8,AmazonRDS,alias,AmazonRDS)
 
-!define AMAZONRDS(alias,label) AWS_ENTITY(component,#2F74B8,AmazonRDS,label,alias,AmazonRDS)
+!define AMAZONRDS(alias,label) AWS_ENTITY(node,#2F74B8,AmazonRDS,label,alias,AmazonRDS)
 
 @enduml

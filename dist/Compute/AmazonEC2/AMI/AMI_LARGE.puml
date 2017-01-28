@@ -282,8 +282,8 @@ FFFFDCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 
 
-!define AMI_LARGE(alias) AWS_ENTITY(artifact,#F58536,AMI_LARGE,alias,*AMI*)
+!define AMI_LARGE(alias) AWS_ENTITY(artifact,#F58536,AMI_LARGE,alias,**AMI**)
 
-!define AMI_LARGE(alias,label) AWS_ENTITY(artifact,#F58536,AMI_LARGE,label,alias,*AMI*)
+!define AMI_LARGE(alias,label) AWS_ENTITY(artifact,#F58536,AMI_LARGE,label,alias,**AMI**)
 
 @enduml

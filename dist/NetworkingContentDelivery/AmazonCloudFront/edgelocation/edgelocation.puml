@@ -65,6 +65,7 @@ skinparam entity<<edgelocation>> {
 	BorderColor #E05344
 }
 
+
 !define EDGELOCATION(alias) AWS_ENTITY(entity,#F58536,edgelocation,alias,edgelocation)
 
 !define EDGELOCATION(alias,label) AWS_ENTITY(entity,#F58536,edgelocation,label,alias,edgelocation)

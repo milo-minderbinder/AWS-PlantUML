@@ -175,8 +175,8 @@ EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEECABBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
 
 !define AWSSNOWBALL(alias,label) AWS_ENTITY(storage,#E05344,Storage_AWSSnowball,label,alias,AWSSnowball)
 
-!define STORAGE_AWSSNOWBALL(alias) AWS_ENTITY(storage,#E05344,Storage_AWSSnowball,alias,Storage AWSSnowball)
+!define STORAGE_AWSSNOWBALL(alias) AWS_ENTITY(storage,#E05344,Storage_AWSSnowball,alias,Storage\nAWSSnowball)
 
-!define STORAGE_AWSSNOWBALL(alias,label) AWS_ENTITY(storage,#E05344,Storage_AWSSnowball,label,alias,Storage AWSSnowball)
+!define STORAGE_AWSSNOWBALL(alias,label) AWS_ENTITY(storage,#E05344,Storage_AWSSnowball,label,alias,Storage\nAWSSnowball)
 
 @enduml

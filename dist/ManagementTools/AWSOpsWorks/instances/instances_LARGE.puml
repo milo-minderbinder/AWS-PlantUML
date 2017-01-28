@@ -729,12 +729,12 @@ sprite $AWSOpsWorks_instances_LARGE [362x361/16] {
 
 
 
-!define INSTANCES_LARGE(alias) AWS_ENTITY(artifact,#769D3F,AWSOpsWorks_instances_LARGE,alias,*instances*)
+!define INSTANCES_LARGE(alias) AWS_ENTITY(artifact,#769D3F,AWSOpsWorks_instances_LARGE,alias,**instances**)
 
-!define INSTANCES_LARGE(alias,label) AWS_ENTITY(artifact,#769D3F,AWSOpsWorks_instances_LARGE,label,alias,*instances*)
+!define INSTANCES_LARGE(alias,label) AWS_ENTITY(artifact,#769D3F,AWSOpsWorks_instances_LARGE,label,alias,**instances**)
 
-!define AWSOPSWORKS_INSTANCES_LARGE(alias) AWS_ENTITY(artifact,#769D3F,AWSOpsWorks_instances_LARGE,alias,*AWSOpsWorks instances*)
+!define AWSOPSWORKS_INSTANCES_LARGE(alias) AWS_ENTITY(artifact,#769D3F,AWSOpsWorks_instances_LARGE,alias,**AWSOpsWorks\ninstances**)
 
-!define AWSOPSWORKS_INSTANCES_LARGE(alias,label) AWS_ENTITY(artifact,#769D3F,AWSOpsWorks_instances_LARGE,label,alias,*AWSOpsWorks instances*)
+!define AWSOPSWORKS_INSTANCES_LARGE(alias,label) AWS_ENTITY(artifact,#769D3F,AWSOpsWorks_instances_LARGE,label,alias,**AWSOpsWorks\ninstances**)
 
 @enduml

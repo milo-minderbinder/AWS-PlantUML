@@ -641,14 +641,22 @@ FFCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC7000000
 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFF0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 }
 
+skinparam interface<<**router**>> {
+    BackgroundColor #FEEDE2
+	BorderColor #F58536
+}
+skinparam interface<<**Compute\nAmazonVPC\nrouter**>> {
+    BackgroundColor #FEEDE2
+	BorderColor #F58536
+}
 
 
-!define ROUTER_LARGE(alias) AWS_ENTITY(node,#F58536,Compute_AmazonVPC_router_LARGE,alias,*router*)
+!define ROUTER_LARGE(alias) AWS_ENTITY(interface,#F58536,Compute_AmazonVPC_router_LARGE,alias,**router**)
 
-!define ROUTER_LARGE(alias,label) AWS_ENTITY(node,#F58536,Compute_AmazonVPC_router_LARGE,label,alias,*router*)
+!define ROUTER_LARGE(alias,label) AWS_ENTITY(interface,#F58536,Compute_AmazonVPC_router_LARGE,label,alias,**router**)
 
-!define COMPUTE_AMAZONVPC_ROUTER_LARGE(alias) AWS_ENTITY(node,#F58536,Compute_AmazonVPC_router_LARGE,alias,*Compute AmazonVPC router*)
+!define COMPUTE_AMAZONVPC_ROUTER_LARGE(alias) AWS_ENTITY(interface,#F58536,Compute_AmazonVPC_router_LARGE,alias,**Compute\nAmazonVPC\nrouter**)
 
-!define COMPUTE_AMAZONVPC_ROUTER_LARGE(alias,label) AWS_ENTITY(node,#F58536,Compute_AmazonVPC_router_LARGE,label,alias,*Compute AmazonVPC router*)
+!define COMPUTE_AMAZONVPC_ROUTER_LARGE(alias,label) AWS_ENTITY(interface,#F58536,Compute_AmazonVPC_router_LARGE,label,alias,**Compute\nAmazonVPC\nrouter**)
 
 @enduml

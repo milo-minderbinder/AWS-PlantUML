@@ -284,8 +284,8 @@ sprite $client_LARGE [278x280/16] {
 
 
 
-!define CLIENT_LARGE(alias) AWS_ENTITY(agent,#7E7D7D,client_LARGE,alias,*client*)
+!define CLIENT_LARGE(alias) AWS_ENTITY(agent,#7E7D7D,client_LARGE,alias,**client**)
 
-!define CLIENT_LARGE(alias,label) AWS_ENTITY(agent,#7E7D7D,client_LARGE,label,alias,*client*)
+!define CLIENT_LARGE(alias,label) AWS_ENTITY(agent,#7E7D7D,client_LARGE,label,alias,**client**)
 
 @enduml

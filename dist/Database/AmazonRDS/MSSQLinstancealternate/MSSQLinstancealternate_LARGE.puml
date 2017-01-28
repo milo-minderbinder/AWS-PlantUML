@@ -282,8 +282,8 @@ FFFFDCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 
 
-!define MSSQLINSTANCEALTERNATE_LARGE(alias) AWS_ENTITY(component,#2F74B8,MSSQLinstancealternate_LARGE,alias,*MSSQLinstancealternate*)
+!define MSSQLINSTANCEALTERNATE_LARGE(alias) AWS_ENTITY(component,#2F74B8,MSSQLinstancealternate_LARGE,alias,**MSSQLinstancealternate**)
 
-!define MSSQLINSTANCEALTERNATE_LARGE(alias,label) AWS_ENTITY(component,#2F74B8,MSSQLinstancealternate_LARGE,label,alias,*MSSQLinstancealternate*)
+!define MSSQLINSTANCEALTERNATE_LARGE(alias,label) AWS_ENTITY(component,#2F74B8,MSSQLinstancealternate_LARGE,label,alias,**MSSQLinstancealternate**)
 
 @enduml

@@ -402,8 +402,8 @@ FFFFFFFFECCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 
 
-!define POLICY_LARGE(alias) AWS_ENTITY(artifact,#2F74B8,policy_LARGE,alias,*policy*)
+!define POLICY_LARGE(alias) AWS_ENTITY(artifact,#2F74B8,policy_LARGE,alias,**policy**)
 
-!define POLICY_LARGE(alias,label) AWS_ENTITY(artifact,#2F74B8,policy_LARGE,label,alias,*policy*)
+!define POLICY_LARGE(alias,label) AWS_ENTITY(artifact,#2F74B8,policy_LARGE,label,alias,**policy**)
 
 @enduml
