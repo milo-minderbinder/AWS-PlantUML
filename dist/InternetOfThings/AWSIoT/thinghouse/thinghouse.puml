@@ -80,4 +80,8 @@ CCCCCCCCCCCCCCCCCCC00000000000000CCCCCC50000000000000CCCCCCCCCCCCCCCCCCC
 
 !define THINGHOUSE(alias,label) AWS_ENTITY(node,#2F74B8,thinghouse,label,alias,thinghouse)
 
+!definelong THINGHOUSE(alias,label,e_type="node",e_color="#2F74B8",e_stereo="thinghouse",e_sprite="thinghouse")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

@@ -366,4 +366,8 @@ CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 !define THINGDOORLOCK_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,thingdoorlock_LARGE,label,alias,**thingdoorlock**)
 
+!definelong THINGDOORLOCK_LARGE(alias,label,e_type="node",e_color="#2F74B8",e_stereo="**thingdoorlock**",e_sprite="thingdoorlock_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

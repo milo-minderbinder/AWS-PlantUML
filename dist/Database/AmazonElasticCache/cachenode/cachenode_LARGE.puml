@@ -286,4 +286,8 @@ FFFFDCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 !define CACHENODE_LARGE(alias,label) AWS_ENTITY(storage,#2F74B8,cachenode_LARGE,label,alias,**cachenode**)
 
+!definelong CACHENODE_LARGE(alias,label,e_type="storage",e_color="#2F74B8",e_stereo="**cachenode**",e_sprite="cachenode_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

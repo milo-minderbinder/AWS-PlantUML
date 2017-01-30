@@ -783,8 +783,16 @@ sprite $MobileServices_AmazonPinpoint_LARGE [342x386/16] {
 
 !define AMAZONPINPOINT_LARGE(alias,label) AWS_ENTITY(node,#AD698C,MobileServices_AmazonPinpoint_LARGE,label,alias,**AmazonPinpoint**)
 
-!define MOBILESERVICES_AMAZONPINPOINT_LARGE(alias) AWS_ENTITY(node,#AD698C,MobileServices_AmazonPinpoint_LARGE,alias,**MobileServices\nAmazonPinpoint**)
+!definelong AMAZONPINPOINT_LARGE(alias,label,e_type="node",e_color="#AD698C",e_stereo="**AmazonPinpoint**",e_sprite="MobileServices_AmazonPinpoint_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
-!define MOBILESERVICES_AMAZONPINPOINT_LARGE(alias,label) AWS_ENTITY(node,#AD698C,MobileServices_AmazonPinpoint_LARGE,label,alias,**MobileServices\nAmazonPinpoint**)
+!define MOBILESERVICES_AMAZONPINPOINT_LARGE(alias) AWS_ENTITY(node,#AD698C,MobileServices_AmazonPinpoint_LARGE,alias,**MobileServices**\n**AmazonPinpoint**)
+
+!define MOBILESERVICES_AMAZONPINPOINT_LARGE(alias,label) AWS_ENTITY(node,#AD698C,MobileServices_AmazonPinpoint_LARGE,label,alias,**MobileServices**\n**AmazonPinpoint**)
+
+!definelong MOBILESERVICES_AMAZONPINPOINT_LARGE(alias,label,e_type="node",e_color="#AD698C",e_stereo="**MobileServices**\n**AmazonPinpoint**",e_sprite="MobileServices_AmazonPinpoint_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

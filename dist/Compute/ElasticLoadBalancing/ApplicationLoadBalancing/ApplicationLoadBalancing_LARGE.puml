@@ -645,8 +645,16 @@ FFCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC900000007CCCCCCCCCCCCCCC
 
 !define APPLICATIONLOADBALANCING_LARGE(alias,label) AWS_ENTITY(node,#F58536,Compute_ElasticLoadBalancing_ApplicationLoadBalancing_LARGE,label,alias,**ApplicationLoadBalancing**)
 
-!define COMPUTE_ELASTICLOADBALANCING_APPLICATIONLOADBALANCING_LARGE(alias) AWS_ENTITY(node,#F58536,Compute_ElasticLoadBalancing_ApplicationLoadBalancing_LARGE,alias,**Compute\nElasticLoadBalancing\nApplicationLoadBalancing**)
+!definelong APPLICATIONLOADBALANCING_LARGE(alias,label,e_type="node",e_color="#F58536",e_stereo="**ApplicationLoadBalancing**",e_sprite="Compute_ElasticLoadBalancing_ApplicationLoadBalancing_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
-!define COMPUTE_ELASTICLOADBALANCING_APPLICATIONLOADBALANCING_LARGE(alias,label) AWS_ENTITY(node,#F58536,Compute_ElasticLoadBalancing_ApplicationLoadBalancing_LARGE,label,alias,**Compute\nElasticLoadBalancing\nApplicationLoadBalancing**)
+!define COMPUTE_ELASTICLOADBALANCING_APPLICATIONLOADBALANCING_LARGE(alias) AWS_ENTITY(node,#F58536,Compute_ElasticLoadBalancing_ApplicationLoadBalancing_LARGE,alias,**Compute**\n**ElasticLoadBalancing**\n**ApplicationLoadBalancing**)
+
+!define COMPUTE_ELASTICLOADBALANCING_APPLICATIONLOADBALANCING_LARGE(alias,label) AWS_ENTITY(node,#F58536,Compute_ElasticLoadBalancing_ApplicationLoadBalancing_LARGE,label,alias,**Compute**\n**ElasticLoadBalancing**\n**ApplicationLoadBalancing**)
+
+!definelong COMPUTE_ELASTICLOADBALANCING_APPLICATIONLOADBALANCING_LARGE(alias,label,e_type="node",e_color="#F58536",e_stereo="**Compute**\n**ElasticLoadBalancing**\n**ApplicationLoadBalancing**",e_sprite="Compute_ElasticLoadBalancing_ApplicationLoadBalancing_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

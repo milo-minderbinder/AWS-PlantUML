@@ -80,4 +80,8 @@ CCCCCCCCCCCCCCCCCCCC7000000000000000000000000ACCCCCCAAAACCCCCCCCCCCCCCCC
 
 !define THINGCOFFEEPOT(alias,label) AWS_ENTITY(node,#2F74B8,thingcoffeepot,label,alias,thingcoffeepot)
 
+!definelong THINGCOFFEEPOT(alias,label,e_type="node",e_color="#2F74B8",e_stereo="thingcoffeepot",e_sprite="thingcoffeepot")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

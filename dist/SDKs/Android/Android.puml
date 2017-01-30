@@ -78,10 +78,18 @@ FFFFA00000000000000000000000000000000000000000000000000000000AFFFF
 00000000000000000000000000000000FF00000000000000000000000000000000
 }
 
+skinparam agent<<Android>> {
+    BackgroundColor White
+	BorderColor Black
+}
 
 
-!define ANDROID(alias) AWS_ENTITY(agent,black,Android,alias,Android)
+!define ANDROID(alias) AWS_ENTITY(agent,#96BF3D,Android,alias,Android)
 
-!define ANDROID(alias,label) AWS_ENTITY(agent,black,Android,label,alias,Android)
+!define ANDROID(alias,label) AWS_ENTITY(agent,#96BF3D,Android,label,alias,Android)
+
+!definelong ANDROID(alias,label,e_type="agent",e_color="#96BF3D",e_stereo="Android",e_sprite="Android")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

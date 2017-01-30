@@ -66,4 +66,8 @@ FECCCCCCCCCCCCCCCCCCCCCCCCCCCC00CCCCC00AC000AC00ACCCCC
 
 !define MYSQLDBINSTANCE(alias,label) AWS_ENTITY(component,#2F74B8,MySQLDBinstance,label,alias,MySQLDBinstance)
 
+!definelong MYSQLDBINSTANCE(alias,label,e_type="component",e_color="#2F74B8",e_stereo="MySQLDBinstance",e_sprite="MySQLDBinstance")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

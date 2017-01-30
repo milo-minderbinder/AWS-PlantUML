@@ -74,4 +74,8 @@ FDCCCCCCCC00000FFFFFFFFFFFFFFFFFFFFFFFF00000CCCCCCCCDF
 
 !define SNAPSHOT(alias,label) AWS_ENTITY(artifact,#E05344,snapshot,label,alias,snapshot)
 
+!definelong SNAPSHOT(alias,label,e_type="artifact",e_color="#E05344",e_stereo="snapshot",e_sprite="snapshot")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

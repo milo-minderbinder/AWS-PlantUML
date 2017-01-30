@@ -92,4 +92,8 @@ DDDDDDDDDDDDDDDAAAAACDDDDDDDDDDDDDDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 
 !define AWSAPPLICATIONDISCOVERYSERVICE(alias,label) AWS_ENTITY(node,#2F74B8,AWSApplicationDiscoveryService,label,alias,AWSApplicationDiscoveryService)
 
+!definelong AWSAPPLICATIONDISCOVERYSERVICE(alias,label,e_type="node",e_color="#2F74B8",e_stereo="AWSApplicationDiscoveryService",e_sprite="AWSApplicationDiscoveryService")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

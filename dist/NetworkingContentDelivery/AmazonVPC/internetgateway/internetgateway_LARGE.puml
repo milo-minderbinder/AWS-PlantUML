@@ -329,4 +329,8 @@ skinparam interface<<**internetgateway**>> {
 
 !define INTERNETGATEWAY_LARGE(alias,label) AWS_ENTITY(interface,#F58536,internetgateway_LARGE,label,alias,**internetgateway**)
 
+!definelong INTERNETGATEWAY_LARGE(alias,label,e_type="interface",e_color="#F58536",e_stereo="**internetgateway**",e_sprite="internetgateway_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

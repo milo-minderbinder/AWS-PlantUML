@@ -141,8 +141,16 @@ FDCCCCCC999707999BC999900999ACCCC999800999BCA999009999CCCCCCDF
 
 !define APPLICATIONLOADBALANCER(alias,label) AWS_ENTITY(node,#F58536,NetworkingContentDelivery_ElasticLoadBalancing_ApplicationLoadBalancer,label,alias,ApplicationLoadBalancer)
 
+!definelong APPLICATIONLOADBALANCER(alias,label,e_type="node",e_color="#F58536",e_stereo="ApplicationLoadBalancer",e_sprite="NetworkingContentDelivery_ElasticLoadBalancing_ApplicationLoadBalancer")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 !define NETWORKINGCONTENTDELIVERY_ELASTICLOADBALANCING_APPLICATIONLOADBALANCER(alias) AWS_ENTITY(node,#F58536,NetworkingContentDelivery_ElasticLoadBalancing_ApplicationLoadBalancer,alias,NetworkingContentDelivery\nElasticLoadBalancing\nApplicationLoadBalancer)
 
 !define NETWORKINGCONTENTDELIVERY_ELASTICLOADBALANCING_APPLICATIONLOADBALANCER(alias,label) AWS_ENTITY(node,#F58536,NetworkingContentDelivery_ElasticLoadBalancing_ApplicationLoadBalancer,label,alias,NetworkingContentDelivery\nElasticLoadBalancing\nApplicationLoadBalancer)
+
+!definelong NETWORKINGCONTENTDELIVERY_ELASTICLOADBALANCING_APPLICATIONLOADBALANCER(alias,label,e_type="node",e_color="#F58536",e_stereo="NetworkingContentDelivery\nElasticLoadBalancing\nApplicationLoadBalancer",e_sprite="NetworkingContentDelivery_ElasticLoadBalancing_ApplicationLoadBalancer")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

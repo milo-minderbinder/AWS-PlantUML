@@ -326,4 +326,8 @@ FFFFFFFFFFFFFB999999999999999999999999999999999999999999999999999999999999999BFF
 
 !define SAMLTOKEN_LARGE(alias,label) AWS_ENTITY(artifact,#7E7D7D,SAMLtoken_LARGE,label,alias,**SAMLtoken**)
 
+!definelong SAMLTOKEN_LARGE(alias,label,e_type="artifact",e_color="#7E7D7D",e_stereo="**SAMLtoken**",e_sprite="SAMLtoken_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

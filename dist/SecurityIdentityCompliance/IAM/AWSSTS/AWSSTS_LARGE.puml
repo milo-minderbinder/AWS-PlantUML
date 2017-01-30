@@ -164,4 +164,8 @@ skinparam artifact<<**AWSSTS**>> {
 
 !define AWSSTS_LARGE(alias,label) AWS_ENTITY(artifact,#769D3F,AWSSTS_LARGE,label,alias,**AWSSTS**)
 
+!definelong AWSSTS_LARGE(alias,label,e_type="artifact",e_color="#769D3F",e_stereo="**AWSSTS**",e_sprite="AWSSTS_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

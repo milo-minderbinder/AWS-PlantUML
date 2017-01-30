@@ -831,8 +831,16 @@ EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
 
 !define AWSSNOWBALL_LARGE(alias,label) AWS_ENTITY(node,#E05344,Migration_AWSSnowball_LARGE,label,alias,**AWSSnowball**)
 
-!define MIGRATION_AWSSNOWBALL_LARGE(alias) AWS_ENTITY(node,#E05344,Migration_AWSSnowball_LARGE,alias,**Migration\nAWSSnowball**)
+!definelong AWSSNOWBALL_LARGE(alias,label,e_type="node",e_color="#E05344",e_stereo="**AWSSnowball**",e_sprite="Migration_AWSSnowball_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
-!define MIGRATION_AWSSNOWBALL_LARGE(alias,label) AWS_ENTITY(node,#E05344,Migration_AWSSnowball_LARGE,label,alias,**Migration\nAWSSnowball**)
+!define MIGRATION_AWSSNOWBALL_LARGE(alias) AWS_ENTITY(node,#E05344,Migration_AWSSnowball_LARGE,alias,**Migration**\n**AWSSnowball**)
+
+!define MIGRATION_AWSSNOWBALL_LARGE(alias,label) AWS_ENTITY(node,#E05344,Migration_AWSSnowball_LARGE,label,alias,**Migration**\n**AWSSnowball**)
+
+!definelong MIGRATION_AWSSNOWBALL_LARGE(alias,label,e_type="node",e_color="#E05344",e_stereo="**Migration**\n**AWSSnowball**",e_sprite="Migration_AWSSnowball_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

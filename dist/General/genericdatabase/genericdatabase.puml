@@ -66,4 +66,8 @@ FFFEDDCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCDFFF
 
 !define GENERICDATABASE(alias,label) AWS_ENTITY(database,#7E7D7D,genericdatabase,label,alias,genericdatabase)
 
+!definelong GENERICDATABASE(alias,label,e_type="database",e_color="#7E7D7D",e_stereo="genericdatabase",e_sprite="genericdatabase")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

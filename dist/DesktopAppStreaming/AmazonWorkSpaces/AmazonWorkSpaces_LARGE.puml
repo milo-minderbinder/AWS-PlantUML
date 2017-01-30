@@ -434,4 +434,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 
 !define AMAZONWORKSPACES_LARGE(alias,label) AWS_ENTITY(component,#F58536,AmazonWorkSpaces_LARGE,label,alias,**AmazonWorkSpaces**)
 
+!definelong AMAZONWORKSPACES_LARGE(alias,label,e_type="component",e_color="#F58536",e_stereo="**AmazonWorkSpaces**",e_sprite="AmazonWorkSpaces_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

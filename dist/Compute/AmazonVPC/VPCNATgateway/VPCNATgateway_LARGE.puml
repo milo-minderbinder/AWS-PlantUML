@@ -645,7 +645,7 @@ skinparam interface<<**VPCNATgateway**>> {
     BackgroundColor #FEEDE2
 	BorderColor #F58536
 }
-skinparam interface<<**Compute\nAmazonVPC\nVPCNATgateway**>> {
+skinparam interface<<**Compute**\n**AmazonVPC**\n**VPCNATgateway**>> {
     BackgroundColor #FEEDE2
 	BorderColor #F58536
 }
@@ -655,8 +655,16 @@ skinparam interface<<**Compute\nAmazonVPC\nVPCNATgateway**>> {
 
 !define VPCNATGATEWAY_LARGE(alias,label) AWS_ENTITY(interface,#F58536,Compute_AmazonVPC_VPCNATgateway_LARGE,label,alias,**VPCNATgateway**)
 
-!define COMPUTE_AMAZONVPC_VPCNATGATEWAY_LARGE(alias) AWS_ENTITY(interface,#F58536,Compute_AmazonVPC_VPCNATgateway_LARGE,alias,**Compute\nAmazonVPC\nVPCNATgateway**)
+!definelong VPCNATGATEWAY_LARGE(alias,label,e_type="interface",e_color="#F58536",e_stereo="**VPCNATgateway**",e_sprite="Compute_AmazonVPC_VPCNATgateway_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
-!define COMPUTE_AMAZONVPC_VPCNATGATEWAY_LARGE(alias,label) AWS_ENTITY(interface,#F58536,Compute_AmazonVPC_VPCNATgateway_LARGE,label,alias,**Compute\nAmazonVPC\nVPCNATgateway**)
+!define COMPUTE_AMAZONVPC_VPCNATGATEWAY_LARGE(alias) AWS_ENTITY(interface,#F58536,Compute_AmazonVPC_VPCNATgateway_LARGE,alias,**Compute**\n**AmazonVPC**\n**VPCNATgateway**)
+
+!define COMPUTE_AMAZONVPC_VPCNATGATEWAY_LARGE(alias,label) AWS_ENTITY(interface,#F58536,Compute_AmazonVPC_VPCNATgateway_LARGE,label,alias,**Compute**\n**AmazonVPC**\n**VPCNATgateway**)
+
+!definelong COMPUTE_AMAZONVPC_VPCNATGATEWAY_LARGE(alias,label,e_type="interface",e_color="#F58536",e_stereo="**Compute**\n**AmazonVPC**\n**VPCNATgateway**",e_sprite="Compute_AmazonVPC_VPCNATgateway_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

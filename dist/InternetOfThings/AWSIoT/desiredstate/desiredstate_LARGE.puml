@@ -286,4 +286,8 @@ FFFFDCCCCCCCCCCCCC00000000000000000000000000000000000000000000000000000000000000
 
 !define DESIREDSTATE_LARGE(alias,label) AWS_ENTITY(artifact,#2F74B8,desiredstate_LARGE,label,alias,**desiredstate**)
 
+!definelong DESIREDSTATE_LARGE(alias,label,e_type="artifact",e_color="#2F74B8",e_stereo="**desiredstate**",e_sprite="desiredstate_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

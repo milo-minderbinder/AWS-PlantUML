@@ -73,4 +73,8 @@ FECCCCC900009CCCCCCCCCCCC007AACCCCCCCCCC70000ACCCCCF0000000000
 
 !define AGENT(alias,label) AWS_ENTITY(agent,#769D3F,agent,label,alias,agent)
 
+!definelong AGENT(alias,label,e_type="agent",e_color="#769D3F",e_stereo="agent",e_sprite="agent")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

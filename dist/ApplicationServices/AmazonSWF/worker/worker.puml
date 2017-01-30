@@ -66,4 +66,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 
 !define WORKER(alias,label) AWS_ENTITY(agent,#D9A842,worker,label,alias,worker)
 
+!definelong WORKER(alias,label,e_type="agent",e_color="#D9A842",e_stereo="worker",e_sprite="worker")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

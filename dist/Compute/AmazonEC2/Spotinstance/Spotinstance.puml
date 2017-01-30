@@ -65,4 +65,8 @@ FFDCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCDFF
 
 !define SPOTINSTANCE(alias,label) AWS_ENTITY(component,#F58536,Spotinstance,label,alias,Spotinstance)
 
+!definelong SPOTINSTANCE(alias,label,e_type="component",e_color="#F58536",e_stereo="Spotinstance",e_sprite="Spotinstance")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

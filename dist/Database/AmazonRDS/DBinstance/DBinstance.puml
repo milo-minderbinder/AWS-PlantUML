@@ -66,4 +66,8 @@ FFFFFEEDDCCCCCCCCCCCCCCCCCCCCCCCCCCDDEEFFFFF
 
 !define DBINSTANCE(alias,label) AWS_ENTITY(component,#2F74B8,DBinstance,label,alias,DBinstance)
 
+!definelong DBINSTANCE(alias,label,e_type="component",e_color="#2F74B8",e_stereo="DBinstance",e_sprite="DBinstance")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

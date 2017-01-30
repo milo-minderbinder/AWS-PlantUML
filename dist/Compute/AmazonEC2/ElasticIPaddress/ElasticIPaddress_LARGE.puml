@@ -105,4 +105,8 @@ FFFFFDCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCDFFFFFFFFF
 
 !define ELASTICIPADDRESS_LARGE(alias,label) AWS_ENTITY(artifact,#F58536,ElasticIPaddress_LARGE,label,alias,**ElasticIPaddress**)
 
+!definelong ELASTICIPADDRESS_LARGE(alias,label,e_type="artifact",e_color="#F58536",e_stereo="**ElasticIPaddress**",e_sprite="ElasticIPaddress_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

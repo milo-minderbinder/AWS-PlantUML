@@ -68,4 +68,8 @@ skinparam cloud<<AmazonEMR\nHDFScluster>> {
 
 !define AMAZONEMR_HDFSCLUSTER(alias,label) AWS_ENTITY(cloud,#F58536,AmazonEMR_HDFScluster,label,alias,AmazonEMR\nHDFScluster)
 
+!definelong AMAZONEMR_HDFSCLUSTER(alias,label,e_type="cloud",e_color="#F58536",e_stereo="AmazonEMR\nHDFScluster",e_sprite="AmazonEMR_HDFScluster")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

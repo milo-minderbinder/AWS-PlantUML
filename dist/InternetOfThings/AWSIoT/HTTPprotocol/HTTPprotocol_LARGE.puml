@@ -304,4 +304,8 @@ skinparam interface<<**HTTPprotocol**>> {
 
 !define HTTPPROTOCOL_LARGE(alias,label) AWS_ENTITY(interface,#2F74B8,HTTPprotocol_LARGE,label,alias,**HTTPprotocol**)
 
+!definelong HTTPPROTOCOL_LARGE(alias,label,e_type="interface",e_color="#2F74B8",e_stereo="**HTTPprotocol**",e_sprite="HTTPprotocol_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

@@ -66,4 +66,8 @@ FDBBBBBBBBBBBBBBB908BBBBBBBBBBBBBBBBB70BBBBBBBBBBBBBBBDF
 
 !define DECIDER(alias,label) AWS_ENTITY(agent,#D9A842,decider,label,alias,decider)
 
+!definelong DECIDER(alias,label,e_type="agent",e_color="#D9A842",e_stereo="decider",e_sprite="decider")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

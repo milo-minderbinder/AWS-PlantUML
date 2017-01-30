@@ -579,8 +579,16 @@ FFFFFFFFFFFFFFFFFFECCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 !define IMPORTEXPORT_LARGE(alias,label) AWS_ENTITY(agent,#E05344,Migration_AWSSnowball_importexport_LARGE,label,alias,**importexport**)
 
-!define MIGRATION_AWSSNOWBALL_IMPORTEXPORT_LARGE(alias) AWS_ENTITY(agent,#E05344,Migration_AWSSnowball_importexport_LARGE,alias,**Migration\nAWSSnowball\nimportexport**)
+!definelong IMPORTEXPORT_LARGE(alias,label,e_type="agent",e_color="#E05344",e_stereo="**importexport**",e_sprite="Migration_AWSSnowball_importexport_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
-!define MIGRATION_AWSSNOWBALL_IMPORTEXPORT_LARGE(alias,label) AWS_ENTITY(agent,#E05344,Migration_AWSSnowball_importexport_LARGE,label,alias,**Migration\nAWSSnowball\nimportexport**)
+!define MIGRATION_AWSSNOWBALL_IMPORTEXPORT_LARGE(alias) AWS_ENTITY(agent,#E05344,Migration_AWSSnowball_importexport_LARGE,alias,**Migration**\n**AWSSnowball**\n**importexport**)
+
+!define MIGRATION_AWSSNOWBALL_IMPORTEXPORT_LARGE(alias,label) AWS_ENTITY(agent,#E05344,Migration_AWSSnowball_importexport_LARGE,label,alias,**Migration**\n**AWSSnowball**\n**importexport**)
+
+!definelong MIGRATION_AWSSNOWBALL_IMPORTEXPORT_LARGE(alias,label,e_type="agent",e_color="#E05344",e_stereo="**Migration**\n**AWSSnowball**\n**importexport**",e_sprite="Migration_AWSSnowball_importexport_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

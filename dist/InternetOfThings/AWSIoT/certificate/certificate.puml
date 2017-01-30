@@ -86,4 +86,8 @@ FFFFFEB0008CCCC900000000009CCCCCCCCCCCCCCCCCCCC8000BEFFFFF
 
 !define CERTIFICATE(alias,label) AWS_ENTITY(artifact,#2F74B8,certificate,label,alias,certificate)
 
+!definelong CERTIFICATE(alias,label,e_type="artifact",e_color="#2F74B8",e_stereo="certificate",e_sprite="certificate")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

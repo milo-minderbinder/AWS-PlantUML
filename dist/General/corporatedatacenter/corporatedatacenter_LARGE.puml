@@ -290,4 +290,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 
 !define CORPORATEDATACENTER_LARGE(alias,label) AWS_ENTITY(storage,#7E7D7D,corporatedatacenter_LARGE,label,alias,**corporatedatacenter**)
 
+!definelong CORPORATEDATACENTER_LARGE(alias,label,e_type="storage",e_color="#7E7D7D",e_stereo="**corporatedatacenter**",e_sprite="corporatedatacenter_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

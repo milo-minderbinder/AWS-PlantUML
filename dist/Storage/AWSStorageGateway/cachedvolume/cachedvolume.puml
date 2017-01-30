@@ -70,8 +70,12 @@ FFFFFFFFFFFFFFFFFFFF00000000000000FFFFFFFFFFFFFFFFFFFF
 
 
 
-!define CACHEDVOLUME(alias) AWS_ENTITY(artifact,#E05344,cachedvolume,alias,cachedvolume)
+!define CACHEDVOLUME(alias) AWS_ENTITY(storage,#E05344,cachedvolume,alias,cachedvolume)
 
-!define CACHEDVOLUME(alias,label) AWS_ENTITY(artifact,#E05344,cachedvolume,label,alias,cachedvolume)
+!define CACHEDVOLUME(alias,label) AWS_ENTITY(storage,#E05344,cachedvolume,label,alias,cachedvolume)
+
+!definelong CACHEDVOLUME(alias,label,e_type="storage",e_color="#E05344",e_stereo="cachedvolume",e_sprite="cachedvolume")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

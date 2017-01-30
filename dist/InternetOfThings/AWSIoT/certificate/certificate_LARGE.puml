@@ -396,4 +396,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFCCC60000000000000006CCCCCCCCCCCCCCCCCCCCCCCCCC600000
 
 !define CERTIFICATE_LARGE(alias,label) AWS_ENTITY(artifact,#2F74B8,certificate_LARGE,label,alias,**certificate**)
 
+!definelong CERTIFICATE_LARGE(alias,label,e_type="artifact",e_color="#2F74B8",e_stereo="**certificate**",e_sprite="certificate_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

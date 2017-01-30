@@ -278,12 +278,16 @@ FFFFFFFFFFFFFFFECCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 }
 
 skinparam folder<<**bucket**>> {
-    BackgroundColor White
+    BackgroundColor #F9DFDC
 }
 
 
 !define BUCKET_LARGE(alias) AWS_ENTITY(folder,#E05344,bucket_LARGE,alias,**bucket**)
 
 !define BUCKET_LARGE(alias,label) AWS_ENTITY(folder,#E05344,bucket_LARGE,label,alias,**bucket**)
+
+!definelong BUCKET_LARGE(alias,label,e_type="folder",e_color="#E05344",e_stereo="**bucket**",e_sprite="bucket_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

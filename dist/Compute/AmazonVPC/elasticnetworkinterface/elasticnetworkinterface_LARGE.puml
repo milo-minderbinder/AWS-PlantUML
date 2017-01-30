@@ -645,7 +645,7 @@ skinparam interface<<**elasticnetworkinterface**>> {
     BackgroundColor #FEEDE2
 	BorderColor #F58536
 }
-skinparam interface<<**Compute\nAmazonVPC\nelasticnetworkinterface**>> {
+skinparam interface<<**Compute**\n**AmazonVPC**\n**elasticnetworkinterface**>> {
     BackgroundColor #FEEDE2
 	BorderColor #F58536
 }
@@ -655,8 +655,16 @@ skinparam interface<<**Compute\nAmazonVPC\nelasticnetworkinterface**>> {
 
 !define ELASTICNETWORKINTERFACE_LARGE(alias,label) AWS_ENTITY(interface,#F58536,Compute_AmazonVPC_elasticnetworkinterface_LARGE,label,alias,**elasticnetworkinterface**)
 
-!define COMPUTE_AMAZONVPC_ELASTICNETWORKINTERFACE_LARGE(alias) AWS_ENTITY(interface,#F58536,Compute_AmazonVPC_elasticnetworkinterface_LARGE,alias,**Compute\nAmazonVPC\nelasticnetworkinterface**)
+!definelong ELASTICNETWORKINTERFACE_LARGE(alias,label,e_type="interface",e_color="#F58536",e_stereo="**elasticnetworkinterface**",e_sprite="Compute_AmazonVPC_elasticnetworkinterface_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
-!define COMPUTE_AMAZONVPC_ELASTICNETWORKINTERFACE_LARGE(alias,label) AWS_ENTITY(interface,#F58536,Compute_AmazonVPC_elasticnetworkinterface_LARGE,label,alias,**Compute\nAmazonVPC\nelasticnetworkinterface**)
+!define COMPUTE_AMAZONVPC_ELASTICNETWORKINTERFACE_LARGE(alias) AWS_ENTITY(interface,#F58536,Compute_AmazonVPC_elasticnetworkinterface_LARGE,alias,**Compute**\n**AmazonVPC**\n**elasticnetworkinterface**)
+
+!define COMPUTE_AMAZONVPC_ELASTICNETWORKINTERFACE_LARGE(alias,label) AWS_ENTITY(interface,#F58536,Compute_AmazonVPC_elasticnetworkinterface_LARGE,label,alias,**Compute**\n**AmazonVPC**\n**elasticnetworkinterface**)
+
+!definelong COMPUTE_AMAZONVPC_ELASTICNETWORKINTERFACE_LARGE(alias,label,e_type="interface",e_color="#F58536",e_stereo="**Compute**\n**AmazonVPC**\n**elasticnetworkinterface**",e_sprite="Compute_AmazonVPC_elasticnetworkinterface_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

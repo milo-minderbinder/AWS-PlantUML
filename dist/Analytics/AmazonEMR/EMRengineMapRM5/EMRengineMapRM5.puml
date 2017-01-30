@@ -62,4 +62,8 @@ FFFF00000FFFFFFFFFFFFFFFFFFFFFCCCCCCCCCCCCCCCCCCCCCCCCCCCCDF0000FEDDDDDEFF
 
 !define EMRENGINEMAPRM5(alias,label) AWS_ENTITY(component,#F58536,EMRengineMapRM5,label,alias,EMRengineMapRM5)
 
+!definelong EMRENGINEMAPRM5(alias,label,e_type="component",e_color="#F58536",e_stereo="EMRengineMapRM5",e_sprite="EMRengineMapRM5")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

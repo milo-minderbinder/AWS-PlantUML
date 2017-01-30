@@ -93,4 +93,8 @@ skinparam frame<<IAM>> {
 
 !define IAM(alias,label) AWS_ENTITY(frame,#769D3F,IAM,label,alias,IAM)
 
+!definelong IAM(alias,label,e_type="frame",e_color="#769D3F",e_stereo="IAM",e_sprite="IAM")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

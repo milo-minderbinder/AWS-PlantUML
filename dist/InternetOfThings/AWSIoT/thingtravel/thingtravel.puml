@@ -80,4 +80,8 @@ CCCCCCCCCCCCCCCCCCCCCCCC600000CCCCCCCCCCCCCCC00000004CCCCCCCCCCCCCCCCCCC
 
 !define THINGTRAVEL(alias,label) AWS_ENTITY(node,#2F74B8,thingtravel,label,alias,thingtravel)
 
+!definelong THINGTRAVEL(alias,label,e_type="node",e_color="#2F74B8",e_stereo="thingtravel",e_sprite="thingtravel")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

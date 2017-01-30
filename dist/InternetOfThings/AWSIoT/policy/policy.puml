@@ -88,4 +88,8 @@ FFECCCCCCCCCCCCCCCCCCCCD0CCCC06C700000000000009CCC
 
 !define POLICY(alias,label) AWS_ENTITY(artifact,#2F74B8,policy,label,alias,policy)
 
+!definelong POLICY(alias,label,e_type="artifact",e_color="#2F74B8",e_stereo="policy",e_sprite="policy")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

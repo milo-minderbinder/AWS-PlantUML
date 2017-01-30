@@ -427,7 +427,7 @@ skinparam interface<<**VPNconnection**>> {
     BackgroundColor #FEEDE2
 	BorderColor #F58536
 }
-skinparam interface<<**NetworkingContentDelivery\nAmazonVPC\nVPNconnection**>> {
+skinparam interface<<**NetworkingContentDelivery**\n**AmazonVPC**\n**VPNconnection**>> {
     BackgroundColor #FEEDE2
 	BorderColor #F58536
 }
@@ -437,8 +437,16 @@ skinparam interface<<**NetworkingContentDelivery\nAmazonVPC\nVPNconnection**>> {
 
 !define VPNCONNECTION_LARGE(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_VPNconnection_LARGE,label,alias,**VPNconnection**)
 
-!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_VPNCONNECTION_LARGE(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_VPNconnection_LARGE,alias,**NetworkingContentDelivery\nAmazonVPC\nVPNconnection**)
+!definelong VPNCONNECTION_LARGE(alias,label,e_type="interface",e_color="#F58536",e_stereo="**VPNconnection**",e_sprite="NetworkingContentDelivery_AmazonVPC_VPNconnection_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
-!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_VPNCONNECTION_LARGE(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_VPNconnection_LARGE,label,alias,**NetworkingContentDelivery\nAmazonVPC\nVPNconnection**)
+!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_VPNCONNECTION_LARGE(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_VPNconnection_LARGE,alias,**NetworkingContentDelivery**\n**AmazonVPC**\n**VPNconnection**)
+
+!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_VPNCONNECTION_LARGE(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_VPNconnection_LARGE,label,alias,**NetworkingContentDelivery**\n**AmazonVPC**\n**VPNconnection**)
+
+!definelong NETWORKINGCONTENTDELIVERY_AMAZONVPC_VPNCONNECTION_LARGE(alias,label,e_type="interface",e_color="#F58536",e_stereo="**NetworkingContentDelivery**\n**AmazonVPC**\n**VPNconnection**",e_sprite="NetworkingContentDelivery_AmazonVPC_VPNconnection_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

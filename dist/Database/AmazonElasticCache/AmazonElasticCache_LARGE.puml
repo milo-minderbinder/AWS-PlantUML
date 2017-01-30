@@ -418,4 +418,8 @@ DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
 
 !define AMAZONELASTICCACHE_LARGE(alias,label) AWS_ENTITY(storage,#2F74B8,AmazonElasticCache_LARGE,label,alias,**AmazonElasticCache**)
 
+!definelong AMAZONELASTICCACHE_LARGE(alias,label,e_type="storage",e_color="#2F74B8",e_stereo="**AmazonElasticCache**",e_sprite="AmazonElasticCache_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

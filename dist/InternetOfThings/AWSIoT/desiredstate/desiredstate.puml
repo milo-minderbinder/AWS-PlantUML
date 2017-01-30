@@ -64,4 +64,8 @@ FECCB75555555555555555555555555555555555555555556BCCEF
 
 !define DESIREDSTATE(alias,label) AWS_ENTITY(artifact,#2F74B8,desiredstate,label,alias,desiredstate)
 
+!definelong DESIREDSTATE(alias,label,e_type="artifact",e_color="#2F74B8",e_stereo="desiredstate",e_sprite="desiredstate")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

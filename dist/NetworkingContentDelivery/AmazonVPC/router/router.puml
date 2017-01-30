@@ -149,8 +149,16 @@ skinparam interface<<NetworkingContentDelivery\nAmazonVPC\nrouter>> {
 
 !define ROUTER(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_router,label,alias,router)
 
+!definelong ROUTER(alias,label,e_type="interface",e_color="#F58536",e_stereo="router",e_sprite="NetworkingContentDelivery_AmazonVPC_router")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 !define NETWORKINGCONTENTDELIVERY_AMAZONVPC_ROUTER(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_router,alias,NetworkingContentDelivery\nAmazonVPC\nrouter)
 
 !define NETWORKINGCONTENTDELIVERY_AMAZONVPC_ROUTER(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_router,label,alias,NetworkingContentDelivery\nAmazonVPC\nrouter)
+
+!definelong NETWORKINGCONTENTDELIVERY_AMAZONVPC_ROUTER(alias,label,e_type="interface",e_color="#F58536",e_stereo="NetworkingContentDelivery\nAmazonVPC\nrouter",e_sprite="NetworkingContentDelivery_AmazonVPC_router")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

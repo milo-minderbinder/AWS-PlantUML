@@ -222,4 +222,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 
 !define QUEUE_LARGE(alias,label) AWS_ENTITY(artifact,#D9A842,queue_LARGE,label,alias,**queue**)
 
+!definelong QUEUE_LARGE(alias,label,e_type="artifact",e_color="#D9A842",e_stereo="**queue**",e_sprite="queue_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

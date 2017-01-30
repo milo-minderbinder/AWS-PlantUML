@@ -78,10 +78,18 @@ FFFFA00000000000000000000000000000000000000000000000000000000AFFFF
 00000000000000000000000000000000FF00000000000000000000000000000000
 }
 
+skinparam agent<<Xamarin>> {
+    BackgroundColor White
+	BorderColor Black
+}
 
 
-!define XAMARIN(alias) AWS_ENTITY(agent,black,Xamarin,alias,Xamarin)
+!define XAMARIN(alias) AWS_ENTITY(agent,#4090D7,Xamarin,alias,Xamarin)
 
-!define XAMARIN(alias,label) AWS_ENTITY(agent,black,Xamarin,label,alias,Xamarin)
+!define XAMARIN(alias,label) AWS_ENTITY(agent,#4090D7,Xamarin,label,alias,Xamarin)
+
+!definelong XAMARIN(alias,label,e_type="agent",e_color="#4090D7",e_stereo="Xamarin",e_sprite="Xamarin")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

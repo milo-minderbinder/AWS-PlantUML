@@ -333,8 +333,12 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 
 
 
-!define VIRTUALTAPELIBRARY_LARGE(alias) AWS_ENTITY(artifact,#E05344,virtualtapelibrary_LARGE,alias,**virtualtapelibrary**)
+!define VIRTUALTAPELIBRARY_LARGE(alias) AWS_ENTITY(storage,#E05344,virtualtapelibrary_LARGE,alias,**virtualtapelibrary**)
 
-!define VIRTUALTAPELIBRARY_LARGE(alias,label) AWS_ENTITY(artifact,#E05344,virtualtapelibrary_LARGE,label,alias,**virtualtapelibrary**)
+!define VIRTUALTAPELIBRARY_LARGE(alias,label) AWS_ENTITY(storage,#E05344,virtualtapelibrary_LARGE,label,alias,**virtualtapelibrary**)
+
+!definelong VIRTUALTAPELIBRARY_LARGE(alias,label,e_type="storage",e_color="#E05344",e_stereo="**virtualtapelibrary**",e_sprite="virtualtapelibrary_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

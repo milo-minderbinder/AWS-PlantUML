@@ -171,12 +171,20 @@ EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEECABBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
 
 
 
-!define AWSSNOWBALL(alias) AWS_ENTITY(storage,#E05344,Storage_AWSSnowball,alias,AWSSnowball)
+!define AWSSNOWBALL(alias) AWS_ENTITY(node,#E05344,Storage_AWSSnowball,alias,AWSSnowball)
 
-!define AWSSNOWBALL(alias,label) AWS_ENTITY(storage,#E05344,Storage_AWSSnowball,label,alias,AWSSnowball)
+!define AWSSNOWBALL(alias,label) AWS_ENTITY(node,#E05344,Storage_AWSSnowball,label,alias,AWSSnowball)
 
-!define STORAGE_AWSSNOWBALL(alias) AWS_ENTITY(storage,#E05344,Storage_AWSSnowball,alias,Storage\nAWSSnowball)
+!definelong AWSSNOWBALL(alias,label,e_type="node",e_color="#E05344",e_stereo="AWSSnowball",e_sprite="Storage_AWSSnowball")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
-!define STORAGE_AWSSNOWBALL(alias,label) AWS_ENTITY(storage,#E05344,Storage_AWSSnowball,label,alias,Storage\nAWSSnowball)
+!define STORAGE_AWSSNOWBALL(alias) AWS_ENTITY(node,#E05344,Storage_AWSSnowball,alias,Storage\nAWSSnowball)
+
+!define STORAGE_AWSSNOWBALL(alias,label) AWS_ENTITY(node,#E05344,Storage_AWSSnowball,label,alias,Storage\nAWSSnowball)
+
+!definelong STORAGE_AWSSNOWBALL(alias,label,e_type="node",e_color="#E05344",e_stereo="Storage\nAWSSnowball",e_sprite="Storage_AWSSnowball")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

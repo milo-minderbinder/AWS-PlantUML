@@ -328,4 +328,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 
 !define CHECKLISTFAULTTOLERANCE_LARGE(alias,label) AWS_ENTITY(artifact,#769D3F,checklistfaulttolerance_LARGE,label,alias,**checklistfaulttolerance**)
 
+!definelong CHECKLISTFAULTTOLERANCE_LARGE(alias,label,e_type="artifact",e_color="#769D3F",e_stereo="**checklistfaulttolerance**",e_sprite="checklistfaulttolerance_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

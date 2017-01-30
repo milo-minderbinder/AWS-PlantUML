@@ -779,12 +779,20 @@ sprite $Messaging_AmazonPinpoint_LARGE [342x386/16] {
 
 
 
-!define AMAZONPINPOINT_LARGE(alias) AWS_ENTITY(node,#D9A842,Messaging_AmazonPinpoint_LARGE,alias,**AmazonPinpoint**)
+!define AMAZONPINPOINT_LARGE(alias) AWS_ENTITY(node,#AD698C,Messaging_AmazonPinpoint_LARGE,alias,**AmazonPinpoint**)
 
-!define AMAZONPINPOINT_LARGE(alias,label) AWS_ENTITY(node,#D9A842,Messaging_AmazonPinpoint_LARGE,label,alias,**AmazonPinpoint**)
+!define AMAZONPINPOINT_LARGE(alias,label) AWS_ENTITY(node,#AD698C,Messaging_AmazonPinpoint_LARGE,label,alias,**AmazonPinpoint**)
 
-!define MESSAGING_AMAZONPINPOINT_LARGE(alias) AWS_ENTITY(node,#D9A842,Messaging_AmazonPinpoint_LARGE,alias,**Messaging\nAmazonPinpoint**)
+!definelong AMAZONPINPOINT_LARGE(alias,label,e_type="node",e_color="#AD698C",e_stereo="**AmazonPinpoint**",e_sprite="Messaging_AmazonPinpoint_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
-!define MESSAGING_AMAZONPINPOINT_LARGE(alias,label) AWS_ENTITY(node,#D9A842,Messaging_AmazonPinpoint_LARGE,label,alias,**Messaging\nAmazonPinpoint**)
+!define MESSAGING_AMAZONPINPOINT_LARGE(alias) AWS_ENTITY(node,#AD698C,Messaging_AmazonPinpoint_LARGE,alias,**Messaging**\n**AmazonPinpoint**)
+
+!define MESSAGING_AMAZONPINPOINT_LARGE(alias,label) AWS_ENTITY(node,#AD698C,Messaging_AmazonPinpoint_LARGE,label,alias,**Messaging**\n**AmazonPinpoint**)
+
+!definelong MESSAGING_AMAZONPINPOINT_LARGE(alias,label,e_type="node",e_color="#AD698C",e_stereo="**Messaging**\n**AmazonPinpoint**",e_sprite="Messaging_AmazonPinpoint_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

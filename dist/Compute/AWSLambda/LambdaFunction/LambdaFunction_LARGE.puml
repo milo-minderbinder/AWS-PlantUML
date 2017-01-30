@@ -320,14 +320,18 @@ FFCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000FFFFFFFFFFFFFFFFFFFF00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 }
 
-skinparam node<<**LambdaFunction**>> {
-    BackgroundColor White
+skinparam component<<**LambdaFunction**>> {
+    BackgroundColor #FEEDE2
 	BorderColor Black
 }
 
 
-!define LAMBDAFUNCTION_LARGE(alias) AWS_ENTITY(node,#F58536,LambdaFunction_LARGE,alias,**LambdaFunction**)
+!define LAMBDAFUNCTION_LARGE(alias) AWS_ENTITY(component,#F58536,LambdaFunction_LARGE,alias,**LambdaFunction**)
 
-!define LAMBDAFUNCTION_LARGE(alias,label) AWS_ENTITY(node,#F58536,LambdaFunction_LARGE,label,alias,**LambdaFunction**)
+!define LAMBDAFUNCTION_LARGE(alias,label) AWS_ENTITY(component,#F58536,LambdaFunction_LARGE,label,alias,**LambdaFunction**)
+
+!definelong LAMBDAFUNCTION_LARGE(alias,label,e_type="component",e_color="#F58536",e_stereo="**LambdaFunction**",e_sprite="LambdaFunction_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

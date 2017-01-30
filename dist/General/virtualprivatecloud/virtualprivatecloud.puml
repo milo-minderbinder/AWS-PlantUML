@@ -58,4 +58,8 @@ skinparam cloud<<virtualprivatecloud>> {
 
 !define VIRTUALPRIVATECLOUD(alias,label) AWS_ENTITY(cloud,#F58536,virtualprivatecloud,label,alias,virtualprivatecloud)
 
+!definelong VIRTUALPRIVATECLOUD(alias,label,e_type="cloud",e_color="#F58536",e_stereo="virtualprivatecloud",e_sprite="virtualprivatecloud")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

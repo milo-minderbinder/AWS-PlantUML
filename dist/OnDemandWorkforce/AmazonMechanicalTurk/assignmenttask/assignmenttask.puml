@@ -60,10 +60,17 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00
 }
 
+skinparam agent<<assignmenttask>> {
+    BorderColor #7E7D7D
+}
 
 
-!define ASSIGNMENTTASK(alias) AWS_ENTITY(artifact,#D6D6D6,assignmenttask,alias,assignmenttask)
+!define ASSIGNMENTTASK(alias) AWS_ENTITY(agent,#D6D6D6,assignmenttask,alias,assignmenttask)
 
-!define ASSIGNMENTTASK(alias,label) AWS_ENTITY(artifact,#D6D6D6,assignmenttask,label,alias,assignmenttask)
+!define ASSIGNMENTTASK(alias,label) AWS_ENTITY(agent,#D6D6D6,assignmenttask,label,alias,assignmenttask)
+
+!definelong ASSIGNMENTTASK(alias,label,e_type="agent",e_color="#D6D6D6",e_stereo="assignmenttask",e_sprite="assignmenttask")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

@@ -324,4 +324,8 @@ EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
 
 !define AWSSHIELD_LARGE(alias,label) AWS_ENTITY(node,#769D3F,AWSShield_LARGE,label,alias,**AWSShield**)
 
+!definelong AWSSHIELD_LARGE(alias,label,e_type="node",e_color="#769D3F",e_stereo="**AWSShield**",e_sprite="AWSShield_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

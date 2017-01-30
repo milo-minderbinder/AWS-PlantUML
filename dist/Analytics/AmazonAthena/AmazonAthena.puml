@@ -77,4 +77,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFECABCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 !define AMAZONATHENA(alias,label) AWS_ENTITY(node,#F58536,AmazonAthena,label,alias,AmazonAthena)
 
+!definelong AMAZONATHENA(alias,label,e_type="node",e_color="#F58536",e_stereo="AmazonAthena",e_sprite="AmazonAthena")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

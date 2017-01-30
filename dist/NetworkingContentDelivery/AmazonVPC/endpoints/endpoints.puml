@@ -149,8 +149,16 @@ skinparam interface<<NetworkingContentDelivery\nAmazonVPC\nendpoints>> {
 
 !define ENDPOINTS(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_endpoints,label,alias,endpoints)
 
+!definelong ENDPOINTS(alias,label,e_type="interface",e_color="#F58536",e_stereo="endpoints",e_sprite="NetworkingContentDelivery_AmazonVPC_endpoints")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 !define NETWORKINGCONTENTDELIVERY_AMAZONVPC_ENDPOINTS(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_endpoints,alias,NetworkingContentDelivery\nAmazonVPC\nendpoints)
 
 !define NETWORKINGCONTENTDELIVERY_AMAZONVPC_ENDPOINTS(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_endpoints,label,alias,NetworkingContentDelivery\nAmazonVPC\nendpoints)
+
+!definelong NETWORKINGCONTENTDELIVERY_AMAZONVPC_ENDPOINTS(alias,label,e_type="interface",e_color="#F58536",e_stereo="NetworkingContentDelivery\nAmazonVPC\nendpoints",e_sprite="NetworkingContentDelivery_AmazonVPC_endpoints")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

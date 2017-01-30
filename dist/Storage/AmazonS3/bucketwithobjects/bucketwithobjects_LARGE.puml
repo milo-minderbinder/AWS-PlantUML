@@ -278,12 +278,16 @@ FFFFFFFFFFFFFFFECCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 }
 
 skinparam folder<<**bucketwithobjects**>> {
-    BackgroundColor White
+    BackgroundColor #F9DFDC
 }
 
 
 !define BUCKETWITHOBJECTS_LARGE(alias) AWS_ENTITY(folder,#E05344,bucketwithobjects_LARGE,alias,**bucketwithobjects**)
 
 !define BUCKETWITHOBJECTS_LARGE(alias,label) AWS_ENTITY(folder,#E05344,bucketwithobjects_LARGE,label,alias,**bucketwithobjects**)
+
+!definelong BUCKETWITHOBJECTS_LARGE(alias,label,e_type="folder",e_color="#E05344",e_stereo="**bucketwithobjects**",e_sprite="bucketwithobjects_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

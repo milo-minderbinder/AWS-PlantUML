@@ -643,7 +643,7 @@ skinparam interface<<**customergateway**>> {
     BackgroundColor #FEEDE2
 	BorderColor #F58536
 }
-skinparam interface<<**NetworkingContentDelivery\nAmazonVPC\ncustomergateway**>> {
+skinparam interface<<**NetworkingContentDelivery**\n**AmazonVPC**\n**customergateway**>> {
     BackgroundColor #FEEDE2
 	BorderColor #F58536
 }
@@ -653,8 +653,16 @@ skinparam interface<<**NetworkingContentDelivery\nAmazonVPC\ncustomergateway**>>
 
 !define CUSTOMERGATEWAY_LARGE(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_customergateway_LARGE,label,alias,**customergateway**)
 
-!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_CUSTOMERGATEWAY_LARGE(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_customergateway_LARGE,alias,**NetworkingContentDelivery\nAmazonVPC\ncustomergateway**)
+!definelong CUSTOMERGATEWAY_LARGE(alias,label,e_type="interface",e_color="#F58536",e_stereo="**customergateway**",e_sprite="NetworkingContentDelivery_AmazonVPC_customergateway_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
-!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_CUSTOMERGATEWAY_LARGE(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_customergateway_LARGE,label,alias,**NetworkingContentDelivery\nAmazonVPC\ncustomergateway**)
+!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_CUSTOMERGATEWAY_LARGE(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_customergateway_LARGE,alias,**NetworkingContentDelivery**\n**AmazonVPC**\n**customergateway**)
+
+!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_CUSTOMERGATEWAY_LARGE(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_customergateway_LARGE,label,alias,**NetworkingContentDelivery**\n**AmazonVPC**\n**customergateway**)
+
+!definelong NETWORKINGCONTENTDELIVERY_AMAZONVPC_CUSTOMERGATEWAY_LARGE(alias,label,e_type="interface",e_color="#F58536",e_stereo="**NetworkingContentDelivery**\n**AmazonVPC**\n**customergateway**",e_sprite="NetworkingContentDelivery_AmazonVPC_customergateway_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

@@ -66,14 +66,18 @@ FDCCCCCCCCCCCCCCCC800000009CCCCCCCA0000000ACCCCCCCCCCCCCCCCCDF
 000000000000000000000000FFFFFFFFFFFFFF000000000000000000000000
 }
 
-skinparam node<<LambdaFunction>> {
-    BackgroundColor White
+skinparam component<<LambdaFunction>> {
+    BackgroundColor #FEEDE2
 	BorderColor Black
 }
 
 
-!define LAMBDAFUNCTION(alias) AWS_ENTITY(node,#F58536,LambdaFunction,alias,LambdaFunction)
+!define LAMBDAFUNCTION(alias) AWS_ENTITY(component,#F58536,LambdaFunction,alias,LambdaFunction)
 
-!define LAMBDAFUNCTION(alias,label) AWS_ENTITY(node,#F58536,LambdaFunction,label,alias,LambdaFunction)
+!define LAMBDAFUNCTION(alias,label) AWS_ENTITY(component,#F58536,LambdaFunction,label,alias,LambdaFunction)
+
+!definelong LAMBDAFUNCTION(alias,label,e_type="component",e_color="#F58536",e_stereo="LambdaFunction",e_sprite="LambdaFunction")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

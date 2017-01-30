@@ -257,4 +257,8 @@ skinparam artifact<<**encrypteddata**>> {
 
 !define ENCRYPTEDDATA_LARGE(alias,label) AWS_ENTITY(artifact,Black,encrypteddata_LARGE,label,alias,**encrypteddata**)
 
+!definelong ENCRYPTEDDATA_LARGE(alias,label,e_type="artifact",e_color="Black",e_stereo="**encrypteddata**",e_sprite="encrypteddata_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

@@ -287,4 +287,8 @@ FFFFECCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 !define X1INSTANCE_LARGE(alias,label) AWS_ENTITY(component,#F58536,X1instance_LARGE,label,alias,**X1instance**)
 
+!definelong X1INSTANCE_LARGE(alias,label,e_type="component",e_color="#F58536",e_stereo="**X1instance**",e_sprite="X1instance_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

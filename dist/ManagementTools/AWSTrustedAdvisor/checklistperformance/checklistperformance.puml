@@ -75,4 +75,8 @@ FFFFFFFFFFFFFFFFFFFFF0CCCCCC900009B000000006CCCCCCCCCCC
 
 !define CHECKLISTPERFORMANCE(alias,label) AWS_ENTITY(artifact,#769D3F,checklistperformance,label,alias,checklistperformance)
 
+!definelong CHECKLISTPERFORMANCE(alias,label,e_type="artifact",e_color="#769D3F",e_stereo="checklistperformance",e_sprite="checklistperformance")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

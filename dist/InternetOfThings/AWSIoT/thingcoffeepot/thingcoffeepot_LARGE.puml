@@ -578,4 +578,8 @@ CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 !define THINGCOFFEEPOT_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,thingcoffeepot_LARGE,label,alias,**thingcoffeepot**)
 
+!definelong THINGCOFFEEPOT_LARGE(alias,label,e_type="node",e_color="#2F74B8",e_stereo="**thingcoffeepot**",e_sprite="thingcoffeepot_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

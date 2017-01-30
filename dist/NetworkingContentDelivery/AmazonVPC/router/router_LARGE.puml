@@ -643,7 +643,7 @@ skinparam interface<<**router**>> {
     BackgroundColor #FEEDE2
 	BorderColor #F58536
 }
-skinparam interface<<**NetworkingContentDelivery\nAmazonVPC\nrouter**>> {
+skinparam interface<<**NetworkingContentDelivery**\n**AmazonVPC**\n**router**>> {
     BackgroundColor #FEEDE2
 	BorderColor #F58536
 }
@@ -653,8 +653,16 @@ skinparam interface<<**NetworkingContentDelivery\nAmazonVPC\nrouter**>> {
 
 !define ROUTER_LARGE(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_router_LARGE,label,alias,**router**)
 
-!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_ROUTER_LARGE(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_router_LARGE,alias,**NetworkingContentDelivery\nAmazonVPC\nrouter**)
+!definelong ROUTER_LARGE(alias,label,e_type="interface",e_color="#F58536",e_stereo="**router**",e_sprite="NetworkingContentDelivery_AmazonVPC_router_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
-!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_ROUTER_LARGE(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_router_LARGE,label,alias,**NetworkingContentDelivery\nAmazonVPC\nrouter**)
+!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_ROUTER_LARGE(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_router_LARGE,alias,**NetworkingContentDelivery**\n**AmazonVPC**\n**router**)
+
+!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_ROUTER_LARGE(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_router_LARGE,label,alias,**NetworkingContentDelivery**\n**AmazonVPC**\n**router**)
+
+!definelong NETWORKINGCONTENTDELIVERY_AMAZONVPC_ROUTER_LARGE(alias,label,e_type="interface",e_color="#F58536",e_stereo="**NetworkingContentDelivery**\n**AmazonVPC**\n**router**",e_sprite="NetworkingContentDelivery_AmazonVPC_router_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

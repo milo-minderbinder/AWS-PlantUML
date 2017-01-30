@@ -87,4 +87,8 @@ CCC0000000000000000CCC00000000000000000CCC
 
 !define DATABASEMIGRATIONWORKFLOW_JOB(alias,label) AWS_ENTITY(agent,#2F74B8,databasemigrationworkflow_job,label,alias,databasemigrationworkflow\njob)
 
+!definelong DATABASEMIGRATIONWORKFLOW_JOB(alias,label,e_type="agent",e_color="#2F74B8",e_stereo="databasemigrationworkflow\njob",e_sprite="databasemigrationworkflow_job")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

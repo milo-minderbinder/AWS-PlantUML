@@ -288,4 +288,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 
 !define DENSESTORAGENODE_LARGE(alias,label) AWS_ENTITY(database,#2F74B8,densestoragenode_LARGE,label,alias,**densestoragenode**)
 
+!definelong DENSESTORAGENODE_LARGE(alias,label,e_type="database",e_color="#2F74B8",e_stereo="**densestoragenode**",e_sprite="densestoragenode_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

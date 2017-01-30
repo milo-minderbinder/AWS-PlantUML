@@ -69,4 +69,8 @@ skinparam agent<<users>> {
 
 !define USERS(alias,label) AWS_ENTITY(agent,#D6D6D6,users,label,alias,users)
 
+!definelong USERS(alias,label,e_type="agent",e_color="#D6D6D6",e_stereo="users",e_sprite="users")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

@@ -835,8 +835,16 @@ DDDDDDDDDDDDDDDDDBAAAAAAAAAAAAAAAAAABDDDDDDDDDDDDDDDDDDDDBAAAAAAAAAAAAAAAAAAAAAA
 
 !define ELASTICLOADBALANCING_LARGE(alias,label) AWS_ENTITY(node,#F58536,Compute_ElasticLoadBalancing_LARGE,label,alias,**ElasticLoadBalancing**)
 
-!define COMPUTE_ELASTICLOADBALANCING_LARGE(alias) AWS_ENTITY(node,#F58536,Compute_ElasticLoadBalancing_LARGE,alias,**Compute\nElasticLoadBalancing**)
+!definelong ELASTICLOADBALANCING_LARGE(alias,label,e_type="node",e_color="#F58536",e_stereo="**ElasticLoadBalancing**",e_sprite="Compute_ElasticLoadBalancing_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
-!define COMPUTE_ELASTICLOADBALANCING_LARGE(alias,label) AWS_ENTITY(node,#F58536,Compute_ElasticLoadBalancing_LARGE,label,alias,**Compute\nElasticLoadBalancing**)
+!define COMPUTE_ELASTICLOADBALANCING_LARGE(alias) AWS_ENTITY(node,#F58536,Compute_ElasticLoadBalancing_LARGE,alias,**Compute**\n**ElasticLoadBalancing**)
+
+!define COMPUTE_ELASTICLOADBALANCING_LARGE(alias,label) AWS_ENTITY(node,#F58536,Compute_ElasticLoadBalancing_LARGE,label,alias,**Compute**\n**ElasticLoadBalancing**)
+
+!definelong COMPUTE_ELASTICLOADBALANCING_LARGE(alias,label,e_type="node",e_color="#F58536",e_stereo="**Compute**\n**ElasticLoadBalancing**",e_sprite="Compute_ElasticLoadBalancing_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

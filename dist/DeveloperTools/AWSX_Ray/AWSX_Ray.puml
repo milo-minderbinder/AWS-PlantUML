@@ -86,4 +86,8 @@ EEEEEEEEFFFFFFFFFFFFEEEEEEEEEEEEEDBBBBBBBBBBBBBBEFFFFFFFFFFEBBBBBBBB
 
 !define AWSX_RAY(alias,label) AWS_ENTITY(component,#769D3F,AWSX_Ray,label,alias,AWSX\nRay)
 
+!definelong AWSX_RAY(alias,label,e_type="component",e_color="#769D3F",e_stereo="AWSX\nRay",e_sprite="AWSX_Ray")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

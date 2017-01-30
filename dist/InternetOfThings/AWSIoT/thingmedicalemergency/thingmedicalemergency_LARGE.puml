@@ -366,4 +366,8 @@ CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 !define THINGMEDICALEMERGENCY_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,thingmedicalemergency_LARGE,label,alias,**thingmedicalemergency**)
 
+!definelong THINGMEDICALEMERGENCY_LARGE(alias,label,e_type="node",e_color="#2F74B8",e_stereo="**thingmedicalemergency**",e_sprite="thingmedicalemergency_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

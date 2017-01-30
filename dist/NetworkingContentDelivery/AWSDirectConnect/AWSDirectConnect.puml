@@ -90,4 +90,8 @@ DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDB9AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 
 !define AWSDIRECTCONNECT(alias,label) AWS_ENTITY(node,#F58536,AWSDirectConnect,label,alias,AWSDirectConnect)
 
+!definelong AWSDIRECTCONNECT(alias,label,e_type="node",e_color="#F58536",e_stereo="AWSDirectConnect",e_sprite="AWSDirectConnect")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

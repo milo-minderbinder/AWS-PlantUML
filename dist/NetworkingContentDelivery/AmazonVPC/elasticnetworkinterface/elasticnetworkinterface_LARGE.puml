@@ -645,7 +645,7 @@ skinparam interface<<**elasticnetworkinterface**>> {
     BackgroundColor #FEEDE2
 	BorderColor #F58536
 }
-skinparam interface<<**NetworkingContentDelivery\nAmazonVPC\nelasticnetworkinterface**>> {
+skinparam interface<<**NetworkingContentDelivery**\n**AmazonVPC**\n**elasticnetworkinterface**>> {
     BackgroundColor #FEEDE2
 	BorderColor #F58536
 }
@@ -655,8 +655,16 @@ skinparam interface<<**NetworkingContentDelivery\nAmazonVPC\nelasticnetworkinter
 
 !define ELASTICNETWORKINTERFACE_LARGE(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_elasticnetworkinterface_LARGE,label,alias,**elasticnetworkinterface**)
 
-!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_ELASTICNETWORKINTERFACE_LARGE(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_elasticnetworkinterface_LARGE,alias,**NetworkingContentDelivery\nAmazonVPC\nelasticnetworkinterface**)
+!definelong ELASTICNETWORKINTERFACE_LARGE(alias,label,e_type="interface",e_color="#F58536",e_stereo="**elasticnetworkinterface**",e_sprite="NetworkingContentDelivery_AmazonVPC_elasticnetworkinterface_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
-!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_ELASTICNETWORKINTERFACE_LARGE(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_elasticnetworkinterface_LARGE,label,alias,**NetworkingContentDelivery\nAmazonVPC\nelasticnetworkinterface**)
+!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_ELASTICNETWORKINTERFACE_LARGE(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_elasticnetworkinterface_LARGE,alias,**NetworkingContentDelivery**\n**AmazonVPC**\n**elasticnetworkinterface**)
+
+!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_ELASTICNETWORKINTERFACE_LARGE(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_elasticnetworkinterface_LARGE,label,alias,**NetworkingContentDelivery**\n**AmazonVPC**\n**elasticnetworkinterface**)
+
+!definelong NETWORKINGCONTENTDELIVERY_AMAZONVPC_ELASTICNETWORKINTERFACE_LARGE(alias,label,e_type="interface",e_color="#F58536",e_stereo="**NetworkingContentDelivery**\n**AmazonVPC**\n**elasticnetworkinterface**",e_sprite="NetworkingContentDelivery_AmazonVPC_elasticnetworkinterface_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

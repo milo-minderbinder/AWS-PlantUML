@@ -418,4 +418,8 @@ DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDB877777777777
 
 !define AMAZONPOLLY_LARGE(alias,label) AWS_ENTITY(component,#2F74B8,AmazonPolly_LARGE,label,alias,**AmazonPolly**)
 
+!definelong AMAZONPOLLY_LARGE(alias,label,e_type="component",e_color="#2F74B8",e_stereo="**AmazonPolly**",e_sprite="AmazonPolly_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

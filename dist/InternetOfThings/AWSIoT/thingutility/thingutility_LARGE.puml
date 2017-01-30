@@ -366,4 +366,8 @@ CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 !define THINGUTILITY_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,thingutility_LARGE,label,alias,**thingutility**)
 
+!definelong THINGUTILITY_LARGE(alias,label,e_type="node",e_color="#2F74B8",e_stereo="**thingutility**",e_sprite="thingutility_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

@@ -292,4 +292,8 @@ FFFFFFFFFFFFFFEDCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 !define INSTANCEREADREPLICA_LARGE(alias,label) AWS_ENTITY(component,#2F74B8,instancereadreplica_LARGE,label,alias,**instancereadreplica**)
 
+!definelong INSTANCEREADREPLICA_LARGE(alias,label,e_type="component",e_color="#2F74B8",e_stereo="**instancereadreplica**",e_sprite="instancereadreplica_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

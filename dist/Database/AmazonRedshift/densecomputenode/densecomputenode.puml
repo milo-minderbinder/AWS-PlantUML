@@ -65,4 +65,8 @@ FFFFFFFFFFFFFFFFFFECCCCC0000000CCCDF0CCCCCCCCCCCCC
 
 !define DENSECOMPUTENODE(alias,label) AWS_ENTITY(database,#2F74B8,densecomputenode,label,alias,densecomputenode)
 
+!definelong DENSECOMPUTENODE(alias,label,e_type="database",e_color="#2F74B8",e_stereo="densecomputenode",e_sprite="densecomputenode")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

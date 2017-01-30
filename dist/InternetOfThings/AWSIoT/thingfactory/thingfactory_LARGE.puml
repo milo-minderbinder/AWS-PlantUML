@@ -365,4 +365,8 @@ CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 !define THINGFACTORY_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,thingfactory_LARGE,label,alias,**thingfactory**)
 
+!definelong THINGFACTORY_LARGE(alias,label,e_type="node",e_color="#2F74B8",e_stereo="**thingfactory**",e_sprite="thingfactory_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

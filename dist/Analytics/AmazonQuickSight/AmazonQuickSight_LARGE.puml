@@ -270,8 +270,12 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 
 
 
-!define AMAZONQUICKSIGHT_LARGE(alias) AWS_ENTITY(node,#F58536,AmazonQuickSight_LARGE,alias,**AmazonQuickSight**)
+!define AMAZONQUICKSIGHT_LARGE(alias) AWS_ENTITY(node,#AECCEA,AmazonQuickSight_LARGE,alias,**AmazonQuickSight**)
 
-!define AMAZONQUICKSIGHT_LARGE(alias,label) AWS_ENTITY(node,#F58536,AmazonQuickSight_LARGE,label,alias,**AmazonQuickSight**)
+!define AMAZONQUICKSIGHT_LARGE(alias,label) AWS_ENTITY(node,#AECCEA,AmazonQuickSight_LARGE,label,alias,**AmazonQuickSight**)
+
+!definelong AMAZONQUICKSIGHT_LARGE(alias,label,e_type="node",e_color="#AECCEA",e_stereo="**AmazonQuickSight**",e_sprite="AmazonQuickSight_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

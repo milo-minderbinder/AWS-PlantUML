@@ -286,4 +286,8 @@ FFFFDCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 !define REDIS_LARGE(alias,label) AWS_ENTITY(storage,#2F74B8,Redis_LARGE,label,alias,**Redis**)
 
+!definelong REDIS_LARGE(alias,label,e_type="storage",e_color="#2F74B8",e_stereo="**Redis**",e_sprite="Redis_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

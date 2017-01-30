@@ -53,6 +53,10 @@ MACROS_TEMPLATE = '''
 !define {macro}(alias) AWS_ENTITY({entity_type},{color},{unique_name},alias,{stereotype})
 
 !define {macro}(alias,label) AWS_ENTITY({entity_type},{color},{unique_name},label,alias,{stereotype})
+
+!definelong {macro}(alias,label,e_type="{entity_type}",e_color="{color}",e_stereo="{stereotype}",e_sprite="{unique_name}")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 '''
 
 

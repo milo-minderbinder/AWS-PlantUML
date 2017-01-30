@@ -72,4 +72,8 @@ FDCCC700000000009CCCCCCCC900000ACCCCCCCCCCCCCCCCCCCCCCCCCCCCDF
 
 !define CLASSICLOADBALANCER(alias,label) AWS_ENTITY(node,#F58536,ClassicLoadbalancer,label,alias,ClassicLoadbalancer)
 
+!definelong CLASSICLOADBALANCER(alias,label,e_type="node",e_color="#F58536",e_stereo="ClassicLoadbalancer",e_sprite="ClassicLoadbalancer")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml
