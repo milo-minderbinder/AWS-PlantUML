@@ -133,7 +133,9 @@ class PUML:
             name = self.unique_name
         if name.endswith('_LARGE'):
             name = '**{}**'.format(name[:-6])
-        return re.sub(r'_(?!\d)', r'\\n', name)
+            return re.sub(r'_(?!\d)', r'**\\n**', name)
+        else:
+            return re.sub(r'_(?!\d)', r'\\n', name)
 
     @property
     def macros(self):
@@ -243,11 +245,10 @@ class PUML:
         output = subprocess.check_output(cmd, universal_newlines=True)
         transparency = []
         lines = output.split('\n')
+        lines[1:-3] = [l.upper().replace('F', '0') for l in lines[1:-3]]
         darkest = '0'
-        # get 'darkest' pixel, but ignore 'F' since it will be flipped
         for line in lines[1:-3]:
-            darkest = max(darkest, max(line.upper(),
-                                       key=lambda v: v if v != 'F' else '0'))
+            darkest = max(darkest, max(line))
         if not shift:
             shift = 15 - int(darkest, base=16)
         lines[0] = re.sub(r'^(\s*sprite\s+\$)\w+(\s+\[\d+x\d+/\d+\]\s*\{\s*)$',
@@ -257,7 +258,7 @@ class PUML:
         transparency.append(lines[0])
         for line in lines[1:-3]:
             new_line = ''
-            for c in line.upper().replace('F', '0'):
+            for c in line:
                 if c not in ignore:
                     # shift up to 15/F, convert to hex and strip leading '0x'
                     c = hex(min(15, shift + int(c, base=16))).upper()[-1]
