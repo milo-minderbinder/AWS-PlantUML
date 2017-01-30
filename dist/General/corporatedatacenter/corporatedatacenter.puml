@@ -66,4 +66,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 
 !define CORPORATEDATACENTER(alias,label) AWS_ENTITY(storage,#7E7D7D,corporatedatacenter,label,alias,corporatedatacenter)
 
+!definelong CORPORATEDATACENTER(alias,label,e_type="storage",e_color="#7E7D7D",e_stereo="corporatedatacenter",e_sprite="corporatedatacenter")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

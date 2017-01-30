@@ -243,4 +243,8 @@ skinparam cloud<<**AWScloud**>> {
 
 !define AWSCLOUD_LARGE(alias,label) AWS_ENTITY(cloud,#F58536,AWScloud_LARGE,label,alias,**AWScloud**)
 
+!definelong AWSCLOUD_LARGE(alias,label,e_type="cloud",e_color="#F58536",e_stereo="**AWScloud**",e_sprite="AWScloud_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

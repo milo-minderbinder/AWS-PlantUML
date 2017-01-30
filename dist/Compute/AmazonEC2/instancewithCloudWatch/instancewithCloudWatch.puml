@@ -65,4 +65,8 @@ FFDCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCDFF
 
 !define INSTANCEWITHCLOUDWATCH(alias,label) AWS_ENTITY(component,#F58536,instancewithCloudWatch,label,alias,instancewithCloudWatch)
 
+!definelong INSTANCEWITHCLOUDWATCH(alias,label,e_type="component",e_color="#F58536",e_stereo="instancewithCloudWatch",e_sprite="instancewithCloudWatch")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

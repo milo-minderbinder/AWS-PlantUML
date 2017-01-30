@@ -147,8 +147,16 @@ skinparam interface<<Compute\nAmazonVPC\nVPCNATgateway>> {
 
 !define VPCNATGATEWAY(alias,label) AWS_ENTITY(interface,#F58536,Compute_AmazonVPC_VPCNATgateway,label,alias,VPCNATgateway)
 
+!definelong VPCNATGATEWAY(alias,label,e_type="interface",e_color="#F58536",e_stereo="VPCNATgateway",e_sprite="Compute_AmazonVPC_VPCNATgateway")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 !define COMPUTE_AMAZONVPC_VPCNATGATEWAY(alias) AWS_ENTITY(interface,#F58536,Compute_AmazonVPC_VPCNATgateway,alias,Compute\nAmazonVPC\nVPCNATgateway)
 
 !define COMPUTE_AMAZONVPC_VPCNATGATEWAY(alias,label) AWS_ENTITY(interface,#F58536,Compute_AmazonVPC_VPCNATgateway,label,alias,Compute\nAmazonVPC\nVPCNATgateway)
+
+!definelong COMPUTE_AMAZONVPC_VPCNATGATEWAY(alias,label,e_type="interface",e_color="#F58536",e_stereo="Compute\nAmazonVPC\nVPCNATgateway",e_sprite="Compute_AmazonVPC_VPCNATgateway")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

@@ -66,4 +66,8 @@ FFECBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBCEFF
 
 !define MULTIMEDIA(alias,label) AWS_ENTITY(artifact,#D6D6D6,multimedia,label,alias,multimedia)
 
+!definelong MULTIMEDIA(alias,label,e_type="artifact",e_color="#D6D6D6",e_stereo="multimedia",e_sprite="multimedia")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

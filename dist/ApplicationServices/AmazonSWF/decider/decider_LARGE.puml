@@ -297,4 +297,8 @@ FFFBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
 
 !define DECIDER_LARGE(alias,label) AWS_ENTITY(agent,#D9A842,decider_LARGE,label,alias,**decider**)
 
+!definelong DECIDER_LARGE(alias,label,e_type="agent",e_color="#D9A842",e_stereo="**decider**",e_sprite="decider_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

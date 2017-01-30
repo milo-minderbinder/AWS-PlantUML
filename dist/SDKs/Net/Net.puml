@@ -78,10 +78,18 @@ FFFFA00000000000000000000000000000000000000000000000000000000AFFFF
 00000000000000000000000000000000FF00000000000000000000000000000000
 }
 
+skinparam agent<<Net>> {
+    BackgroundColor White
+	BorderColor Black
+}
 
 
-!define NET(alias) AWS_ENTITY(agent,black,Net,alias,Net)
+!define NET(alias) AWS_ENTITY(agent,#115193,Net,alias,Net)
 
-!define NET(alias,label) AWS_ENTITY(agent,black,Net,label,alias,Net)
+!define NET(alias,label) AWS_ENTITY(agent,#115193,Net,label,alias,Net)
+
+!definelong NET(alias,label,e_type="agent",e_color="#115193",e_stereo="Net",e_sprite="Net")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

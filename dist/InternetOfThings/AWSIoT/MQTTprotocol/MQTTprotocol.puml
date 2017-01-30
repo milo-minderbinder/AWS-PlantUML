@@ -71,4 +71,8 @@ skinparam interface<<MQTTprotocol>> {
 
 !define MQTTPROTOCOL(alias,label) AWS_ENTITY(interface,#2F74B8,MQTTprotocol,label,alias,MQTTprotocol)
 
+!definelong MQTTPROTOCOL(alias,label,e_type="interface",e_color="#2F74B8",e_stereo="MQTTprotocol",e_sprite="MQTTprotocol")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

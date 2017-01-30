@@ -39,4 +39,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 
 !define EC2COMPUTECONTAINER_ALT2(alias,label) AWS_ENTITY(node,#F58536,EC2ComputeContainer_Alt2,label,alias,EC2ComputeContainer\nAlt2)
 
+!definelong EC2COMPUTECONTAINER_ALT2(alias,label,e_type="node",e_color="#F58536",e_stereo="EC2ComputeContainer\nAlt2",e_sprite="EC2ComputeContainer_Alt2")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

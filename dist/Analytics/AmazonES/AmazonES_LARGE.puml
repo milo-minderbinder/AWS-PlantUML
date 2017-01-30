@@ -419,4 +419,8 @@ DDDDDDDDDDDDDDDDDDDDDCAAAAAAAAAAAAAAAAAAAACDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDB
 
 !define AMAZONES_LARGE(alias,label) AWS_ENTITY(node,#F58536,AmazonES_LARGE,label,alias,**AmazonES**)
 
+!definelong AMAZONES_LARGE(alias,label,e_type="node",e_color="#F58536",e_stereo="**AmazonES**",e_sprite="AmazonES_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

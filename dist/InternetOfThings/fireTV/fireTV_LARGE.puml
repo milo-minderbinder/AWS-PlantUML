@@ -251,4 +251,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 
 !define FIRETV_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,fireTV_LARGE,label,alias,**fireTV**)
 
+!definelong FIRETV_LARGE(alias,label,e_type="node",e_color="#2F74B8",e_stereo="**fireTV**",e_sprite="fireTV_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

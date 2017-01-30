@@ -64,4 +64,8 @@ FECCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCEF
 
 !define MEMCACHED(alias,label) AWS_ENTITY(storage,#2F74B8,Memcached,label,alias,Memcached)
 
+!definelong MEMCACHED(alias,label,e_type="storage",e_color="#2F74B8",e_stereo="Memcached",e_sprite="Memcached")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

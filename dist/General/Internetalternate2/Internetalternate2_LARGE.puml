@@ -243,4 +243,8 @@ skinparam cloud<<**Internetalternate2**>> {
 
 !define INTERNETALTERNATE2_LARGE(alias,label) AWS_ENTITY(cloud,#D6D6D6,Internetalternate2_LARGE,label,alias,**Internetalternate2**)
 
+!definelong INTERNETALTERNATE2_LARGE(alias,label,e_type="cloud",e_color="#D6D6D6",e_stereo="**Internetalternate2**",e_sprite="Internetalternate2_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

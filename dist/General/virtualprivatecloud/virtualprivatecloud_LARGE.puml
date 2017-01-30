@@ -243,4 +243,8 @@ skinparam cloud<<**virtualprivatecloud**>> {
 
 !define VIRTUALPRIVATECLOUD_LARGE(alias,label) AWS_ENTITY(cloud,#F58536,virtualprivatecloud_LARGE,label,alias,**virtualprivatecloud**)
 
+!definelong VIRTUALPRIVATECLOUD_LARGE(alias,label,e_type="cloud",e_color="#F58536",e_stereo="**virtualprivatecloud**",e_sprite="virtualprivatecloud_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

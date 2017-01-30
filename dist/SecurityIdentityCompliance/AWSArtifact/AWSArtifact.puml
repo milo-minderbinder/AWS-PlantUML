@@ -88,4 +88,8 @@ EEFFFFFCCCCCCCCBBBAAEEEEEEEEEEEEEDBBBBBBBBBBBBBB00000000000000000000
 
 !define AWSARTIFACT(alias,label) AWS_ENTITY(node,#769D3F,AWSArtifact,label,alias,AWSArtifact)
 
+!definelong AWSARTIFACT(alias,label,e_type="node",e_color="#769D3F",e_stereo="AWSArtifact",e_sprite="AWSArtifact")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

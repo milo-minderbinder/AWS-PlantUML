@@ -204,12 +204,16 @@ FFFDCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 }
 
 skinparam artifact<<**object**>> {
-    BackgroundColor White
+    BackgroundColor #F9DFDC
 }
 
 
 !define OBJECT_LARGE(alias) AWS_ENTITY(artifact,#E05344,object_LARGE,alias,**object**)
 
 !define OBJECT_LARGE(alias,label) AWS_ENTITY(artifact,#E05344,object_LARGE,label,alias,**object**)
+
+!definelong OBJECT_LARGE(alias,label,e_type="artifact",e_color="#E05344",e_stereo="**object**",e_sprite="object_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

@@ -284,8 +284,12 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 
 
 
-!define DENSECOMPUTENODE_LARGE(alias) AWS_ENTITY(node,#F58536,densecomputenode_LARGE,alias,**densecomputenode**)
+!define DENSECOMPUTENODE_LARGE(alias) AWS_ENTITY(node,#2F74B8,densecomputenode_LARGE,alias,**densecomputenode**)
 
-!define DENSECOMPUTENODE_LARGE(alias,label) AWS_ENTITY(node,#F58536,densecomputenode_LARGE,label,alias,**densecomputenode**)
+!define DENSECOMPUTENODE_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,densecomputenode_LARGE,label,alias,**densecomputenode**)
+
+!definelong DENSECOMPUTENODE_LARGE(alias,label,e_type="node",e_color="#2F74B8",e_stereo="**densecomputenode**",e_sprite="densecomputenode_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

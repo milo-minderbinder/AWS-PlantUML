@@ -86,14 +86,14 @@ DDDDDAAAAACDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 0000000000000000000000000000000000BA0000000000000000000000000000000000
 }
 
-skinparam node<<AWSLambda>> {
-    BackgroundColor White
-	BorderColor Black
-}
 
 
 !define AWSLAMBDA(alias) AWS_ENTITY(node,#F58536,AWSLambda,alias,AWSLambda)
 
 !define AWSLAMBDA(alias,label) AWS_ENTITY(node,#F58536,AWSLambda,label,alias,AWSLambda)
+
+!definelong AWSLAMBDA(alias,label,e_type="node",e_color="#F58536",e_stereo="AWSLambda",e_sprite="AWSLambda")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

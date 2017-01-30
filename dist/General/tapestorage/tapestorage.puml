@@ -43,4 +43,8 @@ FDCCCCC7000008CCCCCCCCCCCCABCCCD0000DCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCF
 
 !define TAPESTORAGE(alias,label) AWS_ENTITY(storage,#7E7D7D,tapestorage,label,alias,tapestorage)
 
+!definelong TAPESTORAGE(alias,label,e_type="storage",e_color="#7E7D7D",e_stereo="tapestorage",e_sprite="tapestorage")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

@@ -92,4 +92,8 @@ DDDDDBAAAAAAAAABDDDDDDDDDDDDDDAAAAAAAAAAA0000000000000000000
 
 !define AWSELASTICBEANSTALK(alias,label) AWS_ENTITY(node,#F58536,AWSElasticBeanstalk,label,alias,AWSElasticBeanstalk)
 
+!definelong AWSELASTICBEANSTALK(alias,label,e_type="node",e_color="#F58536",e_stereo="AWSElasticBeanstalk",e_sprite="AWSElasticBeanstalk")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

@@ -599,8 +599,16 @@ FFFFFFFFFFFFFECCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 !define TOPIC_LARGE(alias,label) AWS_ENTITY(artifact,#2F74B8,AWSIoT_topic_LARGE,label,alias,**topic**)
 
-!define AWSIOT_TOPIC_LARGE(alias) AWS_ENTITY(artifact,#2F74B8,AWSIoT_topic_LARGE,alias,**AWSIoT\ntopic**)
+!definelong TOPIC_LARGE(alias,label,e_type="artifact",e_color="#2F74B8",e_stereo="**topic**",e_sprite="AWSIoT_topic_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
-!define AWSIOT_TOPIC_LARGE(alias,label) AWS_ENTITY(artifact,#2F74B8,AWSIoT_topic_LARGE,label,alias,**AWSIoT\ntopic**)
+!define AWSIOT_TOPIC_LARGE(alias) AWS_ENTITY(artifact,#2F74B8,AWSIoT_topic_LARGE,alias,**AWSIoT**\n**topic**)
+
+!define AWSIOT_TOPIC_LARGE(alias,label) AWS_ENTITY(artifact,#2F74B8,AWSIoT_topic_LARGE,label,alias,**AWSIoT**\n**topic**)
+
+!definelong AWSIOT_TOPIC_LARGE(alias,label,e_type="artifact",e_color="#2F74B8",e_stereo="**AWSIoT**\n**topic**",e_sprite="AWSIoT_topic_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

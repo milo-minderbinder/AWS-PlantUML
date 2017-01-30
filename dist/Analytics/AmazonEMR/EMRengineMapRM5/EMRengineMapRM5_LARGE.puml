@@ -276,4 +276,8 @@ sprite $EMRengineMapRM5_LARGE [372x268/16] {
 
 !define EMRENGINEMAPRM5_LARGE(alias,label) AWS_ENTITY(component,#F58536,EMRengineMapRM5_LARGE,label,alias,**EMRengineMapRM5**)
 
+!definelong EMRENGINEMAPRM5_LARGE(alias,label,e_type="component",e_color="#F58536",e_stereo="**EMRengineMapRM5**",e_sprite="EMRengineMapRM5_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

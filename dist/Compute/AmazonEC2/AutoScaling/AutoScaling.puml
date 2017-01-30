@@ -78,4 +78,8 @@ FFFFFFFFFFFFFCCCCFFFF00000CCCCCCCCCCCCCCCCCCCC00000FFFFCCCCFFFFFFFFFFFFF
 
 !define AUTOSCALING(alias,label) AWS_ENTITY(frame,#F58536,AutoScaling,label,alias,AutoScaling)
 
+!definelong AUTOSCALING(alias,label,e_type="frame",e_color="#F58536",e_stereo="AutoScaling",e_sprite="AutoScaling")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

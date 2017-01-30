@@ -643,7 +643,7 @@ skinparam artifact<<**flowlogs**>> {
     BackgroundColor White
 	BorderColor Black
 }
-skinparam artifact<<**NetworkingContentDelivery\nAmazonVPC\nflowlogs**>> {
+skinparam artifact<<**NetworkingContentDelivery**\n**AmazonVPC**\n**flowlogs**>> {
     BackgroundColor White
 	BorderColor Black
 }
@@ -653,8 +653,16 @@ skinparam artifact<<**NetworkingContentDelivery\nAmazonVPC\nflowlogs**>> {
 
 !define FLOWLOGS_LARGE(alias,label) AWS_ENTITY(artifact,#F58536,NetworkingContentDelivery_AmazonVPC_flowlogs_LARGE,label,alias,**flowlogs**)
 
-!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_FLOWLOGS_LARGE(alias) AWS_ENTITY(artifact,#F58536,NetworkingContentDelivery_AmazonVPC_flowlogs_LARGE,alias,**NetworkingContentDelivery\nAmazonVPC\nflowlogs**)
+!definelong FLOWLOGS_LARGE(alias,label,e_type="artifact",e_color="#F58536",e_stereo="**flowlogs**",e_sprite="NetworkingContentDelivery_AmazonVPC_flowlogs_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
-!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_FLOWLOGS_LARGE(alias,label) AWS_ENTITY(artifact,#F58536,NetworkingContentDelivery_AmazonVPC_flowlogs_LARGE,label,alias,**NetworkingContentDelivery\nAmazonVPC\nflowlogs**)
+!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_FLOWLOGS_LARGE(alias) AWS_ENTITY(artifact,#F58536,NetworkingContentDelivery_AmazonVPC_flowlogs_LARGE,alias,**NetworkingContentDelivery**\n**AmazonVPC**\n**flowlogs**)
+
+!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_FLOWLOGS_LARGE(alias,label) AWS_ENTITY(artifact,#F58536,NetworkingContentDelivery_AmazonVPC_flowlogs_LARGE,label,alias,**NetworkingContentDelivery**\n**AmazonVPC**\n**flowlogs**)
+
+!definelong NETWORKINGCONTENTDELIVERY_AMAZONVPC_FLOWLOGS_LARGE(alias,label,e_type="artifact",e_color="#F58536",e_stereo="**NetworkingContentDelivery**\n**AmazonVPC**\n**flowlogs**",e_sprite="NetworkingContentDelivery_AmazonVPC_flowlogs_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

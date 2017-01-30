@@ -398,4 +398,8 @@ CCCCCCCCCCC000000000000000000000000000000000000000000000000000000000000000000000
 
 !define DATABASEMIGRATIONWORKFLOWJOB_LARGE(alias,label) AWS_ENTITY(database,#2F74B8,databasemigrationworkflowjob_LARGE,label,alias,**databasemigrationworkflowjob**)
 
+!definelong DATABASEMIGRATIONWORKFLOWJOB_LARGE(alias,label,e_type="database",e_color="#2F74B8",e_stereo="**databasemigrationworkflowjob**",e_sprite="databasemigrationworkflowjob_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

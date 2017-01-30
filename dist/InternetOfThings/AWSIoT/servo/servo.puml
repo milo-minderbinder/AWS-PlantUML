@@ -62,4 +62,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 
 !define SERVO(alias,label) AWS_ENTITY(node,#2F74B8,servo,label,alias,servo)
 
+!definelong SERVO(alias,label,e_type="node",e_color="#2F74B8",e_stereo="servo",e_sprite="servo")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

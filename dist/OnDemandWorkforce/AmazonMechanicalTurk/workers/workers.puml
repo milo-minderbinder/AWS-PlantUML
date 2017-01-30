@@ -60,10 +60,17 @@ FFFFFFFFFFFFFFF999999999999999999999999999999FFFFFFFFFFFFFFF
 000000000000000FFFFFF0FFFFFFFFFFFFFFFFFFFFFFF000000000000000
 }
 
+skinparam agent<<workers>> {
+    BorderColor #7E7D7D
+}
 
 
-!define WORKERS(alias) AWS_ENTITY(artifact,#D6D6D6,workers,alias,workers)
+!define WORKERS(alias) AWS_ENTITY(agent,#D6D6D6,workers,alias,workers)
 
-!define WORKERS(alias,label) AWS_ENTITY(artifact,#D6D6D6,workers,label,alias,workers)
+!define WORKERS(alias,label) AWS_ENTITY(agent,#D6D6D6,workers,label,alias,workers)
+
+!definelong WORKERS(alias,label,e_type="agent",e_color="#D6D6D6",e_stereo="workers",e_sprite="workers")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

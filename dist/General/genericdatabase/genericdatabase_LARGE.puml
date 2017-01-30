@@ -293,4 +293,8 @@ FFFFFFFFFFFFFFFFFFFFEDCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 !define GENERICDATABASE_LARGE(alias,label) AWS_ENTITY(database,#7E7D7D,genericdatabase_LARGE,label,alias,**genericdatabase**)
 
+!definelong GENERICDATABASE_LARGE(alias,label,e_type="database",e_color="#7E7D7D",e_stereo="**genericdatabase**",e_sprite="genericdatabase_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

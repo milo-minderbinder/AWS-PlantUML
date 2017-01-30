@@ -643,7 +643,7 @@ skinparam interface<<**VPCpeering**>> {
     BackgroundColor #FEEDE2
 	BorderColor #F58536
 }
-skinparam interface<<**NetworkingContentDelivery\nAmazonVPC\nVPCpeering**>> {
+skinparam interface<<**NetworkingContentDelivery**\n**AmazonVPC**\n**VPCpeering**>> {
     BackgroundColor #FEEDE2
 	BorderColor #F58536
 }
@@ -653,8 +653,16 @@ skinparam interface<<**NetworkingContentDelivery\nAmazonVPC\nVPCpeering**>> {
 
 !define VPCPEERING_LARGE(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_VPCpeering_LARGE,label,alias,**VPCpeering**)
 
-!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_VPCPEERING_LARGE(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_VPCpeering_LARGE,alias,**NetworkingContentDelivery\nAmazonVPC\nVPCpeering**)
+!definelong VPCPEERING_LARGE(alias,label,e_type="interface",e_color="#F58536",e_stereo="**VPCpeering**",e_sprite="NetworkingContentDelivery_AmazonVPC_VPCpeering_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
-!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_VPCPEERING_LARGE(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_VPCpeering_LARGE,label,alias,**NetworkingContentDelivery\nAmazonVPC\nVPCpeering**)
+!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_VPCPEERING_LARGE(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_VPCpeering_LARGE,alias,**NetworkingContentDelivery**\n**AmazonVPC**\n**VPCpeering**)
+
+!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_VPCPEERING_LARGE(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_VPCpeering_LARGE,label,alias,**NetworkingContentDelivery**\n**AmazonVPC**\n**VPCpeering**)
+
+!definelong NETWORKINGCONTENTDELIVERY_AMAZONVPC_VPCPEERING_LARGE(alias,label,e_type="interface",e_color="#F58536",e_stereo="**NetworkingContentDelivery**\n**AmazonVPC**\n**VPCpeering**",e_sprite="NetworkingContentDelivery_AmazonVPC_VPCpeering_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

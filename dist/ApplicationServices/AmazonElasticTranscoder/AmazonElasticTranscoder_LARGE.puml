@@ -416,8 +416,12 @@ DDDDDDDDDDDDDDDDDDDDDDDDDDDDD9999999999999999CDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
 
 
 
-!define AMAZONELASTICTRANSCODER_LARGE(alias) AWS_ENTITY(component,#D9A842,AmazonElasticTranscoder_LARGE,alias,**AmazonElasticTranscoder**)
+!define AMAZONELASTICTRANSCODER_LARGE(alias) AWS_ENTITY(node,#D9A842,AmazonElasticTranscoder_LARGE,alias,**AmazonElasticTranscoder**)
 
-!define AMAZONELASTICTRANSCODER_LARGE(alias,label) AWS_ENTITY(component,#D9A842,AmazonElasticTranscoder_LARGE,label,alias,**AmazonElasticTranscoder**)
+!define AMAZONELASTICTRANSCODER_LARGE(alias,label) AWS_ENTITY(node,#D9A842,AmazonElasticTranscoder_LARGE,label,alias,**AmazonElasticTranscoder**)
+
+!definelong AMAZONELASTICTRANSCODER_LARGE(alias,label,e_type="node",e_color="#D9A842",e_stereo="**AmazonElasticTranscoder**",e_sprite="AmazonElasticTranscoder_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

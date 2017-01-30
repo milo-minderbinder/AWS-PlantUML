@@ -88,8 +88,12 @@ DDDDDDDDDDA9999999999999ADDDDDDDDDD9999999999CDDDDDDDDDDDDDC9999999999
 
 
 
-!define AMAZONAPIGATEWAY(alias) AWS_ENTITY(node,#AD698C,AmazonAPIGateway,alias,AmazonAPIGateway)
+!define AMAZONAPIGATEWAY(alias) AWS_ENTITY(node,#D9A842,AmazonAPIGateway,alias,AmazonAPIGateway)
 
-!define AMAZONAPIGATEWAY(alias,label) AWS_ENTITY(node,#AD698C,AmazonAPIGateway,label,alias,AmazonAPIGateway)
+!define AMAZONAPIGATEWAY(alias,label) AWS_ENTITY(node,#D9A842,AmazonAPIGateway,label,alias,AmazonAPIGateway)
+
+!definelong AMAZONAPIGATEWAY(alias,label,e_type="node",e_color="#D9A842",e_stereo="AmazonAPIGateway",e_sprite="AmazonAPIGateway")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

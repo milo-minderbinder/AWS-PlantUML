@@ -418,4 +418,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFEDDCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 !define ECHO_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,echo_LARGE,label,alias,**echo**)
 
+!definelong ECHO_LARGE(alias,label,e_type="node",e_color="#2F74B8",e_stereo="**echo**",e_sprite="echo_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

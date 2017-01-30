@@ -65,4 +65,8 @@ FFDCCCCCCCCCCCCCCCCCCCCCCCCCCC00CCCCCCCCCCCCCCCCCCCCCC
 
 !define DBONINSTANCE(alias,label) AWS_ENTITY(database,#F58536,DBoninstance,label,alias,DBoninstance)
 
+!definelong DBONINSTANCE(alias,label,e_type="database",e_color="#F58536",e_stereo="DBoninstance",e_sprite="DBoninstance")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

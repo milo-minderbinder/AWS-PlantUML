@@ -569,8 +569,16 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00000000000000CCCCCCCCCCCCCCCCCCCCCCC
 
 !define INSTANCES_LARGE(alias,label) AWS_ENTITY(frame,#F58536,AmazonEC2_instances_LARGE,label,alias,**instances**)
 
-!define AMAZONEC2_INSTANCES_LARGE(alias) AWS_ENTITY(frame,#F58536,AmazonEC2_instances_LARGE,alias,**AmazonEC2\ninstances**)
+!definelong INSTANCES_LARGE(alias,label,e_type="frame",e_color="#F58536",e_stereo="**instances**",e_sprite="AmazonEC2_instances_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
-!define AMAZONEC2_INSTANCES_LARGE(alias,label) AWS_ENTITY(frame,#F58536,AmazonEC2_instances_LARGE,label,alias,**AmazonEC2\ninstances**)
+!define AMAZONEC2_INSTANCES_LARGE(alias) AWS_ENTITY(frame,#F58536,AmazonEC2_instances_LARGE,alias,**AmazonEC2**\n**instances**)
+
+!define AMAZONEC2_INSTANCES_LARGE(alias,label) AWS_ENTITY(frame,#F58536,AmazonEC2_instances_LARGE,label,alias,**AmazonEC2**\n**instances**)
+
+!definelong AMAZONEC2_INSTANCES_LARGE(alias,label,e_type="frame",e_color="#F58536",e_stereo="**AmazonEC2**\n**instances**",e_sprite="AmazonEC2_instances_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

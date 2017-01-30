@@ -388,8 +388,12 @@ sprite $AWSX_Ray_LARGE [342x384/16] {
 
 
 
-!define AWSX_RAY_LARGE(alias) AWS_ENTITY(component,#769D3F,AWSX_Ray_LARGE,alias,**AWSX\nRay**)
+!define AWSX_RAY_LARGE(alias) AWS_ENTITY(component,#769D3F,AWSX_Ray_LARGE,alias,**AWSX**\n**Ray**)
 
-!define AWSX_RAY_LARGE(alias,label) AWS_ENTITY(component,#769D3F,AWSX_Ray_LARGE,label,alias,**AWSX\nRay**)
+!define AWSX_RAY_LARGE(alias,label) AWS_ENTITY(component,#769D3F,AWSX_Ray_LARGE,label,alias,**AWSX**\n**Ray**)
+
+!definelong AWSX_RAY_LARGE(alias,label,e_type="component",e_color="#769D3F",e_stereo="**AWSX**\n**Ray**",e_sprite="AWSX_Ray_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

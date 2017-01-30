@@ -326,4 +326,8 @@ FFCCCCCCCCCCCCCCCCCCCCCCC0000000000000000000000000000000000000000000000000000000
 
 !define CLASSICLOADBALANCER_LARGE(alias,label) AWS_ENTITY(node,#F58536,ClassicLoadbalancer_LARGE,label,alias,**ClassicLoadbalancer**)
 
+!definelong CLASSICLOADBALANCER_LARGE(alias,label,e_type="node",e_color="#F58536",e_stereo="**ClassicLoadbalancer**",e_sprite="ClassicLoadbalancer_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

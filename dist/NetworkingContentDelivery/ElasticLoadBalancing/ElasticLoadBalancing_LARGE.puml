@@ -835,8 +835,16 @@ DDDDDDDDDDDDDDDDDBAAAAAAAAAAAAAAAAAABDDDDDDDDDDDDDDDDDDDDBAAAAAAAAAAAAAAAAAAAAAA
 
 !define ELASTICLOADBALANCING_LARGE(alias,label) AWS_ENTITY(node,#F58536,NetworkingContentDelivery_ElasticLoadBalancing_LARGE,label,alias,**ElasticLoadBalancing**)
 
-!define NETWORKINGCONTENTDELIVERY_ELASTICLOADBALANCING_LARGE(alias) AWS_ENTITY(node,#F58536,NetworkingContentDelivery_ElasticLoadBalancing_LARGE,alias,**NetworkingContentDelivery\nElasticLoadBalancing**)
+!definelong ELASTICLOADBALANCING_LARGE(alias,label,e_type="node",e_color="#F58536",e_stereo="**ElasticLoadBalancing**",e_sprite="NetworkingContentDelivery_ElasticLoadBalancing_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
-!define NETWORKINGCONTENTDELIVERY_ELASTICLOADBALANCING_LARGE(alias,label) AWS_ENTITY(node,#F58536,NetworkingContentDelivery_ElasticLoadBalancing_LARGE,label,alias,**NetworkingContentDelivery\nElasticLoadBalancing**)
+!define NETWORKINGCONTENTDELIVERY_ELASTICLOADBALANCING_LARGE(alias) AWS_ENTITY(node,#F58536,NetworkingContentDelivery_ElasticLoadBalancing_LARGE,alias,**NetworkingContentDelivery**\n**ElasticLoadBalancing**)
+
+!define NETWORKINGCONTENTDELIVERY_ELASTICLOADBALANCING_LARGE(alias,label) AWS_ENTITY(node,#F58536,NetworkingContentDelivery_ElasticLoadBalancing_LARGE,label,alias,**NetworkingContentDelivery**\n**ElasticLoadBalancing**)
+
+!definelong NETWORKINGCONTENTDELIVERY_ELASTICLOADBALANCING_LARGE(alias,label,e_type="node",e_color="#F58536",e_stereo="**NetworkingContentDelivery**\n**ElasticLoadBalancing**",e_sprite="NetworkingContentDelivery_ElasticLoadBalancing_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

@@ -74,4 +74,8 @@ FFBAAAAAA85AAAA57AAAAAABFF0AAAAAAAAAABFFFFAAAAAACF
 
 !define DEPLOYMENT(alias,label) AWS_ENTITY(frame,#F58536,deployment,label,alias,deployment)
 
+!definelong DEPLOYMENT(alias,label,e_type="frame",e_color="#F58536",e_stereo="deployment",e_sprite="deployment")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

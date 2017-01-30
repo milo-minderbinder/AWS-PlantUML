@@ -90,4 +90,8 @@ DDDDDDDDDDDDDDDA87777ADDDDDDDDDDDDDAAAAA977777777777789AAAAAAAAAAAAAAA
 
 !define AMAZONPOLLY(alias,label) AWS_ENTITY(component,#2F74B8,AmazonPolly,label,alias,AmazonPolly)
 
+!definelong AMAZONPOLLY(alias,label,e_type="component",e_color="#2F74B8",e_stereo="AmazonPolly",e_sprite="AmazonPolly")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

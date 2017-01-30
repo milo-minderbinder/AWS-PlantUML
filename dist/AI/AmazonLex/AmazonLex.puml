@@ -80,4 +80,8 @@ DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDCA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 
 !define AMAZONLEX(alias,label) AWS_ENTITY(component,#2F74B8,AmazonLex,label,alias,AmazonLex)
 
+!definelong AMAZONLEX(alias,label,e_type="component",e_color="#2F74B8",e_stereo="AmazonLex",e_sprite="AmazonLex")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

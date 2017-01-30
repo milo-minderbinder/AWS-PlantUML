@@ -291,4 +291,8 @@ FFFFCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 !define SQLMASTER_LARGE(alias,label) AWS_ENTITY(component,#2F74B8,SQLmaster_LARGE,label,alias,**SQLmaster**)
 
+!definelong SQLMASTER_LARGE(alias,label,e_type="component",e_color="#2F74B8",e_stereo="**SQLmaster**",e_sprite="SQLmaster_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

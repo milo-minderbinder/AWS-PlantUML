@@ -420,4 +420,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 
 !define AWSKMS_LARGE(alias,label) AWS_ENTITY(node,#769D3F,AWSKMS_LARGE,label,alias,**AWSKMS**)
 
+!definelong AWSKMS_LARGE(alias,label,e_type="node",e_color="#769D3F",e_stereo="**AWSKMS**",e_sprite="AWSKMS_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

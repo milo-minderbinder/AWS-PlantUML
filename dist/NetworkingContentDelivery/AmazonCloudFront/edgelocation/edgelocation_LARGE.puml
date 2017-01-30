@@ -297,4 +297,8 @@ skinparam entity<<**edgelocation**>> {
 
 !define EDGELOCATION_LARGE(alias,label) AWS_ENTITY(entity,#F58536,edgelocation_LARGE,label,alias,**edgelocation**)
 
+!definelong EDGELOCATION_LARGE(alias,label,e_type="entity",e_color="#F58536",e_stereo="**edgelocation**",e_sprite="edgelocation_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

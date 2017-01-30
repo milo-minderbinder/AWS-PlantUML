@@ -147,8 +147,16 @@ skinparam interface<<Compute\nAmazonVPC\nVPCpeering>> {
 
 !define VPCPEERING(alias,label) AWS_ENTITY(interface,#F58536,Compute_AmazonVPC_VPCpeering,label,alias,VPCpeering)
 
+!definelong VPCPEERING(alias,label,e_type="interface",e_color="#F58536",e_stereo="VPCpeering",e_sprite="Compute_AmazonVPC_VPCpeering")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 !define COMPUTE_AMAZONVPC_VPCPEERING(alias) AWS_ENTITY(interface,#F58536,Compute_AmazonVPC_VPCpeering,alias,Compute\nAmazonVPC\nVPCpeering)
 
 !define COMPUTE_AMAZONVPC_VPCPEERING(alias,label) AWS_ENTITY(interface,#F58536,Compute_AmazonVPC_VPCpeering,label,alias,Compute\nAmazonVPC\nVPCpeering)
+
+!definelong COMPUTE_AMAZONVPC_VPCPEERING(alias,label,e_type="interface",e_color="#F58536",e_stereo="Compute\nAmazonVPC\nVPCpeering",e_sprite="Compute_AmazonVPC_VPCpeering")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

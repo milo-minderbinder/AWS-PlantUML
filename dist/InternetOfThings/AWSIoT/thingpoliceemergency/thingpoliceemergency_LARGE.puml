@@ -366,4 +366,8 @@ CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 !define THINGPOLICEEMERGENCY_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,thingpoliceemergency_LARGE,label,alias,**thingpoliceemergency**)
 
+!definelong THINGPOLICEEMERGENCY_LARGE(alias,label,e_type="node",e_color="#2F74B8",e_stereo="**thingpoliceemergency**",e_sprite="thingpoliceemergency_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

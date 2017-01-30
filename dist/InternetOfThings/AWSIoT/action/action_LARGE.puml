@@ -300,4 +300,8 @@ skinparam usecase<<**action**>> {
 
 !define ACTION_LARGE(alias,label) AWS_ENTITY(usecase,#2F74B8,action_LARGE,label,alias,**action**)
 
+!definelong ACTION_LARGE(alias,label,e_type="usecase",e_color="#2F74B8",e_stereo="**action**",e_sprite="action_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

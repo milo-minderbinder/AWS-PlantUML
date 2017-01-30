@@ -420,4 +420,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 
 !define AMAZONSES_LARGE(alias,label) AWS_ENTITY(node,#D9A842,AmazonSES_LARGE,label,alias,**AmazonSES**)
 
+!definelong AMAZONSES_LARGE(alias,label,e_type="node",e_color="#D9A842",e_stereo="**AmazonSES**",e_sprite="AmazonSES_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

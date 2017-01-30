@@ -62,4 +62,8 @@ FFFF00000FFFFFFFFFFFFFFFFFFFFFCCCCCCCCCCCCCCCCCCCCCCCCCCCCDF0000FEDDDDDEFF
 
 !define EMRENGINE(alias,label) AWS_ENTITY(component,#F58536,EMRengine,label,alias,EMRengine)
 
+!definelong EMRENGINE(alias,label,e_type="component",e_color="#F58536",e_stereo="EMRengine",e_sprite="EMRengine")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

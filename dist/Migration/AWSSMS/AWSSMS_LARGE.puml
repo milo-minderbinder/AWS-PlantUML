@@ -418,4 +418,8 @@ DDDDDDDDDDDDDDDCAAAAAAAAAAAAAAAACDDDDDDDDDDDDDDDDDDDAAAAAAAAAAAAAAAAAAAAAACDDDDD
 
 !define AWSSMS_LARGE(alias,label) AWS_ENTITY(node,#2F74B8,AWSSMS_LARGE,label,alias,**AWSSMS**)
 
+!definelong AWSSMS_LARGE(alias,label,e_type="node",e_color="#2F74B8",e_stereo="**AWSSMS**",e_sprite="AWSSMS_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

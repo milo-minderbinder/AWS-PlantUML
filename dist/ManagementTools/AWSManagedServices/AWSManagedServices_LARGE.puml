@@ -418,4 +418,8 @@ EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEDBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBD
 
 !define AWSMANAGEDSERVICES_LARGE(alias,label) AWS_ENTITY(node,#769D3F,AWSManagedServices_LARGE,label,alias,**AWSManagedServices**)
 
+!definelong AWSMANAGEDSERVICES_LARGE(alias,label,e_type="node",e_color="#769D3F",e_stereo="**AWSManagedServices**",e_sprite="AWSManagedServices_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

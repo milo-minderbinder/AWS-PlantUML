@@ -78,10 +78,18 @@ FFFFA00000000000000000000000000000000000000000000000000000000AFFFF
 00000000000000000000000000000000FF00000000000000000000000000000000
 }
 
+skinparam agent<<Java>> {
+    BackgroundColor White
+	BorderColor Black
+}
 
 
-!define JAVA(alias) AWS_ENTITY(agent,black,Java,alias,Java)
+!define JAVA(alias) AWS_ENTITY(agent,#EE472A,Java,alias,Java)
 
-!define JAVA(alias,label) AWS_ENTITY(agent,black,Java,label,alias,Java)
+!define JAVA(alias,label) AWS_ENTITY(agent,#EE472A,Java,label,alias,Java)
+
+!definelong JAVA(alias,label,e_type="agent",e_color="#EE472A",e_stereo="Java",e_sprite="Java")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

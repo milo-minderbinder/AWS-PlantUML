@@ -65,4 +65,8 @@ FFDCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCDFF
 
 !define ALEXASKILL(alias,label) AWS_ENTITY(component,#2F74B8,alexaskill,label,alias,alexaskill)
 
+!definelong ALEXASKILL(alias,label,e_type="component",e_color="#2F74B8",e_stereo="alexaskill",e_sprite="alexaskill")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

@@ -292,4 +292,8 @@ FFFFFFFFFFFFFFEDCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 !define INSTANCESTANDBY_LARGE(alias,label) AWS_ENTITY(component,#2F74B8,instancestandby_LARGE,label,alias,**instancestandby**)
 
+!definelong INSTANCESTANDBY_LARGE(alias,label,e_type="component",e_color="#2F74B8",e_stereo="**instancestandby**",e_sprite="instancestandby_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

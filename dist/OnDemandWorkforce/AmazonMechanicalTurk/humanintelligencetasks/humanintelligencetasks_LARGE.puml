@@ -246,10 +246,17 @@ FFFFFFFFFFFFFFFFFFFFFE9999999999999999999999999999999999000000000000000000000000
 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 }
 
+skinparam agent<<**humanintelligencetasks**>> {
+    BorderColor #7E7D7D
+}
 
 
-!define HUMANINTELLIGENCETASKS_LARGE(alias) AWS_ENTITY(artifact,#D6D6D6,humanintelligencetasks_LARGE,alias,**humanintelligencetasks**)
+!define HUMANINTELLIGENCETASKS_LARGE(alias) AWS_ENTITY(agent,#D6D6D6,humanintelligencetasks_LARGE,alias,**humanintelligencetasks**)
 
-!define HUMANINTELLIGENCETASKS_LARGE(alias,label) AWS_ENTITY(artifact,#D6D6D6,humanintelligencetasks_LARGE,label,alias,**humanintelligencetasks**)
+!define HUMANINTELLIGENCETASKS_LARGE(alias,label) AWS_ENTITY(agent,#D6D6D6,humanintelligencetasks_LARGE,label,alias,**humanintelligencetasks**)
+
+!definelong HUMANINTELLIGENCETASKS_LARGE(alias,label,e_type="agent",e_color="#D6D6D6",e_stereo="**humanintelligencetasks**",e_sprite="humanintelligencetasks_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

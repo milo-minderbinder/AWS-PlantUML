@@ -125,8 +125,16 @@ FFFFFFFFF00CCCCCCCCCC00CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 !define INSTANCES(alias,label) AWS_ENTITY(frame,#F58536,AmazonEC2_instances,label,alias,instances)
 
+!definelong INSTANCES(alias,label,e_type="frame",e_color="#F58536",e_stereo="instances",e_sprite="AmazonEC2_instances")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 !define AMAZONEC2_INSTANCES(alias) AWS_ENTITY(frame,#F58536,AmazonEC2_instances,alias,AmazonEC2\ninstances)
 
 !define AMAZONEC2_INSTANCES(alias,label) AWS_ENTITY(frame,#F58536,AmazonEC2_instances,label,alias,AmazonEC2\ninstances)
+
+!definelong AMAZONEC2_INSTANCES(alias,label,e_type="frame",e_color="#F58536",e_stereo="AmazonEC2\ninstances",e_sprite="AmazonEC2_instances")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

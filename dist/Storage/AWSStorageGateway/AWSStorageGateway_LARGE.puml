@@ -418,4 +418,8 @@ EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEDBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBC
 
 !define AWSSTORAGEGATEWAY_LARGE(alias,label) AWS_ENTITY(node,#E05344,AWSStorageGateway_LARGE,label,alias,**AWSStorageGateway**)
 
+!definelong AWSSTORAGEGATEWAY_LARGE(alias,label,e_type="node",e_color="#E05344",e_stereo="**AWSStorageGateway**",e_sprite="AWSStorageGateway_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

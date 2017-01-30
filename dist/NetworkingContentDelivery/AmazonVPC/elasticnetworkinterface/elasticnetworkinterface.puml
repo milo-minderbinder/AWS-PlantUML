@@ -149,8 +149,16 @@ skinparam interface<<NetworkingContentDelivery\nAmazonVPC\nelasticnetworkinterfa
 
 !define ELASTICNETWORKINTERFACE(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_elasticnetworkinterface,label,alias,elasticnetworkinterface)
 
+!definelong ELASTICNETWORKINTERFACE(alias,label,e_type="interface",e_color="#F58536",e_stereo="elasticnetworkinterface",e_sprite="NetworkingContentDelivery_AmazonVPC_elasticnetworkinterface")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 !define NETWORKINGCONTENTDELIVERY_AMAZONVPC_ELASTICNETWORKINTERFACE(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_elasticnetworkinterface,alias,NetworkingContentDelivery\nAmazonVPC\nelasticnetworkinterface)
 
 !define NETWORKINGCONTENTDELIVERY_AMAZONVPC_ELASTICNETWORKINTERFACE(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_elasticnetworkinterface,label,alias,NetworkingContentDelivery\nAmazonVPC\nelasticnetworkinterface)
+
+!definelong NETWORKINGCONTENTDELIVERY_AMAZONVPC_ELASTICNETWORKINTERFACE(alias,label,e_type="interface",e_color="#F58536",e_stereo="NetworkingContentDelivery\nAmazonVPC\nelasticnetworkinterface",e_sprite="NetworkingContentDelivery_AmazonVPC_elasticnetworkinterface")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

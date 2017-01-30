@@ -326,4 +326,8 @@ FFCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCB0000000
 
 !define AMAZONECR_LARGE(alias,label) AWS_ENTITY(frame,#F58536,AmazonECR_LARGE,label,alias,**AmazonECR**)
 
+!definelong AMAZONECR_LARGE(alias,label,e_type="frame",e_color="#F58536",e_stereo="**AmazonECR**",e_sprite="AmazonECR_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

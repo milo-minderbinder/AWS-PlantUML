@@ -393,8 +393,12 @@ CCCCCCCCCCC000000000000000000000000000000000000000000000000000000000000000000000
 
 
 
-!define DATABASEMIGRATIONWORKFLOW_JOB_LARGE(alias) AWS_ENTITY(agent,#2F74B8,databasemigrationworkflow_job_LARGE,alias,**databasemigrationworkflow\njob**)
+!define DATABASEMIGRATIONWORKFLOW_JOB_LARGE(alias) AWS_ENTITY(agent,#2F74B8,databasemigrationworkflow_job_LARGE,alias,**databasemigrationworkflow**\n**job**)
 
-!define DATABASEMIGRATIONWORKFLOW_JOB_LARGE(alias,label) AWS_ENTITY(agent,#2F74B8,databasemigrationworkflow_job_LARGE,label,alias,**databasemigrationworkflow\njob**)
+!define DATABASEMIGRATIONWORKFLOW_JOB_LARGE(alias,label) AWS_ENTITY(agent,#2F74B8,databasemigrationworkflow_job_LARGE,label,alias,**databasemigrationworkflow**\n**job**)
+
+!definelong DATABASEMIGRATIONWORKFLOW_JOB_LARGE(alias,label,e_type="agent",e_color="#2F74B8",e_stereo="**databasemigrationworkflow**\n**job**",e_sprite="databasemigrationworkflow_job_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

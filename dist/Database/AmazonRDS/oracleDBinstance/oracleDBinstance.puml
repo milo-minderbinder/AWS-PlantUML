@@ -66,4 +66,8 @@ FECCCCCCCCCCCCCCCCCCCCCCCCCCCC00CCCCC00AC000AC00ACCCCC
 
 !define ORACLEDBINSTANCE(alias,label) AWS_ENTITY(component,#2F74B8,oracleDBinstance,label,alias,oracleDBinstance)
 
+!definelong ORACLEDBINSTANCE(alias,label,e_type="component",e_color="#2F74B8",e_stereo="oracleDBinstance",e_sprite="oracleDBinstance")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

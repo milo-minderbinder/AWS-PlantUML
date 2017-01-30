@@ -364,4 +364,8 @@ skinparam agent<<**role**>> {
 
 !define ROLE_LARGE(alias,label) AWS_ENTITY(agent,#769D3F,role_LARGE,label,alias,**role**)
 
+!definelong ROLE_LARGE(alias,label,e_type="agent",e_color="#769D3F",e_stereo="**role**",e_sprite="role_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

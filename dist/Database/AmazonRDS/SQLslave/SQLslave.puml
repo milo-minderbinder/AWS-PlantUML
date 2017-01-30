@@ -65,4 +65,8 @@ FFDCCCCCCCCCCCCCCCCCCCCCCCCCCC00CCCCC70006986000BCCCCC
 
 !define SQLSLAVE(alias,label) AWS_ENTITY(component,#2F74B8,SQLslave,label,alias,SQLslave)
 
+!definelong SQLSLAVE(alias,label,e_type="component",e_color="#2F74B8",e_stereo="SQLslave",e_sprite="SQLslave")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

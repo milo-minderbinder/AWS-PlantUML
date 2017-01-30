@@ -286,4 +286,8 @@ FFFFDCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 !define ALEXASKILL_LARGE(alias,label) AWS_ENTITY(component,#2F74B8,alexaskill_LARGE,label,alias,**alexaskill**)
 
+!definelong ALEXASKILL_LARGE(alias,label,e_type="component",e_color="#2F74B8",e_stereo="**alexaskill**",e_sprite="alexaskill_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

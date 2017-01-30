@@ -64,4 +64,8 @@ BBBB000BBBBBBBBBBBBBBB00BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBCEFFF00BBBBBBBBBB
 
 !define EMAIL(alias,label) AWS_ENTITY(artifact,#D9A842,email,label,alias,email)
 
+!definelong EMAIL(alias,label,e_type="artifact",e_color="#D9A842",e_stereo="email",e_sprite="email")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

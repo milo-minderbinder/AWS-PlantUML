@@ -330,4 +330,8 @@ skinparam entity<<**downloaddistribution**>> {
 
 !define DOWNLOADDISTRIBUTION_LARGE(alias,label) AWS_ENTITY(entity,#F58536,downloaddistribution_LARGE,label,alias,**downloaddistribution**)
 
+!definelong DOWNLOADDISTRIBUTION_LARGE(alias,label,e_type="entity",e_color="#F58536",e_stereo="**downloaddistribution**",e_sprite="downloaddistribution_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

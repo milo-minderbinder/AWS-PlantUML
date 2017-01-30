@@ -38,4 +38,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00000000000000
 
 !define FIRETVSTICK(alias,label) AWS_ENTITY(node,#2F74B8,fireTVstick,label,alias,fireTVstick)
 
+!definelong FIRETVSTICK(alias,label,e_type="node",e_color="#2F74B8",e_stereo="fireTVstick",e_sprite="fireTVstick")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

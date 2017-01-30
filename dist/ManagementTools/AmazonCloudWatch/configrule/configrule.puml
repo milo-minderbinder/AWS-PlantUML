@@ -72,4 +72,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 
 !define CONFIGRULE(alias,label) AWS_ENTITY(artifact,#769D3F,configrule,label,alias,configrule)
 
+!definelong CONFIGRULE(alias,label,e_type="artifact",e_color="#769D3F",e_stereo="configrule",e_sprite="configrule")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

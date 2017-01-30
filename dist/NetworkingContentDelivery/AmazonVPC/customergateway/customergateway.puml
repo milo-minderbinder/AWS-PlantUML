@@ -149,8 +149,16 @@ skinparam interface<<NetworkingContentDelivery\nAmazonVPC\ncustomergateway>> {
 
 !define CUSTOMERGATEWAY(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_customergateway,label,alias,customergateway)
 
+!definelong CUSTOMERGATEWAY(alias,label,e_type="interface",e_color="#F58536",e_stereo="customergateway",e_sprite="NetworkingContentDelivery_AmazonVPC_customergateway")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 !define NETWORKINGCONTENTDELIVERY_AMAZONVPC_CUSTOMERGATEWAY(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_customergateway,alias,NetworkingContentDelivery\nAmazonVPC\ncustomergateway)
 
 !define NETWORKINGCONTENTDELIVERY_AMAZONVPC_CUSTOMERGATEWAY(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_customergateway,label,alias,NetworkingContentDelivery\nAmazonVPC\ncustomergateway)
+
+!definelong NETWORKINGCONTENTDELIVERY_AMAZONVPC_CUSTOMERGATEWAY(alias,label,e_type="interface",e_color="#F58536",e_stereo="NetworkingContentDelivery\nAmazonVPC\ncustomergateway",e_sprite="NetworkingContentDelivery_AmazonVPC_customergateway")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

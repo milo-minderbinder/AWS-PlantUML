@@ -344,4 +344,8 @@ FFFFFFFFFFCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC0000000000000000000000000007CCC
 
 !define AMAZONKINESISANALYTICS_LARGE(alias,label) AWS_ENTITY(component,#F58536,AmazonKinesisAnalytics_LARGE,label,alias,**AmazonKinesisAnalytics**)
 
+!definelong AMAZONKINESISANALYTICS_LARGE(alias,label,e_type="component",e_color="#F58536",e_stereo="**AmazonKinesisAnalytics**",e_sprite="AmazonKinesisAnalytics_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

@@ -103,8 +103,16 @@ skinparam interface<<Compute\nAmazonVPC\nVPNconnection>> {
 
 !define VPNCONNECTION(alias,label) AWS_ENTITY(interface,#F58536,Compute_AmazonVPC_VPNconnection,label,alias,VPNconnection)
 
+!definelong VPNCONNECTION(alias,label,e_type="interface",e_color="#F58536",e_stereo="VPNconnection",e_sprite="Compute_AmazonVPC_VPNconnection")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 !define COMPUTE_AMAZONVPC_VPNCONNECTION(alias) AWS_ENTITY(interface,#F58536,Compute_AmazonVPC_VPNconnection,alias,Compute\nAmazonVPC\nVPNconnection)
 
 !define COMPUTE_AMAZONVPC_VPNCONNECTION(alias,label) AWS_ENTITY(interface,#F58536,Compute_AmazonVPC_VPNconnection,label,alias,Compute\nAmazonVPC\nVPNconnection)
+
+!definelong COMPUTE_AMAZONVPC_VPNCONNECTION(alias,label,e_type="interface",e_color="#F58536",e_stereo="Compute\nAmazonVPC\nVPNconnection",e_sprite="Compute_AmazonVPC_VPNconnection")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

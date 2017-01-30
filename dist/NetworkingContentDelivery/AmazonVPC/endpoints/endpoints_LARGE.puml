@@ -645,7 +645,7 @@ skinparam interface<<**endpoints**>> {
     BackgroundColor #FEEDE2
 	BorderColor #F58536
 }
-skinparam interface<<**NetworkingContentDelivery\nAmazonVPC\nendpoints**>> {
+skinparam interface<<**NetworkingContentDelivery**\n**AmazonVPC**\n**endpoints**>> {
     BackgroundColor #FEEDE2
 	BorderColor #F58536
 }
@@ -655,8 +655,16 @@ skinparam interface<<**NetworkingContentDelivery\nAmazonVPC\nendpoints**>> {
 
 !define ENDPOINTS_LARGE(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_endpoints_LARGE,label,alias,**endpoints**)
 
-!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_ENDPOINTS_LARGE(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_endpoints_LARGE,alias,**NetworkingContentDelivery\nAmazonVPC\nendpoints**)
+!definelong ENDPOINTS_LARGE(alias,label,e_type="interface",e_color="#F58536",e_stereo="**endpoints**",e_sprite="NetworkingContentDelivery_AmazonVPC_endpoints_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
-!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_ENDPOINTS_LARGE(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_endpoints_LARGE,label,alias,**NetworkingContentDelivery\nAmazonVPC\nendpoints**)
+!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_ENDPOINTS_LARGE(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_endpoints_LARGE,alias,**NetworkingContentDelivery**\n**AmazonVPC**\n**endpoints**)
+
+!define NETWORKINGCONTENTDELIVERY_AMAZONVPC_ENDPOINTS_LARGE(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_endpoints_LARGE,label,alias,**NetworkingContentDelivery**\n**AmazonVPC**\n**endpoints**)
+
+!definelong NETWORKINGCONTENTDELIVERY_AMAZONVPC_ENDPOINTS_LARGE(alias,label,e_type="interface",e_color="#F58536",e_stereo="**NetworkingContentDelivery**\n**AmazonVPC**\n**endpoints**",e_sprite="NetworkingContentDelivery_AmazonVPC_endpoints_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

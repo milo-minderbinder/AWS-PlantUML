@@ -167,8 +167,16 @@ EEEEEEEBAAAABEEEEEEEEEECAAAAAA9987899BCCCCCCCAAAAAAAAABCCCCCCAAAAAAA0
 
 !define AMAZONPINPOINT(alias,label) AWS_ENTITY(node,#AD698C,MobileServices_AmazonPinpoint,label,alias,AmazonPinpoint)
 
+!definelong AMAZONPINPOINT(alias,label,e_type="node",e_color="#AD698C",e_stereo="AmazonPinpoint",e_sprite="MobileServices_AmazonPinpoint")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 !define MOBILESERVICES_AMAZONPINPOINT(alias) AWS_ENTITY(node,#AD698C,MobileServices_AmazonPinpoint,alias,MobileServices\nAmazonPinpoint)
 
 !define MOBILESERVICES_AMAZONPINPOINT(alias,label) AWS_ENTITY(node,#AD698C,MobileServices_AmazonPinpoint,label,alias,MobileServices\nAmazonPinpoint)
+
+!definelong MOBILESERVICES_AMAZONPINPOINT(alias,label,e_type="node",e_color="#AD698C",e_stereo="MobileServices\nAmazonPinpoint",e_sprite="MobileServices_AmazonPinpoint")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

@@ -149,8 +149,16 @@ skinparam interface<<NetworkingContentDelivery\nAmazonVPC\nVPNgateway>> {
 
 !define VPNGATEWAY(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_VPNgateway,label,alias,VPNgateway)
 
+!definelong VPNGATEWAY(alias,label,e_type="interface",e_color="#F58536",e_stereo="VPNgateway",e_sprite="NetworkingContentDelivery_AmazonVPC_VPNgateway")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 !define NETWORKINGCONTENTDELIVERY_AMAZONVPC_VPNGATEWAY(alias) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_VPNgateway,alias,NetworkingContentDelivery\nAmazonVPC\nVPNgateway)
 
 !define NETWORKINGCONTENTDELIVERY_AMAZONVPC_VPNGATEWAY(alias,label) AWS_ENTITY(interface,#F58536,NetworkingContentDelivery_AmazonVPC_VPNgateway,label,alias,NetworkingContentDelivery\nAmazonVPC\nVPNgateway)
+
+!definelong NETWORKINGCONTENTDELIVERY_AMAZONVPC_VPNGATEWAY(alias,label,e_type="interface",e_color="#F58536",e_stereo="NetworkingContentDelivery\nAmazonVPC\nVPNgateway",e_sprite="NetworkingContentDelivery_AmazonVPC_VPNgateway")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

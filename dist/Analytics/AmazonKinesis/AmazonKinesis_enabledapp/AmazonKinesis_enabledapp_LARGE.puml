@@ -308,8 +308,12 @@ FFFFFFFFCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 
 
-!define AMAZONKINESIS_ENABLEDAPP_LARGE(alias) AWS_ENTITY(component,#F58536,AmazonKinesis_enabledapp_LARGE,alias,**AmazonKinesis\nenabledapp**)
+!define AMAZONKINESIS_ENABLEDAPP_LARGE(alias) AWS_ENTITY(component,#F58536,AmazonKinesis_enabledapp_LARGE,alias,**AmazonKinesis**\n**enabledapp**)
 
-!define AMAZONKINESIS_ENABLEDAPP_LARGE(alias,label) AWS_ENTITY(component,#F58536,AmazonKinesis_enabledapp_LARGE,label,alias,**AmazonKinesis\nenabledapp**)
+!define AMAZONKINESIS_ENABLEDAPP_LARGE(alias,label) AWS_ENTITY(component,#F58536,AmazonKinesis_enabledapp_LARGE,label,alias,**AmazonKinesis**\n**enabledapp**)
+
+!definelong AMAZONKINESIS_ENABLEDAPP_LARGE(alias,label,e_type="component",e_color="#F58536",e_stereo="**AmazonKinesis**\n**enabledapp**",e_sprite="AmazonKinesis_enabledapp_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

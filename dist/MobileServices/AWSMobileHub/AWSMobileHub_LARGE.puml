@@ -418,4 +418,8 @@ CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC0000000000000000000000000
 
 !define AWSMOBILEHUB_LARGE(alias,label) AWS_ENTITY(node,#AD698C,AWSMobileHub_LARGE,label,alias,**AWSMobileHub**)
 
+!definelong AWSMOBILEHUB_LARGE(alias,label,e_type="node",e_color="#AD698C",e_stereo="**AWSMobileHub**",e_sprite="AWSMobileHub_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

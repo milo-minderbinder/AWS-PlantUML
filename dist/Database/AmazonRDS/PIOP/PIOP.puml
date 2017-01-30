@@ -64,4 +64,8 @@ FECCCCCCCCCCCCCCCCCCCCCCEFFFFFFFFFFFFFFFFFFFFFFECCCCEF
 
 !define PIOP(alias,label) AWS_ENTITY(component,#2F74B8,PIOP,label,alias,PIOP)
 
+!definelong PIOP(alias,label,e_type="component",e_color="#2F74B8",e_stereo="PIOP",e_sprite="PIOP")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

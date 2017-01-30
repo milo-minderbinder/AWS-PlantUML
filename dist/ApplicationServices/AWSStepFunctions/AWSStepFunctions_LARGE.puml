@@ -415,8 +415,12 @@ DDDDDDDDDDDDDDDDDDDDDC9999999999999999999999999ADDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDA
 
 
 
-!define AWSSTEPFUNCTIONS_LARGE(alias) AWS_ENTITY(component,#D9A842,AWSStepFunctions_LARGE,alias,**AWSStepFunctions**)
+!define AWSSTEPFUNCTIONS_LARGE(alias) AWS_ENTITY(node,#D9A842,AWSStepFunctions_LARGE,alias,**AWSStepFunctions**)
 
-!define AWSSTEPFUNCTIONS_LARGE(alias,label) AWS_ENTITY(component,#D9A842,AWSStepFunctions_LARGE,label,alias,**AWSStepFunctions**)
+!define AWSSTEPFUNCTIONS_LARGE(alias,label) AWS_ENTITY(node,#D9A842,AWSStepFunctions_LARGE,label,alias,**AWSStepFunctions**)
+
+!definelong AWSSTEPFUNCTIONS_LARGE(alias,label,e_type="node",e_color="#D9A842",e_stereo="**AWSStepFunctions**",e_sprite="AWSStepFunctions_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

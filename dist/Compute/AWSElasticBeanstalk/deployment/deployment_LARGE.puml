@@ -338,4 +338,8 @@ FFDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA800007AAAAAAAAAAAAAAAAAAAAAAA500
 
 !define DEPLOYMENT_LARGE(alias,label) AWS_ENTITY(frame,#F58536,deployment_LARGE,label,alias,**deployment**)
 
+!definelong DEPLOYMENT_LARGE(alias,label,e_type="frame",e_color="#F58536",e_stereo="**deployment**",e_sprite="deployment_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

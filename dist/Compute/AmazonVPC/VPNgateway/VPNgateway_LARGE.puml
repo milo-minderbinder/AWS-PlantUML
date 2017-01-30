@@ -645,7 +645,7 @@ skinparam interface<<**VPNgateway**>> {
     BackgroundColor #FEEDE2
 	BorderColor #F58536
 }
-skinparam interface<<**Compute\nAmazonVPC\nVPNgateway**>> {
+skinparam interface<<**Compute**\n**AmazonVPC**\n**VPNgateway**>> {
     BackgroundColor #FEEDE2
 	BorderColor #F58536
 }
@@ -655,8 +655,16 @@ skinparam interface<<**Compute\nAmazonVPC\nVPNgateway**>> {
 
 !define VPNGATEWAY_LARGE(alias,label) AWS_ENTITY(interface,#F58536,Compute_AmazonVPC_VPNgateway_LARGE,label,alias,**VPNgateway**)
 
-!define COMPUTE_AMAZONVPC_VPNGATEWAY_LARGE(alias) AWS_ENTITY(interface,#F58536,Compute_AmazonVPC_VPNgateway_LARGE,alias,**Compute\nAmazonVPC\nVPNgateway**)
+!definelong VPNGATEWAY_LARGE(alias,label,e_type="interface",e_color="#F58536",e_stereo="**VPNgateway**",e_sprite="Compute_AmazonVPC_VPNgateway_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
-!define COMPUTE_AMAZONVPC_VPNGATEWAY_LARGE(alias,label) AWS_ENTITY(interface,#F58536,Compute_AmazonVPC_VPNgateway_LARGE,label,alias,**Compute\nAmazonVPC\nVPNgateway**)
+!define COMPUTE_AMAZONVPC_VPNGATEWAY_LARGE(alias) AWS_ENTITY(interface,#F58536,Compute_AmazonVPC_VPNgateway_LARGE,alias,**Compute**\n**AmazonVPC**\n**VPNgateway**)
+
+!define COMPUTE_AMAZONVPC_VPNGATEWAY_LARGE(alias,label) AWS_ENTITY(interface,#F58536,Compute_AmazonVPC_VPNgateway_LARGE,label,alias,**Compute**\n**AmazonVPC**\n**VPNgateway**)
+
+!definelong COMPUTE_AMAZONVPC_VPNGATEWAY_LARGE(alias,label,e_type="interface",e_color="#F58536",e_stereo="**Compute**\n**AmazonVPC**\n**VPNgateway**",e_sprite="Compute_AmazonVPC_VPNgateway_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

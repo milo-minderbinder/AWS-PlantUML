@@ -94,4 +94,8 @@ FFFFFFFFFFFFFFFFFB000000000000000000000000000000DFFFFFFFFFFFFFFFFFFFFFFFFF
 
 !define AMAZONWORKDOCS(alias,label) AWS_ENTITY(frame,#F58536,AmazonWorkDocs,label,alias,AmazonWorkDocs)
 
+!definelong AMAZONWORKDOCS(alias,label,e_type="frame",e_color="#F58536",e_stereo="AmazonWorkDocs",e_sprite="AmazonWorkDocs")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

@@ -290,4 +290,8 @@ FFFFDCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 !define MSSQLINSTANCE_LARGE(alias,label) AWS_ENTITY(component,#2F74B8,MSSQLinstance_LARGE,label,alias,**MSSQLinstance**)
 
+!definelong MSSQLINSTANCE_LARGE(alias,label,e_type="component",e_color="#2F74B8",e_stereo="**MSSQLinstance**",e_sprite="MSSQLinstance_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

@@ -78,10 +78,18 @@ FFFFA00000000000000000000000000000000000000000000000000000000AFFFF
 00000000000000000000000000000000FF00000000000000000000000000000000
 }
 
+skinparam agent<<JavaScript>> {
+    BackgroundColor White
+	BorderColor Black
+}
 
 
-!define JAVASCRIPT(alias) AWS_ENTITY(agent,black,JavaScript,alias,JavaScript)
+!define JAVASCRIPT(alias) AWS_ENTITY(agent,#EE472A,JavaScript,alias,JavaScript)
 
-!define JAVASCRIPT(alias,label) AWS_ENTITY(agent,black,JavaScript,label,alias,JavaScript)
+!define JAVASCRIPT(alias,label) AWS_ENTITY(agent,#EE472A,JavaScript,label,alias,JavaScript)
+
+!definelong JAVASCRIPT(alias,label,e_type="agent",e_color="#EE472A",e_stereo="JavaScript",e_sprite="JavaScript")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

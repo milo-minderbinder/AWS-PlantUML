@@ -90,4 +90,8 @@ EEEEEDAAAAAAA00EEEEEEEEEEEEEEEEEEC9AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 
 !define AMAZONCOGNITO(alias,label) AWS_ENTITY(node,#AD698C,AmazonCognito,label,alias,AmazonCognito)
 
+!definelong AMAZONCOGNITO(alias,label,e_type="node",e_color="#AD698C",e_stereo="AmazonCognito",e_sprite="AmazonCognito")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

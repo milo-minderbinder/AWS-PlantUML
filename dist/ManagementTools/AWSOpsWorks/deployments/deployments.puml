@@ -77,4 +77,8 @@ FFFFCCCCCCCCCCCCCCCCCCCCCCCCFFFF00000000FFFFCCCCCCCCCCCCCCCCCCCCCCCCFFFF
 
 !define DEPLOYMENTS(alias,label) AWS_ENTITY(artifact,#769D3F,deployments,label,alias,deployments)
 
+!definelong DEPLOYMENTS(alias,label,e_type="artifact",e_color="#769D3F",e_stereo="deployments",e_sprite="deployments")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

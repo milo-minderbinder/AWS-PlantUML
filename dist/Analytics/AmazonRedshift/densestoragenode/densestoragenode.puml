@@ -61,8 +61,12 @@ FFFFFFFFFFFFFFFFFFEDCCCC0000000CCCDF0CCCCCCCCCCCCC
 
 
 
-!define DENSESTORAGENODE(alias) AWS_ENTITY(node,#F58536,densestoragenode,alias,densestoragenode)
+!define DENSESTORAGENODE(alias) AWS_ENTITY(node,#2F74B8,densestoragenode,alias,densestoragenode)
 
-!define DENSESTORAGENODE(alias,label) AWS_ENTITY(node,#F58536,densestoragenode,label,alias,densestoragenode)
+!define DENSESTORAGENODE(alias,label) AWS_ENTITY(node,#2F74B8,densestoragenode,label,alias,densestoragenode)
+
+!definelong DENSESTORAGENODE(alias,label,e_type="node",e_color="#2F74B8",e_stereo="densestoragenode",e_sprite="densestoragenode")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

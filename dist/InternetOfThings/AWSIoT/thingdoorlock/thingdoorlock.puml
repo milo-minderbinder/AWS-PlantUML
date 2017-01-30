@@ -80,4 +80,8 @@ CCCCCCCCCCCCCCCCCCCCCCCCC000000005CCCC500000000CCCCCCCCCCCCCCCCCCCCCCCCC
 
 !define THINGDOORLOCK(alias,label) AWS_ENTITY(node,#2F74B8,thingdoorlock,label,alias,thingdoorlock)
 
+!definelong THINGDOORLOCK(alias,label,e_type="node",e_color="#2F74B8",e_stereo="thingdoorlock",e_sprite="thingdoorlock")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

@@ -60,10 +60,17 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 }
 
+skinparam agent<<requester>> {
+    BorderColor #7E7D7D
+}
 
 
-!define REQUESTER(alias) AWS_ENTITY(artifact,#D6D6D6,requester,alias,requester)
+!define REQUESTER(alias) AWS_ENTITY(agent,#D6D6D6,requester,alias,requester)
 
-!define REQUESTER(alias,label) AWS_ENTITY(artifact,#D6D6D6,requester,label,alias,requester)
+!define REQUESTER(alias,label) AWS_ENTITY(agent,#D6D6D6,requester,label,alias,requester)
+
+!definelong REQUESTER(alias,label,e_type="agent",e_color="#D6D6D6",e_stereo="requester",e_sprite="requester")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
 
 @enduml

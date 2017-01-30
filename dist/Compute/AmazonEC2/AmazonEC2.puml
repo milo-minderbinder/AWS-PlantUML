@@ -92,4 +92,8 @@ FFFFDCCCFFFFDCCCDFFFFFCCCCCCFFFFFFECCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 !define AMAZONEC2(alias,label) AWS_ENTITY(component,#F58536,AmazonEC2,label,alias,AmazonEC2)
 
+!definelong AMAZONEC2(alias,label,e_type="component",e_color="#F58536",e_stereo="AmazonEC2",e_sprite="AmazonEC2")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

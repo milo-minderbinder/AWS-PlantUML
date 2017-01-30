@@ -94,4 +94,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 
 !define AMAZONWORKMAIL(alias,label) AWS_ENTITY(frame,#F58536,AmazonWorkMail,label,alias,AmazonWorkMail)
 
+!definelong AMAZONWORKMAIL(alias,label,e_type="frame",e_color="#F58536",e_stereo="AmazonWorkMail",e_sprite="AmazonWorkMail")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

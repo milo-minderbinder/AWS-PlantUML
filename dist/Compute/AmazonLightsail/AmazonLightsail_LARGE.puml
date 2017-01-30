@@ -374,4 +374,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCE
 
 !define AMAZONLIGHTSAIL_LARGE(alias,label) AWS_ENTITY(node,#F58536,AmazonLightsail_LARGE,label,alias,**AmazonLightsail**)
 
+!definelong AMAZONLIGHTSAIL_LARGE(alias,label,e_type="node",e_color="#F58536",e_stereo="**AmazonLightsail**",e_sprite="AmazonLightsail_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml

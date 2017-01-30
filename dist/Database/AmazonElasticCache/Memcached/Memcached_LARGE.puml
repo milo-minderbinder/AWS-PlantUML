@@ -286,4 +286,8 @@ FFFFDCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 !define MEMCACHED_LARGE(alias,label) AWS_ENTITY(storage,#2F74B8,Memcached_LARGE,label,alias,**Memcached**)
 
+!definelong MEMCACHED_LARGE(alias,label,e_type="storage",e_color="#2F74B8",e_stereo="**Memcached**",e_sprite="Memcached_LARGE")
+AWS_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
+!enddefinelong
+
 @enduml
