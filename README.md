@@ -65,10 +65,12 @@ Before you know it, you'll be creating nice, clean diagrams for your AWS applica
     !includeurl AWSPUML/common.puml
     !includeurl AWSPUML/ApplicationServices/AmazonAPIGateway/AmazonAPIGateway.puml
     !includeurl AWSPUML/Compute/AWSLambda/AWSLambda.puml
+    !includeurl AWSPUML/Compute/AWSLambda/LambdaFunction/LambdaFunction.puml
     !includeurl AWSPUML/Database/AmazonDynamoDB/AmazonDynamoDB.puml
     !includeurl AWSPUML/Database/AmazonDynamoDB/table/table.puml
     !includeurl AWSPUML/General/AWScloud/AWScloud.puml
     !includeurl AWSPUML/General/client/client.puml
+    !includeurl AWSPUML/SDKs/JavaScript/JavaScript.puml
     !includeurl AWSPUML/General/user/user.puml
     !includeurl AWSPUML/Storage/AmazonS3/AmazonS3.puml
     !includeurl AWSPUML/Storage/AmazonS3/bucket/bucket.puml
@@ -83,6 +85,7 @@ Before you know it, you'll be creating nice, clean diagrams for your AWS applica
 
     USER(user)
     CLIENT(browser)
+    JAVASCRIPT(js,SDK)
 
     AWSCLOUD(aws) {
 
@@ -93,7 +96,9 @@ Before you know it, you'll be creating nice, clean diagrams for your AWS applica
 
         AMAZONAPIGATEWAY(api)
 
-        AWSLAMBDA(lambda,addComment)
+        AWSLAMBDA(lambda) {
+            LAMBDAFUNCTION(addComments,addComments)
+        }
 
         AMAZONDYNAMODB(dynamo) {
             TABLE(comments,Comments)
@@ -102,20 +107,20 @@ Before you know it, you'll be creating nice, clean diagrams for your AWS applica
 
     user - browser
 
-    browser -d-> site :**1a**
+    browser -d-> site :**1a**) get\nstatic\ncontent
     site ~> logs :1a
-    site -u-> browser :**1b**
-    browser ..> comments :**2a**
-    comments ..> browser :**2b**
+    site .u.> browser :**1b**
+    browser - js
+    js -r-> comments :**2a**) get\ncomments
+    comments ..> js :**2b**
 
-    browser .r.> api :**3**
+    js -r-> api :**3**) add\ncomment
 
-    api -d-> lambda :**4**
+    api -d-> addComments :**4**
 
-    lambda -> comments :**5**
+    addComments -> comments :**5**
 
-    comments --> browser :**6**
-
+    comments ..> js :**6**) new\ncomments
     @enduml
 
 
