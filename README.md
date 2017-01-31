@@ -29,6 +29,24 @@ Macro definitions for components, like S3 and S3 Buckets, will take an alias as 
 
 ![simple example](examples/simple-s3.png)
 
+Starting from version 17.1.6, all icons now have a large version of sprites with accompanying macros and stereotypes. For additional customization, there is now a new six-parameter macro for all icons, which adds four new optional parameters in addition to the `alias` and `label` parameters, so that users can set the entity type, sprite color, stereotype, and sprite, respectively:
+
+    ...<SNIP>...
+    !includeurl AWSPUML/Storage/AmazonS3/AmazonS3_LARGE.puml
+
+    skinparam nodeBackgroundColor White
+    skinparam storage<<**AmazonS3**>> {
+        backgroundColor #F9DFDC
+    }
+    AMAZONS3(s3_internal,"Default S3")
+    AMAZONS3(s3_internal2,"S3 as node",node)
+    AMAZONS3_LARGE(s3_partner,"Large S3")
+
+    s3_internal2 <-r- s3_partner
+    s3_internal <-l- s3_partner
+
+![customization example](examples/component-customization.png)
+
 You can also nest components inside others using enclosures:
 
     AMAZONS3(s3) {
