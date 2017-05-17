@@ -19,8 +19,8 @@ After the `common.puml` is added, you can then add any additional `.puml` files 
     !define AWSPUML https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/17-1-19/dist
     !includeurl AWSPUML/common.puml
     !includeurl AWSPUML/Storage/AmazonS3/AmazonS3.puml
-    !includeurl AWSPUML/Storage-Content-Delivery/AmazonS3/bucket/bucket.puml
-
+    !includeurl AWSPUML/Storage/AmazonS3/bucket/bucket.puml
+    
 Macro definitions for components, like S3 and S3 Buckets, will take an alias as the first parameter, and a label as an optional second parameter:
 
     AMAZONS3(s3_internal)
