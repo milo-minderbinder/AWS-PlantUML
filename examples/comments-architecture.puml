@@ -1,18 +1,18 @@
 @startuml
-!define AWSPUML https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/17-1-19/dist
+!define AWSPUML https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/17-10-18/dist
 
 !includeurl AWSPUML/common.puml
-!includeurl AWSPUML/ApplicationServices/AmazonAPIGateway/AmazonAPIGateway.puml
-!includeurl AWSPUML/Compute/AWSLambda/AWSLambda.puml
-!includeurl AWSPUML/Compute/AWSLambda/LambdaFunction/LambdaFunction.puml
-!includeurl AWSPUML/Database/AmazonDynamoDB/AmazonDynamoDB.puml
-!includeurl AWSPUML/Database/AmazonDynamoDB/table/table.puml
-!includeurl AWSPUML/General/AWScloud/AWScloud.puml
-!includeurl AWSPUML/General/client/client.puml
-!includeurl AWSPUML/SDKs/JavaScript/JavaScript.puml
-!includeurl AWSPUML/General/user/user.puml
-!includeurl AWSPUML/Storage/AmazonS3/AmazonS3.puml
-!includeurl AWSPUML/Storage/AmazonS3/bucket/bucket.puml
+!includeurl AWSPUML/applicationservices/amazonapigateway/amazonapigateway.puml
+!includeurl AWSPUML/compute/awslambda/awslambda.puml
+!includeurl AWSPUML/compute/awslambda/lambdafunction/lambdafunction.puml
+!includeurl AWSPUML/database/amazondynamodb/amazondynamodb.puml
+!includeurl AWSPUML/database/amazondynamodb/table/table.puml
+!includeurl AWSPUML/general/awscloud/awscloud.puml
+!includeurl AWSPUML/general/client/client.puml
+!includeurl AWSPUML/sdks/javascript/javascript.puml
+!includeurl AWSPUML/general/user/user.puml
+!includeurl AWSPUML/storage/amazons3/amazons3.puml
+!includeurl AWSPUML/storage/amazons3/bucket/bucket.puml
 
 
 skinparam componentArrowColor Black
