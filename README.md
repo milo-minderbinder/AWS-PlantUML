@@ -16,10 +16,10 @@ Otherwise, you can link directly to the file in this repo with:
 
 After the `common.puml` is added, you can then add any additional `.puml` files from AWS-PlantUML to import the specific sprites, macros, and other definitions you need. Sometimes it's helpful to define a constant pointing to the `dist` folder of the AWS PlantUML version you're using, to make switching versions and hosts easier.
 
-    !define AWSPUML https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/17-10-20/dist
+    !define AWSPUML https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/17-10-18/dist
     !includeurl AWSPUML/common.puml
-    !includeurl AWSPUML/storage/amazons3/amazons3.puml
-    !includeurl AWSPUML/storage/amazons3/bucket/bucket.puml
+    !includeurl AWSPUML/Storage/AmazonS3/AmazonS3.puml
+    !includeurl AWSPUML/Storage/AmazonS3/bucket/bucket.puml
     
 Macro definitions for components, like S3 and S3 Buckets, will take an alias as the first parameter, and a label as an optional second parameter:
 
@@ -32,7 +32,7 @@ Macro definitions for components, like S3 and S3 Buckets, will take an alias as 
 Starting from version 17.1.6, all icons now have a large version of sprites with accompanying macros and stereotypes. For additional customization, there is now a new six-parameter macro for all icons, which adds four new optional parameters in addition to the `alias` and `label` parameters, so that users can set the entity type, sprite color, stereotype, and sprite, respectively:
 
     ...<SNIP>...
-    !includeurl AWSPUML/storage/amazons3/amazons3_large.puml
+    !includeurl AWSPUML/Storage/AmazonS3/AmazonS3_LARGE.puml
 
     skinparam nodeBackgroundColor White
     skinparam storage<<**AmazonS3**>> {
@@ -63,17 +63,17 @@ Before you know it, you'll be creating nice, clean diagrams for your AWS applica
     !define AWSPUML https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/17-10-18/dist
 
     !includeurl AWSPUML/common.puml
-    !includeurl AWSPUML/applicationservices/amazonapigateway/amazonapigateway.puml
-    !includeurl AWSPUML/compute/awslambda/awslambda.puml
-    !includeurl AWSPUML/compute/awslambda/lambdafunction/lambdafunction.puml
-    !includeurl AWSPUML/database/amazondynamodb/amazondynamodb.puml
-    !includeurl AWSPUML/database/amazondynamodb/table/table.puml
-    !includeurl AWSPUML/general/awscloud/awscloud.puml
-    !includeurl AWSPUML/general/client/client.puml
-    !includeurl AWSPUML/sdks/javascript/javascript.puml
-    !includeurl AWSPUML/general/user/user.puml
-    !includeurl AWSPUML/storage/amazons3/amazons3.puml
-    !includeurl AWSPUML/storage/amazons3/bucket/bucket.puml
+    !includeurl AWSPUML/ApplicationServices/AmazonAPIGateway/AmazonAPIGateway.puml
+    !includeurl AWSPUML/Compute/AWSLambda/AWSLambda.puml
+    !includeurl AWSPUML/Compute/AWSLambda/LambdaFunction/LambdaFunction.puml
+    !includeurl AWSPUML/Database/AmazonDynamoDB/AmazonDynamoDB.puml
+    !includeurl AWSPUML/Database/AmazonDynamoDB/table/table.puml
+    !includeurl AWSPUML/General/AWScloud/AWScloud.puml
+    !includeurl AWSPUML/General/client/client.puml
+    !includeurl AWSPUML/General/user/user.puml
+    !includeurl AWSPUML/SDKs/JavaScript/JavaScript.puml
+    !includeurl AWSPUML/Storage/AmazonS3/AmazonS3.puml
+    !includeurl AWSPUML/Storage/AmazonS3/bucket/bucket.puml
 
 
     skinparam componentArrowColor Black
