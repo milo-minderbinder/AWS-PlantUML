@@ -232,16 +232,16 @@ class PUML:
     def output_dir(self):
         if self._output_dir is None:
             self._output_dir = os.path.join(self.output_root_dir,
-                                            *(c.lower() for c in self.categories))
+                                            *self.categories)
         return self._output_dir
 
     @property
     def sprite_path(self):
-        return os.path.join(self.output_dir, '{}-sprite.puml'.format(self.name).lower())
+        return os.path.join(self.output_dir, '{}-sprite.puml'.format(self.name))
 
     @property
     def puml_path(self):
-        return os.path.join(self.output_dir, '{}.puml'.format(self.name).lower())
+        return os.path.join(self.output_dir, '{}.puml'.format(self.name))
 
     @property
     def sprite(self):
