@@ -12,11 +12,11 @@ If you want to tweak the basic representation of AWS-PlantUML entities, or you d
 
 Otherwise, you can link directly to the file in this repo with:
 
-    !includeurl https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/17-10-18/dist/common.puml
+    !includeurl https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/18-2-22/dist/common.puml
 
 After the `common.puml` is added, you can then add any additional `.puml` files from AWS-PlantUML to import the specific sprites, macros, and other definitions you need. Sometimes it's helpful to define a constant pointing to the `dist` folder of the AWS PlantUML version you're using, to make switching versions and hosts easier.
 
-    !define AWSPUML https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/17-10-18/dist
+    !define AWSPUML https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/18-2-22/dist
     !includeurl AWSPUML/common.puml
     !includeurl AWSPUML/Storage/AmazonS3/AmazonS3.puml
     !includeurl AWSPUML/Storage/AmazonS3/bucket/bucket.puml
@@ -60,7 +60,7 @@ You can also nest components inside others using enclosures:
 Before you know it, you'll be creating nice, clean diagrams for your AWS applications:
 
     @startuml
-    !define AWSPUML https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/17-10-18/dist
+    !define AWSPUML https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/18-2-22/dist
 
     !includeurl AWSPUML/common.puml
     !includeurl AWSPUML/ApplicationServices/AmazonAPIGateway/AmazonAPIGateway.puml

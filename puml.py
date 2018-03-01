@@ -9,6 +9,7 @@ import subprocess
 from configparser import _UNSET, NoOptionError, NoSectionError
 from hashlib import sha1
 from itertools import groupby
+from operator import attrgetter
 
 SRC_DIR = os.path.realpath(os.path.dirname(__file__))
 OUTPUT_DIR = os.path.join(SRC_DIR, 'dist')
@@ -285,7 +286,7 @@ class PUML:
         if not shift:
             shift = 15 - int(darkest, base=16)
         lines[0] = re.sub(r'^(\s*sprite\s+\$)\w+(\s+\[\d+x\d+/\d+\]\s*\{\s*)$',
-                          r'\1{}\2'.format(self.name),
+                          r'\g<1>{}\g<2>'.format(self.name),
                           lines[0],
                           re.I)
         sprite_lines.append(lines[0])
@@ -384,6 +385,24 @@ def create_pumls(conf, output_path, pumls):
     shutil.copy(os.path.join(SRC_DIR, 'common.puml'), output_path)
     if conf.getboolean('PUML', 'debug', fallback=False):
         create_test_puml(conf, output_path, pumls)
+        map_file = os.path.join(output_path, 'file-map.yml')
+        puml_files = [os.path.join(output_path, f) for f in ('common.puml', 'file-map.yml', 'test.puml')]
+        print('Writing file name map: {}'.format(map_file))
+        with open(map_file, 'w') as f:
+            f.write('---\n\n')
+            for puml in sorted(pumls, key=attrgetter('namespaced_name')):
+                puml_files.append(puml.puml_path)
+                puml_files.append(puml.sprite_path)
+                f.write('{}:\n\t- {}\n\t- {}\n\t- {}\n\n'.format(puml.namespaced_name,
+                                                                 puml.image_path,
+                                                                 puml.puml_path,
+                                                                 puml.sprite_path))
+        for root, dirs, files in os.walk(output_path):
+            for fname in files:
+                fpath = os.path.join(root, fname)
+                if fpath not in puml_files:
+                    print('Deleting: {}'.format(fpath))
+                    os.remove(fpath)
 
 
 def create_ini(conf, path, pumls):
