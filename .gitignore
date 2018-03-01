@@ -4,5 +4,6 @@ resources/*
 test/*
 dist/**/*.png
 dist/test.puml
+dist/file-map.yml
 .idea/
 *.sw[po]
