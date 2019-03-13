@@ -1,4 +1,4 @@
-sprite $ECScontainer [54x31/16] {
+sprite $EKScontainer [54x31/16] {
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCBBBBCBBBCBBBBCBBBBCBBBCBBBBCBBBCBBBBCBBBBCBBBCBBBBCC
 CCB87AC977CB879CA77AC878CB87AC977CB879CA77AC878CB87ACC
@@ -32,11 +32,8 @@ FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 }
 
+!define EKSCONTAINER(alias) PUML_ENTITY(component,#F58536,EKScontainer,alias,EKScontainer)
 
-
-
-!define ECSCONTAINER(alias) PUML_ENTITY(component,#F58536,ECScontainer,alias,ECScontainer)
-
-!definelong ECSCONTAINER(alias,label,e_type="component",e_color="#F58536",e_stereo="ECScontainer",e_sprite="ECScontainer")
+!definelong EKSCONTAINER(alias,label,e_type="component",e_color="#F58536",e_stereo="EKScontainer",e_sprite="EKScontainer")
 PUML_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
 !enddefinelong
