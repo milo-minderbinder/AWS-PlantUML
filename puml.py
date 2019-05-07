@@ -28,21 +28,23 @@ CONFIG_DEFAULTS = {
         'sprite.shift_ignore': 0,
         'stereotype.split_len': 30},
     'PUML.colors': {
-        'orange': '#F58536',
-        'light-orange': '#FEEDE2',
-        'goldenrod': '#D9A842',
-        'light-goldenrod': '#F7EDD8',
-        'blue': '#2F74B8',
-        'light-blue': '#AECCEA',
-        'green': '#769D3F',
-        'light-green': '#CBDFAF',
-        'purple': '#AD698C',
-        'light-purple': '#EDDEE6',
-        'grey': '#7E7D7D',
-        'light-grey': '#D6D6D6',
-        'red': '#E05344',
-        'light-red': '#F9DFDC',
-        'teal': '#05ABAF'}}
+        'orange':             '#D86614',
+        'light-orange':       '#FEEDE2',
+        'goldenrod':          '#D9A842',
+        'light-goldenrod':    '#F7EDD8',
+        'blue':               '#3C48CC',
+        'light-blue':         '#147EBA',
+        'green':              '#3E8624',
+        'light-green':        '#228815',
+        'purple':             '#6A3CC5',
+        'light-purple':       '#EDDEE6',
+        'grey':               '#232F3E',
+        'light-grey':         '#5A6C86',
+        'red':                '#D6242D',
+        'light-red':          '#F9DFDC',
+        'teal':               '#1B7B68',
+        'fuchsia':            '#CD2264',
+    }}
 
 
 PUML_TEMPLATE = '''
@@ -83,8 +85,9 @@ class InheritingConfigParser(configparser.ConfigParser):
 
 
 class PUML:
-    def __init__(self, image_path, output_root_dir, conf):
+    def __init__(self, icons_root, image_path, output_root_dir, conf):
         self.conf = conf
+        self.icons_root = os.path.abspath(icons_root)
         self.image_path = os.path.abspath(image_path)
         self.output_root_dir = os.path.abspath(output_root_dir)
         self._output_dir = None
@@ -100,12 +103,25 @@ class PUML:
     @property
     def categorized_name(self):
         if self._categorized_name is None:
-            basename = os.path.splitext(os.path.basename(self.image_path))[0]
-            parts = [re.sub(r'[^\w]', '_', p) for p in basename.split('_')]
-            if parts[-1] == 'LARGE':
-                self._categorized_name = parts[:-1], '_'.join(parts[-2:])
-            else:
-                self._categorized_name = parts, parts[-1]
+            rel_path = os.path.relpath(self.image_path, self.icons_root)
+            replace_rules = [
+                (r'&', 'and'),
+                (r'^_', ''),
+                (r'/_', '/'),
+                (r'\.png$', ''),
+                (r'[_-]light-bg', ''),
+                (r'Identity-and-Access-Management[-_]IAM', 'IAM'),
+                (r'Simple-Storage-Service-S3', 'S3'),
+                (r'Elastic-Block-Store-EBS', 'EBS'),
+                (r'Simple-Email-Service-SES', 'SES'),
+                (r'Simple-Notification-Service-SNS', 'SNS'),
+                (r'Simple-Queue-Service-SQS', 'SQS'),
+                (r'[^\w/]+', '-'),
+            ]
+            for rule in replace_rules:
+                rel_path = re.sub(rule[0], rule[1], rel_path)
+            parts = re.split(r'[_/]', rel_path)
+            self._categorized_name = parts, parts[-1]
         return self._categorized_name
 
     @property
@@ -114,11 +130,11 @@ class PUML:
 
     @property
     def name(self):
-        return self.categorized_name[1]
+        return re.sub(r'[^A-Za-z0-9_]+', '_', self.categorized_name[1])
 
     @property
     def namespaced_name(self):
-        return '{}.{}'.format('.'.join(self.categories), self.name)
+        return '.'.join(self.categories)
 
     @property
     def unique_name(self):
@@ -128,12 +144,13 @@ class PUML:
 
     @unique_name.setter
     def unique_name(self, value):
-        self._unique_name = value
+        self._unique_name = re.sub(r'[^A-Za-z0-9_]+', '_', value)
 
     def _macro(self, unique=True):
         name = self.name
         if not unique:
             name = self.unique_name
+        # return re.sub(r'[^A-Za-z0-9_]+', '_', name.upper())
         return name.upper()
 
     def _split_longer(self, parts, max_len, lines=None):
@@ -238,11 +255,11 @@ class PUML:
 
     @property
     def sprite_path(self):
-        return os.path.join(self.output_dir, '{}-sprite.puml'.format(self.name))
+        return os.path.join(self.output_dir, '{}-sprite.puml'.format(self.categorized_name[1]))
 
     @property
     def puml_path(self):
-        return os.path.join(self.output_dir, '{}.puml'.format(self.name))
+        return os.path.join(self.output_dir, '{}.puml'.format(self.categorized_name[1]))
 
     @property
     def sprite(self):
@@ -400,7 +417,7 @@ def create_pumls(conf, output_path, pumls):
         for root, dirs, files in os.walk(output_path):
             for fname in files:
                 fpath = os.path.join(root, fname)
-                if fpath not in puml_files:
+                if fpath not in puml_files and not fname.endswith('.ini'):
                     print('Deleting: {}'.format(fpath))
                     os.remove(fpath)
 
@@ -445,14 +462,16 @@ def create_ini(conf, path, pumls):
             f.write('\n')
 
 
-def get_pumls(conf, icons_path, output_path, icon_ext='.png'):
+def get_pumls(conf, icons_path, output_path, icon_ext='light-bg.png'):
     icons_path = os.path.abspath(icons_path)
     if not os.path.isdir(icons_path):
         raise Exception('Invalid Icons path: %s' % icons_path)
     output_path = os.path.abspath(output_path)
 
     icons = find_images(icons_path, icon_ext)
-    pumls = [PUML(p, output_path, conf) for p in icons]
+    pumls = [PUML(icons_path, p, output_path, conf) for p in icons]
+    for p in pumls:
+        print(p.categorized_name)
     set_unique_names(filter_duplicate_images(pumls))
     return pumls
 
